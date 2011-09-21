@@ -1,0 +1,27 @@
+11.9.2011
+*create a standard for the movement data sent between phones and server
+*Would it be too slow for us to grab "images" of the game from the web
+server?
+*Is it actually possible to grab accelerometer data with any accuracy
+from the Wiimote? Maybe more importantly, can the Android accelerometer
+work better for this?
+*First thing: get data from the Wiimote to begin looking at what it
+contains. This means making an app to collect data from a bluetooth
+connection.
+*Standards: court size, movement data between server-phones, displays,
+stuff running on phones, where to wear Wiimote
+*common interface between Android and iPhone
+
+
+17.9.2011
+*We want an API from the wii team.
+*We still need to know details of how the game is supposed to be run:
+where, in what language
+*Initial Plan: everyone does their own profile, SCHEDULE: David, BIGGEST
+CHALLENGES: Kyle, TOOLS: Jordan, GOALS: Jill
+*To-do: SDK and ADT Documentation: Jill, Game Manual: ????, Java API:
+????, Kyle: Developing HTML5 Game Engine, Know some GUI: Everyone
+(Fenggui. . . .)
+*Thursday: Build some GUI
+*We need to build a general design of our game: classes, interactions,
+functionality
