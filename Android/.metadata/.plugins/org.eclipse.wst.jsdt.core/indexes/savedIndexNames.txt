@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+/home/kwenholz/Programming/human-pong/Android/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2669386408.index
+422004810.index
+313203895.index
+1083177741.index
+2456407983.index
