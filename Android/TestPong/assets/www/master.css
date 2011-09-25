@@ -1,6 +1,8 @@
   body {
-    background:#222 none repeat scroll 0 0;
-    color:#666;
+  	/*pick the main background color*/
+    background:#006DAC none repeat scroll 0 0;
+    /*Font color in top part*/
+    color:#000000;
     font-family:Helvetica;
     font-size:72%;
     line-height:1.5em;
@@ -9,10 +11,11 @@
   }
 
   #info{
-    background:#ffa;
+  	//This does the stuff around the "info" block at the top
+    background:#F0000F;
     border: 1px solid #ffd324;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     clear:both;
     margin:15px 6px 0;
     width:295px;
@@ -52,7 +55,7 @@
   }
 
   /* Content Styling */
-  #stage.theme > h1, #stage.theme > h2, #stage.theme > p{
+  #stage.theme > h1,  #stage.theme > p{
     margin:1em 0 .5em 13px;
   }
 
@@ -81,9 +84,10 @@
   	text-align:center;
   	display:block;
   	float:left;
-  	background:#444;
+  	background:#F0E700;
   	width:150px;
-  	color:#9ab;
+  	/*Font color on buttons*/
+  	color:#000000;
   	font-size:1.1em;
   	text-decoration:none;
   	padding:1.2em 0;
