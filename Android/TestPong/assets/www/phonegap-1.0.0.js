@@ -4331,7 +4331,7 @@ PhoneGap.addConstructor(function() {
     var setupDroidDB = function() {
         navigator.openDatabase = window.openDatabase = DroidDB_openDatabase;
         window.droiddb = new DroidDB();
-    }
+    };
     if (typeof window.openDatabase === "undefined") {
         setupDroidDB();
     } else {
@@ -4354,7 +4354,7 @@ PhoneGap.addConstructor(function() {
             else {
                 return db;
             }
-        }
+        };
     }
     
     if (typeof window.localStorage === "undefined") {

@@ -25,3 +25,8 @@ CHALLENGES: Kyle, TOOLS: Jordan, GOALS: Jill
 *Thursday: Build some GUI
 *We need to build a general design of our game: classes, interactions,
 functionality
+
+25.9.2011
+*Worked on class diagramming.  
+*Need to work on PLAN, HTML5, JavaScript, CSS, flesh out new project: Kyle, 
+*Week goals: talk to server, server pong, 
