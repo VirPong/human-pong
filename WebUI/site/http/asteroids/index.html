@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>NodeGame: Shooter</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        
+        <script type="text/javascript">
+            WEB_SOCKET_SWF_LOCATION = 'flash/WebSocketMain.swf';
+        </script>
+        
+        <script type="text/javascript" src="flash/swfobject.js"></script>
+        <script type="text/javascript" src="flash/FABridge.js"></script>
+        <script type="text/javascript" src="flash/web_socket.js"></script> 
+        
+        <script type="text/javascript" src="record.js"></script>
+        <script type="text/javascript" src="bison.js"></script>
+        <script type="text/javascript" src="nodegame.client.js"></script>
+        <script type="text/javascript" src="config.js"></script>
+        <script type="text/javascript" src="sound.js"></script>
+        
+        <script type="text/javascript" src="game.js"></script>
+        <script type="text/javascript" src="game.events.js"></script>
+        <script type="text/javascript" src="game.draw.js"></script>
+        <script type="text/javascript" src="game.helpers.js"></script>
+        <script type="text/javascript" src="actors.js"></script>
+    </head>
+    
+    <body onload="initGame()">
+        <div id="gameOverlay">
+            <div id="gameInfo">
+                <div id="gameInfoRight"></div>
+                <div id="gameInfoLeft"></div>
+            </div>
+        </div>
+        
+        <div id="achievementOverlay">
+            <div id="achievement">
+            </div>
+        </div>
+        
+        <div id="tutorialOverlay">
+            <div id="tutorial">
+            </div>
+        </div>
+        
+        <div id="loginOverlay">
+            <div id="loginBox">
+                <input id="login" autocomplete="off" placeholder="Enter your Name..." type="text" value="" maxlength="15" spellcheck="false" /><input type="button" value="JOIN" onclick="Shooter.doLogin()"/><br/>
+                <div id="colors"></div><div id="watch"><a onclick="Shooter.onWatch()">Watch the demo!</a></div>
+                <div id="warning">
+                    WebSockets = More Fun<br/>
+                    Use Chrome 6, Firefox 4, Opera 10.70!
+                </div>
+            </div>
+            <div id="offlineBox">
+                <div id="serverStatus">SERVER OFFLINE</div>
+                <div class="offline" id="goplaying">
+                    <a onclick="Shooter.onPlay()">Stop watching, start playing!</a>
+                </div>
+                <div class="offline" id="watching">
+                    You are watching a recording.
+                </div>
+            </div>
+        </div>
+        
+        <a class="fork" href="http://github.com/BonsaiDen/NodeGame-Shooter">
+            <img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub" />
+        </a>
+        
+        <noscript>
+            Sorry, but this game is running fully in JavaScript.<br/>Would you please be so kind and turn it on?
+        </noscript>
+        
+        <canvas id="bg"></canvas>
+        
+        <div id="sub">
+            <div class="copyright">
+                Copyright (c) 2010 Ivo Wetzel | <a href="http://twitter.com/BonsaiDen">Twitter @BonsaiDen</a>
+            </div>
+            <div class="sound">
+                <a id="sound" onclick="Shooter.onSound()">DEACTIVATE SOUND</a> | 
+                <a id="tut" onclick="Shooter.onTutorial()">RE-ENABLE TUTORIAL</a>
+            </div>
+        </div>
+    </body>
+</html>
+
