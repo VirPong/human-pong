@@ -3,7 +3,7 @@
 //  PhoneGapClient
 //
 //  Created by Josef Lange on 9/29/11.
-//  Copyright __MyCompanyName__ 2011. All rights reserved.
+//  Copyright VirPong 2011. All rights reserved.
 //
 
 #import "AppDelegate.h"

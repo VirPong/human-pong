@@ -1,61 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-
+    <meta name="viewport" content="width=320; user-scalable=no" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>PhoneGap</title>
+	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	  <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="canvas.js"></script>
 
-        
-    <link rel="stylesheet" href="main.css" type="text/css" />
-	<!-- iPad/iPhone specific css below, add after your main css >
-	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
-	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
-	-->
-	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-
-	// If you want to prevent dragging, uncomment this section
-	/*
-	function preventBehavior(e) 
-	{ 
-      e.preventDefault(); 
-    };
-	document.addEventListener("touchmove", preventBehavior, false);
-	*/
-	
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
-	/*
-	function handleOpenURL(url)
-	{
-		// TODO: do something with the url passed in.
-	}
-	*/
-	
-	function onBodyLoad()
-	{		
-		document.addEventListener("deviceready",onDeviceReady,false);
-	}
-	
-	/* When this function is called, PhoneGap has been initialized and is ready to roll */
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
-	function onDeviceReady()
-	{
-		// do your thing!
-		navigator.notification.alert("Welcome to VirPong!")
-	}
-    
-    </script>
   </head>
-  <body onload="onBodyLoad()">
-  	  <h1>Hey, it's PhoneGap!</h1>
-	  <p>Don't know how to get started? Check out <em><a href="http://github.com/phonegap/phonegap-start">PhoneGap Start</a></em>  
-      <iframe src="http://cs340-serv/osmus/client/index.html"
-          </iframe>
+  <body onload="init();" id="stage" class="theme">
+    <h1>Welcome to VirPong!</h1>
+    <a href="PlayGame/gameIndex.html" class="btn large">Play a game!</a>
+    <a href="http://www.math.ups.edu/~jsawin/" class="btn large">Stalk Sawin!</a>
+	<a href="#" class="btn large">Phone a friend.</a>
+    <a href="http://www.youtube.com/watch?v=ViIDFZ1Kfa8/" class="btn large" onclick="beep();">Watch a game.</a>
+    <div id="viewport" class="viewport" style="display: none;">       
+      <img style="width:60px;height:60px" id="test_img" src=""> </img>
+    </div> 
+    <canvas id='canvasPong' onload='initCanvas();'>
+    	<p> Not working </p>
+    </canvas>
   </body>
 </html>

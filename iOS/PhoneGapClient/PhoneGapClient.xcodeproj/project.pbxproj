@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */; };
+		CB02A079143C0939007CD2F0 /* GapSocket.js in Sources */ = {isa = PBXBuildFile; fileRef = CB02A076143C0939007CD2F0 /* GapSocket.js */; };
+		CB02A07A143C0939007CD2F0 /* GapSocketCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A078143C0939007CD2F0 /* GapSocketCommand.m */; };
+		CB02A07E143C0A37007CD2F0 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A07D143C0A37007CD2F0 /* AsyncSocket.m */; };
 		CBCD227514352FBB00E74443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227414352FBB00E74443 /* Foundation.framework */; };
 		CBCD227714352FBB00E74443 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227614352FBB00E74443 /* UIKit.framework */; };
 		CBCD227914352FBB00E74443 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227814352FBB00E74443 /* CoreGraphics.framework */; };
@@ -37,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPBluetoothDataProcessor.h; path = Classes/VPBluetoothDataProcessor.h; sourceTree = "<group>"; };
+		CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPBluetoothDataProcessor.m; path = Classes/VPBluetoothDataProcessor.m; sourceTree = "<group>"; };
+		CB02A076143C0939007CD2F0 /* GapSocket.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = GapSocket.js; path = "../../../../phonegap-plugins/iPhone/GapSocket/GapSocket.js"; sourceTree = "<group>"; };
+		CB02A077143C0939007CD2F0 /* GapSocketCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GapSocketCommand.h; path = "../../../../phonegap-plugins/iPhone/GapSocket/GapSocketCommand.h"; sourceTree = "<group>"; };
+		CB02A078143C0939007CD2F0 /* GapSocketCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GapSocketCommand.m; path = "../../../../phonegap-plugins/iPhone/GapSocket/GapSocketCommand.m"; sourceTree = "<group>"; };
+		CB02A07C143C0A37007CD2F0 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = ../../../../Downloads/AsyncSocket.h; sourceTree = "<group>"; };
+		CB02A07D143C0A37007CD2F0 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = ../../../../Downloads/AsyncSocket.m; sourceTree = "<group>"; };
 		CBCD227014352FBB00E74443 /* PhoneGapClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneGapClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCD227414352FBB00E74443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBCD227614352FBB00E74443 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -156,6 +167,7 @@
 		CBCD228F14352FBB00E74443 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CB02A076143C0939007CD2F0 /* GapSocket.js */,
 				CBCD229014352FBB00E74443 /* PhoneGapClient-Info.plist */,
 				CBCD229114352FBB00E74443 /* InfoPlist.strings */,
 				CBCD229414352FBB00E74443 /* main.m */,
@@ -215,8 +227,14 @@
 		CBCD22B214352FBC00E74443 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CB02A077143C0939007CD2F0 /* GapSocketCommand.h */,
+				CB02A078143C0939007CD2F0 /* GapSocketCommand.m */,
 				CBCD22B314352FBC00E74443 /* AppDelegate.h */,
 				CBCD22B414352FBC00E74443 /* AppDelegate.m */,
+				CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */,
+				CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */,
+				CB02A07C143C0A37007CD2F0 /* AsyncSocket.h */,
+				CB02A07D143C0A37007CD2F0 /* AsyncSocket.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -319,6 +337,10 @@
 			files = (
 				CBCD229514352FBB00E74443 /* main.m in Sources */,
 				CBCD22B514352FBC00E74443 /* AppDelegate.m in Sources */,
+				CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */,
+				CB02A079143C0939007CD2F0 /* GapSocket.js in Sources */,
+				CB02A07A143C0939007CD2F0 /* GapSocketCommand.m in Sources */,
+				CB02A07E143C0A37007CD2F0 /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +479,7 @@
 				CBCD22BC14352FBC00E74443 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
