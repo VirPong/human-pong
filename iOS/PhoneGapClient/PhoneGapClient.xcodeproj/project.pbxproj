@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */; };
-		CB02A07A143C0939007CD2F0 /* GapSocketCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A078143C0939007CD2F0 /* GapSocketCommand.m */; };
+		CB73D684143D4ADA005B15EF /* GapSocketCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D683143D4ADA005B15EF /* GapSocketCommand.m */; };
+		CB73D687143D4AF6005B15EF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D686143D4AF6005B15EF /* AsyncSocket.m */; };
+		CB73D689143D4B21005B15EF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73D688143D4B21005B15EF /* CFNetwork.framework */; };
 		CBCD227514352FBB00E74443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227414352FBB00E74443 /* Foundation.framework */; };
 		CBCD227714352FBB00E74443 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227614352FBB00E74443 /* UIKit.framework */; };
 		CBCD227914352FBB00E74443 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD227814352FBB00E74443 /* CoreGraphics.framework */; };
@@ -41,8 +43,11 @@
 /* Begin PBXFileReference section */
 		CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPBluetoothDataProcessor.h; path = Classes/VPBluetoothDataProcessor.h; sourceTree = "<group>"; };
 		CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPBluetoothDataProcessor.m; path = Classes/VPBluetoothDataProcessor.m; sourceTree = "<group>"; };
-		CB02A077143C0939007CD2F0 /* GapSocketCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GapSocketCommand.h; path = "../../../../phonegap-plugins/iPhone/GapSocket/GapSocketCommand.h"; sourceTree = "<group>"; };
-		CB02A078143C0939007CD2F0 /* GapSocketCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GapSocketCommand.m; path = "../../../../phonegap-plugins/iPhone/GapSocket/GapSocketCommand.m"; sourceTree = "<group>"; };
+		CB73D682143D4ADA005B15EF /* GapSocketCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GapSocketCommand.h; path = Classes/GapSocketCommand.h; sourceTree = "<group>"; };
+		CB73D683143D4ADA005B15EF /* GapSocketCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GapSocketCommand.m; path = Classes/GapSocketCommand.m; sourceTree = "<group>"; };
+		CB73D685143D4AF6005B15EF /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		CB73D686143D4AF6005B15EF /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		CB73D688143D4B21005B15EF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CBCD227014352FBB00E74443 /* PhoneGapClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneGapClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCD227414352FBB00E74443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBCD227614352FBB00E74443 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB73D689143D4B21005B15EF /* CFNetwork.framework in Frameworks */,
 				CBCD227514352FBB00E74443 /* Foundation.framework in Frameworks */,
 				CBCD227714352FBB00E74443 /* UIKit.framework in Frameworks */,
 				CBCD227914352FBB00E74443 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +136,7 @@
 		CBCD227314352FBB00E74443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB73D688143D4B21005B15EF /* CFNetwork.framework */,
 				CBCD227414352FBB00E74443 /* Foundation.framework */,
 				CBCD227614352FBB00E74443 /* UIKit.framework */,
 				CBCD227814352FBB00E74443 /* CoreGraphics.framework */,
@@ -221,8 +228,10 @@
 		CBCD22B214352FBC00E74443 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CB02A077143C0939007CD2F0 /* GapSocketCommand.h */,
-				CB02A078143C0939007CD2F0 /* GapSocketCommand.m */,
+				CB73D685143D4AF6005B15EF /* AsyncSocket.h */,
+				CB73D686143D4AF6005B15EF /* AsyncSocket.m */,
+				CB73D682143D4ADA005B15EF /* GapSocketCommand.h */,
+				CB73D683143D4ADA005B15EF /* GapSocketCommand.m */,
 				CBCD22B314352FBC00E74443 /* AppDelegate.h */,
 				CBCD22B414352FBC00E74443 /* AppDelegate.m */,
 				CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */,
@@ -330,7 +339,8 @@
 				CBCD229514352FBB00E74443 /* main.m in Sources */,
 				CBCD22B514352FBC00E74443 /* AppDelegate.m in Sources */,
 				CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */,
-				CB02A07A143C0939007CD2F0 /* GapSocketCommand.m in Sources */,
+				CB73D684143D4ADA005B15EF /* GapSocketCommand.m in Sources */,
+				CB73D687143D4AF6005B15EF /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
