@@ -2008,7 +2008,7 @@
 		</dict>
 		<string>IDEWorkspaceTabController_6EBE57B9-240D-484B-A694-126E256BDA32</string>
 		<string>IDEWorkspaceWindowControllerUniqueIdentifier</string>
-		<string>{{19, 8}, {1400, 870}}</string>
+		<string>{{65, -13}, {1400, 870}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4177,10 +4177,10 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>339561367.33775699</real>
-		<string>{0, 253}</string>
-		<string>{252, 0}</string>
-		<string>promptLogin</string>
+		<real>339561806.433864</real>
+		<string>{0, 467}</string>
+		<string>{467, 0}</string>
+		<string>connectToGame</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
@@ -6844,9 +6844,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339561362.31650198</real>
-		<string>{0, 646}</string>
-		<string>{606, 0}</string>
+		<real>339561786.562778</real>
+		<string>{0, 753}</string>
+		<string>{712, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7269,9 +7269,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339561367.33283103</real>
-		<string>{0, 253}</string>
-		<string>{252, 0}</string>
+		<real>339561806.43060601</real>
+		<string>{0, 467}</string>
+		<string>{467, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8276,7 +8276,7 @@
 				<integer>652</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>339561344.02142799</real>
+			<real>339561795.79068601</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -8287,7 +8287,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 7:35 PM</string>
+		<string>Today at 7:43 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
