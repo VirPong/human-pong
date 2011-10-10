@@ -1,0 +1,86 @@
+﻿
+body {
+	background-color: #DDDDDD;
+	color: #333333;
+	font-family: Calibri, Candara, Trebuchet MS, sans serif;
+}
+
+a {
+	color: #999999;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #999999;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-weight: bold;
+	color: #800000;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #DDDDDD;
+}
+
+.errormsg {
+	font-size: 0.75em;
+	color: #FF0000;
+}
+
+#logo {
+	
+}
+
+#nav {
+	background-color: #FFFFFF;
+	color: #999999;
+	width: 545px;
+	margin: 0 auto;
+	position: relative;
+	left: 40px;
+	text-align: center;
+	font-size: 1.125em;
+	line-height: 2.25em;
+}
+#nav a {
+	color: #800000;
+}
+#nav a:hover {
+	color: #999999;	
+}
+
+#content {
+	background-color: #FFFFFF;
+	color: #333333;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: 25px;
+	text-align: justify;
+}
+
+#footer {
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: 25px;
+	text-align: center;
+	font-size: 0.75em;
+	color: #0B1C61;
+}
+
+#gameplay_menu, #watch_menu, #events_menu, #records_menu, #chat_menu, #account_menu {
+	background-color: #FFFFFF;
+	z-index: 0;
+}

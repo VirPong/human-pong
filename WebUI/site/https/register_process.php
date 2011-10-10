@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 	
 	<head>
-	
+		<link href="css/classic.css" rel="stylesheet" type="text/css" />
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		
 		<title>virPONG</title>
@@ -38,8 +38,8 @@
 			mysql_select_db('db2', $conn)
 				or die ("could not open connection" . mysql_error());
 
-			$myQuery = "INSERT INTO Customer (username, firstname, lastname, email)";
-			$myQuery .= " VALUES ('" . $_POST["username"] . "', '" . $_POST["firstname"] . "', '" . $_POST["lastname"] . "', '" . $_POST["email"] . "')";
+			$myQuery = "INSERT INTO Customer (username, firstname, lastname, email, birthday, gender)";
+			$myQuery .= " VALUES ('" . $_POST["username"] . "', '" . $_POST["firstname"] . "', '" . $_POST["lastname"] . "', '" . $_POST["email"] . "', '" . $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"] . "', '" . $_POST["gender"] . "')";
 //also birthday and gender...
 
 			mysql_query($myQuery, $conn)

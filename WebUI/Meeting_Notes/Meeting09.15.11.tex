@@ -1,0 +1,47 @@
+
+%The simple beginnings of a latex meeting document
+
+\documentstyle{article}
+
+\begin{document}
+
+\title{Web UI Team}
+\author{Kyle M, Katie M, Garrett D, Aryn G.}
+\date{\today}
+\maketitle
+
+
+\section{Review of Goals}
+	\subsection{Authentication}
+	Rough version of the sign-in function with connection to a database.
+	\subsection{HTML5}
+	Research and have figured out a first
+	approach to attempting the video streaming using HTML5.
+
+\section{Accomplishments}
+	\subsection{User Authentication}
+	Kyle and Katie discussed login features. Kyle produced Apache controlled authentication using .htaccess file with appropriate directory sections in the VirtualHost configuration file in "/etc/apache2/sites-available". Requires the running of the "htpasswd" command on the server to make the file, add users and groups. Look and feel dependent on clients browser, not normally used for this situation, ugly.\\Login using a HTML login form with a PHP backend linked to a MySQL database got as far as making the form, but no PHP or MySQL. No checks in the HTML login form to prevent SQL injection.
+	\subsection{Design}
+	Katie produced a prototype in Photoshop of the website design. It has a great Vir-Pong Logo. We met with the customer and received initial approval. It is now up for internal critique. Adjustments will be made afterwards. Customer suggested Maroon and white as possible alternative color scheme.
+	\subsection{HTML5}
+	Garrett and Aryn have currently produced two animations. One has a white playing court with two paddles (purple and teal). The user can move the right paddle up and down. The left one works on Garrett's machine but not Aryn's. The second animation is of a red ball bouncing off the sides and moving around in a screen (there is currently gravity, but we feel that we should be able to remove it)
+
+\section{New Goals}
+	\subsection{Authentication}
+	Kyle and Katie are going to redo the sign-in function with PHP and a MySQL database. They will then add more security  by making it HTTPS secure as well as encrypting the passwords to add another layer of security. They will also build a new member form to allow new users to register for the site. The form will also be validated. This will ensure against empty forms or wrong data being entered into the form. This is also another layer of security to prevent SQL injection attacks.
+	\subsection{HTML5}
+	Garrett and Aryn are going to continue working on the animations. The first goal will be to combine the two animations (get a ball to appear in the game animation) Then control the paddle and ball movements from an outside source. So hopefully, we will be able to have a game of ping-pong being played.
+	\subsection{Design}
+	Look further into general website design.\\Research popular opinion on dropdown menus as used in website navigation
+	
+\section{Long Term Goals}
+	-Need to create a PHP header (something that will be consistent on every PHP page).\\
+	-Design the page's CSS.\\
+	-Create a scoring system for the animation.\\
+	-Fancy Pong game in background of game.\\
+	-Privacy Policy.\\
+	-Pretty W3C HTML/CSS validation icons.\\
+
+
+
+\end{document}
