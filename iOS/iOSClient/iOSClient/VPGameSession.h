@@ -7,19 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AsyncSocket.h"
 #import "VPPlayerPaddle.h"
+#import "SocketIO.h"
 
-@interface VPGameSession : NSObject {
-    
-    AsyncSocket *serverSocket;           // The AsyncSocket that will be establishing our socket connection.
-    
+@interface VPGameSession : NSObject<SocketIODelegate> {
+        
     VPPlayerPaddle *playerOne;              // Our players.
     VPPlayerPaddle *playerTwo;      
     
+    SocketIO *socketClient;          // Socket connection.
+    
+    NSString *gameLog;
+    
 }
 
--(BOOL)startGameSessionAtAddress:(NSString *)serverAddress
-                          onPort:(UInt16)thePort;
+
+-(void)startGameSessionAtAddress:(NSString *)address onPort:(int)port; 
+
+- (void) socketIODidConnect:(SocketIO *)socket;
+- (void) socketIODidDisconnect:(SocketIO *)socket;
+- (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet;
+- (void) socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet;
+- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet;
+- (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet;
 
 @end

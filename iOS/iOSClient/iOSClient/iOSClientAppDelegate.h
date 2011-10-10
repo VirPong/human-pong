@@ -23,12 +23,14 @@
                                                                 // is for registering an account.
     IBOutlet UIWebView *registerAccountWebView;                 // WebView for the account registration.
     
+    IBOutlet UITextView *socketCommunicationLog;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 -(IBAction)pushPlayGameViewController:(id)sender; // Switches the Navigation View to the Game View.
 -(IBAction)pushRegisterAccountViewController:(id)sender; // Switches the Navigation View to the Registration View.
-
+-(void)appendToSocketLog:(NSString *)string;
 
 @end

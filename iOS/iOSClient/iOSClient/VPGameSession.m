@@ -7,6 +7,7 @@
 //
 
 #import "VPGameSession.h"
+#import "iOSClientAppDelegate.h"
 
 @implementation VPGameSession
 
@@ -17,23 +18,60 @@
         
         playerOne = [[VPPlayerPaddle alloc] init];
         playerTwo = [[VPPlayerPaddle alloc] init];
-              
-        serverSocket = [[AsyncSocket alloc] initWithDelegate:self];
-                                 
+        
+        [playerOne setPlayerName:@"JOSEF"];
+                                               
         }
     return self;
 }
 
--(BOOL) startGameSessionAtAddress:(NSString *)serverAddress
-                           onPort:(UInt16)thePort
-{
+-(void)startGameSessionAtAddress:(NSString *)address onPort:(int)port {
     
-    if([serverSocket connectToHost:serverAddress onPort:thePort error:nil]) { 
-        return TRUE;
-    } else {
-        return FALSE;
-    }
+    socketClient = [[SocketIO alloc] initWithDelegate:self];
+    
+    [socketClient connectToHost:address onPort:port];
         
+    [socketClient sendMessage:@"findAGameForMe"];
+    [socketClient sendMessage:[NSString stringWithFormat: @"My name is %@", [playerOne getPlayerName]]];
+    
+    
+}
+
+-(void)socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet {
+    
+    iOSClientAppDelegate *myDelegate = (iOSClientAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [myDelegate appendToSocketLog:packet.data];
+    
+    NSLog(@"EVENT RECEIVED: %@", packet.data);
+    
+}
+
+-(void)socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet {
+    
+    NSLog(@"MESSAGE RECEIVED: %@", packet.data);
+    
+}
+
+
+- (void) socketIODidConnect:(SocketIO *)socket {
+    
+    NSLog(@"Connection Successful!");
+    
+    
+}
+- (void) socketIODidDisconnect:(SocketIO *)socket {
+    
+    NSLog(@"DISCONNECTINGGGG");
+    
+}
+- (void) socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet {
+    
+    
+}
+- (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet {
+    
+    NSLog(@"Sent something!");
     
 }
 

@@ -20,6 +20,8 @@
     
     [versionString setText: versionText];
     
+    [socketCommunicationLog setText:nil];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -72,11 +74,9 @@
 - (IBAction)pushPlayGameViewController:(id)sender {
     
     theGame = [[VPGameSession alloc] init];         // Instantiate the Game Session.
-    if([theGame startGameSessionAtAddress:@"10.150.1.204" onPort:3000])
-    {
-        NSLog(@"SOCKET STARTED CONNECTING!");
-    }
-
+    
+    [theGame startGameSessionAtAddress:@"10.150.1.204" onPort:3000];
+    
     [navigationController pushViewController:playGameViewController animated:YES]; // Switch to Game View.
     
 }
@@ -90,6 +90,13 @@
     [registerAccountWebView loadRequest:registerRequest];
  
     [navigationController pushViewController:registerAccountViewController animated:YES]; // Switch to Registration View.
+    
+}
+
+-(void)appendToSocketLog:(NSString *)string {
+    
+    NSString *concat = [[socketCommunicationLog text] stringByAppendingString:string];
+    [socketCommunicationLog setText:concat];
     
 }
 
