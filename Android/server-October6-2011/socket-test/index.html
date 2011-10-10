@@ -1,0 +1,17 @@
+<HTML>
+<head>
+<script src="node_modules/socket.io/socket.io.js"></script>
+</head>
+<body>
+<script>
+  var socket = io.connect('http://cs340-serv:8000');
+  socket.on('news', function (data) {
+    console.log(data);
+    console.log('NEWS!');
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+
+Get your pain on.
+</body>
+</HTML>

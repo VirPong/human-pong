@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MOSMOS</title>
+
+    <script src="lib/socket.io.js"></script>
+    <script src="lib/Three.js"></script>
+    <script src="lib/ThreeExtras.js"></script>
+    <script src="lib/ThreeShadows.js"></script>
+    <script src="sound.js"></script>
+    <script src="client.js"></script>
+    <script src="render.three.js"></script>
+    <script src="input.js"></script>
+    <script src="../common/game.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Orbitron:900|Abel">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <div id="outer">
+      <div id="logo">mosmos</div>
+      <div id="container" width="640" height="480"></div>
+
+      <div id="hud" class="clearfix">
+        <button id="join">Join</button>
+
+        <div id="info">
+          <div>
+            <span id="player-count">0</span> players.
+          </div>
+          <div>
+            <span id="observer-count">0</span> observers.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
