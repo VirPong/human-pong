@@ -1,0 +1,57 @@
+
+%The simple beginnings of a latex meeting document
+
+\documentstyle{article}
+
+\begin{document}
+
+\title{Web UI Team}
+\author{Kyle M, Katie M, Garrett D, Aryn G.}
+\date{October 6, 2011}
+\maketitle
+
+
+\section{Review of Goals}
+	\subsection{Authentication}
+	Get SQL injection prevention in place and working.\\Encypt MySQL username/password database.\\Fix the duplicate username issue. 
+	\subsection{Account Settings}
+	Create an edit user settings page and be able to edit the MySQL database through it, keeping SQL injection prevention in mind.
+	\subsection{Play}
+	Work with the Osmus project to try and learn how to implement our own jWebSockets and server-side javascript.
+	\subsection{Design}
+	Look into eventually implementing the basic mock-up design, Learn CSS for that.
+
+\section{Accomplishments}
+	\subsection{User Authentication}
+		\subsubsection{MySQL}
+		A javascript version of SQL verification is in place, but that can be easily worked around be turning off javascript... Works for our purposes for the time being.
+		\subsubsection{Account}
+                      A new page for debugging purposes was made that prints out all the content in the database.\\User can now go to a user account settings page to edit there current information such as password, name, email, etc. 
+	\subsection{Play}
+	The Osmus project has been striped to bare-bones and being rebuilt as our own creation. User can visit web page and server and client can communicate through the Socket.
+	\subsection{Design}
+	We now have some CSS! Basic colors are in place. PHP style dropdown menus are in place and working for the most part.
+	\subsection{content}
+	More pages: Code of Conduct and Use of Terms.
+
+\section{New Goals}
+	\subsection{Play}
+		Integrate original demo pong with the moving paddles into the current node and socket demo.
+	\subsection{Style}
+		Work more on the CSS for the site.\\More dropdown menu work.
+	\subsection{MySQL}
+		continue work on user account settings page.\\Figure out the duplicate username issue.
+	
+\section{Medium Term Goals}
+	-Chat/Forum abilities.\\
+	-Transition for clientside javescript SQL protection to serverside PHP, or Perl, etc. protection.
+\section{Long Term Goals}
+	-Need to create a PHP header (something that will be consistent on every PHP page).\\
+	-Pure CSS menu system if that many menus are needed.\\
+	-Create a scoring system for the animation.\\
+	-Fancy Pong game in background of game.\\
+	-Pretty W3C HTML/CSS validation icons.\\
+
+
+
+\end{document}

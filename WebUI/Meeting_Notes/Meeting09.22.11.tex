@@ -1,0 +1,48 @@
+
+%The simple beginnings of a latex meeting document
+
+\documentstyle{article}
+
+\begin{document}
+
+\title{Web UI Team}
+\author{Kyle M, Katie M, Garrett D, Aryn G.}
+\date{\today}
+\maketitle
+
+
+\section{Review of Goals}
+	\subsection{Authentication}
+	Kyle and Katie are going to redo the sign-in function with PHP and a MySQL database. They will then add more security  by making it HTTPS secure as well as encrypting the passwords to add another layer of security. They will also build a new member form to allow new users to register for the site. The form will also be validated. This will ensure against empty forms or wrong data being entered into the form. This is also another layer of security to prevent SQL injection attacks.
+	\subsection{HTML5}
+	Garrett and Aryn are going to continue working on the animations. The first goal will be to combine the two animations (get a ball to appear in the game animation) Then control the paddle and ball movements from an outside source. So hopefully, we will be able to have a game of ping-pong being played. 
+
+\section{Accomplishments}
+	\subsection{User Authentication}
+	Kyle and Katie have produced a PHP and JavaScript scripts for the sign-in function. They are not fully functional since they are waiting on a database. The SQL database was downloaded on Thursday, September 22. They have been successful implementing HTTPS.
+	\subsection{Design}
+	 Kyle has researched drop down menus.\\Katie has continued to research web designs.
+	\subsection{HTML5}
+	Garrett and Aryn have made the animation work off x, y coordinates. Garrett has done a lot of in-depth research on server push methods. They created an pros and cons list to five different approaches to handle the information being sent from the server. The five approaches are: web sockets, ruby on rails, connect to the terrastore database directly, reverse ajax, HTML5 server sent events. After discussing with the client we are going to attempt web sockets with a java applet to handle translating the information for the browsers.
+	\subsection{General}
+	As a group we have discussed the structure of the database and what tables are needed. We have also started laying out how information should be stored on the site. Currently we have the following pages: logged-in player history, tournament, privacy policy, about the company page (about us), watch live, rules, system requirements, chat, give us feedback, account settings, records, news/special events. 
+
+\section{New Goals}
+	\subsection{Authentication}
+	Kyle and Katie are going to figure out connection to the database. They want to move their scripts to the database to allow testing. They are going to focus on learning PHP. Katie will continue to work on mock-ups of the site as well.
+	\subsection{Play}
+	Garrett and Aryn are going to research jWebSockets. We would like to emulate some demos. Also we will develop a plan on how to integrate jwebsockets in with our animation.
+	\subsection{Design}
+	Look further into general website design.\\Research popular opinion on dropdown menus as used in website navigation
+	
+\section{Long Term Goals}
+	-Need to create a PHP header (something that will be consistent on every PHP page).\\
+	-Design the page's CSS.\\
+	-Create a scoring system for the animation.\\
+	-Fancy Pong game in background of game.\\
+	-Privacy Policy.\\
+	-Pretty W3C HTML/CSS validation icons.\\
+
+
+
+\end{document}
