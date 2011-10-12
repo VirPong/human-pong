@@ -1,4 +1,6 @@
 ﻿
+/** the following deals with the style of general elements */
+
 body {
 	background-color: #7788CC;
 	color: #333333;
@@ -37,6 +39,9 @@ h3 {
 	font-size: 0.75em;
 	color: #FF0000;
 }
+
+
+/** the following deals with the style of specific elements, including positioning */
 
 #logo {
 	width: 864px;
@@ -79,7 +84,7 @@ h3 {
 }
 
 #content-inner {
-	padding: 0.00125em 1em;
+	padding: 0.125em 1em;
 }
 
 #footer {

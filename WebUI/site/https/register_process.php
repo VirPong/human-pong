@@ -10,43 +10,38 @@
 		
 		<title>virPONG</title>
 
-<!--do i need this line?-->
-		<script src="register.js" type="text/javascript"></script>
-
 	</head>
 
 	<body>
 	
  	       <?php
-	
+
+			// connect to the server and open db1
 	          	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
 					or die ("connection failed." . mysql_error());
 			mysql_select_db('db1', $conn)
 				or die ("could not open connection" . mysql_error());
 
+			// insert the login information into the Customer table
 			$myQuery = "INSERT INTO Customer (username, password)";
 			$myQuery .= " VALUES ('" . $_POST["username"] . "', '" . $_POST["password"] . "')";
-			
 			mysql_query($myQuery, $conn)
 				or die("This username is already taken. Please <a href=register_form.php>register</a> with a new username.");
 
-			mysql_close($conn);
-
-
-	          	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
-					or die ("connection failed." . mysql_error());
+			// open db2
 			mysql_select_db('db2', $conn)
 				or die ("could not open connection" . mysql_error());
 
+			// insert the account information into the Customer table
 			$myQuery = "INSERT INTO Customer (username, firstname, lastname, email, birthday, gender)";
 			$myQuery .= " VALUES ('" . $_POST["username"] . "', '" . $_POST["firstname"] . "', '" . $_POST["lastname"] . "', '" . $_POST["email"] . "', '" . $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"] . "', '" . $_POST["gender"] . "')";
-//also birthday and gender...
-
 			mysql_query($myQuery, $conn)
 				or die("This username is already taken. Please <a href=register_form.php>register</a> with a new username.");
 
+			// close the connection
 			mysql_close($conn);
 
+			// print a success message
 			echo 'Thank you for registering!<br /><a href=login_form.php>Log in</a>';
 
         	?>

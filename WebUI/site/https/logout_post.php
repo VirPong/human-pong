@@ -16,6 +16,7 @@
 	<body>
 
 		<?php
+			// destory the session and redirect the user to the login form
 			session_destroy();
 			header('Location:login_form.php');
 		?>

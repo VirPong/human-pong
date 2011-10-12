@@ -1,8 +1,5 @@
 
-/**
- * Validate the form input.
- */
-function validate() {
+function validate(){
 
 
 	// check that cookies are enabled
@@ -13,7 +10,7 @@ function validate() {
 
 
 	// give the form a shorter alias name
-	var theForm = document.newuser;
+	var theForm = document.accountsettings;
 
 
 	// ensure that all fields have been completed
@@ -22,6 +19,17 @@ function validate() {
         		alert("All fields must be complete.");
         		return false;
         	}
+	}
+
+
+	// check for valid new password
+	if (theForm.newpassword.value.length > 50) {
+	    alert("New password must be fewer than 50 characters.");
+	    return false;
+	}
+	if (theForm.newpassword.value != theForm.newpassword1.value) {
+            alert("Please re-confirm your new password.");
+            return false;
 	}
 
 
@@ -38,30 +46,6 @@ function validate() {
 	}
 	if (theForm.lastname.value.length > 50) {
 	    alert("Last name must be fewer than 50 characters.");
-	    return false;
-	}
-
-
-	// check for valid username
-	var usernameRegEx = /[^a-zA-Z0-9\_]/;
-	if (usernameRegEx.test(theForm.username.value)) {
-            alert("Your username can only contain letters, numbers, and underscores.");
-            return false;
-	}
-	if (theForm.username.value.length > 50) {
-	    alert("Your username must be fewer than 50 characters.");
-	    return false;
-	}
-
-
-	// check for valid password
-	var passwordRegEx = /[^a-zA-Z0-9\_]/;
-	if (passwordRegEx.test(theForm.password.value)) {
-            alert("Your password can only contain letters, numbers, and underscores.");
-            return false;
-	}
-	if (theForm.password.value.length > 50) {
-	    alert("Password must be fewer than 50 characters.");
 	    return false;
 	}
 
