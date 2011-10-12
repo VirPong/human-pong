@@ -28,7 +28,6 @@
 			First name <input type="text" size="30" name="firstname" /><br />
 			Last name <input type="text" size="50" name="lastname" /><br />
 			E-mail address <input type="text" size="50" name="email" /><br />
-<!--also: birthday-->
 			Birthday <select name="month">
 				<option value="01">Jan</option>
 				<option value="02">Feb</option>
