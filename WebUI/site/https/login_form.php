@@ -22,6 +22,7 @@
 	<body>
 
 		<?php
+			// if the user is logged in, tell them so and display the log out button
 			if (isset($_SESSION['username']))
 			{
 				echo 'You are currently logged in as ' . $_SESSION['username'] . '<br />';
@@ -29,12 +30,14 @@
 				echo '<input type="submit" name="submitButton" value="Log out" />';
 				echo '</form>';
 			}
+
+			// if the user is not logged in, display the log in form and a registration link
 			else
 			{
 				echo '<form name="login" id="login" method="post" action="login_post.php">';
 				echo 'Username: <input type="text" name="username" /><br />';
 				echo 'Password: <input type="password" name="password" /><br />';
-				echo '<input type="submit" name="submitButton" value="Log in" onclick="return validLogin();" />';
+				echo '<input type="submit" name="submitButton" value="Log in" onclick="return validate();" />';
 				echo '</form>';
 				echo 'Not a member? <a href=register_form.php>Register</a> now!';
 			}
