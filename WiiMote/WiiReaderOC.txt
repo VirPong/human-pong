@@ -1,0 +1,119 @@
+This is my first attempt to translate my acceleration-to-position code into Objective-C.
+Stuff here has not yet been tested; presumably it eventually will be two files instead 
+of one, as well.
+
+Please note! I haven't found a way to reset the value of an NSDate object so I just make 
+a new one (assigned to the same field) each time; this is probably really bad practice
+because Objective-C has no garbage collector, but I'm not sure how to clear this space
+when it's a field...
+
+
+///WiiReader.h///
+
+#import <Foundation/NSObject.h>
+
+@interface WiiReader: NSObject {
+	float pos;
+	float vel;
+	NSDate *prevTime;
+	char mode; 
+	int converter;
+}
+
+-(WiiReader*) initWithAxis: (char) in andConverter: (int) conv;
+-(int) getAxisPosition
+: (int) accel;
+-(int) getSmartPositionX: (int) xAccel Y: (int) yAccel Z: (int) zAccel;
+-(void) calibrate;
+-(void) setAxis: (char) in;
+-(char) getAxisMode;
+@end
+
+
+///WiiReader.m///
+
+#import "WiiReader.h"
+
+@implementation WiiReader
+-(id) init {
+	self = [super init];
+	if ( self ) {
+		[self calibrate];
+		mode = 'y'; // default axis
+		converter = 1;
+	}
+	return self;
+}
+
+-(WiiReader*) initWithAxis: (char) in andConv: (int) conv{
+	self = [super init];
+	if ( self ) {
+		[self calibrate];
+		mode = in;
+		converter = conv;
+	}
+	return self;
+}
+
+-(int) getAxisPosition: (int) accel {
+	// get change in time
+	NSTimeInterval elapsedTime = [prevTime timeIntervalSinceNow] * -1;
+	*prevTime = [NSDate date];
+	// compensate for sign flip in x mode and/or gravity
+	// in z mode
+	if ( mode == 'x' ) {
+		accel = -accel;
+	}
+	if ( mode == 'z' ) {
+		accel = accel + 10;
+	}
+	// calculate new velocity/position
+	float newVel = (elapsedTime * (float)accel) + vel;
+	pos = elapsedTime * (newVel + vel) / 2 + pos;
+	vel = newVel;
+	int finalPos = (int)(pos * converter);
+	return finalPos;
+}
+
+-(int) getSmartPositionX: (int) xAccel Y: (int) yAccel Z: (int) zAccel {
+	// get change in time
+	NSTimeInterval elapsedTime = [prevTime timeIntervalSinceNow] * -1;
+	*prevTime = [NSDate date];
+	// compensate for sign flip in x and/or gravity in z
+	xAccel = -xAccel;
+	zAccel = zAccel + 10;
+	// find max
+	int maxAccel = xAccel;
+	if ( yAccel > maxAccel ) {
+		maxAccel = yAccel;
+	}
+	if ( zAccel > maxAccel ) {
+		maxAccel = zAccel;
+	}
+	// calculate new velocity/position
+	float newVel = (elapsedTime * (float)maxAccel) + vel;
+	pos = elapsedTime * (newVel + vel) / 2 + pos;
+	vel = newVel;
+	int finalPos = (int)(pos * converter);
+	return finalPos;
+}
+
+-(void) calibrate {
+	*prevTime = [NSDate date];
+	pos = 0;
+	vel = 0;
+}
+
+-(void) setAxis: (char) in {
+	if (in == 'x' || in == 'y' || in == 'z' || in == 's') {
+		mode = in;
+	}
+	else {
+		mode = 'y'; // default to y axis if char is incorrect
+	}
+}
+
+-(char) getAxisMode {
+	return mode;
+}
+@end
