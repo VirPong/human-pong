@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>how to make a web site : demo site</title>
+	<link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="page">
+		<div id="site_title">
+			<span>Making a Web Site from Start to Finish</span>
+		</div>
+		<div id="primary_content">
+			<div id="menu">
+				<ul>
+					<li><span class="color01">01</span> <a href="#">DESIGN</a></li>
+					<li><span class="color02">02</span> <a href="#">PREPARATION</a></li>
+					<li><span class="color03">03</span> <a href="#">DEVELOPMENT</a></li>
+					<li><span class="color04">04</span> <a href="#">DEPLOYMENT</a></li>
+				</ul>
+			</div>
+			<div id="page_content">
+				<h1>Design</h1>
+				<p>We're not going to get into how to design a web site, technically or artistically.  (<a href="http://lifehacker.com/#!5753625/basics-of-photoshop-designing-a-website">We've sort of done that already</a>.)  You should have your site design figured out already, but there are a few things we do need to talk about before you start figuring out how to translate it into code.</p>
+
+				<p>First, the most important thing to know is that your font choices are sort of restricted online.  While you can use the <a href="http://www.font-face.com/">@font-face</a> rule in CSS to externally load fonts, this isn't supported by older browsers.  You also may need rights to use certain typefaces with this tag.  That said, you <em>can</em> use @font-face to solve the problem of limited font choices on the web, but if you're not ready to jump into that world quite yet you should either use a web fonts service like <a href="http://www.webtype.com/">WebType</a> (which can be free depending on your use) or limit yourself to web-safe fonts.  Which fonts are web-safe?  Times New Roman and Arial are the most common options, but most operating systems come with several other built-in fonts that are considered web-safe.  These include fonts like Tahoma, Verdana, Lucida Grande, Gill Sans, Trebuchet MS, Courier New, and Georgia.  Do a search for web-safe fonts if you're looking for additional options.</p>
+
+				<p>Second, you need to consider what is going to be an image and what isn't.  Nowadays you don't really need to use images for much more than complex graphics and photos as HTML and CSS can handle many of the complex things that we used to do with images.  Menus, for example, can be created very easily in CSS with an unordered list.  Generally you do not need text to be rendered as an image, but there may be some circumstances where you will need to do that (e.g. if the text is combined with a graphic).</p>
+
+				<p>Finally, you need to consider which images are going to be displayed as actual images or as backgrounds for one of your DIVs.  How do you determine this?  If you have text that's going to go on top of an image (e.g. with a menu), then you have your answer: your image will be a background.  The reason this is important to know is because you need to export it unadorned with any text, images, or anything you're going to add later in the code.  Once you've got that figured out, head on to the next step ("Preparation") where we discuss preparing your layout for coding and exporting any necessary images.</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

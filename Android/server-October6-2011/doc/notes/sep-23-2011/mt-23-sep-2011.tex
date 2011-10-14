@@ -1,0 +1,101 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+% \geometry{margins=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+%\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%%% PACKAGES
+%\usepackage{booktabs} % for much better looking tables
+%\usepackage{array} % for better arrays (eg matrices) in maths
+%\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+%\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+%% These packages are all incorporated in the memoir class to one degree or another...
+%
+%%%% HEADERS & FOOTERS
+%\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+%\pagestyle{fancy} % options: empty , plain , fancy
+%\renewcommand{\headrulewidth}{0pt} % customise the layout...
+%\lhead{}\chead{}\rhead{}
+%\lfoot{}\cfoot{\thepage}\rfoot{}
+%
+%%%% SECTION TITLE APPEARANCE
+%\usepackage{sectsty}
+%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+%% (This matches ConTeXt defaults)
+%
+%%%% ToC (table of contents) APPEARANCE
+%\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+%\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+%\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+%\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+%
+%%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Meeting Notes}
+\author{Server Group}
+\date{23 Sep 2011} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Members Attended}
+
+\begin{itemize}
+	\item Shelby Lee
+	\item Ryan Wheeler
+	\item Patrick Green
+	\item Daniel Guilak (M)
+\end{itemize}
+
+\section{Review of Goals}
+
+\begin{itemize}
+	\item Get everyone working on source control (all members comfortable).
+       \item Install database on server: be able to write and read from database, getting server running; finalize components for server (users/password/real-time streaming/data store): determine all the jobs of the server; update wiki whenever we find anything out.
+       \item Patrick and Ryan: server end: open a port and be able to send data back and forth from a phone.
+       \item Shelby: figure out Terrastore database implementation, downloading, and functions (if need help, contact other members).
+       \item Ryan: look further into setting up servers with Java.
+\end{itemize}
+
+\section{What has been accomplished}
+
+\begin{itemize}
+	\item All members are working with github accounts now.
+       \item Server protocol has been decided on (WebSockets), and two different implementations of WebSocket-enabled servers are currently functioning (node.js/express; jWebSocket).
+       \item The OrientDB database is up and running, albeit a little finnicky.
+       \item HTML5/JavaScript/WebSocket open-source pong game is up and running on the server.
+\end{itemize}
+
+\section{New Goals}
+
+\begin{itemize}
+	\item Test jWebSocket server install and determine if we're going to use that or node.js for the server (much more example code and support with node.js)
+       \item Get a phone client running to see if WebSocket protocol will be feasible (it should be).
+       \item Access database from whichever server environment we decide upon.
+       \item Start writing basic method definitions/class layouts for the server code.
+\end{itemize}
+
+\end{document}

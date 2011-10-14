@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OSMUS: Multiplayer Osmos Tech Demo</title>
+
+    <script src="lib/socket.io.js"></script>
+    <script src="render.js"></script>
+    <script src="input.js"></script>
+    <script src="sound.js"></script>
+    <script src="client.js"></script>
+    <script src="lib/smoke.min.js"></script>
+    <script src="../common/game.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Orbitron:900|Abel">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="lib/smoke.css">
+    <link href='http://fonts.googleapis.com/css?family=Bowlby+One+SC' rel='stylesheet' type='text/css'>
+
+    <!-- Load Google Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17930798-26']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+     </script>
+
+  </head>
+  <body>
+
+    <div id="outer">
+      <div id="logo">o&sdot;s&sdot;m&sdot;u&sdot;s</div>
+      <canvas id="canvas" width="640" height="480"></canvas>
+      <audio id="audio"></audio>
+
+      <div id="hud">
+        <div id="buttons">
+          <button id="join">Join</button>
+          <button id="music">Music</button>
+        </div>
+
+        <div id="info">
+          <div>
+            <span id="player-count">0</span> players.
+          </div>
+          <div>
+            <span id="observer-count">0</span> observers.
+          </div>
+          <div>
+            <span id="average-lag">0</span> ms lag.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer style="clear:both;">
+    <p>
+    written by <a href="http://twitter.com/borismus">Boris</a>, with
+    awesome contributions from <a href="http://twitter.com/kurrik">Arne</a> and
+    <a href="http://twitter.com/romannurik">Roman</a>.
+    </p>
+    </footer>
+
+    <a href="http://github.com/borismus/osmus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+  </body>
+</html>

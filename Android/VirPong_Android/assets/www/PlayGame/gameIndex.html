@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>GameIndex</title>
+	  <link rel="stylesheet" href="../master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	  <script type="text/javascript" charset="utf-8" src="../phonegap-1.0.0.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="game.js"></script>
+  </head>
+<body id="gameStage" class="theme">
+	<pre>
+	[code]
+	alert("Initializing!!!");
+	// new socket
+	socket = new WebSocket('http://cs340-serv:8000');
+ 
+	// push a message after the connection is established.
+	socket.onopen = function() {
+ 	socket.send("Hello World!");
+	};
+	// alerts message pushed from server
+	socket.onmessage = function(msg) {
+ 	alert(JSON.stringify(msg.data));
+	};
+	// alert close event
+	socket.onclose = function() {
+ 	alert('closed');
+	};
+	alert("Finishing initialization.");
+	[/code]
+	</pre>
+	<h1>Get ready. . .</h1>
+		<a href="http://10.150.1.204:8000" class="btn large" onclick="">Let's play pong!</a>
+</body>
+</html>
