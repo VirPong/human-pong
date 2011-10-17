@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, BluetoothPluginActivity!</string>
-    <string name="app_name">BluetoothPlugin</string>
+    <string name="hello">Hello World, BluetoothPluginTestActivity!</string>
+    <string name="app_name">BluetoothPluginTest</string>
 </resources>

@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="lib" path="/opt/phonegap-phonegap-80cc6dd/Android/phonegap-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/kwenholz/Programming/phonegap-1.1.0/Android/phonegap-1.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
