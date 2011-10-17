@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Personnel Profile}{2}
+\contentsline {subsection}{\numberline {1.1}Jordan Apele}{2}
+\contentsline {subsection}{\numberline {1.2}Jillian Andersen}{2}
+\contentsline {subsection}{\numberline {1.3}Kyle Wenholz}{3}
+\contentsline {subsection}{\numberline {1.4}David Ruhle}{3}
+\contentsline {section}{\numberline {2}Proposed End Product}{4}
+\contentsline {section}{\numberline {3}Key Features}{4}
+\contentsline {subsection}{\numberline {3.1}Secondary Features}{5}
+\contentsline {section}{\numberline {4}Tools for Development}{5}
+\contentsline {section}{\numberline {5}Challenges}{7}
+\contentsline {subsection}{\numberline {5.1}Deployment to Various Devices}{7}
+\contentsline {subsection}{\numberline {5.2}Server Communication}{7}
+\contentsline {subsection}{\numberline {5.3}A Unified Interface}{8}
+\contentsline {section}{\numberline {6}Estimated Timeline}{9}
