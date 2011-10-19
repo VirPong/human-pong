@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  12 OCT 2011 00:06
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  18 OCT 2011 13:07
 entering extended mode
  %&-line parsing enabled.
 **developerDocumentation.tex
@@ -376,21 +376,23 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.55 \newpage
-              [1] [2] (./developerDocumentation.aux) ) 
+              [1] [2] [3] (./developerDocumentation.aux) ) 
 Here is how much of TeX's memory you used:
- 4316 strings out of 256216
- 57932 string characters out of 1917071
+ 4320 strings out of 256216
+ 57968 string characters out of 1917071
  117076 words of memory out of 1500000
- 7551 multiletter control sequences out of 10000+200000
- 10111 words of font info for 38 fonts, out of 1200000 for 2000
+ 7552 multiletter control sequences out of 10000+200000
+ 10280 words of font info for 39 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 27i,4n,43p,464b,366s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/t
-ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb><
-/usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
-Output written on developerDocumentation.pdf (3 pages, 35084 bytes).
+ 27i,4n,43p,740b,366s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fon
+ts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.
+pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/
+type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb>
+Output written on developerDocumentation.pdf (4 pages, 51742 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 131072)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 131072)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

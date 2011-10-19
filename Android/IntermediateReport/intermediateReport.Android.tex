@@ -11,7 +11,7 @@
 % for conveniently specifying the spacing (\singlespacing, \doublespacing,
 %    \onehalfspacing, etc.)
 \usepackage{setspace}
-\doublespacing
+\onehalfspacing
 
 % this does some sort of symbol stuff
 \usepackage{textcomp}
@@ -92,7 +92,6 @@ The final product of this team will integrate with the greater Vir-Pong ecosyste
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Development: Thus Far}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %6. Implementation:
 %        Include the coding style guide that your team is using. This should be fairly detailed including naming, coding conventions, and comment conventions.
@@ -108,30 +107,145 @@ The final product of this team will integrate with the greater Vir-Pong ecosyste
 %            If the data is not stored in a db describe how it is stored included formatting. 
 %        Describe your testing and verification procedure for your implemented code 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Coding Style Guide}
-\subsubsection{Working with Java}
+\section{Coding Style Guide}
+The majority of the coding takes place within the $assets/www$ folder of our application.  It is, therefore, important that our team maintain a clear and concise style within this limited space.  In general, folders should be titled in the CamelCase style (first letter a capital) and individual files should be likewise with the exception that the first letter is a lower case.  Dashes may be permitted so long as it is used when there may be multiple editions of something (e.g. a "logo-blue.jpg" and "logo-red.jpg").  Further exceptions include any README files (used for build instructions) or versioned files.  
 
-\subsubsection{Working with JavaScript}
+As to how many folders to have, if there exists a logical grouping between one file and several others (i.e. more than 2 files are related to one another) then these should be placed in a separate folder within the $www$ directory.  Files themselves and the code contained should follow the guidelines given below.  While these guidelines are not quite as extensive as some resources (such as Sun's own Java style guide\cite{JavaStyle-Sun}) the brevity serves our team well.
 
-\subsubsection{Working with HTML5 and CSS}
+\subsection{Working with Java}
+While Java is not a primary language for our team, we will be strictly following conventions laid down by Sun and other programmers\cite{JavaStyle-Sun}\cite{JavaStyle-JavaRanch}.
+
+\subsubsection{Style Rules}
+\begin{itemize}
+\item All identifiers use letters ('A' through 'Z' and 'a' through 'z') and numbers ('0' through '9') only. No underscores, dollar signs or non-ascii characters (with one exception mentioned later).
+\item Class and interface names will use CamelCase beginning with a capital letter.
+\item Fields, local variables, methods and parameters will be named using CamelCase beginning with a lower case letter.  The exception being that constants are in all capital letters spacing words with underscores.
+\item There will be no use of $break$.
+\item Use a separate line for an increment or decrement.
+\item All fields must be private, except for some constants. 
+\end{itemize}
+\textbf{A note on comments:} all methods and classes should contain a standard Javadoc comment (text description and appropriate author, version, parameter and return tags).  In-line comments are strongly encouraged to assist in readability of the code.
+
+\subsubsection{Code Rules}
+\begin{itemize}
+\item Class elements will follow this order: fields, constructors, methods.
+\item Opening curly braces should be on the same line as what they are opening.
+\item Closing curly braces will be horizontally aligned with the line where the statement began.
+\item Indent each time a new bracket set is created.  Indents should be four spaces.
+\item All control-flow statements must use brackets.
+\item Commas and semicolons are always followed by whitespace.
+\item Binary operators should have a space on either side.
+\item Parentheses should be used in expressions not only to specify order of precedence, but also to help simplify the expression. When in doubt, parenthesize. 
+\end{itemize}
+
+
+\subsection{Working with JavaScript}
+The majority of our JavaScript style guidelines are mimicked from Google\cite{JavaScriptStyle-Google}.  For further and more detailed information, see their guide.  To many new programmers, JavaScript seems very much like Java (even the name!), but it is important to note that these are different languages and we have several very different rules.
+
+\subsubsection{Style Rules}
+\begin{itemize}
+\item In general, use $functionNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, $EnumNamesLikeThis$, $methodNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+\item Start curly braces on the same line as what they are opening.
+\item Be sure to indent blocks by four spaces.
+\item Use blank lines to group logically related pieces of code.
+\item Use parentheses only when required.
+\item Prefer $'$ over $"$ for strings.
+\item Use JSDoc annotations ($@priave$ and $@protected$) where appropriate.  Marking visibility is encouraged.
+\item Be sure to use JSDoc comments.  A comment at the top of the file for authorship and general overview, comments for methods, and inline comments are encouraged.  The first two are done using $/*. . . */$ and the latter is $//$.
+\item Be sure to use @param and @return tags for methods and functions.
+\item Simple getters may have no description but should specify the returned values.
+\end{itemize}
+
+\subsubsection{Coding Rules}
+\begin{itemize}
+\item Always declare variables with $var$.
+\item Use $NAMES\_LIKE\_THIS$ for constants. Use $@const$ where appropriate. Never use the $const$ keyword. 
+\item Always end lines with semicolons.
+\item Feel free to use nested functions but try to comment these to make them clear.
+\item Do not declare functions within blocks.  Instead you may do the following:
+\begin{verbatim}
+if (x) {
+  var foo = function() {}
+}
+\end{verbatim}
+\item Avoid wrapper objects for primitive types.
+\item The keyword $this$ is for object constructors and methods only.
+\item For-in loops are only for iterating over keys in an object/map/hash.
+\item Do not use multiline string literals.  Instead, use concatenation when initializing such long strings.
+\end{itemize}
+
+\subsection{Working with HTML5}
+HTML5 and CSS are so quickly evolving of late that style guides are not readily available.  We have, however, compiled our own unique guide from some suggestions found on the Web Developer's Virtual Library\cite{HTMLStyle-WDVL}.  We recommend keeping JavaScript and CSS code in files separate from the HTML.  This is primarily to keep the code modular and sensible.  Reading HTML and JavaScript in the same file can be confusing.
+
+\begin{itemize}
+\item Block-level tags are to the far left with content indented four spaces.
+\item Don't indent tags relative to their container.
+\item Line up multiple attributes with the "=" signs all in the same column.
+\item The home page is an index to other pages.
+\item Page designs should be consistent in appearance and structure.
+\item Choose a meaningful title for pages.
+\item $*$Unless it is an incredibly brief code-snippet, do not include JavaScript or CSS in the $html$ file.  Place this code in a separate file.
+\item Provide a $Home$ link.
+\end{itemize}
+
+\subsection{Working with CSS}
+CSS doesn't normally follow any particular style guide, but we have imposed a few general rules to keep things neat\cite{CSSStyle-SmashingMagazine}.
+
+\begin{itemize}
+\item Consider a table of contents at the top of the CSS file.  This would reference labels or comments used as tags in the file.  Use a tree structure.
+\item Because constants are not possible, define colors and typography used in comments at the top of the file.  This allows you to reference these colors font styles later to be consistent.  
+\item Organize properties alphabetically.
+\end{itemize}
+
+\subsection{Setting up the Development Environment}
+In order to develop for Android, you will need the Android SDK, the PhoneGap software, and some editor.  These pieces are relatively easy to set up, but because all systems are different, some personal configuration may be required.  All of the software mentioned below can be found, with current links, at the PhoneGap Android page\cite{PhoneGap-Android}.  
+
+\subsubsection{Android SDK}
+The Android SDK comes with an Android Emulator as well as Android libraries.
+To download the SDK, first check to make sure your operating system fulfills all of the system requirements.  A list of of system requirements is available on the Android Developers website\cite{AndroidSDK-SystemRequirements}.
+
+Next, download the Android SDK from the Android Developer website\cite{AndroidSDK-Download}.
+The instructions for installation are found on the same site but on the installation page\cite{AndroidSDK-Installation}. \textbf{Note:} do not put a space in the folder name.
+
+After that, you must add necessary components to the SDK.  The instructions for that portion are found on the components page\cite{AndroidSDK-Components}.  On your first run, you will be required to create an Android Virtual Device (AVD) that is simply a mock phone.
+
+
+\subsubsection{PhoneGap}
+The PhoneGap download is primarily a collection of tools that provide functionality for the HTML5 and JavaScript interface in a native application environment.  That is, the PhoneGap jar, js, and xml files all serve to support the use of HTML5 and JavaScript coding as implementing the core functionality of the application.   
+
+\subsubsection{Editing Environment}
+In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.
+
+\subsection{Retrieving the Source}
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
+
+\section{Implementation Details}
+\subsection{PhoneGap}
+
+\subsection{Interactions with Other Development Teams}
+
+\subsection{Testing}
 
 
 
-\subsection{Progress Made}
-\subsection{Proposed Schedule}
+
+\section{Planning and Reflection}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %7.Planning and Reflection:
 %        Present a complete schedule for your project. This schedule should start from when you turned in your initial plan and project forward to the end of the project. Provide an indication of target dates and goals that were met, goals that were late, and goals that were discarded.
 %        Describe major challenges that you have met thus far and how you over came them. Looking back are there things that you would have done differently.
 %        Clearly indicate future milestones including dates and team member responsibilities. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\subsection{Current State of the Project}
+\subsection{Proposed Schedule}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %8. References: Clearly indicate all the tools and sources you have used in the development of your product thus far. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{amsplain}
+
+\newpage
+\bibliographystyle{plain}
 \bibliography{intermediateReport.Android.bib}
 
 

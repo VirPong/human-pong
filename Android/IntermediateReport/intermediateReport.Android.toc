@@ -1,8 +1,26 @@
 \contentsline {section}{\numberline {1}The Product}{2}{section.1}
-\contentsline {section}{\numberline {2}Requirements}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Functional Requirements}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Nonfunctional Requirements}{3}{subsection.2.2}
-\contentsline {section}{\numberline {3}Domain Analysis}{3}{section.3}
-\contentsline {section}{\numberline {4}Development: Thus Far}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Progress Made}{3}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Proposed Schedule}{3}{subsection.4.2}
+\contentsline {section}{\numberline {2}Requirements}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Functional Requirements}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Nonfunctional Requirements}{2}{subsection.2.2}
+\contentsline {section}{\numberline {3}Domain Analysis}{2}{section.3}
+\contentsline {section}{\numberline {4}Coding Style Guide}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}Working with Java}{3}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Style Rules}{3}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Code Rules}{3}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Working with JavaScript}{4}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Style Rules}{4}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Coding Rules}{4}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}Working with HTML5}{5}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Working with CSS}{6}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Setting up the Development Environment}{6}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Android SDK}{6}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}PhoneGap}{6}{subsubsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.3}Editing Environment}{6}{subsubsection.4.5.3}
+\contentsline {subsection}{\numberline {4.6}Retrieving the Source}{7}{subsection.4.6}
+\contentsline {section}{\numberline {5}Implementation Details}{7}{section.5}
+\contentsline {subsection}{\numberline {5.1}PhoneGap}{7}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Interactions with Other Development Teams}{7}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Testing}{7}{subsection.5.3}
+\contentsline {section}{\numberline {6}Planning and Reflection}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}Current State of the Project}{7}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Proposed Schedule}{7}{subsection.6.2}
