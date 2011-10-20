@@ -1,0 +1,58 @@
+
+%The simple beginnings of a latex meeting document
+
+\documentstyle{article}
+
+\begin{document}
+
+\title{Web UI Team}
+\author{Kyle M, Katie M, Garrett D, Aryn G.}
+\date{September 29, 2011}
+\maketitle
+
+
+\section{Review of Goals}
+	\subsection{Authentication}
+	Create and link to MySQL database for user sign-in functionality. Test PHP code for said function. learn PHP...
+	\subsection{Play}
+	Research jWebSockets. Take lessons from other projects. Develop a plan on how to integrate jWebSockets in with our animation.
+	\subsection{Design}
+	Look further into general website design.\\Research popular opinion on drop-down menus as used in website navigation\\Continue work on mock-ups of site.
+
+\section{Accomplishments}
+	\subsection{User Authentication}
+		\subsubsection{MySQL}
+		MySQL database created. User registration and user login pages up and actually works. Currently, does not check for duplicate usernames, allows for same username with multiple passwords; needs fixing.
+		\subsubsection{HTTPS}
+		All sensitive data now sent over SSL encrypted connection. 
+		\subsubsection{Cookies}
+		A user cookie is set to indicate that the user was signed in. Sign-out function works too, destroies user session on server.
+	\subsection{Play}
+	Server group suggested Github project "NodeGame-Shooter" for example jWebSockets use. NodeGame non-functional, other game, Osmus, found on Github and is functional. Osmus uses Nodes and Sockets with a strange server-side javascript to run the game back-end, HTML5 goodness running on client machine.\\Hopfully we'll learn off that project.
+	\subsection{Design}
+	New site mock-ups created with login functionality thought in, also school colors! 
+	\subsection{content}
+	We now have AboutUs and ContactUs, etc. pages. yay!
+
+\section{New Goals}
+	\subsection{Authentication}
+	Get SQL injection prevention in place and working.\\Encypt MySQL username/password database.\\Fix the duplicate username issue. 
+	\subsection{Account Settings}
+	Create an edit user settings page and be able to edit the MySQL database through it, keeping SQL injection prevention in mind.
+	\subsection{Play}
+	Work with the Osmus project to try and learn how to implement our own jWebSockets and server-side javascript.
+	\subsection{Design}
+	Look into eventually implementing the basic mock-up design, Learn CSS for that.
+	
+\section{Long Term Goals}
+	-Need to create a PHP header (something that will be consistent on every PHP page).\\
+	-Design the page's CSS.\\
+	-Pure CSS menu system if that many menus are needed.\\
+	-Create a scoring system for the animation.\\
+	-Fancy Pong game in background of game.\\
+	-Privacy Policy.\\
+	-Pretty W3C HTML/CSS validation icons.\\
+
+
+
+\end{document}

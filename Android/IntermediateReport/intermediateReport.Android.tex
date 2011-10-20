@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+% useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
+\usepackage{amsmath, amssymb, amsthm}
+
+% for including graphics
+\usepackage{graphicx}
+
+% for conveniently specifying the spacing (\singlespacing, \doublespacing,
+%    \onehalfspacing, etc.)
+\usepackage{setspace}
+\doublespacing
+
+% this does some sort of symbol stuff
+\usepackage{textcomp}
+
+% A package for conveniently adjusting headers and such
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0 pt}
+\rhead{\textit{\thepage}}
+\cfoot{}
+
+
+
+% Set the margins
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+% set up a new command to insert a little bit of vertical space
+% (use this BEFORE a line break)
+\newcommand{\padding}{\vspace*{.5cm}}
+
+% set up an environment to format each hw problem in
+\newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
+
+\newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
+               {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+
+
+
+\begin{document}
+
+%Add in some nice looking pages
+ \begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+      {\Huge Intermediate Report: Android Development Team}\\[0.5cm]
+      {\Large Jillian Andersen, Jordan Apele, David Ruhle, Kyle Wenholz}\\[0.4cm]
+      \today
+    \end{center}
+    \vspace*{\fill}
+  \end{titlepage}
+  
+\tableofcontents
+\newpage
+%There are 8 requirements to this paper so we will have 8 sections.
+%1. Cover Page (include group name and team member names)
+
+
+\section{The Product}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2. Describe in detail the end product your department is producing, do not forget about documentation artifacts.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The final product of this development team will be a downloadable Android application for playing Pong via human motion.  Receiving position data from a Wii Remote the application allows a user to move a paddle on screen with motion in physical space.  The current concept is to host games over the internet and allow play between two players to proceed as a normal game of Pong.  This may change in the future to include \textit{enhanced modes} where players may retrieve power-ups, attack or complete any other number of non-standard actions.  Aside from the gameplay, however, the Android application will host a suite of other features.  Accessing user statistics, global statistics, help and support, changing aesthetic settings, adjusting the volume, and even navigating to the Vir-Pong website will all be possible from within the application.  While the application developed by our team is targeted at the Android platform, our team is working closely with the iOS development group to support a cohesive and quality application across multiple platforms.  
+
+Installation and usage instructions as well as help and support will be found on the Android market or on the Vir-Pong site.  These instructions will be targeted towards novice technology users so that our product may be enjoyed by all groups.  Developer documentation generated during the development cycle will be available to all Vir-Pong employees and the general public as part of our open-source commitment.  Where this documentation will be hosted is currently under consideration.  
+
+The final product of this team will integrate with the greater Vir-Pong ecosystem.  Servers, devices, the website, and users will bring together a community of human Pong players, all enjoying our product.  Our piece in this greater puzzle is to put that experience in the pockets of consumers and allow Pong to be played in the physical world.
+
+
+\section{Requirements}
+\subsection{Functional Requirements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%3. Functional Requirements:
+%        Use Cases:
+%            All uses cases must use the same template and this template should identify Actors, Preconditions, Postconditions, Scenario, and Alternatives for fully-dress uses cases. The template should also include a meaningful name for the use-case and some form of versioning.
+%            Brief or Casual Descriptions: You need to write a brief or casual use case for all features you plan to include in your final product.
+%            Fully Dressed Descriptions: Select your critical features and write fully-dressed well detailed use cases for these features. 
+%        System Sequence Diagram:
+%            Create a system sequence diagram for your most important fully-dressed use case. Include a one paragraph description of what is being depicted in the diagram (use plan English). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Nonfunctional Requirements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%4. Nonfunctional Requirements: List and briefly describe (a couple of sentences) the nonfunctional requirements for your product (you might try searching the web for FURPS to get ideas).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Domain Analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%5. Domain Analysis: Create a UML diagram that depicts the domain model for your product (use your fully dressed use cases as a guide but include conceptual classes that might be needed for additional features). Include a plain-english description of what is being shown in the diagram. Define any terms used in conceptual classes, attributes, or associations that might not be clear to a lay person.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Development: Thus Far}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%6. Implementation:
+%        Include the coding style guide that your team is using. This should be fairly detailed including naming, coding conventions, and comment conventions.
+%        Install documentation: include a description of all necessary procedures a developer would have to complete to install your product. If you are assuming a certain starting environment then explicitly state so (e.g. a Linux server with Apache installed). Make sure to include how the user would access and download your source code and documentation.
+%        Include a current class diagram of your product
+%            Diagram should depict all classes and their associations 
+%        Description of algorithms, data structures and design patterns
+%            Describe any complex algorithms, data structures, or design patterns your group used. Provide insights as to why you made the choices you did.
+%            Describe any techniques you are using to ensure fault tolerance (e.g. if you have information to write to a db but the db is down what do you do?) 
+%        Data Storage:
+%            Identify all the data you are storing (ex. user athentication, medical records, back up information if the DB is down etc.)
+%            If your product contains a database include both an ER Diagram and the schema for it, include a description of why you made the design decisions you did.
+%            If the data is not stored in a db describe how it is stored included formatting. 
+%        Describe your testing and verification procedure for your implemented code 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Coding Style Guide}
+\subsubsection{Working with Java}
+
+\subsubsection{Working with JavaScript}
+
+\subsubsection{Working with HTML5 and CSS}
+
+
+
+\subsection{Progress Made}
+\subsection{Proposed Schedule}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%7.Planning and Reflection:
+%        Present a complete schedule for your project. This schedule should start from when you turned in your initial plan and project forward to the end of the project. Provide an indication of target dates and goals that were met, goals that were late, and goals that were discarded.
+%        Describe major challenges that you have met thus far and how you over came them. Looking back are there things that you would have done differently.
+%        Clearly indicate future milestones including dates and team member responsibilities. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%8. References: Clearly indicate all the tools and sources you have used in the development of your product thus far. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{amsplain}
+\bibliography{intermediateReport.Android.bib}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
