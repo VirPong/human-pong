@@ -25,12 +25,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 
 public class WiimoteReader extends HIDReaderBase {
-
 	private static final boolean D = false; //General debug info
 	private static final boolean D2 = false; //Detailed (packages) debug info
 	private static final boolean D3 = false; //Classic Controller debug info
+	
+	private static int counter = 0;
 	
 	public static final String DRIVER_NAME = "wiimote";
 	public static final String DISPLAY_NAME = "Wiimote (some firmwares)";
@@ -109,8 +113,8 @@ public class WiimoteReader extends HIDReaderBase {
 
 	//Emulated keypress values for core accelerometer
 	private static final int[] CORE_ACCELEROMETER_KEYS = new int[] {
-		KeyEvent.KEYCODE_X, 			//Accelerometer X up
-		KeyEvent.KEYCODE_Z, 			//Accelerometer X down
+		KeyEvent.KEYCODE_I, 			//Accelerometer X up
+		KeyEvent.KEYCODE_I, 			//Accelerometer X down
 		KeyEvent.KEYCODE_I,  			//Accelerometer Y up
 		KeyEvent.KEYCODE_I,  			//Accelerometer Y down
 		KeyEvent.KEYCODE_I,  			//Accelerometer Z up
@@ -664,10 +668,7 @@ public class WiimoteReader extends HIDReaderBase {
 		}	
 	}
 	
-	//No clue if this will work for what we want it to do...
-	private int[] wiiAccel = {0,0,0};
-	
-	public int[] returnAccel(){return wiiAccel;}
+	public static final String TEST_INTENT = "com.hexad.bluezime.intent.action.TEST";
 	
 	private void handleAnalogValues(int[] newValues, int[] prev, boolean[] buttonstates, int[] keys, int report_axis_offset, boolean isAccelerometer) {
 		
@@ -690,7 +691,14 @@ public class WiimoteReader extends HIDReaderBase {
 					accelerometerBroadcast.putExtra(BluezService.EVENT_ACCELEROMETERCHANGE_AXIS, i + report_axis_offset);
 					accelerometerBroadcast.putExtra(BluezService.EVENT_ACCELEROMETERCHANGE_VALUE, prev[i]);
 					m_context.sendBroadcast(accelerometerBroadcast);
-					wiiAccel = prev;
+					Intent intent = new Intent();
+					intent.setAction(TEST_INTENT);
+					intent.putExtra("Accel", prev);
+					if(counter%100==0)
+						m_context.sendBroadcast(intent);
+					counter++;
+					
+					
 					
 				} else {
 					directionBroadcast.putExtra(BluezService.EVENT_DIRECTIONALCHANGE_DIRECTION, i + report_axis_offset);
@@ -741,7 +749,7 @@ public class WiimoteReader extends HIDReaderBase {
 		m_tmpAnalogValues[0] = raw_x - 0x80; 
 		m_tmpAnalogValues[1] = raw_y - 0x80;
 		m_tmpAnalogValues[2] = raw_z - 0x80;
-		
+		//Log.d("WII VALUES", ""+m_tmpAnalogValues[0] + " " + m_tmpAnalogValues[1] + " " + m_tmpAnalogValues[2]);
 		handleAnalogValues(m_tmpAnalogValues, m_coreAccelerometerValues, m_coreEmulatedAccelerometerButtons, CORE_ACCELEROMETER_KEYS, CORE_ACCELEROMETER_AXIS_OFFSET, true);
 	}
 
