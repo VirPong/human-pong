@@ -2,4 +2,8 @@
 <resources>
     <string name="hello">Hello World, TestActivity!</string>
     <string name="app_name">Test</string>
+    <string name="local_service_started">SERVICE STARTED</string>
+    <string name="local_service_stopped">SERVICE STOPPED</string>
+    <string name="local_service_disconnected">SERVICE DISCONNECTED</string>
+    <string name="local_service_connected">SERVICE CONNECTED</string>
 </resources>
