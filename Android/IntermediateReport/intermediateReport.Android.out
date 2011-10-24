@@ -1,12 +1,15 @@
 \BOOKMARK [1][-]{section.1}{The Product}{}
-\BOOKMARK [1][-]{section.2}{Requirements}{}
+\BOOKMARK [1][-]{section.2}{Requirements Analysis}{}
 \BOOKMARK [2][-]{subsection.2.1}{Functional Requirements}{section.2}
-\BOOKMARK [2][-]{subsection.2.2}{Nonfunctional Requirements}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Usability Requirements}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{Reliability Requirements}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Performance Requirements}{section.2}
+\BOOKMARK [2][-]{subsection.2.5}{Supportability Requirements}{section.2}
 \BOOKMARK [1][-]{section.3}{Domain Analysis}{}
 \BOOKMARK [1][-]{section.4}{Coding Style Guide}{}
 \BOOKMARK [2][-]{subsection.4.1}{Working with Java}{section.4}
 \BOOKMARK [3][-]{subsubsection.4.1.1}{Style Rules}{subsection.4.1}
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Code Rules}{subsection.4.1}
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Coding Rules}{subsection.4.1}
 \BOOKMARK [2][-]{subsection.4.2}{Working with JavaScript}{section.4}
 \BOOKMARK [3][-]{subsubsection.4.2.1}{Style Rules}{subsection.4.2}
 \BOOKMARK [3][-]{subsubsection.4.2.2}{Coding Rules}{subsection.4.2}
@@ -18,9 +21,8 @@
 \BOOKMARK [3][-]{subsubsection.4.5.3}{Editing Environment}{subsection.4.5}
 \BOOKMARK [2][-]{subsection.4.6}{Retrieving the Source}{section.4}
 \BOOKMARK [1][-]{section.5}{Implementation Details}{}
-\BOOKMARK [2][-]{subsection.5.1}{PhoneGap}{section.5}
-\BOOKMARK [2][-]{subsection.5.2}{Interactions with Other Development Teams}{section.5}
-\BOOKMARK [2][-]{subsection.5.3}{Testing}{section.5}
+\BOOKMARK [2][-]{subsection.5.1}{Basic Design}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Testing}{section.5}
 \BOOKMARK [1][-]{section.6}{Planning and Reflection}{}
 \BOOKMARK [2][-]{subsection.6.1}{Current State of the Project}{section.6}
 \BOOKMARK [2][-]{subsection.6.2}{Proposed Schedule}{section.6}

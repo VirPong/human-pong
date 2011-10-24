@@ -6,6 +6,11 @@
   }, August 1999.
 \newblock [Online; accessed October-2011].
 
+\bibitem{PhoneGap-About}
+{About << PhoneGap}.
+\newblock \url{http://www.phonegap.com/start#android}, 2011.
+\newblock [Online; accessed September/October-2011].
+
 \bibitem{Eclipse-ADT}
 {ADT} {P}lugin for {E}clipse.
 \newblock \url{http://developer.android.com/sdk/eclipse-adt.html#installing},
@@ -44,8 +49,8 @@ Github.
 
 \bibitem{PhoneGap-Android}
 {PhoneGap for Android}.
-\newblock \url{http://www.phonegap.com/start#android}, 2011.
-\newblock [Online; accessed September/October-2011].
+\newblock \url{http://www.phonegap.com/about}, 2011.
+\newblock [Online; accessed September-2011].
 
 \bibitem{HTMLStyle-WDVL}
 {The WDVL Style Guide}.

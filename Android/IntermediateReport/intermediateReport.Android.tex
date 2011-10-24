@@ -26,6 +26,22 @@
 
 % Set the margins
 \usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+
+% Differently spaced itemize
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+  	\setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+\newenvironment{enumerate*}%
+  {\begin{enumerate}%
+  	\setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{enumerate}}
+
+
 % set up a new command to insert a little bit of vertical space
 % (use this BEFORE a line break)
 \newcommand{\padding}{\vspace*{.5cm}}
@@ -68,22 +84,328 @@ Installation and usage instructions as well as help and support will be found on
 The final product of this team will integrate with the greater Vir-Pong ecosystem.  Servers, devices, the website, and users will bring together a community of human Pong players, all enjoying our product.  Our piece in this greater puzzle is to put that experience in the pockets of consumers and allow Pong to be played in the physical world.
 
 
-\section{Requirements}
+\section{Requirements Analysis}
 \subsection{Functional Requirements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %3. Functional Requirements:
 %        Use Cases:
-%            All uses cases must use the same template and this template should identify Actors, Preconditions, Postconditions, Scenario, and Alternatives for fully-dress uses cases. The template should also include a meaningful name for the use-case and some form of versioning.
-%            Brief or Casual Descriptions: You need to write a brief or casual use case for all features you plan to include in your final product.
-%            Fully Dressed Descriptions: Select your critical features and write fully-dressed well detailed use cases for these features. 
+%            All uses cases must use the same template and this template should identify Actors, 
+%			 Preconditions, Postconditions, Scenario, and Alternatives for fully-dress uses cases. The 
+%			 template should also include a meaningful name for the use-case and some form of versioning.
+%           Brief or Casual Descriptions: You need to write a brief or casual use case for all features you
+%			 plan to include in your final product.
+%           Fully Dressed Descriptions: Select your critical features and write fully-dressed well detailed 
+%			 use cases for these features. 
 %        System Sequence Diagram:
-%            Create a system sequence diagram for your most important fully-dressed use case. Include a one paragraph description of what is being depicted in the diagram (use plan English). 
+%            Create a system sequence diagram for your most important fully-dressed use case. Include a one
+%			 paragraph description of what is being depicted in the diagram (use plain English). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Nonfunctional Requirements}
+\singlespacing
+
+\subsubsection*{Initializing a Game - 2.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Hub
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item The application is installed and open on the device.
+\item The user has already created an account with Vir-Pong.
+\item The input method is prepared.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The hub is relaying game information.
+\item The system is using a display to relay the game state.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item \label{SelectStart}The player selects to begin a game.
+\item \label{SystemPromptsAuthentication}The device prompts the player to authenticate.
+\item \label{PlayerProvidesCredentials}The player provides credentials.
+\item \label{SystemVerifies}The device verifies credentials with the hub.
+\item \label{SystemRequestsGame}The device requests a game from the hub.
+\item \label{HubSelectsOpponent}The hub selects an opponent and signals a ready-start to device.
+\item \label{LoadGameState}The device loads an initial game state displayed to the user.
+\item Game begins.
+\end{enumerate*}
+Alternatives:\\
+\ref{SelectStart}a) The player selects the wrong action.
+\begin{enumerate*}
+\item The player may elect to go back the the previous screen with a $return$ function.
+\end{enumerate*}
+\ref{PlayerProvidesCredentials}a) The player provides incorrect credentials.
+\begin{enumerate*}
+\item \label{HubNoAuthenticate}The device cannot authenticate into the hub.
+\item The device displays a message that tells the player that the entered credentials were incorrect.
+\item \label{PromptAuthenticate}The device prompts the player to authenticate.\\
+Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player selects the $return$ function.
+\end{enumerate*}
+\ref{SystemRequestsGame}a) The system can not connect to the hub.
+\begin{enumerate*}
+\item The device sends the player an error message that prompts the player to retry or exit.
+\item Player chooses to retry.
+\item System connects to hub.
+\item Return to \ref{HubSelectsOpponent} of main scenario.
+\end{enumerate*}
+
+\subsubsection*{Playing a Game - 1.0}
+Actors:
+\begin{itemize*}
+\item User
+\item Hub
+\item Android device
+\item Input device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item User is authenticated into the system and has successfully requested a game from the hub.
+\item The input device is tethered to the Android device and is ready to submit motion data.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item A winner has been determined.
+\item User statistics are recorded by the hub system.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Hub signals a ready-start and the game begins.
+\item \label{UserObserves}User observes ball and opponent's paddle motion on Android device.
+\item User responds with appropriate motion, detected by the input device and relayed to the Android device.
+\item The Android device relays motion data to the hub.
+\item \label{HubUpdateGame}The hub recalculates ball and paddle position then sends updated information to Android device.
+\item \label{DisplayCurrentInformation}User's Android device displays the current information.\\
+Repeat \ref{UserObserves} through \ref{DisplayCurrentInformation} until a point is scored.
+\item \label{LogPointRefresh}Hub logs point scored then resets game state to fresh.\\
+Repeat \ref{UserObserves} through \ref{LogPointRefresh} until score limit is reached.
+\item \label{AnnounceWinner}Hub indicates winner to Android device.
+\item Android device displays winner to user and announces game complete.
+\item Hub logs game statistics for later access.
+\item User is prompted to play another game or exit back to the home screen.
+\end{enumerate*}
+Alternatives:\\
+\ref{AnnounceWinner}a) The user's Android device loses connection with the hub after score limit being reached.
+\begin{enumerate*}
+\item The hub waits for a specified recovery time.
+\item Upon connection lost, the user's Android device begins recovery mode, trying to reconnect with the hub and indicating this to the user.
+\item After reconnecting with the hub, the game's winner is announced.  
+\item User is prompted to verify this, due to the connection lost. 
+\item Both players agree, so hub logs the game statistics.
+\item User is prompted to play another game or exit back to the home screen.
+\end{enumerate*}
+\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
+\begin{enumerate*}
+\item Hub alerts players that game is reaching overtime.
+\item User is given option to continue playing, call a tie, or postpone the game.
+\item User selects to call a tie. 
+\item The game ends and hub logs results.
+\item User is given option to play another game or return to home screen.
+\end{enumerate*}
+\ref{HubUpdateGame}a) Hub signals that connection to other player has been lost.
+\begin{enumerate*}
+\item Android device signals a game pause to user.
+\item User is prompted to wait or leave the game.
+\item The user elects to wait.
+\item Hub signals that the other player is reconnected.
+\item Game resumes.
+\item Return to \ref{DisplayCurrentInformation} in main scenario.
+\end{enumerate*}
+
+
+
+\subsubsection*{Connect to Input Device - 1.0}
+Actors:
+\begin{itemize*}
+\item User
+\item Device 
+\item Wii Remote
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item System is installed on the device and has launched.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item Input device (Wii Remote) is selected and prepared for game use.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item \label{BeginGame}User selects start game.
+\item \label{InputMethod}System prompts user for input method: Wii Remote, device accelerometer, or touchscreen.
+\item User elects to use the Wii Remote.
+\item \label{ConnectWiimote}System attempts to tether Wii Remote.
+\item User follows instructions from system to connect Wii Remote.
+\item System accepts Wii Remote device and notifies user.
+\item System proceeds to game launch.
+\end{enumerate*}
+Alternatives:\\
+\ref{InputMethod}a) User selects phone accelerometer.  
+\begin{enumerate*}
+\item System asks user to make certain the device has an built in accelerometer.
+\item User indicates that device has accelerometer.
+\item System connects to device accelerometer.
+\item System proceeds to game launch.
+\end{enumerate*}
+\ref{InputMethod}b) User selects touch screen interface.
+\begin{enumerate*}
+\item System asks user to touch a box displayed on-screen to ensure that a touch screen is available.
+\item User touches box.
+\item System proceeds to game launch.
+\end{enumerate*}
+\ref{ConnectWiimote}System attempts Wii Remote connection, and fails.
+\begin{enumerate*}
+\item System alerts user that connection failed.
+\item Return to step \ref{InputMethod} of main scenario.
+\end{enumerate*}
+
+\subsubsection*{Changing the Game Settings - 1.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item The application is installed and open on the device.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The newly changed settings have been saved and will be applied to future game play.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item \label{SelectChangeSettings}The player selects a $change$ $settings$ function.
+\item \label{ChangeSettings}The player changes the setting(s).
+\item \label{SelectSave}The player selects a $save$ $and$ $apply$ function.
+\item \label{SystemSaves}The device saves changes and applies them to future game plays.
+\item \label{ReturnToMainMenu}The device returns to the main menu.
+\end{enumerate*}
+Alternatives:\\
+\ref{ChangeSettings}a) The player selects a non-valid entry for a setting.
+\begin{enumerate*}
+\item The device displays an error message that tells the player he entered a non-compatible value.
+\item The device returns the setting to a default state.
+\end{enumerate*}
+\ref{SelectSave}a) The player decides not to change any settings.
+\begin{enumerate*}
+\item The player selects the $return$ function.
+\end{enumerate*}
+\onehalfspacing
+
+\singlespacing
+\subsubsection*{Viewing Stats - 1.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Website
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item Our system is installed on the device and has launched.
+\item The user has already created an account with Vir-Pong and is logged in.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The user has looked at their statistics.
+\item The user can compare his to everyones.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item \label{SelectStats}The player chooses view stats option
+\item \label{PersonalStatRequest}The device requests personal score from website.
+\item Website sends personal stats.
+\item Device displays personal stats and CompareStats option.
+\item \label{CompareStats}Player selects CompareStats option.
+\item Device navigates to website with all player stats listed.
+\item \label{Back}Player finishes viewing stats and hits back button.
+\item Device returns to system state SelectStats.
+\end{enumerate*}
+Alternatives:\\
+\ref{PersonalStatRequest}a) Unable to contact website.
+\begin{enumerate*}
+\item Display connection error message.
+\item User may utilize a $retry$ or $continue$ button.
+\item User selects $retry$.
+\item Return to \ref{PersonalStatRequest}.
+\end{enumerate*}
+
+\subsubsection*{Edit Account Information}
+Actors:
+\begin{itemize*}
+\item User
+\item System
+\item Vir-Pong Website
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item System is installed on the device and has launched.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item User has edited account information.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item User selects Edit Account information.
+\item \label{Browser}System opens phone browser to "Vir-pong Edit Account" information page. 
+\item User begins editing account information.
+\item User saves and exits editing account information.
+\item System returns user to previous page.
+\end{enumerate*} 
+
+\onehalfspacing
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WHAT WE HAD IN THE INITIAL REPORT:
+% There are a number of key features that must function properly in order for our program
+% to work on the most basic level. First, the Android device must be able to communicate with the
+% Wii Remote through Bluetooth, in order to acquire accelerometer data. This function is absolutely vital
+% because it allows the phone to track the position of the player and calculate the position of the
+% player's paddle. After gaining data from the Wii Remote, the phone needs to pass this information
+% along to a server. As the phone is sending position data, it must be able to also receive the
+% position of both players' paddles and ball location from the server. In addition, the application 
+% must receive information about when a point is scored, to whom the point goes to, when the game is over, and
+% the final score of the players. In order to allow players to see all of this data, there must be a
+% graphical representation of the game that is constantly updated by the server. Pairing down to
+% essentials, this would include only a plain background, two paddles, and a ball. This GUI must
+% also include a start screen that allows for players to choose to start a game and end the
+% application when the game is finished.  After the completion of these primary features, we can start working
+% on secondary features that are not integral to the game, but enhance the playing experience. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %4. Nonfunctional Requirements: List and briefly describe (a couple of sentences) the nonfunctional requirements for your product (you might try searching the web for FURPS to get ideas).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Usability Requirements}
+%Human factors, Aesthetics, Consistency, Documentation
+In order for the application to provide an experience enjoyable to a wide user base, the following usability requirements should be met:
+\begin{itemize}
+\item Players should have their statistics saved and then made available for viewing.
+\item Players should be able to change game settings(difficulty, ball shape, etc.).
+\item Users should be able to register an account through the application.
+\item The application needs to be available for download via the website or on the Android Market.
+\item The application should have the option to view a game in progress.
+\item It would be nice to make the game environment modifiable (i.e. theming).
+\item When there is not a second available human player (or connection to the hub is impossible) there should be an option for playing versus the computer in training mode.
+\end{itemize}
+
+\subsection{Reliability Requirements}
+%Frequency/severity of failure, Recoverability, Predictability, Accuracy, Mean time to failure
+A working product is fine, but reliability ensures a consistent experience.  With this in mind our design is striving for security of private user information and the ability to pause the game.  The latter is focused on creating a fault tolerant solution for network connectivity.  A strict testing policy will help to alleviate many other possible issues.
+
+\subsection{Performance Requirements}
+%Speed, Efficiency, Resource consumption, Throughput, Response time
+The ability to adjust the display for different screens will allow for better performance of the software on different Android devices.  The system must also minimize latency when contacting the server for game information or receiving information from the Wii Remote.  No other connections are nearly as important.
+
+\subsection{Supportability Requirements}
+%Testability, Extensibility, Adaptability, Maintainability, Compatibility, Configurability, Serviceability, %Installability, Localizability, Portability
+Installation, game play, and resource usage should all be properly documented in a conveniently located and navigated user-manual. A list of known compatible devices included in the manual will assist in keeping potential customers informed about our product.  There should also be some contact information for support and help when documentation is not enough.
+
+In keeping with the project's open source roots, it will be important to make all source code well documented for the general public; make the source code readily available; give credit to non-employees with contributions; and provide substantial developer documentation. 
 
 
 \section{Domain Analysis}
@@ -118,17 +440,19 @@ While Java is not a primary language for our team, we will be strictly following
 \subsubsection{Style Rules}
 \begin{itemize}
 \item All identifiers use letters ('A' through 'Z' and 'a' through 'z') and numbers ('0' through '9') only. No underscores, dollar signs or non-ascii characters (with one exception mentioned later).
-\item Class and interface names will use CamelCase beginning with a capital letter.
-\item Fields, local variables, methods and parameters will be named using CamelCase beginning with a lower case letter.  The exception being that constants are in all capital letters spacing words with underscores.
-\item There will be no use of $break$.
+\item In general, use $methodNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
 \item Use a separate line for an increment or decrement.
-\item All fields must be private, except for some constants. 
+\item All fields must be private, except for some constants.
+\item Class elements will follow this order: fields, constructors, methods. 
+\item Limit the scope of local variables.
+\item Initialize objects as late as possible.
+\item Use Strings with care.
+\item Avoid wrapper classes.
 \end{itemize}
 \textbf{A note on comments:} all methods and classes should contain a standard Javadoc comment (text description and appropriate author, version, parameter and return tags).  In-line comments are strongly encouraged to assist in readability of the code.
 
-\subsubsection{Code Rules}
+\subsubsection{Coding Rules}
 \begin{itemize}
-\item Class elements will follow this order: fields, constructors, methods.
 \item Opening curly braces should be on the same line as what they are opening.
 \item Closing curly braces will be horizontally aligned with the line where the statement began.
 \item Indent each time a new bracket set is created.  Indents should be four spaces.
@@ -136,6 +460,7 @@ While Java is not a primary language for our team, we will be strictly following
 \item Commas and semicolons are always followed by whitespace.
 \item Binary operators should have a space on either side.
 \item Parentheses should be used in expressions not only to specify order of precedence, but also to help simplify the expression. When in doubt, parenthesize. 
+\item There will be no use of $break$.
 \end{itemize}
 
 
@@ -145,13 +470,14 @@ The majority of our JavaScript style guidelines are mimicked from Google\cite{Ja
 \subsubsection{Style Rules}
 \begin{itemize}
 \item In general, use $functionNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, $EnumNamesLikeThis$, $methodNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+\item Avoid using many global variables.
 \item Start curly braces on the same line as what they are opening.
 \item Be sure to indent blocks by four spaces.
 \item Use blank lines to group logically related pieces of code.
 \item Use parentheses only when required.
 \item Prefer $'$ over $"$ for strings.
-\item Use JSDoc annotations ($@priave$ and $@protected$) where appropriate.  Marking visibility is encouraged.
 \item Be sure to use JSDoc comments.  A comment at the top of the file for authorship and general overview, comments for methods, and inline comments are encouraged.  The first two are done using $/*. . . */$ and the latter is $//$.
+\item Use JSDoc annotations ($@priave$ and $@protected$) where appropriate.  Marking visibility is encouraged.
 \item Be sure to use @param and @return tags for methods and functions.
 \item Simple getters may have no description but should specify the returned values.
 \end{itemize}
@@ -172,6 +498,7 @@ if (x) {
 \item The keyword $this$ is for object constructors and methods only.
 \item For-in loops are only for iterating over keys in an object/map/hash.
 \item Do not use multiline string literals.  Instead, use concatenation when initializing such long strings.
+\item Use $onclick$ instead of $javascript:$ for anchors.
 \end{itemize}
 
 \subsection{Working with HTML5}
@@ -219,14 +546,31 @@ In theory, any development can be done from a text editor so long as you have ac
 \subsection{Retrieving the Source}
 In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
 
-\section{Implementation Details}
-\subsection{PhoneGap}
 
-\subsection{Interactions with Other Development Teams}
+
+\section{Implementation Details}
+%These sections need to discuss how each piece of software works as part of the whole application.
+%I have listed what I think are the important pieces to our software.
+
+\subsection{Basic Design}
+%How does PhoneGap allow us to implement a Pong game on our system?
+%Where does our application interact with the pieces from other teams? (i.e. server, wii, iOS, webUI)?
+The core technology of the Android application is PhoneGap\cite{PhoneGap-About}.  PhoneGap basically creates a shell on top of native devices, allowing developers to design the application using HTML5 and JavaScript.  This avoids the need to use native languages, such as Java or Objective C, and gives developers the same power used to generate content on the web.  Using PhoneGap allows us to combine with the iOS team and design a single application.  
+
+Our application is structured such that individual "web pages" will represent different features of the application: separate pages for the home screen, game playing, settings, etc.  JavaScript files provide the functionality behind each of these features and CSS creates the styling.  The separation of the system into layout, style and functionality with specific languages allows us to use the power of languages built specifically for each piece of our whole.  While this requires a wider knowledge base, the benefits are far more important to our dedicated team.  Working with other teams' systems is made slightly easier through this choice of technology.
+
+The WebUI and Server teams are so closely connected to internet technologies that our use of similar technologies creates a stronger basis on which to interface.  The Android application, as it stands, will not be storing any user information.  All player account and statistical information will be handled by the databases constructed by other teams.  This keeps information secure and centralized.  In the future, it may be possible that the application will hold local login information for several users, as a convenience.  
+
+As the design of our application progresses, there may be changes to the overall implementation structure.  The current implementation, however, is designed to be rapidly prototypable and easy to work with other teams.  Going forward, we hope to keep improving on our use and understanding of the technologies at hand.
+
 
 \subsection{Testing}
+%How are we testing and how will we be testing our product?  This is really an incremental thing.
+At this stage of development, many of our features are split across different pages of the application.  This has allowed us to test each feature in isolation.  As development progresses, we are constantly bringing new features into sections of the application we consider as $main$.  This process keeps us from breaking the functioning pieces of the system, while progressing quickly on new features.
 
+Our general testing strategy is to use each test page as a suite of unit tests.  Buttons allow us to interact with functions and test each feature individually.  This may sound tedious, but it is effective and simulates unit testing in the best way we know.  Going forward, we will be keeping certain test pages to allow us to retest functionality.  Final builds will, of course, lack these pages.
 
+Members of the team are encouraged to consistently bring their code to others for verification.  This keeps members informed about each other's progress, and it forces members to write cleaner, more comprehensible code.  Our ability to snapshot code into the repository has also helped in this effort.  Each snapshot is verified to be tested and functioning, with documentation marking any rough edges.  These code checks represent each end of a testing cycle.
 
 
 \section{Planning and Reflection}
@@ -236,7 +580,10 @@ In order to work with the source code of the project, you will likely want to us
 %        Describe major challenges that you have met thus far and how you over came them. Looking back are there things that you would have done differently.
 %        Clearly indicate future milestones including dates and team member responsibilities. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%BLAME SERVER TEAM
 \subsection{Current State of the Project}
+
+
 \subsection{Proposed Schedule}
 
 
@@ -245,7 +592,7 @@ In order to work with the source code of the project, you will likely want to us
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{amsplain}
 \bibliography{intermediateReport.Android.bib}
 
 

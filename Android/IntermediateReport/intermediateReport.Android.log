@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  18 OCT 2011 22:33
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  23 OCT 2011 18:37
 entering extended mode
  %&-line parsing enabled.
 **intermediateReport.Android.tex
@@ -278,27 +278,27 @@ Package: geometry 2002/07/08 v3.2 Page Geometry
 (./intermediateReport.Android.aux)
 \openout1 = `intermediateReport.Android.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 57.
  (/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 41.
-Package hyperref Info: Link coloring OFF on input line 41.
+LaTeX Font Info:    ... okay on input line 57.
+Package hyperref Info: Link coloring OFF on input line 57.
 
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
@@ -308,8 +308,8 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count110
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
 
 (./intermediateReport.Android.out) (./intermediateReport.Android.out)
 \@outlinefile=\write3
@@ -373,62 +373,69 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 \newpage
-              [1] [2] [3]
-Overfull \hbox (34.30064pt too wide) in paragraph at lines 147--148
+l.71 \newpage
+              [1] [2] [3] [4] [5] [6] [7] [8]
+Overfull \hbox (1.57848pt too wide) in paragraph at lines 443--444
+[]\OT1/cmr/m/n/12 In gen-eral, use $\OML/cmm/m/it/12 methodNamesLikeThis$\OT1/c
+mr/m/n/12 , $\OML/cmm/m/it/12 variableNamesLikeThis$\OT1/cmr/m/n/12 , $\OML/cmm
+/m/it/12 ClassNamesLikeThis$\OT1/cmr/m/n/12 , and
+ []
+
+[9]
+Overfull \hbox (34.30064pt too wide) in paragraph at lines 472--473
 \OML/cmm/m/it/12 EnumNamesLikeThis$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 methodNa
 mesLikeThis$\OT1/cmr/m/n/12 , and $\OML/cmm/m/it/12 SYMBOLIC[]CONSTANTS[]LIKE[]
 THIS$\OT1/cmr/m/n/12 . 
  []
 
-[4] [5] [6] [7] (./intermediateReport.Android.bbl
-Underfull \hbox (badness 7030) in paragraph at lines 10--14
+[10] [11] [12] [13] [14] (./intermediateReport.Android.bbl
+Underfull \hbox (badness 7030) in paragraph at lines 15--19
 []\OT1/cmr/m/n/12 ADT Plu-gin for Eclipse.  []$\OT1/cmtt/m/n/12 http : / / deve
 loper . android . com / sdk / eclipse-[]adt . html #
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 35--39
+Underfull \hbox (badness 1642) in paragraph at lines 40--44
 []\OT1/cmr/m/n/12 Eclipse Pack-ages.  []$\OT1/cmtt/m/n/12 http : / / www . ecli
 pse . org / downloads / packages / release / helios / sr2$[]\OT1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--63
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
 []\OT1/cmr/m/n/12 Vitaly Fried-man.  Im-prov-ing Code Read-abil-ity With CSS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--63
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
 \OT1/cmr/m/n/12 Styleguides.  []$\OT1/cmtt/m/n/12 http : / / coding . smashingm
 agazine . com / 2008 / 05 / 02 /
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 57--63
+Underfull \hbox (badness 2080) in paragraph at lines 62--68
 \OT1/cmtt/m/n/12 improving-[]code-[]readability-[]with-[]css-[]styleguides/$[]\
 OT1/cmr/m/n/12 , May 2008.  [On-line; ac-cessed
  []
 
-) [8] (./intermediateReport.Android.aux) ) 
+) [15] (./intermediateReport.Android.aux) ) 
 Here is how much of TeX's memory you used:
- 4404 strings out of 256216
- 59435 string characters out of 1917071
- 119076 words of memory out of 1500000
- 7591 multiletter control sequences out of 10000+200000
+ 4539 strings out of 256216
+ 60718 string characters out of 1917071
+ 120076 words of memory out of 1500000
+ 7625 multiletter control sequences out of 10000+200000
  10964 words of font info for 41 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 27i,5n,43p,1113b,369s stack positions out of 5000i,500n,6000p,200000b,15000s
- </home/kwenholz/.texlive2007/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texmf/fonts/type1/blu
-esky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/sh
-are/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesk
-y/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/
-texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/cm
-/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on intermediateReport.Android.pdf (9 pages, 107269 bytes).
+ 27i,5n,43p,1113b,503s stack positions out of 5000i,500n,6000p,200000b,15000s
+ </home/kwenholz/.texlive2007/texmf-
+var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texmf/fonts/type1/bl
+uesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/blues
+ky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb>
+Output written on intermediateReport.Android.pdf (16 pages, 139423 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 131072)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 131072)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
