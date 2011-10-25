@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190E2963145766DC0094D884 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 190E2962145766DC0094D884 /* www */; };
 		CB332C6214300A4400325C85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB332C6114300A4400325C85 /* UIKit.framework */; };
 		CB332C6414300A4400325C85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB332C6314300A4400325C85 /* Foundation.framework */; };
 		CB332C6614300A4400325C85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB332C6514300A4400325C85 /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190E2962145766DC0094D884 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		CB332C5D14300A4400325C85 /* VirPong iOS Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VirPong iOS Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB332C6114300A4400325C85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB332C6314300A4400325C85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +90,7 @@
 		CB332C5214300A4400325C85 = {
 			isa = PBXGroup;
 			children = (
+				190E2962145766DC0094D884 /* www */,
 				CB332C6714300A4400325C85 /* VirPong iOS Client */,
 				CB332C8914300A4500325C85 /* VirPong iOS ClientTests */,
 				CB332C6014300A4400325C85 /* Frameworks */,
@@ -239,6 +242,7 @@
 				CB332C7514300A4500325C85 /* MainWindow.xib in Resources */,
 				CB332C7B14300A4500325C85 /* RootViewController.xib in Resources */,
 				CB332C9E14300FE500325C85 /* MainWindow-iPad.xib in Resources */,
+				190E2963145766DC0094D884 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +468,7 @@
 				CB332C9714300A4500325C85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB332C9814300A4500325C85 /* Build configuration list for PBXNativeTarget "VirPong iOS ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +477,7 @@
 				CB332C9A14300A4500325C85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
