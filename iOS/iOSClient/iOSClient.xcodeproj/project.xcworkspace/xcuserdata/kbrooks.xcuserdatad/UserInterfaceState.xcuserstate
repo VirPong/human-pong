@@ -1380,7 +1380,7 @@
 		</dict>
 		<string>IDEUtilitiesArea</string>
 		<real>260</real>
-		<string>{{263, 289}, {990, 489}}</string>
+		<string>{{103, 283}, {990, 489}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>

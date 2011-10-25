@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190E296E14576B490094D884 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 190E296D14576B490094D884 /* www */; };
 		CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */; };
 		CB73D684143D4ADA005B15EF /* GapSocketCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D683143D4ADA005B15EF /* GapSocketCommand.m */; };
 		CB73D687143D4AF6005B15EF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D686143D4AF6005B15EF /* AsyncSocket.m */; };
@@ -37,10 +38,10 @@
 		CBCD22AF14352FBC00E74443 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBCD22AE14352FBC00E74443 /* Capture.bundle */; };
 		CBCD22B114352FBC00E74443 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBCD22B014352FBC00E74443 /* PhoneGap.plist */; };
 		CBCD22B514352FBC00E74443 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD22B414352FBC00E74443 /* AppDelegate.m */; };
-		CBCD22BE1435304A00E74443 /* www in Resources */ = {isa = PBXBuildFile; fileRef = CBCD22BD1435304A00E74443 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190E296D14576B490094D884 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPBluetoothDataProcessor.h; path = Classes/VPBluetoothDataProcessor.h; sourceTree = "<group>"; };
 		CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPBluetoothDataProcessor.m; path = Classes/VPBluetoothDataProcessor.m; sourceTree = "<group>"; };
 		CB73D682143D4ADA005B15EF /* GapSocketCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GapSocketCommand.h; path = Classes/GapSocketCommand.h; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		CBCD22B314352FBC00E74443 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		CBCD22B414352FBC00E74443 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		CBCD22B714352FBC00E74443 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
-		CBCD22BD1435304A00E74443 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		CBCD226214352FBB00E74443 = {
 			isa = PBXGroup;
 			children = (
-				CBCD22BD1435304A00E74443 /* www */,
+				190E296D14576B490094D884 /* www */,
 				CBCD228E14352FBB00E74443 /* PhoneGapClient */,
 				CBCD227314352FBB00E74443 /* Frameworks */,
 				CBCD227114352FBB00E74443 /* Products */,
@@ -309,7 +309,7 @@
 				CBCD22AD14352FBC00E74443 /* Default@2x.png in Resources */,
 				CBCD22AF14352FBC00E74443 /* Capture.bundle in Resources */,
 				CBCD22B114352FBC00E74443 /* PhoneGap.plist in Resources */,
-				CBCD22BE1435304A00E74443 /* www in Resources */,
+				190E296E14576B490094D884 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
