@@ -1,24 +1,28 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>PhoneGap</title>
 	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	  <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-	  <script type="text/javascript" charset="utf-8" src="canvas.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="websocket.js"></script>
+	   <script type="text/javascript" charset="utf-8" src="socket.io.js"></script>
 
   </head>
-  <body onload="init();" id="stage" class="theme">
-    <h1>Welcome to VirPong!</h1>
+  <body onload="" id="stage" class="theme">
+    <div id="info">
+        <img src="logo-blue.gif"
+         width="280"
+         height="150">
+     </div>    
+     <!-- href="javascript:history.go(-1);" -->
     <a href="PlayGame/gameIndex.html" class="btn large">Play a game!</a>
-    <a href="http://www.math.ups.edu/~jsawin/" class="btn large">Stalk Sawin!</a>
-	<a href="#" class="btn large">Phone a friend.</a>
-    <a href="http://www.youtube.com/watch?v=ViIDFZ1Kfa8/" class="btn large" onclick="beep();">Watch a game.</a>
+	<a href="index2.html" class="btn large">To server.</a>
+	<a href="http://www.pugetsound.edu" class="btn large">To UPS homepage.</a>
     <div id="viewport" class="viewport" style="display: none;">       
       <img style="width:60px;height:60px" id="test_img" src=""> </img>
     </div> 
-    <canvas id='canvasPong' onload='initCanvas();'>
-    	<p> Not working </p>
-    </canvas>
   </body>
 </html>

@@ -1,15 +1,203 @@
-<!DOCTYPE HTML>
 <html>
+
+<script type="text/javascript">
+var context;
+
+var frameX = 210;
+var frameY = 320;
+
+var xBall=(frameX/2); //initial ball coords
+var yBall=(frameY/2); //initial ball coords
+var dx=1; //ball motion in x
+var dy=2; //ball motion in y
+var ballRadius = 10;
+
+var paddleSize = frameY/8; //height
+var paddleWidth = 10;
+var leftPad = (frameY/2) - paddleSize/2; //yBall position of paddles init in the middle
+var rightPad = (frameY/2) - paddleSize/2
+
+var motionStep = frameY/10 //reaction distance to a motion command
+
+var scoreLeft = 0;
+var scoreRight = 0;
+
+var pieterMode = 0;
+
+function movePaddle(e){
+var evntObj = (document.all)?event.keyCode:e.keyCode;
+//var unicode = evntObj.charCode;
+var actualKey = String.fromCharCode(evntObj);
+//alert(evntObj + "\n" + actualKey);
+
+if(actualKey == "W"){ //check which key was pressed
+if(leftPad > 0){ // do nothing if it would move paddle out of frame
+leftPad = leftPad - motionStep;
+}
+}
+if(actualKey == "S"){
+if(leftPad < (frameY - paddleSize)){
+leftPad = leftPad + motionStep;
+}
+}
+if(actualKey == "I"){
+if(rightPad > 0){
+rightPad = rightPad - motionStep;
+}
+}
+if(actualKey == "K"){
+if(rightPad < (frameY - paddleSize)){
+rightPad = rightPad + motionStep;
+}
+}
+if(actualKey == "P"){
+       pieterMode = (pieterMode + 1) % 2;
+	   }
+}
+
+
+function init()
+{
+context= myCanvas.getContext('2d');
+setInterval(draw,30);
+}
+
+
+
+function drawRect(a, b, c, d, col)
+{
+context.save();
+
+context.beginPath();
+context.fillStyle = col; //color to fill shape in with
+context.rect(a,b,c,d); //draws rect with top left corner a,b
+context.closePath();
+context.fill();
+
+context.restore();
+}
+function drawBall(a, b)
+{
+context.save();
+
+context.beginPath();
+context.fillStyle = "rgb(200,0,0)"; //color to fill shape in with
+
+context.arc(xBall,yBall,ballRadius,0,Math.PI*2,true);
+context.closePath();
+context.fill();
+
+context.restore();
+}
+
+function drawScore(pos){
+//pos determines which side to draw score on, based on orientation either side of roughly midpoint
+context.fillStyle = '#00f';
+context.font = 'bold 50px sans-serif';
+context.textBaseline = 'top';
+
+
+if(pos < 600){
+var score;
+score = String(scoreLeft);
+context.fillText('Player 1: ' + score, pos, 10);
+}
+if(pos > 600){
+var score;
+score = String(scoreRight);
+context.fillText('Player 2: ' + score, pos,10);
+}
+
+}
+
+
+function draw()
+{
+context.clearRect(0,0, frameX,frameY); //clear the frame
+
+if(pieterMode == 1){
+       img = new Image();
+       img.src = "pieter.jpg";
+       context.drawImage(img, 0, 0,(img.width)/2 + 10, (img.height)/2 + 25);
+}
+drawBall(xBall,yBall);
+
+drawRect(0,leftPad,paddleWidth, paddleSize, "rgb(0,200,0)");//xpos, ypos, width, height
+drawRect(frameX-paddleWidth,rightPad,paddleWidth,paddleSize, "rgb(255,0,0)");
+
+//drawScore(150);
+//drawScore(850);
+
+// Boundary Logic for bouncing off the walls
+
+// if( xBall<0 || xBall>frameX)
+// {
+// dx = -dx; //change xBall direction if you go off screen....
+// }
+if( yBall<0 || yBall>frameY)
+{
+dy = -dy; //change yBall direction if you go off screen....
+}
+
+//Paddle Boundary Logic
+
+//changed all these numbers to more reasonable shit also, these kinda stuff should also be fields but we can
+//think about that later
+
+if((xBall <= 10) && (xBall > 5) && (yBall > leftPad) && (yBall < (leftPad + paddleSize))) //if it hits the left paddle
+{
+dx = -1.1*dx; //get faster after you hit it
+}
+if((xBall >= frameX - 10) && (xBall <= frameX - 5) && (yBall >= rightPad) && (yBall <= (rightPad + paddleSize))) //if it hits the right paddle
+{
+dx = -1.1*dx;
+}
+
+//if ball goes out of frame reset in the middle and put to default speed and increment score...
+
+if(xBall < -40){ //changed these numbers you had old ones so ball was going super far out of frame
+xBall = frameX/2;
+yBall = frameY/2;
+dx = 1;
+dy = 2;
+scoreRight++;
+}
+if(xBall > 250){  //changed these numbers you had old ones so ball was going super far out of frame
+xBall = frameX/2;
+yBall = frameY/2;
+dx = 1;
+dy = 2;
+scoreLeft++;
+}
+
+
+xBall+=dx;
+yBall+=dy;
+}
+
+document.onkeydown = movePaddle; //call movePaddle whenever any key is pressed
+
+
+
+</script>
+<style type="text/css">
+           canvas {
+               border: 4px solid #A0A0A0;
+               background: black;
+               display: block;
+           }
+</style>
+
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>GameIndex</title>
-        <link rel="stylesheet" href="../master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-            <script type="text/javascript" charset="utf-8" src="../phonegap-1.0.0.js"></script>
-            <script type="text/javascript" charset="utf-8" src="../GapSocket.js"></script>
-            <script type="text/javascript" charset="utf-8" src="game.js"></script>
-  </head>
-<body id="gameStage" class="theme" onload="init();">
-	<h1>Get ready. . .</h1>
-		<a href="#" class="btn large" onclick="javascript:connectToGame();">Let's play pong!</a>
+<title>Pieter Sucks</title>
+</head>
+
+<body onLoad="init();">
+ <canvas id="myCanvas" width="210" height="320" >
+ </canvas>
+
+
 </body>
+
+
 </html>
