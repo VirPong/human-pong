@@ -9,6 +9,23 @@
     margin:0;
     border-top:1px solid #393939;
   }
+  /*Formats the "info" section at the top of the main page.*/
+  #info{
+   //This does the stuff around the "info" block at the top
+    background:#F0000F;
+    border: 1px solid #ffd324;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    clear:both;
+    margin:15px 6px 0;
+    width:295px;
+    padding:4px 0px 2px 10px;
+  }
+  
+  #info > h4{
+    font-size:.95em;
+    margin:5px 0;
+  }
 
   #stage.theme{
     padding-top:3px;

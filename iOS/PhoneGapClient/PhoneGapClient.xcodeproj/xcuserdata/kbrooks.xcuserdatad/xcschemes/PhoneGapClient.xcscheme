@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB332C5C14300A4400325C85"
-               BuildableName = "VirPong iOS Client.app"
-               BlueprintName = "VirPong iOS Client"
-               ReferencedContainer = "container:VirPong iOS Client.xcodeproj">
+               BlueprintIdentifier = "CBCD226F14352FBB00E74443"
+               BuildableName = "PhoneGapClient.app"
+               BlueprintName = "PhoneGapClient"
+               ReferencedContainer = "container:PhoneGapClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,16 +27,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB332C8014300A4500325C85"
-               BuildableName = "VirPong iOS ClientTests.octest"
-               BlueprintName = "VirPong iOS ClientTests"
-               ReferencedContainer = "container:VirPong iOS Client.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -48,10 +38,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB332C5C14300A4400325C85"
-            BuildableName = "VirPong iOS Client.app"
-            BlueprintName = "VirPong iOS Client"
-            ReferencedContainer = "container:VirPong iOS Client.xcodeproj">
+            BlueprintIdentifier = "CBCD226F14352FBB00E74443"
+            BuildableName = "PhoneGapClient.app"
+            BlueprintName = "PhoneGapClient"
+            ReferencedContainer = "container:PhoneGapClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -65,10 +55,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB332C5C14300A4400325C85"
-            BuildableName = "VirPong iOS Client.app"
-            BlueprintName = "VirPong iOS Client"
-            ReferencedContainer = "container:VirPong iOS Client.xcodeproj">
+            BlueprintIdentifier = "CBCD226F14352FBB00E74443"
+            BuildableName = "PhoneGapClient.app"
+            BlueprintName = "PhoneGapClient"
+            ReferencedContainer = "container:PhoneGapClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

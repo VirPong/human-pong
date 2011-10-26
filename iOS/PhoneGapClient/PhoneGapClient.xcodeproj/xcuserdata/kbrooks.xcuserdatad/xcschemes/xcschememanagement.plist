@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>VirPong iOS Client.xcscheme</key>
+		<key>PhoneGapClient.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CB332C5C14300A4400325C85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CB332C8014300A4500325C85</key>
+		<key>CBCD226F14352FBB00E74443</key>
 		<dict>
 			<key>primary</key>
 			<true/>
