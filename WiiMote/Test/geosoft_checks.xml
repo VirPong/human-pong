@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+
+    <!-- Checks that a package.html file exists for each package. -->
+    <module name="PackageHtml"/>
+
+    <!-- Checks whether files end with a new line. -->
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- Checks that property files contain the same keys. -->
+    <module name="Translation"/>
+
+    <module name="TreeWalker">
+
+        <!-- Javadoc for class/interface must be present/valid. -->
+        <!-- Require author to be present.                      -->
+        <module name="JavadocType">
+           <property name="authorFormat" value="\S"/>
+	</module>
+
+        <!-- Javadoc for methods must be present/valid. -->
+        <module name="JavadocMethod">
+	  <property name="allowUndeclaredRTE" value="true"/>
+	</module>
+
+        <!-- Javadoc for class variables must be present/valid. -->
+        <module name="JavadocVariable"/>
+
+        <!-- Javadoc must be well-formed. -->
+        <module name="JavadocStyle"/>
+
+        <!-- Naming conventions for packages. -->
+        <module name="PackageName">
+	  <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+	</module>
+
+        <!-- Naming conventions for classes and interfaces. -->
+        <module name="TypeName"/>
+
+        <!-- Naming conventions for constants. -->
+	<!-- TODO: Problem with this is that it should cover basic     -->
+	<!-- types only, and not names like instance_ and logger_ etc. -->
+	<!--
+        <module name="ConstantName"/>
+	-->
+
+        <!-- Naming conventions for class variables. -->
+        <module name="MemberName">
+	  <property name="format" value="^[a-z][a-zA-Z0-9]*_$"/>
+	</module>
+
+	<!-- Naming conventions local variables. -->
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="ParameterName"/>
+
+        <module name="StaticVariableName">
+	  <property name="format" value="^[a-z][a-zA-Z0-9]*_$"/>
+	</module>
+
+        <!-- Avoid start imports -->
+        <module name="AvoidStarImport"/>
+
+	<!-- Avoid imports of the sun.* packages -->
+        <module name="IllegalImport"/>
+
+	<!-- Avoid redundant imports -->
+        <module name="RedundantImport"/>
+
+	<!-- Avoid unused imports -->
+        <module name="UnusedImports"/>
+
+	<!-- Ensure certian import order -->
+	<module name="ImportOrder">
+          <property name="groups" value="java,javax"/>
+          <property name="ordered" value="true"/>
+          <property name="separated" value="true"/>
+	</module>
+
+        <!-- Lines should be maximum of 80 characters -->
+        <module name="LineLength">
+	  <property name="max" value="80"/>
+	</module>
+
+        <!--  -->
+        <module name="MethodParamPad"/>
+
+        <!-- No whitespace after selected tokens -->
+        <module name="NoWhitespaceAfter"/>
+
+        <!--  -->
+        <module name="NoWhitespaceBefore"/>
+
+        <!--  -->
+        <module name="OperatorWrap">
+	  <property name="tokens" value="ASSIGN,
+	                                 BAND,
+					 BAND_ASSIGN,
+					 BOR,
+					 BOR_ASSIGN,
+					 BSR,
+					 BSR_ASSIGN,
+					 BXOR,
+					 BXOR_ASSIGN,
+					 COLON,
+					 DIV,
+					 DIV_ASSIGN,
+					 EQUAL,
+					 GE,
+					 GT,
+					 LAND,
+					 LE,
+					 LITERAL_INSTANCEOF,
+					 LOR,
+					 LT,
+					 MINUS,
+					 MINUS_ASSIGN,
+					 MOD,
+					 MOD_ASSIGN,
+					 NOT_EQUAL,
+					 PLUS,
+					 PLUS_ASSIGN,
+					 QUESTION,
+					 SL,
+					 SL_ASSIGN,
+					 SR,
+					 SR_ASSIGN,
+					 STAR,
+					 STAR_ASSIGN"/>
+           <property name="option" value="eol"/>
+	</module>
+
+        <!--  -->
+        <module name="ParenPad"/>
+
+        <!-- No space in a case oparation "(int)" not "( int )" -->
+        <module name="TypecastParenPad">
+	  <property name="option" value="nospace"/>
+        </module>
+
+        <!-- Avoid tab chacraters in the code -->
+        <module name="TabCharacter"/>
+
+        <!-- Space after comma, semicolon and casts -->
+        <module name="WhitespaceAfter">
+	  <property name="tokens" value="COMMA,
+	                                 SEMI,
+					 TYPECAST"/>
+        </module>
+
+        <!-- Ensure whitespace around all operators other than -->
+	<!-- GENERIC_START and GENERIC_END                     -->
+        <module name="WhitespaceAround">
+	  <property name="tokens" value="ASSIGN,
+	                                 BAND,
+					 BAND_ASSIGN,
+					 BOR,
+					 BOR_ASSIGN,
+					 BSR,
+					 BSR_ASSIGN,
+					 BXOR,
+					 BXOR_ASSIGN,
+					 COLON,
+					 DIV,
+					 DIV_ASSIGN,
+					 EQUAL,
+					 GE,
+					 GT,
+					 LAND,
+					 LCURLY,
+					 LE,
+					 LITERAL_ASSERT,
+					 LITERAL_CATCH,
+					 LITERAL_DO,
+					 LITERAL_ELSE,
+					 LITERAL_FINALLY,
+					 LITERAL_FOR,
+					 LITERAL_IF,
+					 LITERAL_RETURN,
+					 LITERAL_SYNCHRONIZED,
+					 LITERAL_TRY,
+					 LITERAL_WHILE,
+					 LOR,
+					 LT,
+					 MINUS,
+					 MINUS_ASSIGN,
+					 MOD,
+					 MOD_ASSIGN,
+					 NOT_EQUAL,
+					 PLUS,
+					 PLUS_ASSIGN,
+					 QUESTION,
+					 RCURLY,
+					 SL,
+					 SLIST,
+					 SL_ASSIGN,
+					 SR,
+					 SR_ASSIGN,
+					 STAR,
+					 STAR_ASSIGN,
+					 TYPE_EXTENSION_AND,
+					 WILDCARD_TYPE"/>
+	</module>
+
+        <!-- Check modifier order:          -->
+	<!--   public | protected | private -->
+	<!--   abstract                     -->
+	<!--   static                       -->
+	<!--   final                        -->
+	<!--   transient | volatile         -->
+	<!--   synchronized                 -->
+	<!--   native                       -->
+	<!--   strictfp                     -->
+        <module name="ModifierOrder"/>
+
+	<!-- Avoid redundant modifiers -->
+        <module name="RedundantModifier"/>
+
+	<!-- Avoid empty blocks -->
+        <module name="EmptyBlock"/>
+
+	<!-- Classes, interfaces and methods have left brace on a new line -->
+        <module name="LeftCurly">
+	  <property name="option" value="nl"/>
+	  <property name="maxLineLength" value="80"/>
+	  <property name="tokens" value="CLASS_DEF,
+	                                 CTOR_DEF,
+	                                 INTERFACE_DEF,
+					 METHOD_DEF"/>
+        </module>
+
+	<!-- The others have left brace at eol -->
+        <module name="LeftCurly">
+	  <property name="option" value="eol"/>
+	  <property name="maxLineLength" value="80"/>
+	  <property name="tokens" value="LITERAL_CATCH,
+					 LITERAL_DO,
+					 LITERAL_ELSE,
+					 LITERAL_FINALLY,
+					 LITERAL_FOR,
+					 LITERAL_IF,
+					 LITERAL_SWITCH,
+					 LITERAL_SYNCHRONIZED,
+					 LITERAL_TRY,
+					 LITERAL_WHILE"/>
+        </module>
+
+	<!-- TODO -->
+        <module name="RightCurly">
+	  <property name="option" value="alone"/>
+	  <property name="tokens" value="LITERAL_CATCH,
+	                                 LITERAL_FINALLY,
+					 LITERAL_ELSE"/>
+	</module>
+
+        <!-- Avoid nested blocks other than in switch statements -->
+        <module name="AvoidNestedBlocks">
+	  <property name="allowInSwitchCase" value="true"/>
+	</module>
+
+	<!-- Checks that classes that define a covariant equals() method -->
+        <!-- also override method equals(java.lang.Object)               -->
+        <module name="CovariantEquals"/>
+
+        <!-- Avoid DCL as it doesn't work anyway -->
+        <module name="DoubleCheckedLocking"/>
+
+	<!-- Avoid empty statements -->
+	<!-- TODO: Should be alloed in empty for-loop -->
+        <module name="EmptyStatement"/>
+
+	<!-- Checks that classes that override equals() -->
+	<!-- also override hashCode() -->
+        <module name="EqualsHashCode"/>
+
+	<!-- Checks that local variables and parameters that are never -->
+	<!-- are declared final                                        -->
+	<!--
+	<module name="FinalLocalVariable">
+	  <property name="tokens" value="PARAMETER_DEF,
+                                         VARIABLE_DEF"/>
+	</module>
+	-->
+
+	<!-- Check that method/constructor/catch block parameters are final -->
+	<!--
+	<module name="FinalParameters"/>
+	-->
+
+	<!-- Check that a name doens't hide another name -->
+        <module name="HiddenField"/>
+
+	<!-- TODO
+	<module name="IllegalTokenText">
+	  <property name="tokens" value="NUM_FLOAT,NUM_DOUBLE"/>
+	</module>
+	-->
+
+	<!-- Avoid inner assignments -->
+        <module name="InnerAssignment"/>
+
+	<!-- Require default clause in switch statements -->
+        <module name="MissingSwitchDefault"/>
+
+	<!-- Avoid modifying control variables -->
+        <module name="ModifiedControlVariable"/>
+
+	<!-- Avoid redundant throws -->
+        <module name="RedundantThrows">
+	  <property name="allowUnchecked" value="true"/>
+	</module>
+
+	<!-- Require simple boolean expressions -->
+        <module name="SimplifyBooleanExpression"/>
+
+	<!-- Require simple boolean expressions -->
+        <module name="SimplifyBooleanReturn"/>
+
+	<!-- Capture string compare using == -->
+	<module name="StringLiteralEquality"/>
+
+	<!-- Checks that an overriding clone() method invokes super.clone() -->
+	<module name="SuperClone"/>
+
+	<!-- Checks that an overriding finalize() method invokes -->
+	<!-- super.finalize()                                    -->
+	<module name="SuperFinalize"/>
+
+	<!-- Disallow catcing exception base classes -->
+	<module name="IllegalCatch"/>
+
+	<!-- Disallow throwing exception base classes -->
+	<module name="IllegalThrows"/>
+
+	<!-- Require all classes to be in a package -->
+	<module name="PackageDeclaration"/>
+
+	<!-- Ensures correct layout of JUnit test cases -->
+	<module name="JUnitTestCase"/>
+
+	<!-- Enforce the following declaration order: -->
+	<!--   1. Class variables    -->
+	<!--   2. Instance variables -->
+	<!--   3. Ctors              -->
+	<!--   4. Methods            -->
+	<module name="DeclarationOrder"/>
+
+	<!-- Disallow parameter assignment -->
+	<module name="ParameterAssignment"/>
+
+	<!-- Avoid explicit initialization to the default value -->
+	<module name="ExplicitInitialization"/>
+
+	<!-- Ensure the default clasue is the last case in a switch -->
+	<module name="DefaultComesLast"/>
+
+	<!-- Disallow non-commented swicth fall throug -->
+	<module name="FallThrough"/>
+
+	<!-- Each variable should be declared individually -->
+	<module name="MultipleVariableDeclarations"/>
+
+	<!-- Avoid unnecessary parantheses -->
+	<module name="UnnecessaryParentheses"/>
+
+	<!-- Make sure only static finals are public -->
+        <module name="VisibilityModifier"/>
+
+	<!-- Class with private constructor must be final -->
+        <module name="FinalClass"/>
+
+	<!-- Utility classes should have private ctor -->
+        <module name="HideUtilityClassConstructor"/>
+
+        <!-- Require classes to be either abstract or final -->
+        <module name="DesignForExtension"/>
+
+	<!-- Ensures that exception classes are immutable -->
+	<module name="MutableException"/>
+
+	<!-- Flag overly complex constructions -->
+	<module name="ClassFanOutComplexity"/>
+	<module name="CyclomaticComplexity">
+	  <property name="max" value="20"/>
+	</module>
+	<module name="NPathComplexity"/>
+
+	<!-- Trap trailing spaces -->
+        <module name="GenericIllegalRegexp">
+            <property name="format" value="\s+$"/>
+            <property name="message" value="Line has trailing spaces."/>
+        </module>
+
+	<!-- Identify TODOs -->
+	<module name="TodoComment">
+	  <property name="format" value="TODO"/>
+	</module>
+
+	<!-- Flag uncommented main() methods (debugging left-overs) -->
+	<module name="UncommentedMain"/>
+
+	<!-- Require long constants to be defined by uppercase L -->
+	<module name="UpperEll"/>
+
+	<!-- Array brackets on type not varaible -->
+	<module name="ArrayTypeStyle"/>
+
+	<!-- Indentations -->
+	<module name="Indentation">
+	  <property name="basicOffset" value="2"/>
+	  <property name="braceAdjustment" value="0"/>
+	  <property name="caseIndent" value="2"/>
+	</module>
+
+	<!-- Avoid trailing comments -->
+	<module name="TrailingComment"/>
+
+    </module>
+
+</module>
