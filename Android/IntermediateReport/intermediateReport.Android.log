@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  23 OCT 2011 18:37
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.10.10)  27 OCT 2011 16:13
 entering extended mode
  %&-line parsing enabled.
 **intermediateReport.Android.tex
@@ -374,21 +374,93 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.71 \newpage
-              [1] [2] [3] [4] [5] [6] [7] [8]
-Overfull \hbox (1.57848pt too wide) in paragraph at lines 443--444
+              [1] [2] <ssd_GamePlay_1.png, id=178, 786.94pt x 586.19pt>
+File: ssd_GamePlay_1.png Graphic file (type png)
+
+<use ssd_GamePlay_1.png> [3] [4 <./ssd_GamePlay_1.png (PNG copy)>] [5] [6]
+[7] <domainModel_Android-1.png, id=308, 739.76375pt x 363.3575pt>
+File: domainModel_Android-1.png Graphic file (type png)
+
+<use domainModel_Android-1.png>
+Overfull \hbox (5.96617pt too wide) in paragraph at lines 424--425
+ [] 
+ []
+
+[8] [9 <./domainModel_Android-1.png (PNG copy)>]
+Overfull \hbox (1.57848pt too wide) in paragraph at lines 456--457
 []\OT1/cmr/m/n/12 In gen-eral, use $\OML/cmm/m/it/12 methodNamesLikeThis$\OT1/c
 mr/m/n/12 , $\OML/cmm/m/it/12 variableNamesLikeThis$\OT1/cmr/m/n/12 , $\OML/cmm
 /m/it/12 ClassNamesLikeThis$\OT1/cmr/m/n/12 , and
  []
 
-[9]
-Overfull \hbox (34.30064pt too wide) in paragraph at lines 472--473
+[10]
+Overfull \hbox (34.30064pt too wide) in paragraph at lines 485--486
 \OML/cmm/m/it/12 EnumNamesLikeThis$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 methodNa
 mesLikeThis$\OT1/cmr/m/n/12 , and $\OML/cmm/m/it/12 SYMBOLIC[]CONSTANTS[]LIKE[]
 THIS$\OT1/cmr/m/n/12 . 
  []
 
-[10] [11] [12] [13] [14] (./intermediateReport.Android.bbl
+[11] [12] [13] [14]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [15]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+ [16]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [17] [18] (./intermediateReport.Android.bbl
 Underfull \hbox (badness 7030) in paragraph at lines 15--19
 []\OT1/cmr/m/n/12 ADT Plu-gin for Eclipse.  []$\OT1/cmtt/m/n/12 http : / / deve
 loper . android . com / sdk / eclipse-[]adt . html #
@@ -417,15 +489,15 @@ Underfull \hbox (badness 2080) in paragraph at lines 62--68
 OT1/cmr/m/n/12 , May 2008.  [On-line; ac-cessed
  []
 
-) [15] (./intermediateReport.Android.aux) ) 
+) [19] (./intermediateReport.Android.aux) ) 
 Here is how much of TeX's memory you used:
- 4539 strings out of 256216
- 60718 string characters out of 1917071
+ 4561 strings out of 256216
+ 61094 string characters out of 1917071
  120076 words of memory out of 1500000
- 7625 multiletter control sequences out of 10000+200000
+ 7638 multiletter control sequences out of 10000+200000
  10964 words of font info for 41 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 27i,5n,43p,1113b,503s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 27i,7n,43p,1857b,376s stack positions out of 5000i,500n,6000p,200000b,15000s
  </home/kwenholz/.texlive2007/texmf-
 var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texmf/fonts/type1/bl
 uesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/s
@@ -433,9 +505,9 @@ hare/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/blues
 ky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share
 /texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/c
 m/cmti12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on intermediateReport.Android.pdf (16 pages, 139423 bytes).
+Output written on intermediateReport.Android.pdf (20 pages, 269892 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 151 named destinations out of 1000 (max. 131072)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 131072)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

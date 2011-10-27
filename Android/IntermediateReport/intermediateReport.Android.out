@@ -1,6 +1,7 @@
 \BOOKMARK [1][-]{section.1}{The Product}{}
 \BOOKMARK [1][-]{section.2}{Requirements Analysis}{}
 \BOOKMARK [2][-]{subsection.2.1}{Functional Requirements}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Playing a Game - 1.0}{subsection.2.1}
 \BOOKMARK [2][-]{subsection.2.2}{Usability Requirements}{section.2}
 \BOOKMARK [2][-]{subsection.2.3}{Reliability Requirements}{section.2}
 \BOOKMARK [2][-]{subsection.2.4}{Performance Requirements}{section.2}
@@ -24,5 +25,5 @@
 \BOOKMARK [2][-]{subsection.5.1}{Basic Design}{section.5}
 \BOOKMARK [2][-]{subsection.5.2}{Testing}{section.5}
 \BOOKMARK [1][-]{section.6}{Planning and Reflection}{}
-\BOOKMARK [2][-]{subsection.6.1}{Current State of the Project}{section.6}
-\BOOKMARK [2][-]{subsection.6.2}{Proposed Schedule}{section.6}
+\BOOKMARK [2][-]{subsection.6.1}{Past Goals}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{Future Goals and Deadlines}{section.6}
