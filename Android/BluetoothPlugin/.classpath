@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="/Users/jka/Documents/UPS/CSCI340/AndroidWorkSpace/BluetoothPlugin/libs/phonegap.jar"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="C:/EclipseWorkSpaces/Code/CS340/BluetoothPlugin/BluetoothPluginTest/libs/phonegap.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

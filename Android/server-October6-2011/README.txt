@@ -1,1 +1,0 @@
-Daniel Guilak, Ryan Wheeler
