@@ -77,7 +77,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2. Describe in detail the end product your department is producing, do not forget about documentation artifacts.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The final product of this development team will be a downloadable Android application for playing Pong via human motion.  Receiving position data from a Wii Remote the application allows a user to move a paddle on screen with motion in physical space.  The current concept is to host games over the internet and allow play between two players to proceed as a normal game of Pong.  This may change in the future to include \textit{enhanced modes} where players may retrieve power-ups, attack or complete any other number of non-standard actions.  Aside from the gameplay, however, the Android application will host a suite of other features.  Accessing user statistics, global statistics, help and support, changing aesthetic settings, adjusting the volume, and even navigating to the Vir-Pong website will all be possible from within the application.  While the application developed by our team is targeted at the Android platform, our team is working closely with the iOS development group to support a cohesive and quality application across multiple platforms.  
+The final product of this development team will be a downloadable Android application for playing Pong via human motion.  Receiving position data from a Wii Remote the application allows a player to move a paddle on screen with motion in physical space.  The current concept is to host games over the internet and allow play between two users to proceed as a normal game of Pong.  This may change in the future to include \textit{enhanced modes} where players may retrieve power-ups, attack or complete any other number of non-standard actions.  Aside from the gameplay, however, the Android application will host a suite of other features.  Accessing player statistics, global statistics, help and support, changing aesthetic settings, adjusting the volume, and even navigating to the Vir-Pong website will all be possible from within the application.  While the application developed by our team is targeted at the Android platform, our team is working closely with the iOS development group to support a cohesive and quality application across multiple platforms.  
 
 Installation and usage instructions as well as help and support will be found on the Android market or on the Vir-Pong site.  These instructions will be targeted towards novice technology users so that our product may be enjoyed by all groups.  Developer documentation generated during the development cycle will be available to all Vir-Pong employees and the general public as part of our open-source commitment.  Where this documentation will be hosted is currently under consideration.  
 
@@ -102,67 +102,68 @@ The final product of this team will integrate with the greater Vir-Pong ecosyste
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \singlespacing
-\subsubsection{Playing a Game - 1.0}
+\subsubsection{Playing a Game - v1.0}
 Actors:
 \begin{itemize*}
-\item User
+\item Player
 \item Hub
 \item Android device
 \item Input device
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-\item User is authenticated into the system and has successfully requested a game from the hub.
-\item The input device is tethered to the Android device and is ready to submit motion data.
+\item Player is authenticated into the system and has successfully requested a game from the hub.
+\item Input device is tethered to the Android device and is ready to submit motion data.
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
 \item A winner has been determined.
-\item User statistics are recorded by the hub system.
+\item Player statistics are recorded by the hub system.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
 \item Hub signals a ready-start and the game begins.
-\item \label{UserObserves}User observes ball and opponent's paddle motion on Android device.
-\item User responds with appropriate motion, detected by the input device and relayed to the Android device.
-\item The Android device relays motion data to the hub.
-\item \label{HubUpdateGame}The hub recalculates ball and paddle position then sends updated information to Android device.
-\item \label{DisplayCurrentInformation}User's Android device displays the current information.\\
-Repeat \ref{UserObserves} through \ref{DisplayCurrentInformation} until a point is scored.
+\item \label{playerObserves}Player observes ball and opponent's paddle motion on Android device.
+\item Player responds with appropriate motion, detected by the input device and relayed to the Android device.
+\item Android device relays motion data to the hub.
+\item \label{HubUpdateGame}Hub recalculates ball and paddle position then sends updated information to Android device.
+\item \label{DisplayCurrentInformation}Player's Android device displays the current information.\\
+Repeat \ref{playerObserves} through \ref{DisplayCurrentInformation} until a point is scored.
 \item \label{LogPointRefresh}Hub logs point scored then resets game state to fresh.\\
-Repeat \ref{UserObserves} through \ref{LogPointRefresh} until score limit is reached.
+Repeat \ref{playerObserves} through \ref{LogPointRefresh} until score limit is reached.
 \item \label{AnnounceWinner}Hub indicates winner to Android device.
-\item Android device displays winner to user and announces game complete.
+\item Android device displays winner to player and announces game complete.
 \item Hub logs game statistics for later access.
-\item User is prompted to play another game or exit back to the home screen.
+\item Player is prompted to play another game or exit back to the home screen.
 \end{enumerate*}
 Alternatives:\\
-\ref{AnnounceWinner}a) The user's Android device loses connection with the hub after score limit being reached.
-\begin{enumerate*}
-\item The hub waits for a specified recovery time.
-\item Upon connection lost, the user's Android device begins recovery mode, trying to reconnect with the hub and indicating this to the user.
-\item After reconnecting with the hub, the game's winner is announced.  
-\item User is prompted to verify this, due to the connection lost. 
-\item Both players agree, so hub logs the game statistics.
-\item User is prompted to play another game or exit back to the home screen.
-\end{enumerate*}
-\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
-\begin{enumerate*}
-\item Hub alerts players that game is reaching overtime.
-\item User is given option to continue playing, call a tie, or postpone the game.
-\item User selects to call a tie. 
-\item The game ends and hub logs results.
-\item User is given option to play another game or return to home screen.
-\end{enumerate*}
 \ref{HubUpdateGame}a) Hub signals that connection to other player has been lost.
 \begin{enumerate*}
-\item Android device signals a game pause to user.
-\item User is prompted to wait or leave the game.
-\item The user elects to wait.
+\item Android device signals a game pause to player.
+\item Player is prompted to wait or leave the game.
+\item The player elects to wait.
 \item Hub signals that the other player is reconnected.
 \item Game resumes.
 \item Return to \ref{DisplayCurrentInformation} in main scenario.
 \end{enumerate*}
+\ref{AnnounceWinner}a) The player's Android device loses connection with the hub after score limit has been reached.
+\begin{enumerate*}
+\item The hub waits for a specified recovery time.
+\item Upon connection lost, the player's Android device begins recovery mode, trying to reconnect with the hub and indicating this to the player.
+\item After reconnecting with the hub, the game's winner is announced.  
+\item Player is prompted to verify this, due to the connection lost. 
+\item Both players agree, so hub logs the game statistics.
+\item Player is prompted to play another game or exit back to the home screen.
+\end{enumerate*}
+\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
+\begin{enumerate*}
+\item Hub alerts players that game is reaching overtime.
+\item Player is given option to continue playing, call a tie, or postpone the game.
+\item Player selects to call a tie. 
+\item The game ends and hub logs results.
+\item Player is given option to play another game or return to home screen.
+\end{enumerate*}
+
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.5]{ssd_GamePlay_1.png}
@@ -170,9 +171,9 @@ Alternatives:\\
 \end{center}
 \end{figure}
 
-\textbf{Figure~\ref{ssd_GamePlay_1}} depicts the sequence of actions during a game.  The Hub signals to the Android Device that game is ready to start, then the user is able to move the paddle using their chosen Input Device.  That paddle movement is sent from the Input Device to the Android Device, which relays the motion data to the Hub.  It is then the Hub's responsibility to relay the game status back to the Android Device so that it may display the game state.  This relay of information is repeated until a point is scored.  The Hub will log the point, then refresh the game state and send this new state to the Android Device.  After a refresh, the user is able to move the paddle again and continue play.  Our system remains in this cycle until the maximum number of points is reached.  The Hub indicates the winner and completion of the game to the Android Device for informing the User.  Finally, the Hub logs the game statistics, and the Android Device prompts the User for a new game or exit.
+\textbf{Figure~\ref{ssd_GamePlay_1}} depicts the sequence of actions during a game.  The Hub signals to the Android Device that the game is ready to start, then the player is able to move the paddle using their chosen Input Device.  That paddle movement is sent from the Input Device to the Android Device, which relays the motion data to the Hub.  It is then the Hub's responsibility to relay the game status back to the Android Device so that it may display the game state.  This relay of information is repeated until a point is scored.  The Hub will log the point, then refresh the game state and send this new state to the Android Device.  After a refresh, the player is able to move the paddle again and continue play.  Our system remains in this cycle until the maximum number of points is reached.  The Hub indicates the winner and completion of the game to the Android Device, which then informs the player.  Finally, the Hub logs the game statistics and the Android Device prompts the player for a new game or exit.
 
-\subsubsection*{Initializing a Game - 2.0}
+\subsubsection*{Initializing a Game - v2.0}
 Actors:
 \begin{itemize*}
 \item Player
@@ -182,8 +183,8 @@ Actors:
 Preconditions:
 \begin{itemize*}
 \item The application is installed and open on the device.
-\item The user has already created an account with Vir-Pong.
-\item The input method is prepared.
+\item The player has already created an account with Vir-Pong.
+\item The input device is tethered to the Android device and is ready to submit motion data.
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
@@ -198,7 +199,7 @@ Scenario:
 \item \label{SystemVerifies}The device verifies credentials with the hub.
 \item \label{SystemRequestsGame}The device requests a game from the hub.
 \item \label{HubSelectsOpponent}The hub selects an opponent and signals a ready-start to device.
-\item \label{LoadGameState}The device loads an initial game state displayed to the user.
+\item \label{LoadGameState}The device loads an initial game state displayed to the player.
 \item Game begins.
 \end{enumerate*}
 Alternatives:\\
@@ -220,10 +221,10 @@ Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player selects
 \item System connects to hub.
 \item Return to \ref{HubSelectsOpponent} of main scenario.
 \end{enumerate*}
-\subsubsection*{Connect to Input Device - 1.0}
+\subsubsection*{Connect to Input Device - v1.0}
 Actors:
 \begin{itemize*}
-\item User
+\item Player
 \item Device 
 \item Wii Remote
 \end{itemize*}
@@ -237,26 +238,26 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item \label{BeginGame}User selects start game.
-\item \label{InputMethod}System prompts user for input method: Wii Remote, device accelerometer, or touchscreen.
-\item User elects to use the Wii Remote.
+\item \label{BeginGame}Player selects start game.
+\item \label{InputMethod}Device prompts player for input method: Wii Remote, device accelerometer, or touchscreen.
+\item Player elects to use the Wii Remote.
 \item \label{ConnectWiimote}System attempts to tether Wii Remote.
-\item User follows instructions from system to connect Wii Remote.
+\item Player follows instructions from system to connect Wii Remote.
 \item System accepts Wii Remote device and notifies user.
 \item System proceeds to game launch.
 \end{enumerate*}
 Alternatives:\\
-\ref{InputMethod}a) User selects phone accelerometer.  
+\ref{InputMethod}a) Player selects phone accelerometer.  
 \begin{enumerate*}
-\item System asks user to make certain the device has an built in accelerometer.
-\item User indicates that device has accelerometer.
+\item System asks player to make certain the device has an built in accelerometer.
+\item Player indicates that device has accelerometer.
 \item System connects to device accelerometer.
 \item System proceeds to game launch.
 \end{enumerate*}
-\ref{InputMethod}b) User selects touch screen interface.
+\ref{InputMethod}b) Player selects touch screen interface.
 \begin{enumerate*}
-\item System asks user to touch a box displayed on-screen to ensure that a touch screen is available.
-\item User touches box.
+\item System asks player to touch a box displayed on-screen to ensure that a touch screen is available.
+\item Player touches box.
 \item System proceeds to game launch.
 \end{enumerate*}
 \ref{ConnectWiimote}System attempts Wii Remote connection, and fails.
@@ -265,7 +266,7 @@ Alternatives:\\
 \item Return to step \ref{InputMethod} of main scenario.
 \end{enumerate*}
 
-\subsubsection*{Changing the Game Settings - 1.0}
+\subsubsection*{Changing the Game Settings - v1.0}
 Actors:
 \begin{itemize*}
 \item Player
@@ -281,11 +282,11 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item \label{SelectChangeSettings}The player selects a $change$ $settings$ function.
-\item \label{ChangeSettings}The player changes the setting(s).
-\item \label{SelectSave}The player selects a $save$ $and$ $apply$ function.
-\item \label{SystemSaves}The device saves changes and applies them to future game plays.
-\item \label{ReturnToMainMenu}The device returns to the main menu.
+\item \label{SelectChangeSettings}Player selects a $change$ $settings$ function.
+\item \label{ChangeSettings}Player changes the setting(s).
+\item \label{SelectSave}Player selects a $save$ $and$ $apply$ function.
+\item \label{SystemSaves}Device saves changes and applies them to future game plays.
+\item \label{ReturnToMainMenu}Device returns to the main menu.
 \end{enumerate*}
 Alternatives:\\
 \ref{ChangeSettings}a) The player selects a non-valid entry for a setting.
@@ -300,7 +301,7 @@ Alternatives:\\
 \onehalfspacing
 
 \singlespacing
-\subsubsection*{Viewing Stats - 1.0}
+\subsubsection*{Viewing Stats - v1.0}
 Actors:
 \begin{itemize*}
 \item Player
@@ -309,18 +310,18 @@ Actors:
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-\item Our system is installed on the device and has launched.
-\item The user has already created an account with Vir-Pong and is logged in.
+\item Our application is installed on the device and has launched.
+\item The player has already created an account with Vir-Pong and is logged in.
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
-\item The user has looked at their statistics.
-\item The user can compare his to everyones.
+\item The player has looked at their statistics.
+\item The player can compare his to everyones.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item \label{SelectStats}The player chooses view stats option
-\item \label{PersonalStatRequest}The device requests personal score from website.
+\item \label{SelectStats}Player chooses view stats option
+\item \label{PersonalStatRequest}Device requests personal score from website.
 \item Website sends personal stats.
 \item Device displays personal stats and CompareStats option.
 \item \label{CompareStats}Player selects CompareStats option.
@@ -332,32 +333,32 @@ Alternatives:\\
 \ref{PersonalStatRequest}a) Unable to contact website.
 \begin{enumerate*}
 \item Display connection error message.
-\item User may utilize a $retry$ or $continue$ button.
-\item User selects $retry$.
+\item Player may utilize a $retry$ or $continue$ button.
+\item Player selects $retry$.
 \item Return to \ref{PersonalStatRequest}.
 \end{enumerate*}
 
-\subsubsection*{Edit Account Information}
+\subsubsection*{Edit Account Information - v1.0}
 Actors:
 \begin{itemize*}
-\item User
+\item Player
 \item System
 \item Vir-Pong Website
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-\item System is installed on the device and has launched.
+\item The application is installed on the device and has launched.
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
-\item User has edited account information.
+\item Player has edited account information.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item User selects Edit Account information.
+\item Player selects Edit Account information.
 \item \label{Browser}System opens phone browser to "Vir-pong Edit Account" information page. 
-\item User begins editing account information.
-\item User saves and exits editing account information.
+\item Player begins editing account information.
+\item Player saves and exits editing account information.
 \item System returns user to previous page.
 \end{enumerate*} 
 
@@ -401,24 +402,24 @@ In order for the application to provide an experience enjoyable to a wide user b
 
 \subsection{Reliability Requirements}
 %Frequency/severity of failure, Recoverability, Predictability, Accuracy, Mean time to failure
-A working product is fine, but reliability ensures a consistent experience.  With this in mind our design is striving for security of private user information and the ability to pause the game.  The latter is focused on creating a fault tolerant solution for network connectivity.  A strict testing policy will help to alleviate many other possible issues.
+A working product is important, but reliability ensures a consistent experience.  With this in mind, our design is striving for security of private user information and the ability to pause the game.  The latter is focused on creating a fault tolerant solution for network connectivity.  A strict testing policy will help to alleviate many other possible issues.
 
 \subsection{Performance Requirements}
 %Speed, Efficiency, Resource consumption, Throughput, Response time
-The ability to adjust the display for different screens will allow for better performance of the software on different Android devices.  The system must also minimize latency when contacting the server for game information or receiving information from the Wii Remote.  No other connections are nearly as important.
+The ability to adjust the display for different screens will allow for better performance of the software on different Android devices.  The system must also minimize latency when contacting the server for game information or receiving information from the Wii Remote.  There are no other connections that are quite as important.
 
 \subsection{Supportability Requirements}
 %Testability, Extensibility, Adaptability, Maintainability, Compatibility, Configurability, Serviceability, %Installability, Localizability, Portability
-Installation, game play, and resource usage should all be properly documented in a conveniently located and navigated user-manual. A list of known compatible devices included in the manual will assist in keeping potential customers informed about our product.  There should also be some contact information for support and help when documentation is not enough.
+Installation, game play, and resource usage should all be properly documented in a conveniently located and navigated user-manual. A list of known compatible devices included in the manual will assist in keeping potential customers informed about our product.  There should also be some contact information for support and help when the available documentation is not enough.
 
-In keeping with the project's open source roots, it will be important to make all source code well documented for the general public; make the source code readily available; give credit to non-employees with contributions; and provide substantial developer documentation. 
+In keeping with the project's open source roots, it will be important to make all source code well documented for the general public; make the source code readily available; give credit to non-employees that have contributed to our application; and provide substantial developer documentation. 
 
 
 \section{Domain Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %5. Domain Analysis: Create a UML diagram that depicts the domain model for your product (use your fully dressed use cases as a guide but include conceptual classes that might be needed for additional features). Include a plain-english description of what is being shown in the diagram. Define any terms used in conceptual classes, attributes, or associations that might not be clear to a lay person.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of virtual pong on an android device.  Throughout the game, the user controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and immediately sent to the hub.  The hub sends back information on both the user's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the user to view their virtual pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub.
+\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of Pong on an android device.  Throughout the game, the player controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and from there is immediately sent to the hub.  The hub sends back information on both the player's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the player to view their Pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub and also keeps track of the game's current score.
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{domainModel_Android-1.png}
@@ -557,7 +558,7 @@ The PhoneGap download is primarily a collection of tools that provide functional
 In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.
 
 \subsection{Retrieving the Source}
-In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:Vir-Pong/human-pong}.  You will then want to navigate into $Android/Vir-Pong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:Vir-Pong/www}.  Now you may open Eclipse and import the $Vir-Pong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/Vir-Pong/human-pong} and \url{https://github.com/Vir-Pong/www}, placing the $www$ repository in the same place mentioned above.
 
 
 
@@ -594,9 +595,9 @@ Members of the team are encouraged to consistently bring their code to others fo
 %        Clearly indicate future milestones including dates and team member responsibilities. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %BLAME SERVER TEAM
-The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have planned more manager meetings for the rest of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we are at the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team couldn’t move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits.
+The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have planned more manager meetings for the rest of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we are at the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team could not move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits for both teams.
 
-If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed out team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
+If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed our team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
 
 \subsection{Past Goals}
 \textbf{Thursday the 29th of September}
@@ -608,7 +609,7 @@ If we were to begin this project again, there are a number of things we would ha
 \end{itemize*}
 \textbf{Thursday the 6th of October}
 \begin{itemize*}
-\item Server Communication to and from Android – Status: Delayed but completed 10/10.  Unforeseen difficulties were encountered during final testing.
+\item Server Communication to and from Android – Status: Delayed but completed 10/10 due to unforeseen difficulties that were encountered during final testing.
 \item Ability to capture wii data on interface – Status: Completed
 \end{itemize*}
 \textbf{Monday the 10th of October}
@@ -632,13 +633,13 @@ If we were to begin this project again, there are a number of things we would ha
 
 \subsection{Future Goals and Deadlines}
 \begin{itemize}
-\item \textbf{Monday the 31st of October}: Present a working demo of the core functionality of our product.  This includes some Wii Remote to Android connectivity as well as device to server connectivity, a user interface for the phones, and a working website with a login page as well as other key features.
+\item \textbf{Monday the 31st of October}: Present a working demo of the core functionality of our product.  This includes some Wii Remote to Android connectivity as well as Android to server connectivity, a user interface for the phones, and a working website with a login page as well as other key features.
 
 \item \textbf{Friday the 4th of November}: Have a more robust server connection so that the desired data is being passed from the devices to the server and back.  Also we should have a robust API for the game logic.  Both of these tasks will be handled by Jillian and Kyle.  We also will fully integrate the desired functions of BluezIME with our PhoneGap application.  Jordan and David will complete this task.
 
-\item \textbf{Friday the 11th of November:} Start enhancing the user interface of the game.  This includes the ability to maintain and display score and sizing the paddle’s movement in relation to the device’s screen size.  Those tasked to handle this will be Kyle and David.  Jillian and Jordan will refine the user login process.
+\item \textbf{Friday the 11th of November:} Start enhancing the user interface of the game.  This includes the ability to maintain and display score and sizing the paddles' movement in relation to the device’s screen size.  Those tasked to handle this will be Kyle and David.  Jillian and Jordan will refine the user login process.
 
-\item \textbf{Friday the 18th of November:} Allow user to select settings for their gameplay.  Kyle and Jordan will work on this task. We will also work on other secondary features such as viewing the user’s game stats and changing account information.  This will be handled by David and Jillian
+\item \textbf{Friday the 18th of November:} Allow the player to select settings for their game play.  Kyle and Jordan will work on this task. We will also work on other secondary features such as viewing the player’s game stats and changing account information.  This will be handled by David and Jillian
 
 \item \textbf{Tuesday the 25th of November:} Clean up and embellish the application’s user interface and test the game a great deal.  We will all help in both of these activities. 
 
