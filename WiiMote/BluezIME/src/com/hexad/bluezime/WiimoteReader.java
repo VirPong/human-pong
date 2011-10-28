@@ -113,12 +113,16 @@ public class WiimoteReader extends HIDReaderBase {
 
 	//Emulated keypress values for core accelerometer
 	private static final int[] CORE_ACCELEROMETER_KEYS = new int[] {
-		KeyEvent.KEYCODE_I, 			//Accelerometer X up
-		KeyEvent.KEYCODE_I, 			//Accelerometer X down
-		KeyEvent.KEYCODE_I,  			//Accelerometer Y up
-		KeyEvent.KEYCODE_I,  			//Accelerometer Y down
-		KeyEvent.KEYCODE_I,  			//Accelerometer Z up
-		KeyEvent.KEYCODE_I,  			//Accelerometer Z down
+		KeyEvent.KEYCODE_W, 			//Accelerometer X up
+		KeyEvent.KEYCODE_S, 			//Accelerometer X down
+		//KeyEvent.KEYCODE_W,  			//Accelerometer Y up
+		//KeyEvent.KEYCODE_S,  			//Accelerometer Y down
+		//KeyEvent.KEYCODE_W,  			//Accelerometer Z up
+		//KeyEvent.KEYCODE_S,  			//Accelerometer Z down
+		KeyEvent.KEYCODE_UNKNOWN,
+		KeyEvent.KEYCODE_UNKNOWN,
+		KeyEvent.KEYCODE_UNKNOWN,
+		KeyEvent.KEYCODE_UNKNOWN
 	};
 
 	//Emulated keypress values for classic thumbsticks
@@ -694,6 +698,7 @@ public class WiimoteReader extends HIDReaderBase {
 					Intent intent = new Intent();
 					intent.setAction(TEST_INTENT);
 					intent.putExtra("Accel", prev);
+					//slows down the reporting so the app doesn't crash
 					if(counter%100==0)
 						m_context.sendBroadcast(intent);
 					counter++;
