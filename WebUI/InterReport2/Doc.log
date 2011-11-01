@@ -1,0 +1,362 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.10.28)  28 OCT 2011 19:34
+entering extended mode
+**Doc.tex
+(Z:\InterReport\Doc.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/04/25 v0.06b Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(Z:\InterReport\Doc.aux (Z:\InterReport\ref.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+(C:\Users\agrause\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+) (Z:\InterReport\title.tex <./logo.png, id=1, 213.79875pt x 161.60374pt>
+File: ./logo.png Graphic file (type png)
+
+<use ./logo.png>
+Package pdftex.def Info: ./logo.png used on input line 7.
+(pdftex.def)             Requested size: 155.99762pt x 117.91302pt.
+ [1
+
+{C:/Users/agrause/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <Z:/InterR
+eport/logo.png>]) (Z:\InterReport\enduse.tex
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no í in font cmr12!
+Missing character: There is no í in font cmr12!
+ [2]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [3] [4]
+Missing character: There is no í in font cmr12!
+
+[5]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no í in font cmr12!
+ [6] [7]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [8]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [9] [10] [11]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [12] [13] [14]
+Missing character: There is no ì in font cmr12!
+Missing character: There is no î in font cmr12!
+ [15] [16]
+<./SSD_of_Watch_Live.pdf, id=63, 614.295pt x 794.97pt>
+File: ./SSD_of_Watch_Live.pdf Graphic file (type pdf)
+
+<use ./SSD_of_Watch_Live.pdf>
+Package pdftex.def Info: ./SSD_of_Watch_Live.pdf used on input line 827.
+(pdftex.def)             Requested size: 390.0pt x 504.71544pt.
+ [17] [18 <Z:/InterReport/SSD_of_Watch_Live.pdf>]
+[19]) (Z:\InterReport\NonFunc.tex [20]) (Z:\InterReport\dom.tex
+<./Diagram1.png, id=82, 736.7525pt x 527.9725pt>
+File: ./Diagram1.png Graphic file (type png)
+ <use ./Diagram1.png>
+Package pdftex.def Info: ./Diagram1.png used on input line 5.
+(pdftex.def)             Requested size: 390.0pt x 279.47768pt.
+ [21])
+(Z:\InterReport\Impl.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+ [22 <Z:/InterReport/Diagram1.png>] [23] [24] [25]
+Overfull \hbox (10.80139pt too wide) in paragraph at lines 52--53
+[]\OT1/cmr/m/n/12 This cre-ates the database, but ta-bles must be cre-ated with
+in the database.
+ []
+
+
+Overfull \hbox (71.14912pt too wide) in paragraph at lines 54--55
+[]\OT1/cmr/m/n/12 create ta-ble Game-s-Played (gameID INT(10) NOT NULL AUTO[]IN
+CREMENT,
+ []
+
+
+Overfull \hbox (9.30568pt too wide) in paragraph at lines 54--55
+\OT1/cmr/m/n/12 user-name1 VAR-CHAR(50) NOT NULL, user-name2 VAR-CHAR(50)
+ []
+
+
+Overfull \hbox (2.4616pt too wide) in paragraph at lines 54--55
+\OT1/cmr/m/n/12 NOT NULL, win TINYINT NOT NULL, IN-DEX in-dex1(gameID),
+ []
+
+
+Overfull \hbox (10.2808pt too wide) in paragraph at lines 54--55
+\OT1/cmr/m/n/12 FOR-EIGN KEY(username2) REF-ER-ENCES cus-tomer(username)); 
+ []
+
+[26]
+Overfull \hbox (5.0836pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/12 CHAR(256) NOT NULL, birth-day DATE NULL, gen-der TINYINT
+ []
+
+
+Overfull \hbox (43.97726pt too wide) in paragraph at lines 56--57
+[]\OT1/cmr/m/n/12 create ta-ble Reg-is-tra-tion (gameID INT NOT NULL AUTO[]INCR
+EMENT,
+ []
+
+
+Overfull \hbox (9.30568pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 user-name1 VAR-CHAR(50) NOT NULL, user-name2 VAR-CHAR(50)
+ []
+
+
+Overfull \hbox (8.07199pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 INT NULL, IN-DEX in-dex1(gameID), CON-STRAINT FK[]customer
+ []
+
+
+Overfull \hbox (5.71141pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 FOR-EIGN KEY(username1) REF-ER-ENCES cus-tomer(username),
+ []
+
+
+Overfull \hbox (6.58665pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 CON-STRAINT FK[]customer[]2 FOR-EIGN KEY(username2) REF-
+ []
+
+
+Overfull \hbox (69.33653pt too wide) in paragraph at lines 65--66
+\OT1/cmr/m/n/12 IP ad-dress to the ad-dress of your server. ex: 'socket = io.co
+nnect('xxx.xxx.xxx.xxx');'
+ []
+
+[27]
+Overfull \hbox (62.50085pt too wide) in paragraph at lines 66--67
+[]\OT1/cmr/m/n/12 To view the ap-pli-ca-tion in use, point your web browser to:
+ 'http://localhost/human-
+ []
+
+[28] [29]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+ [30]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+ <./ER.jpg, id=117, 487.8225pt x 590.205pt>
+File: ./ER.jpg Graphic file (type jpg)
+ <use ./ER.jpg>
+Package pdftex.def Info: ./ER.jpg used on input line 131.
+(pdftex.def)             Requested size: 390.0pt x 471.85844pt.
+
+[31] [32 <Z:/InterReport/ER.jpg>]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+ [33]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+
+Overfull \hbox (9.00034pt too wide) in paragraph at lines 193--203
+ [] 
+ []
+
+[34]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+ [35]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [36]) (Z:\InterReport\Plan.tex [37]
+Overfull \hbox (0.71834pt too wide) in paragraph at lines 63--64
+[]\OT1/cmr/m/n/12 Account set-tings page with cur-rent user in-for-ma-tion prel
+oaded 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+[38]
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+Missing character: There is no Ô in font cmr12!
+Missing character: There is no ø in font cmr12!
+Missing character: There is no Ω in font cmr12!
+ [39] [40]) [41] (Z:\InterReport\ref.tex
+Overfull \hbox (1.24275pt too wide) in paragraph at lines 10--11
+[]\OT1/cmr/m/n/12 JWebSockets is both a Java and
+ []
+
+[42
+
+]
+Overfull \hbox (3.38977pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/12 Adobe Pho-to-shop is a graph-ics edit-
+ []
+
+
+Overfull \hbox (18.79521pt too wide) in paragraph at lines 15--16
+[]\OT1/cmr/m/n/12 PHP De-signer
+ []
+
+
+Overfull \hbox (14.04391pt too wide) in paragraph at lines 16--17
+[]\OT1/cmr/m/n/12 Microsoft
+ []
+
+) [43] (Z:\InterReport\Doc.aux (Z:\InterReport\ref.aux)) ) 
+Here is how much of TeX's memory you used:
+ 1192 strings out of 494053
+ 15861 string characters out of 3146178
+ 71941 words of memory out of 3000000
+ 4489 multiletter control sequences out of 15000+200000
+ 9758 words of font info for 34 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,7n,21p,2228b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Doc.pdf (44 pages, 449331 bytes).
+PDF statistics:
+ 189 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
