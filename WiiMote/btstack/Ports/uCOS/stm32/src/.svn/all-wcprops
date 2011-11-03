@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1530/trunk/Ports/uCOS/stm32/src
+END
+bsp_btuart_nodma.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1530/trunk/Ports/uCOS/stm32/src/bsp_btuart_nodma.c
+END
+bsp_btuart_dma.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1530/trunk/Ports/uCOS/stm32/src/bsp_btuart_dma.c
+END
+bsp_btuart.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1530/trunk/Ports/uCOS/stm32/src/bsp_btuart.h
+END
