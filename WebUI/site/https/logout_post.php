@@ -1,26 +1,18 @@
 <?php
 	session_start();
+	include_once('header.php');
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-	
-	<head>
-	
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		
-		<title>virPONG logout</title>
+<h1>&#9612; log out &#9616;</h1>
 
-	</head>
+<?php
+	// destory the session and redirect the user to the login form
+	session_destroy();
+	header('Location:login_form.php?logout=true');
+?>
 
-	<body>
 
-		<?php
-			session_destroy();
-			header('Location:login_form.php');
-		?>
-
-	</body>
-
-</html>
+<?php
+	include_once($footer);
+?>

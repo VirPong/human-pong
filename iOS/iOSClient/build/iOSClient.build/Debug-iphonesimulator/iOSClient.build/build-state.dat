@@ -1,0 +1,1528 @@
+TiOSClient
+v3
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/Info.plist iOSClient/iOSClient-Info.plist
+cProcessPCH /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch iOSClient/iOSClient-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o /Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cLd /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient normal i386
+cGenerateDSYMFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+cCopyStringsFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/InfoPlist.strings iOSClient/en.lproj/InfoPlist.strings
+cCompileXIB /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib
+cCpResource iOSClient/logo-blue.gif build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif
+cTouch /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004E9159370000000000000110
+t1318148407
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004D93DFC500000000001C41E0
+t1301536709
+s1851872
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D93DF9F00000000000004CF
+t1301536671
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004D93E02200000000001D6EC0
+t1301536802
+s1928896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
+c000000004D93DEBA0000000000007AC8
+t1301536442
+s31432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
+c000000004D93DEBA00000000000046C9
+t1301536442
+s18121
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
+c000000004D93DEBB000000000000B7CA
+t1301536443
+s47050
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D93DEBB0000000000000AB3
+t1301536443
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D93DF6900000000002999B0
+t1301536617
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D93DFEA000000000029DA70
+t1301536746
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D93DFDD0000000000001466
+t1301536733
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h
+c000000004D93DFDD0000000000001B27
+t1301536733
+s6951
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h
+c000000004D93DFDE0000000000000E3B
+t1301536734
+s3643
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h
+c000000004D93DFDE0000000000001DE5
+t1301536734
+s7653
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h
+c000000004D93DFDE0000000000002033
+t1301536734
+s8243
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSNotification.h
+c000000004D93DFDE000000000000059D
+t1301536734
+s1437
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h
+c000000004D93DFDE0000000000002E87
+t1301536734
+s11911
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+c000000004D93DFDE000000000000049D
+t1301536734
+s1181
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRunLoop.h
+c000000004D93DFDE0000000000000915
+t1301536734
+s2325
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h
+c000000004D93DFDE0000000000006506
+t1301536734
+s25862
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
+c000000004D93E09800000000000000EB
+t1301536920
+s235
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004D93E09A000000000005C090
+t1301536922
+s376976
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D93E12E00000000000000C4
+t1301537070
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
+c000000004D93DEED0000000000001A58
+t1301536493
+s6744
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004D93DEF400000000000689C0
+t1301536500
+s428480
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D93ECBE0000000000000AA1
+t1301540030
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D93ED1B0000000000766870
+t1301540123
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
+c000000004D4F7A2B0000000000001B19
+t1297054251
+s6937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/AvailabilityMacros.h
+c000000004D4F7A2B0000000000007A5E
+t1297054251
+s31326
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004A11E8210000000000000DE2
+t1242687521
+s3554
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/TargetConditionals.h
+c000000004D4F7A2B00000000000031E9
+t1297054251
+s12777
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
+c000000004D93D5D80000000000001533
+t1301534168
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/dlfcn.h
+c000000004AB98DF40000000000000B1C
+t1253674484
+s2844
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/ifaddrs.h
+c000000004D93D5D800000000000008F5
+t1301534168
+s2293
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libkern/OSAtomic.h
+c000000004D4F6E9A00000000000077C3
+t1297051290
+s30659
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/mach-o/loader.h
+c000000004A4D4DFA000000000000EF91
+t1246580218
+s61329
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
+c000000004D93D5D8000000000000307F
+t1301534168
+s12415
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
+c000000004D93E0AA0000000000006BAC
+t1301536938
+s27564
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet6/in6.h
+c000000004D93E0AA000000000000638F
+t1301536938
+s25487
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/objc/objc-runtime.h
+c000000004D93DBDB0000000000000032
+t1301535707
+s50
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/objc/runtime.h
+c000000004D93DBDB00000000000063AF
+t1301535707
+s25519
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdint.h
+c000000004D4F6E9900000000000018EF
+t1297051289
+s6383
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdio.h
+c000000004D4F6E9A0000000000004763
+t1297051290
+s18275
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdlib.h
+c000000004D4F6E9A00000000000030A7
+t1297051290
+s12455
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/string.h
+c000000004D4F6E9A0000000000001A3A
+t1297051290
+s6714
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
+c000000004D93E0AE0000000000005ACF
+t1301536942
+s23247
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/types.h
+c000000004D93E0AE0000000000002905
+t1301536942
+s10501
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/zlib.h
+c000000004D93DBDD00000000000102A5
+t1301535709
+s66213
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libz.dylib
+c000000004D93DBDE00000000000123C0
+t1301535710
+s74688
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/limits.h
+c000000004DD0AF080000000000000D03
+t1305521928
+s3331
+i"syslimits.h"
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/stdarg.h
+c000000004DD0AF0800000000000010DD
+t1305521928
+s4317
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/syslimits.h
+c000000004DD0ADAD0000000000000155
+t1305521581
+s341
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.h
+c000000004BC5E8E10000000000004130
+t1271261409
+s16688
+i<Foundation/NSArray.h>
+i<Foundation/NSError.h>
+i<Foundation/NSObjCRuntime.h>
+i<Foundation/NSRange.h>
+i<Foundation/NSString.h>
+i<limits.h>
+i<stdint.h>
+i<sys/types.h>
+i<TargetConditionals.h>
+i<AvailabilityMacros.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m
+c000000004BCB02C90000000000032498
+t1271595721
+s205976
+i<CoreFoundation/CFBase.h>
+i<CoreFoundation/CFArray.h>
+i<CoreFoundation/CFString.h>
+i<Foundation/NSArray.h>
+i<Foundation/NSDictionary.h>
+i<Foundation/NSError.h>
+i<Foundation/NSException.h>
+i<Foundation/NSNotification.h>
+i<Foundation/NSRunLoop.h>
+i<Foundation/NSGarbageCollector.h>
+i<objc/runtime.h>
+i<objc/objc-runtime.h>
+i<libkern/OSAtomic.h>
+i<mach-o/loader.h>
+i<AvailabilityMacros.h>
+i<dlfcn.h>
+i<string.h>
+i<stdarg.h>
+i<stdlib.h>
+i<stdio.h>
+i"RegexKitLite.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+t1318271332
+s238
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM
+t1318271332
+s102
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/Info.plist
+t1318269413
+s702
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/PkgInfo
+t1318269413
+s8
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/InfoPlist.strings
+t1318269513
+s42
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/MainWindow.nib
+t1318271301
+s7564
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+t1318271332
+s881856
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif
+t1318269513
+s3750
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o
+t1318269415
+s106260
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o
+t1318269415
+s21208
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o
+t1318269415
+s21176
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o
+t1318269415
+s64312
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o
+t1318269415
+s47708
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o
+t1318269416
+s562332
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o
+t1318269415
+s26780
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o
+t1318269415
+s64592
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o
+t1318269416
+s247716
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o
+t1318269414
+s5668
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o
+t1318269415
+s36996
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o
+t1318269416
+s234584
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o
+t1318269414
+s13128
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o
+t1318269414
+s28572
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
+t1318269414
+s8164
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
+t1318269414
+s23064
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o
+t1318269414
+s47768
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o
+t1318269414
+s43920
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
+t1318269414
+s7960
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o
+t1318269414
+s27388
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o
+t1318269415
+s29716
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o
+t1318269415
+s15124
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o
+t1318269415
+s16088
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o
+t1318269414
+s69788
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o
+t1318271150
+s45048
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o
+t1318269414
+s7384
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o
+t1318269415
+s31060
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClient.LinkFileList
+c000000004E9331E5000000000000103D
+t1318269413
+s4157
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o
+t1318271332
+s55176
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o
+t1318269414
+s3108
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.h
+c000000004E9263430000000000000AE0
+t1318216515
+s2784
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m
+c000000004E926BB800000000000040AD
+t1318218680
+s16557
+i"SocketIO.h"
+i"ASIHTTPRequest.h"
+i"WebSocket.h"
+i"RegexKitLite.h"
+i"SBJson.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.h
+c000000004E92654A0000000000000453
+t1318217034
+s1107
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m
+c000000004E92654A0000000000003E08
+t1318217034
+s15880
+i"ASIAuthenticationDialog.h"
+i"ASIHTTPRequest.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASICacheDelegate.h
+c000000004E92654A000000000000141F
+t1318217034
+s5151
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.h
+c000000004E92654A000000000000072C
+t1318217034
+s1836
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m
+c000000004E92654A0000000000001A63
+t1318217034
+s6755
+i"ASIDataCompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.h
+c000000004E92654A00000000000006A3
+t1318217034
+s1699
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m
+c000000004E92654A0000000000001916
+t1318217034
+s6422
+i"ASIDataDecompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.h
+c000000004E92654A00000000000007CC
+t1318217034
+s1996
+i<Foundation/Foundation.h>
+i"ASICacheDelegate.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m
+c000000004E92654A0000000000004561
+t1318217034
+s17761
+i"ASIDownloadCache.h"
+i"ASIHTTPRequest.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.h
+c000000004E92654A0000000000000A85
+t1318217034
+s2693
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+i"ASIHTTPRequestConfig.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m
+c000000004E92654A0000000000002C02
+t1318217034
+s11266
+i"ASIFormDataRequest.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.h
+c000000004E92654A000000000000AFE9
+t1318217034
+s45033
+i<Foundation/Foundation.h>
+i<CFNetwork/CFNetwork.h>
+i<UIKit/UIKit.h>
+i<stdio.h>
+i"ASIHTTPRequestConfig.h"
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+i"ASICacheDelegate.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m
+c000000004E92654A000000000002CF34
+t1318217034
+s184116
+i"ASIHTTPRequest.h"
+i"Reachability.h"
+i"ASIAuthenticationDialog.h"
+i<MobileCoreServices/MobileCoreServices.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i"ASIInputStream.h"
+i"ASIDataDecompressor.h"
+i"ASIDataCompressor.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequestConfig.h
+c000000004E92654A0000000000000511
+t1318217034
+s1297
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequestDelegate.h
+c000000004E92654A000000000000063E
+t1318217034
+s1598
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.h
+c000000004E92654A00000000000003C9
+t1318217034
+s969
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m
+c000000004E92654A0000000000000C32
+t1318217034
+s3122
+i"ASIInputStream.h"
+i"ASIHTTPRequest.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.h
+c000000004E92654A000000000000120D
+t1318217034
+s4621
+i<Foundation/Foundation.h>
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m
+c000000004E92654A0000000000002C8D
+t1318217034
+s11405
+i"ASINetworkQueue.h"
+i"ASIHTTPRequest.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIProgressDelegate.h
+c000000004E92654A0000000000000678
+t1318217034
+s1656
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.h
+c000000004E8D12250000000000007535
+t1317868069
+s30005
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m
+c000000004E8D1225000000000001E6F1
+t1317868069
+s124657
+i"AsyncSocket.h"
+i<sys/socket.h>
+i<netinet/in.h>
+i<arpa/inet.h>
+i<netdb.h>
+i<CFNetwork/CFNetwork.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.h
+c000000004E92698900000000000008B7
+t1318218121
+s2231
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m
+c000000004E92698900000000000008A6
+t1318218121
+s2214
+i"NSObject+SBJson.h"
+i"SBJsonWriter.h"
+i"SBJsonParser.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.h
+c000000004E92654A0000000000001D25
+t1318217034
+s7461
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i<netinet/in.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m
+c000000004E92654A0000000000005E0C
+t1318217034
+s24076
+i<sys/socket.h>
+i<netinet/in.h>
+i<netinet6/in6.h>
+i<arpa/inet.h>
+i<ifaddrs.h>
+i<netdb.h>
+i<CoreFoundation/CoreFoundation.h>
+i"Reachability.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/RegexKitLite.h
+c000000004BC5E8E10000000000004130
+t1271261409
+s16688
+i<Foundation/NSArray.h>
+i<Foundation/NSError.h>
+i<Foundation/NSObjCRuntime.h>
+i<Foundation/NSRange.h>
+i<Foundation/NSString.h>
+i<limits.h>
+i<stdint.h>
+i<sys/types.h>
+i<TargetConditionals.h>
+i<AvailabilityMacros.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJson.h
+c000000004E9269890000000000000DA2
+t1318218121
+s3490
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+i"SBJsonStreamParser.h"
+i"SBJsonStreamParserAdapter.h"
+i"SBJsonStreamWriter.h"
+i"NSObject+SBJson.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.h
+c000000004E9269890000000000000DCA
+t1318218121
+s3530
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m
+c000000004E9269890000000000000CC0
+t1318218121
+s3264
+i"SBJsonParser.h"
+i"SBJsonStreamParser.h"
+i"SBJsonStreamParserAdapter.h"
+i"SBJsonStreamParserAccumulator.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.h
+c000000004E9269890000000000001550
+t1318218121
+s5456
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m
+c000000004E92698900000000000020D2
+t1318218121
+s8402
+i"SBJsonStreamParser.h"
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParserState.h"
+i<limits.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.h
+c000000004E92698900000000000006AE
+t1318218121
+s1710
+i<Foundation/Foundation.h>
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m
+c000000004E926989000000000000079B
+t1318218121
+s1947
+i"SBJsonStreamParserAccumulator.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.h
+c000000004E926989000000000000145D
+t1318218121
+s5213
+i<Foundation/Foundation.h>
+i"SBJsonStreamParser.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m
+c000000004E92698900000000000011DD
+t1318218121
+s4573
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.h
+c000000004E9269890000000000000B22
+t1318218121
+s2850
+i<Foundation/Foundation.h>
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParser.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m
+c000000004E9269890000000000001FB6
+t1318218121
+s8118
+i"SBJsonStreamParserState.h"
+i"SBJsonStreamParser.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.h
+c000000004E926989000000000000161D
+t1318218121
+s5661
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m
+c000000004E9269890000000000002956
+t1318218121
+s10582
+i"SBJsonStreamWriter.h"
+i"SBJsonStreamWriterState.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.h
+c000000004E9269890000000000000693
+t1318218121
+s1683
+i"SBJsonStreamWriter.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m
+c000000004E92698900000000000007EB
+t1318218121
+s2027
+i"SBJsonStreamWriterAccumulator.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.h
+c000000004E92698900000000000009EC
+t1318218121
+s2540
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m
+c000000004E9269890000000000000F61
+t1318218121
+s3937
+i"SBJsonStreamWriterState.h"
+i"SBJsonStreamWriter.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.h
+c000000004E9269890000000000000888
+t1318218121
+s2184
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m
+c000000004E9269890000000000003386
+t1318218121
+s13190
+i"SBJsonTokeniser.h"
+i"SBJsonUTF8Stream.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.h
+c000000004E926989000000000000081E
+t1318218121
+s2078
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m
+c000000004E9269890000000000000F3D
+t1318218121
+s3901
+i"SBJsonUTF8Stream.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.h
+c000000004E9269890000000000001059
+t1318218121
+s4185
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m
+c000000004E9269890000000000000DBF
+t1318218121
+s3519
+i"SBJsonWriter.h"
+i"SBJsonStreamWriter.h"
+i"SBJsonStreamWriterAccumulator.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.h
+c000000004E9336D800000000000003D6
+t1318270680
+s982
+i<Foundation/Foundation.h>
+i"VPPlayerPaddle.h"
+i"SocketIO.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m
+c000000004E93399A00000000000006EA
+t1318271386
+s1770
+i"VPGameSession.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.h
+c000000004E8F8B4E00000000000001FD
+t1318030158
+s509
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m
+c000000004E8F815600000000000002EB
+t1318027606
+s747
+i"VPPlayerPaddle.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.h
+c000000004E932C5700000000000005BD
+t1318267991
+s1469
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m
+c000000004E932C570000000000001763
+t1318267991
+s5987
+i"WebSocket.h"
+i"AsyncSocket.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/InfoPlist.strings
+c000000004E8F7C26000000000000002D
+t1318026278
+s45
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib
+c000000004E9339440000000000006C4A
+t1318271300
+s27722
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClient-Prefix.pch
+c000000004E8F7C260000000000000144
+t1318026278
+s324
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.h
+c000000004E9337220000000000000546
+t1318270754
+s1350
+i<UIKit/UIKit.h>
+i"VPGameSession.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m
+c000000004E9339610000000000000D5D
+t1318271329
+s3421
+i"iOSClientAppDelegate.h"
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/logo-blue.gif
+c000000004E8F9AAB0000000000000EA6
+t1318034091
+s3750
+
+N/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m
+c000000004E8F7C260000000000000164
+t1318026278
+s356
+i<UIKit/UIKit.h>
+
+N/Users/josefdlange/socket.IO-objc/SocketIO.h
+c000000004E9263430000000000000AE0
+t1318216515
+s2784
+i<Foundation/Foundation.h>
+
+N/var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch
+t1318269413
+s12283312
+
+NiOSClient/iOSClient-Info.plist
+c000000004E8F7C5B0000000000000434
+t1318026331
+s1076
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m
+r0
+
+CBuild AST from /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesed11821a7143b441^158c821a7143b441^---0#1#0#--18"Check dependencies
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.041850
+e339962215.283853
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.mfad30a676943b441^69a948676943b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m0000000000000000^2490"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o iOSClient/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIAuthenticationDialog.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIAuthenticationDialog.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.131500
+e339962215.224215
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.mcdcb21676943b441^846439676943b441^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m0000000000000000^2466"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o iOSClient/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataCompressor.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataCompressor.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.225530
+e339962215.320133
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m7c273a676943b441^9b0152676943b441^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m0000000000000000^2474"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o iOSClient/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDataDecompressor.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDataDecompressor.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.285216
+e339962215.477077
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.md92249676943b441^c8257a676943b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m0000000000000000^2462"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o iOSClient/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIDownloadCache.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIDownloadCache.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.321645
+e339962215.459107
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m8eb252676943b441^fd8675676943b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m0000000000000000^2470"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o iOSClient/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIFormDataRequest.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIFormDataRequest.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.462727
+e339962216.663141
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m4f9276676943b441^7fc2a9686943b441^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m0000000000000000^2454"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o iOSClient/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIHTTPRequest.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIHTTPRequest.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.478432
+e339962215.566595
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.mb3967a676943b441^fe0a91676943b441^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m0000000000000000^2454"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o iOSClient/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASIInputStream.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASIInputStream.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.567886
+e339962215.732664
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m077d91676943b441^6d8ebb676943b441^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m0000000000000000^2458"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o iOSClient/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/ASINetworkQueue.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/ASINetworkQueue.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962216.439461
+e339962216.849363
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m66a270686943b441^8270d9686943b441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m0000000000000000^2442"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o iOSClient/AsyncSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/AsyncSocket.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/AsyncSocket.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.333394
+e339962214.389610
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m927455666943b441^1dcb63666943b441^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m0000000000000000^2458"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o iOSClient/NSObject+SBJson.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/NSObject+SBJson.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/NSObject+SBJson.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.733965
+e339962215.860269
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m1100bc676943b441^6939dc676943b441^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m0000000000000000^2446"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o iOSClient/Reachability.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/Reachability.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/Reachability.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o /Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.972853
+e339962216.438158
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m22faf9676943b441^f12970686943b441^---0#0#0#-19%DVTDocumentLocation2@74"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m0000000000000000^2426"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o RegexKitLite.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/RegexKitLite.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/RegexKitLite.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.391960
+e339962214.472283
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.me27664666943b441^5ce678666943b441^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m0000000000000000^2446"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o iOSClient/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonParser.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonParser.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.473566
+e339962214.590062
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m365779666943b441^cc0c97666943b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m0000000000000000^2470"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o iOSClient/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParser.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParser.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.518733
+e339962214.584546
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m0ce984666943b441^3ca395666943b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m0000000000000000^2514"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o iOSClient/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAccumulator.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.586016
+e339962214.688859
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m252496666943b441^b057b0666943b441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m0000000000000000^2498"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o iOSClient/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserAdapter.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.592590
+e339962214.730470
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m1cd397666943b441^e90dbb666943b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m0000000000000000^2490"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o iOSClient/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamParserState.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamParserState.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.690142
+e339962214.905771
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m26c8b0666943b441^10e9e7666943b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m0000000000000000^2470"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o iOSClient/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriter.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriter.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.731841
+e339962214.861018
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.mf183bb666943b441^3c6adc666943b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m0000000000000000^2514"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o iOSClient/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterAccumulator.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.862348
+e339962214.960230
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m6adfdc666943b441^63d0f5666943b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m0000000000000000^2490"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o iOSClient/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonStreamWriterState.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonStreamWriterState.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.907111
+e339962215.033334
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m0454e8666943b441^448708676943b441^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m0000000000000000^2458"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o iOSClient/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonTokeniser.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonTokeniser.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.961425
+e339962215.040549
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.mc539f6666943b441^6a6d0a676943b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m0000000000000000^2462"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o iOSClient/SBJsonUTF8Stream.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonUTF8Stream.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonUTF8Stream.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.034643
+e339962215.129915
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m2bf908676943b441^ee4021676943b441^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m0000000000000000^2446"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o iOSClient/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/SBJsonWriter.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SBJsonWriter.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.268118
+e339962214.517411
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.mf1bc44666943b441^bd7384666943b441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m0000000000000000^2484"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o iOSClient/../../../../socket.IO-objc/SocketIO.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/../../../../socket.IO-objc/SocketIO.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/SocketIO.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339964186.547849
+e339964186.717476
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m925e8c1a7143b441^deaab71a7143b441^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m0000000000000000^2450"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o iOSClient/VPGameSession.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPGameSession.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPGameSession.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962214.202297
+e339962214.266834
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m75e533666943b441^7b4c44666943b441^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m0000000000000000^2454"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o iOSClient/VPPlayerPaddle.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/VPPlayerPaddle.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/VPPlayerPaddle.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962215.862618
+e339962215.971543
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.mfeefdc676943b441^aab5f8676943b441^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m0000000000000000^2434"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o iOSClient/WebSocket.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/WebSocket.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/WebSocket.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339964132.230805
+e339964132.328907
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.mfd2f3be47043b441^ec3254e47043b441^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m0000000000000000^2478"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o iOSClient/iOSClientAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClientAppDelegate.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClientAppDelegate.o
+
+CCompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962213.989820
+e339962214.200998
+r1
+xCompileC
+xbuild/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.mba82fd656943b441^628133666943b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m0000000000000000^2414"CompileC build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o iOSClient/main.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -include /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/main.m -o /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/main.o
+
+CCompileXIB /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib
+s339964100.902806
+e339964102.018875
+r1
+xCompileXIB
+x/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compiling /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xiba92fe7c47043b441^060d05c67043b441^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib0000000000000000^731"CompileXIB iOSClient/en.lproj/MainWindow.xib    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/MainWindow.nib /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+
+CCopyStringsFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/InfoPlist.strings iOSClient/en.lproj/InfoPlist.strings
+s339962313.535431
+e339962313.599387
+r1
+xCopyStringsFile
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj/InfoPlist.strings
+xiOSClient/en.lproj/InfoPlist.strings
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy iOSClient/en.lproj/InfoPlist.strings392889c96943b441^5c7199c96943b441^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/en.lproj/InfoPlist.strings0000000000000000^591"CopyStringsFile build/Debug-iphonesimulator/iOSClient.app/en.lproj/InfoPlist.strings iOSClient/en.lproj/InfoPlist.strings    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/en.lproj -- iOSClient/en.lproj/InfoPlist.strings
+
+CCpResource iOSClient/logo-blue.gif build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif
+s339962313.600832
+e339962313.644313
+r1
+xCpResource
+xiOSClient/logo-blue.gif
+xbuild/Debug-iphonesimulator/iOSClient.app/logo-blue.gif
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif2de899c96943b441^cefaa4c96943b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif00f424ebddffdf42^588"CpResource iOSClient/logo-blue.gif build/Debug-iphonesimulator/iOSClient.app/logo-blue.gif    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/logo-blue.gif /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+
+CGenerateDSYMFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+s339964187.016173
+e339964187.096350
+r1
+xGenerateDSYMFile
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Generating /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM4436041b7143b441^b9aa181b7143b441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM/0000000000000000^582"GenerateDSYMFile build/Debug-iphonesimulator/iOSClient.app.dSYM build/Debug-iphonesimulator/iOSClient.app/iOSClient    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/dsymutil /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient -o /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app.dSYM
+
+CLd /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient normal i386
+s339964186.740695
+e339964187.008233
+r1
+xLd
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+xnormal
+xi386
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Link /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClientd0b7bd1a7143b441^b01b021b7143b441^---0#0#0#--1243"Ld build/Debug-iphonesimulator/iOSClient.app/iOSClient normal i386    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -filelist /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/Objects-normal/i386/iOSClient.LinkFileList -mmacosx-version-min=10.6 -dead_strip -Xlinker -objc_abi_version -Xlinker 2 -licucore -framework CoreData -lz -framework SystemConfiguration -framework MobileCoreServices -framework CFNetwork -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/iOSClient
+
+CProcessInfoPlistFile /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/Info.plist iOSClient/iOSClient-Info.plist
+s339962213.441355
+e339962213.446118
+r1
+xProcessInfoPlistFile
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/Info.plist
+xiOSClient/iOSClient-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process iOSClient/iOSClient-Info.pliste12471656943b441^ce3372656943b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClient-Info.plist0000000000000000^677"ProcessInfoPlistFile build/Debug-iphonesimulator/iOSClient.app/Info.plist iOSClient/iOSClient-Info.plist    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    builtin-infoPlistUtility iOSClient/iOSClient-Info.plist -genpkginfo /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app/Info.plist
+
+CProcessPCH /Users/josefdlange/Library/Developer/Xcode/DerivedData/iOSClient-hgtjqssupdxkxcheqniyzsygkstw/Index/PrecompiledHeaders/iOSClient-Prefix-eukaguowgrwvkgcfejqroglkgbwc_ast/iOSClient-Prefix.pch.pth iOSClient/iOSClient-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch iOSClient/iOSClient-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+s339962213.454275
+e339962213.982065
+r1
+xProcessPCH
+x/var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch
+xiOSClient/iOSClient-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile iOSClient/iOSClient-Prefix.pchc87874656943b441^0a67fb656943b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClient-Prefix.pch0000000000000000^2393"ProcessPCH /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch iOSClient/iOSClient-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-generated-files.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-own-target-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-all-target-headers.hmap -iquote /Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/iOSClient-project-headers.hmap -I/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/libxml2 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources/i386 -I/Users/josefdlange/human-pong/iOS/iOSClient/build/iOSClient.build/Debug-iphonesimulator/iOSClient.build/DerivedSources -F/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator -F/Users/josefdlange/human-pong/iOS/iOSClient -c /Users/josefdlange/human-pong/iOS/iOSClient/iOSClient/iOSClient-Prefix.pch -o /var/folders/zy/xsp92bp176110wb6r0hj4rwm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/iOSClient-Prefix-ccrztrullzpetmgyvrngdibfxzhn/iOSClient-Prefix.pch.gch
+
+CTouch /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+s339964187.116094
+e339964187.122411
+r1
+xTouch
+x/Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Touch /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.appc1c61d1b7143b441^75561f1b7143b441^---0#0#0#--400"Touch build/Debug-iphonesimulator/iOSClient.app    cd /Users/josefdlange/human-pong/iOS/iOSClient    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /usr/bin/touch -c /Users/josefdlange/human-pong/iOS/iOSClient/build/Debug-iphonesimulator/iOSClient.app
+

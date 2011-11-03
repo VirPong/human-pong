@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+% useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
+\usepackage{amsmath, amssymb, amsthm}
+
+% for including graphics
+\usepackage{graphicx}
+
+% for conveniently specifying the spacing (\singlespacing, \doublespacing,
+%    \onehalfspacing, etc.)
+\usepackage{setspace}
+\doublespacing
+
+% this does some sort of symbol stuff
+\usepackage{textcomp}
+
+% A package for conveniently adjusting headers and such
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0 pt}
+\rhead{\textit{\thepage}}
+\cfoot{}
+
+
+
+% Set the margins
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+% set up a new command to insert a little bit of vertical space
+% (use this BEFORE a line break)
+\newcommand{\padding}{\vspace*{.5cm}}
+
+% set up an environment to format each hw problem in
+\newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
+
+\newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
+               {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+
+
+
+\begin{document}
+
+%Add in some nice looking pages
+ \begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+      {\Huge Vir-Pong: Development for Android}\\[0.5cm]
+      {\Large Jillian Andersen, Jordan Apele, David Ruhle, Kyle Wenholz}\\[0.4cm]
+      \today
+    \end{center}
+    \vspace*{\fill}
+  \end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Setting up the Development Environment}
+In order to develop for Android, you will need the Android SDK, the PhoneGap software, and some editor.  These pieces are relatively easy to set up, but because all systems are different, some personal configuration may be required.  All of the software mentioned below can be found, with current links, at \href{http://www.phonegap.com/start#android}{the PhoneGap Android page}.  
+
+\subsection{Android SDK}
+The Android SDK comes with an Android Emulator as well as Android libraries.
+To download the SDK, first check to make sure your operating system fulfills all of the system requirements.  A list of of system requirements is available at \href{http://developer.android.com/sdk/requirements.html}{The System Requirements Page}.
+
+Next, go to this website to download the SDK starter package: \href{http://developer.android.com/sdk/index.html}{Android SDK Downloads}.
+The instructions for installation are found here: \href{http://developer.android.com/sdk/installing.html}{Installation Guide}. (Note: do not put a space in the folder name.)
+After that, you must add necessary components to the SDK.  The instructions for that portion are found here: \href{http://developer.android.com/sdk/adding-components.html}{Android SDK Components}.  On your first run, you will be required to create an Android Virtual Device (AVD) that is simply a mock phone.
+
+
+\subsection{PhoneGap}
+The PhoneGap download is primarily a collection of tools that provide functionality for the HTML5 and JavaScript interface in a native application environment.  That is, the PhoneGap jar, js, and xml files all serve to support the use of HTML5 and JavaScript coding as implementing the core functionality of the application.   
+
+\subsection{Editing Environment}
+In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse (downloaded \href{http://www.eclipse.org/downloads/packages/release/helios/sr2}{here}).  You then may want to install the ADT plugin for Android Development (instructions \href{http://developer.android.com/sdk/eclipse-adt.html#installing}{here}).
+
+\section{Retrieving the Source}
+In order to work with the source code of the project, you will likely want to use Git (a version control system available \href{https://github.com}{here}).  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

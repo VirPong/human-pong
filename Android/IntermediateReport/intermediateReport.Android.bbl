@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{JavaStyle-Sun}
+{Code Conventions for the Java TM Programming Language}.
+\newblock \url{http://www.oracle.com/technetwork/java/codeconvtoc-136057.html
+  }, August 1999.
+\newblock [Online; accessed October-2011].
+
+\bibitem{PhoneGap-About}
+{About << PhoneGap}.
+\newblock \url{http://www.phonegap.com/start#android}, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{Eclipse-ADT}
+{ADT} {P}lugin for {E}clipse.
+\newblock \url{http://developer.android.com/sdk/eclipse-adt.html#installing},
+  2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{AndroidSDK-Components}
+Android {SDK} {C}omponents.
+\newblock \url{http://developer.android.com/sdk/adding-components.html}, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{AndroidSDK-Download}
+Android {SDK} {D}ownload.
+\newblock \url{http://developer.android.com/sdk/index.html}, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{AndroidSDK-Installation}
+Android {SDK} {I}nstallation.
+\newblock \url{http://developer.android.com/sdk/installing.html}, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{AndroidSDK-SystemRequirements}
+Android {SDK} {S}ystem {R}equirements, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{Eclipse-Helios}
+Eclipse {P}ackages.
+\newblock \url{http://www.eclipse.org/downloads/packages/release/helios/sr2},
+  2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{Github}
+Github.
+\newblock \url{https://github.com}, 2011.
+\newblock [Online; accessed September/October-2011].
+
+\bibitem{PhoneGap-Android}
+{PhoneGap for Android}.
+\newblock \url{http://www.phonegap.com/about}, 2011.
+\newblock [Online; accessed September-2011].
+
+\bibitem{HTMLStyle-WDVL}
+{The WDVL Style Guide}.
+\newblock \url{http://wdvl.internet.com/Authoring/Style/Guides/WDVL.html},
+  2011.
+\newblock [Online; accessed October-2011].
+
+\bibitem{CSSStyle-SmashingMagazine}
+Vitaly Friedman.
+\newblock {Improving Code Readability With CSS Styleguides}.
+\newblock
+  \url{http://coding.smashingmagazine.com/2008/05/02/improving-code-readabilit%
+y-with-css-styleguides/}, May 2008.
+\newblock [Online; accessed October-2011].
+
+\bibitem{JavaStyle-JavaRanch}
+Paul Wheaton.
+\newblock {Java Programming Style Guide}.
+\newblock \url{http://www.javaranch.com/style.jsp}, 2011.
+\newblock [Online; accessed October-2011].
+
+\bibitem{JavaScriptStyle-Google}
+Aaron Whyte, Bob Jervis, Dan Pupius, Eric Arvidsson, Fritz Schneider, and Robby
+  Walker.
+\newblock {Google JavaScript Style Guide}.
+\newblock
+  \url{http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}.
+\newblock [Online; accessed October-2011].
+
+\end{thebibliography}

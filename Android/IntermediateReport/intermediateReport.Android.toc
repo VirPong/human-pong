@@ -1,0 +1,33 @@
+\contentsline {section}{\numberline {1}The Product}{2}{section.1}
+\contentsline {section}{\numberline {2}Requirements Analysis}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Functional Requirements}{2}{subsection.2.1}
+<<<<<<< HEAD
+\contentsline {subsubsection}{\numberline {2.1.1}Playing a Game - 1.0}{2}{subsubsection.2.1.1}
+=======
+\contentsline {subsubsection}{\numberline {2.1.1}Playing a Game - v1.0}{2}{subsubsection.2.1.1}
+>>>>>>> upstream/master
+\contentsline {subsection}{\numberline {2.2}Usability Requirements}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Reliability Requirements}{8}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Performance Requirements}{8}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Supportability Requirements}{8}{subsection.2.5}
+\contentsline {section}{\numberline {3}Domain Analysis}{9}{section.3}
+\contentsline {section}{\numberline {4}Coding Style Guide}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Working with Java}{10}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Style Rules}{10}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Coding Rules}{10}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Working with JavaScript}{11}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Style Rules}{11}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Coding Rules}{12}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}Working with HTML5}{12}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Working with CSS}{13}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Setting up the Development Environment}{13}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Android SDK}{13}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}PhoneGap}{14}{subsubsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.3}Editing Environment}{14}{subsubsection.4.5.3}
+\contentsline {subsection}{\numberline {4.6}Retrieving the Source}{14}{subsection.4.6}
+\contentsline {section}{\numberline {5}Implementation Details}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Basic Design}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Testing}{15}{subsection.5.2}
+\contentsline {section}{\numberline {6}Planning and Reflection}{15}{section.6}
+\contentsline {subsection}{\numberline {6.1}Past Goals}{16}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Future Goals and Deadlines}{17}{subsection.6.2}
