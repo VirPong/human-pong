@@ -1,0 +1,7 @@
+Installation:
+*does not mention MySQL AT ALL
+*no mention of PHP
+*failed to mention that certain components need to be installed:
+	- gcc/g++ compiler
+	- OTHER THINGS I'LL NEED
+	

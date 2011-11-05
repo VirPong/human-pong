@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+% useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
+\usepackage{amsmath, amssymb, amsthm}
+
+% for including graphics
+\usepackage{graphicx}
+
+% for conveniently specifying the spacing (\singlespacing, \doublespacing,
+%    \onehalfspacing, etc.)
+\usepackage{setspace}
+\singlespacing
+
+% this does some sort of symbol stuff
+\usepackage{textcomp}
+
+% A package for conveniently adjusting headers and such
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0 pt}
+\rhead{\textit{\thepage}}
+\cfoot{}
+
+% Differently spaced itemize
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+  	\setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+
+% Set the margins
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+% set up a new command to insert a little bit of vertical space
+% (use this BEFORE a line break)
+\newcommand{\padding}{\vspace*{.5cm}}
+
+% set up an environment to format each hw problem in
+\newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
+
+\newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
+               {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+
+
+\begin{document}
+\thispagestyle{empty}
+\begin{flushleft}
+\singlespacing
+Team: Server System Testing\\
+Members Present: Jordan Apele,\\
+Joey Lange*,\\
+Garrett Dieckmann,\\
+Kyle Monet,\\
+Kyle Wenholz\\
+Date: 11-1-2011 and 11-3-2011\\
+*excused but not present on 11-1-2011
+\end{flushleft}
+\pagestyle{fancy}
+\textbf{Review of Goals:}\\
+\begin{itemize*}
+\item Tasked with generating an initial plan for testing.
+\item Familiarize selves with intermediate report.
+\item Initialize the server.
+\end{itemize*}
+
+\textbf{Accomplishments:}\\
+\begin{itemize*}
+\item Kyle W. is trying to set up server. Having issues because the instructions don't discuss compilation of server software.  
+\item After looking at the code submitted, we determined that our main focus will be the $server.js$ file.  
+\item All team members have agreed to brief meetings after every class period and periodic large group sessions.
+\item The next planned meeting is scheduled for Sunday, November 6, 2011.
+\begin{itemize*}
+\item The following use cases (found in the intermediate report) were divided up for test case creation:
+\item Client connection (generic) - Kyle M.
+\item Client connection (opening game) - Josef
+\item Store Player Information - **
+\item Update Scores - Jordan
+\item Access Replay - **
+\item Complete a Game - Garrett
+\item AI Opponent - **
+\end{itemize*}
+\end{itemize*}
+** Items that don't seem complete or in a state prepared for testing.\\
+
+\textbf{New Goals:}\\
+\begin{itemize*}
+\item Wrap up installation of the server components. (Due 11-4-2011: Kyle W.)
+\item Generate test cases out of assigned use cases. (Due 11-6-2011: All - Kyle W.)
+\item Conceptualize a file or class structure for testing client interaction with the server. (Due 11-6-2011: All)
+\item Review the style guide and begin comparing its rules with the actual code. (Due 11-6-2011: All)
+\end{itemize*}
+
+
+
+\end{document}
