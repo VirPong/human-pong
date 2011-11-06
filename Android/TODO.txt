@@ -1,2 +1,0 @@
-Need to debug the function of starting a game in NodePong.  I think this one 
-is a winner.
