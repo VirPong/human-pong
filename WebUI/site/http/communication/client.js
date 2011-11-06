@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Globals
-socket = io.connect('10.203.0.131:7676');
+socket = io.connect('10.150.1.204:7676');
 pong = new Pong();
 pong.init();
 
@@ -36,9 +36,10 @@ socket.on('time', function(data) {
   document.getElementById('time-stamp').innerText = (data.timeStamp);
   // pongIncludeTrial code. Attempting to make variables cross scripts
   // Works. Can pass back and forth using the next two lines of code
-  document.getElementById('average-lag').innerText = (pong.xCoord);
   pong.changeX(data.timeStamp); 
-  pong.changeY(data.observerCount*3);
+  //pong.changeY(data.observerCount*3);
+  pong.changeY(data.YCoord);
+  pong.changeX(data.XCoord);
   /**
   document.getElementById('observer-count').innerText =
       Math.max(data.observerCount - game.getPlayerCount(), 0);
@@ -47,6 +48,7 @@ socket.on('time', function(data) {
 
   // Beginning of getting Coordinates into the communication
   document.getElementById('YCoord').innerText = (data.YCoord);
+  document.getElementById('average-lag').innerText = (pong.xCoord);
 });
 
 });

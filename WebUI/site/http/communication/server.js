@@ -2,6 +2,9 @@ var io = require('socket.io').listen(7676);
 
 var observerCount = 0;
 var yPosition = 0;
+// Random coordinates for demo'ing product
+var randXCoord = 0;
+var randYCoord = 0;
 
 io.sockets.on('connection', function(socket) {
   // Increments the observerCount
@@ -22,10 +25,14 @@ io.sockets.on('connection', function(socket) {
 
   // Periodically emit time sync commands
   var timeSyncTimer = setInterval(function() {
+    randXCoord = Math.floor(Math.random()*300);
+    randYCoord = Math.floor(Math.random()*300);
+    // Send the time event
     socket.emit('time', {
       timeStamp: (new Date()).valueOf(),
       observerCount: observerCount,
-      YCoord: yPosition
+      YCoord: randYCoord,
+      XCoord: randXCoord
     });
     yPosition += 5;
   }, 2000);

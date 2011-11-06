@@ -11,8 +11,9 @@ var Pong = function(){
 	/**
 	this.canvas = document.getElementById('canvas');
 	this.ctx = this.canvas.getContext('2d');
-	return setInterval(this.draw, 10);
+	return setInterval(this.draw, 10);	
 */
+
 };
 
 var paddleWidth = 20;

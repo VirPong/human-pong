@@ -1,7 +1,11 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
   <head>
-    <title>VirPong: Live - Version 0.2</title> 
+    <title>VirPong: Live - Version 0.2</title> -->
+	<?php
+	session_start();
+	include_once('./header.php');
+?>
     <!-- Required includes -->
     <script src="lib/socket.io.js"></script>
     <script src="client.js"></script>
@@ -17,8 +21,7 @@
     <!-- Second try -->
     <!-- <scipt src="pongRender.js"></script> -->
     <script src="pongRender3.js"></script>
-  </head>
-  <body>
+
 
     <div id="outer">
 	<div>
@@ -49,5 +52,7 @@
         </div>
       </div>
     </div>
-  </body>
-</html> 
+  <?php
+	include_once($footer);
+?>
+<!-- </html> -->
