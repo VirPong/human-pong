@@ -21,8 +21,8 @@
  */
 public class WiiReader {
 
-	private float pos;
-	private float vel;
+	private float position;
+	private float velocity;
 	private float prevTime;
 	private char mode = 'y'; 
 
@@ -53,10 +53,10 @@ public class WiiReader {
 			accel += 10;
 		}
 		// calculate new velocity/position
-		float newVel = (elapsedTime * (float)accel) + vel;
-		pos = elapsedTime * (newVel + vel) / 2 + pos;
-		vel = newVel;
-		int finalPos = (int)(pos * POSITION_CONVERTER);
+		float newVel = (elapsedTime * (float)accel) + velocity;
+		position = elapsedTime * (newVel + velocity) / 2 + position;
+		velocity = newVel;
+		int finalPos = (int)(position * POSITION_CONVERTER);
 		return finalPos;
 	}
 
@@ -88,10 +88,10 @@ public class WiiReader {
 			maxAccel = zAccel;
 		}
 		// calculate new velocity/position
-		float newVel = (elapsedTime * (float)maxAccel) + vel;
-		pos = elapsedTime * (newVel + vel) / 2 + pos;
-		vel = newVel;
-		int finalPos = (int)(pos * POSITION_CONVERTER);
+		float newVel = (elapsedTime * (float)maxAccel) + velocity;
+		position = elapsedTime * (newVel + velocity) / 2 + position;
+		velocity = newVel;
+		int finalPos = (int)(position * POSITION_CONVERTER);
 		return finalPos;
 	}
 
@@ -102,9 +102,9 @@ public class WiiReader {
 	 * that all values are as they should be during the game.
 	 */
 	public void calibrate() {
-		prevtime = System.nanoTime() / 1000000000;
-		pos = 0;
-		vel = 0;
+		prevTime = System.nanoTime() / 1000000000;
+		position = 0;
+		velocity = 0;
 	}
 
 	/**

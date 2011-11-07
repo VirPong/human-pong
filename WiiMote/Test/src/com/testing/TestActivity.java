@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-//import com.testing.R;
 
 /**
  * A proof-of-concept class that simply displays the acceleration data
@@ -61,15 +60,6 @@ public class TestActivity extends Activity
         intent.setComponent(new ComponentName("com.hexad.bluezime",
           "com.hexad.bluezime.BluezIMESettings"));
         startActivityForResult(intent, 0);
-      }
-    });
-
-    //can do other things but not used currently.
-    Button button = (Button) findViewById(R.id.accelButton);
-    button.setOnClickListener(new OnClickListener()
-    {
-      public void onClick(View v)
-      {
       }
     });
   }
