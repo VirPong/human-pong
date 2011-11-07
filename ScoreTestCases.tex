@@ -1,0 +1,137 @@
+\noindent \textbf{Test Case:} Update player scores-Client1 scores 1 point\\
+\textbf{Version:}1.0\\
+\textbf{Description:} This will test if any defects appear when a client scores a point.  When the game logic determines no collision, the system will increment the point winner's score.\\
+\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+\textbf{Post-conditions:} Game continues\\
+\textbf{Scenario:}
+\begin{enumerate}
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does not move 
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client1 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client1’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\end{enumerate}
+\textbf{Expected Results:} Client1 has 1 point, Client 2 has 0 points.  Game continues.\\
+\textbf{Pass/Fail:}
+
+\noindent \textbf{Test Case:} Update player scores-Client 2 scores 1 point\\
+\textbf{Version:}1.0\\
+\textbf{Description:} This will test if any defects appear when a client scores a point.  When the game logic determines no collision, the system will increment the point winner's score.\\
+\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+\textbf{Post-conditions:} Game continues\\
+\textbf{Scenario:}
+\begin{enumerate}
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does moves to hit the ball. 
+\item Game logic determines ball movement.
+\item Client1 does not move.
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client2 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client2’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\end{enumerate}
+\textbf{Expected Results:} Client2 has 1 point, Client 1 has 0 points.  Game continues.\\
+\textbf{Pass/Fail:}
+
+\noindent \textbf{Test Case:} Update player scores-Client1 scores 1 point, then Client2 scores 1 point.\\
+\textbf{Version:}1.0\\
+\textbf{Description:} This will test if any defects appear when a client scores a point.  When the game logic determines no collision, the system will increment the point winner's score.\\
+\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+\textbf{Post-conditions:} Game continues\\
+\textbf{Scenario:}
+\begin{enumerate}
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does not move 
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client1 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client1’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does moves to hit the ball. 
+\item Game logic determines ball movement.
+\item Client1 does not move.
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client2 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client2’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\end{enumerate}
+\textbf{Expected Results:} Client1 has 1 point, Client 2 has 1 point.  Game continues.\\
+\textbf{Pass/Fail:}
+
+\noindent \textbf{Test Case:} Update player scores-Client1 scores 100 points\\
+\textbf{Version:}1.0\\
+\textbf{Description:} This will test if any defects appear when a client scores a point.  When the game logic determines no collision, the system will increment the point winner's score past 100 points.\\
+\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+\textbf{Post-conditions:} Game continues\\
+\textbf{Scenario:}
+\begin{enumerate}
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does not move 
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client1 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client1’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\item Repeat 1-10 until Client1 has 100 points.
+\end{enumerate}
+\textbf{Expected Results:} Client1 has 1 point, Client 2 has 0 points.  Game continues.\\
+\textbf{Pass/Fail:}
+
+\noindent \textbf{Test Case:} Update player scores-Client 2 scores 100 points\\
+\textbf{Version:}1.0\\
+\textbf{Description:} This will test if any defects appear when a client scores a point.  When the game logic determines no collision, the system will increment the point winner's score past 100 points.\\
+\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+\textbf{Post-conditions:} Game continues\\
+\textbf{Scenario:}
+\begin{enumerate}
+\item Client1 moves to hit the ball.
+\item Game logic determines ball movement.
+\item Client2 does moves to hit the ball. 
+\item Game logic determines ball movement.
+\item Client1 does not move.
+\item Game logic determines no collision. 
+\item Game logic pause game to informs system of client2 point.
+\item System communicates point incrimination to game repository.
+\item Game repository increments client2’s point.
+\item Game repository communicates current score back to server.
+\item Game repository sends current score to client interface.
+\item Client interface displays current score
+\item Repeat steps 1-12 until Client 2 reaches 100 points.
+\end{enumerate}
+\textbf{Expected Results:} Client2 has 100 points, Client 1 has 0 points.  Game continues.\\
+\textbf{Pass/Fail:}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
