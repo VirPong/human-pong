@@ -1,0 +1,135 @@
+
+/**
+ * Takes the acceleration data from a Wii Remote, extrapolates position
+ * data, and a few other things. Still a work in progress.
+ *
+ * The WiiMote's axis conventions should be noted. Assume the player is
+ * facing the game field, so to speak. When holding the WiiMote sideways
+ * in the standard orientation (1 and 2 on the right), an acceleration to
+ * the right will be a positive y acceleration. When holding the WiiMote
+ * pointing forwards, an acceleration to the right will be a negative x
+ * acceleration. In either case, an acceleration UPWARDS will be a positive
+ * z acceleration; we incorporated this option in case the user wanted to
+ * use it, but Jason may not approve because it doesn't involve running
+ * around, so we'll see. Also, since lifting/lowering will match the paddle
+ * position differently than moving left/right (depending on whether you're
+ * player 1 or player 2), it'll be up to the phone teams who have whether
+ * they're 1 or 2 to determine this.
+ * 
+ * @author Amanda Ohsiek
+ * @date 10/6/11
+ */
+public class WiiReader {
+
+	private float position;
+	private float velocity;
+	private float prevTime;
+	private char mode = 'y'; 
+
+	// Change this once we know how "strong" the accelerometer is.
+	// Used to convert calculated position to approx. pixel position.
+	private static final int POSITION_CONVERTER = 1;
+
+	/**
+	 * When given an acceleration value, presumably from the Wii Remote,
+	 * converts it to a position defined by an int (number of pixels).
+	 * We recommend using getAxis first to determine which accel value
+	 * to use.
+	 *
+	 * @param accel The current acceleration on some axis.
+	 * @return The current position.
+	 */
+	public int getAxisPosition(int accel) {
+		// get change in time
+		float newTime = System.nanoTime() / 1000000000;
+		float elapsedTime = newTime - prevTime;
+		prevTime = newTime;
+		// compensate for sign flip in x mode and/or gravity
+		// in z mode
+		if (mode == 'x') {
+			accel = -accel;
+		}
+		if (mode == 'z') {
+			accel += 10;
+		}
+		// calculate new velocity/position
+		float newVel = (elapsedTime * (float)accel) + velocity;
+		position = elapsedTime * (newVel + velocity) / 2 + position;
+		velocity = newVel;
+		int finalPos = (int)(position * POSITION_CONVERTER);
+		return finalPos;
+	}
+
+	/**
+	 * Should be called only if 'smart' axis selection is on. Rather
+	 * than using the distance theorem, as in previous versions of this
+	 * code, this method saves time and effort by merely selecting the
+	 * axis with the highest acceleration value.
+	 *
+	 * @param xAccel First acceleration value.
+	 * @param yAccel Second acceleration value.
+	 * @param zAccel Third acceleration value.
+	 * @return The current position.
+	 */
+	public int getSmartPosition(int xAccel, int yAccel, int zAccel) {
+		// get change in time
+		float newTime = System.nanoTime() / 1000000000;
+		float elapsedTime = newTime - prevTime;
+		prevTime = newTime;
+		// compensate for sign flip in x and/or gravity in z
+		xAccel = -xAccel;
+		zAccel += 10;
+		// find max
+		int maxAccel = xAccel;
+		if (yAccel > maxAccel) {
+			maxAccel = yAccel;
+		}
+		if (zAccel > maxAccel) {
+			maxAccel = zAccel;
+		}
+		// calculate new velocity/position
+		float newVel = (elapsedTime * (float)maxAccel) + velocity;
+		position = elapsedTime * (newVel + velocity) / 2 + position;
+		velocity = newVel;
+		int finalPos = (int)(position * POSITION_CONVERTER);
+		return finalPos;
+	}
+
+	/**
+	 * When called, refreshes the WiiReader's prevTime and sets
+	 * vel to 0. This method should be called when the game
+	 * starts and while the Wii remote is completely still, so
+	 * that all values are as they should be during the game.
+	 */
+	public void calibrate() {
+		prevTime = System.nanoTime() / 1000000000;
+		position = 0;
+		velocity = 0;
+	}
+
+	/**
+	 * Changes the axis mode of the WiiReader. Not yet used in
+	 * anything, but the mode field will eventually decide which
+	 * of the Wiimote's axes to read acceleration from, or whether
+	 * to use a composite of all three.
+	 * @param in The axis as a char.
+	 */
+	public void setAxis(char in) {
+		if (in == 'x' || in == 'y' || in == 'z' || in == 's') {
+			mode = in;
+		}
+		else {
+			mode = 'y'; // default to y axis if char is incorrect
+		}
+	}
+
+	/**
+	 * Returns the axis mode as a char. x, y, or z indicates that
+	 * the single-axis reader should be used; s indicates that the
+	 * "smart" reader should be used.
+	 * @return The axis info as a char.
+	 */
+	public char getAxisMode() {
+		return mode;
+	}
+}
