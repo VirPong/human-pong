@@ -1,0 +1,5 @@
+All in attendance.
+
+Commencing work on test cases in meeting.
+Demoed issue creation.
+Demoed logging on to server.
