@@ -1,0 +1,19 @@
+\BOOKMARK [2][-]{subsection.0.1}{Install Node.js}{}
+\BOOKMARK [2][-]{subsection.0.2}{Install MongoDB}{}
+\BOOKMARK [2][-]{subsection.0.3}{Interface with the Server}{}
+\BOOKMARK [2][-]{subsection.0.4}{Running an initial test of the server code}{}
+\BOOKMARK [2][-]{subsection.0.5}{First client connecting to system}{}
+\BOOKMARK [2][-]{subsection.0.6}{Client ID generated and signal}{}
+\BOOKMARK [2][-]{subsection.0.7}{A Client Connecting To An Open Game}{}
+\BOOKMARK [2][-]{subsection.0.8}{A Client Connecting To A Full Game}{}
+\BOOKMARK [2][-]{subsection.0.9}{Many Spectators}{}
+\BOOKMARK [2][-]{subsection.0.10}{Two players play a game, disregarding paddle logic}{}
+\BOOKMARK [2][-]{subsection.0.11}{ Update player scores-Client1 scores 1 point}{}
+\BOOKMARK [2][-]{subsection.0.12}{Game Logic- Ball Logic Usability}{}
+\BOOKMARK [2][-]{subsection.0.13}{Between Client Latency}{}
+\BOOKMARK [2][-]{subsection.0.14}{Two clients play a game until a winner is determined}{}
+\BOOKMARK [2][-]{subsection.0.15}{Available game information sent}{}
+\BOOKMARK [2][-]{subsection.0.16}{Request client start new game}{}
+\BOOKMARK [2][-]{subsection.0.17}{Desired communication time}{}
+\BOOKMARK [2][-]{subsection.0.18}{Client 1 waiting for Client 2}{}
+\BOOKMARK [2][-]{subsection.0.19}{Client warning on system inability to store data}{}
