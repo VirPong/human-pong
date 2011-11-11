@@ -58,7 +58,26 @@
 \begin{document}
 
 
-\section{Install Node.js}
+%Add in some nice looking pages
+ \begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+      {\Huge Server System Testing: Test Case Documentation}\\[0.5cm]
+      {\Large Garrett Dieckmann, Kyle Monet, Jordan Apele, Kyle Wenholz}\\[0.4cm]
+      \today
+    \end{center}
+    \vspace*{\fill}
+  \end{titlepage}
+  
+\tableofcontents
+\newpage
+
+
+\section{Documentation}
+\label{sec:documentationCases}
+
+
+\subsection{Install Node.js}
 \textbf{Version:}1.0\\
 \textbf{Description:} Attempt to use documentation for Node JS installation.
 \textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
@@ -71,9 +90,9 @@
 \end{enumerate}
 \textbf{Expected Results:} Node.js is installed and operational.\\
 \textbf{Pass/Fail:} Fail
-\textbf{Comments:} The user should be encouraged to install the build packages necessary on their system.  Sources should be cited for credit and more assistance should it be needed.  Also, the instruction to “cd <your directory name>” for express installation is entirely unhelpful.  \\
+\textbf{Comments:} The user should be encouraged to install the build packages necessary on their system.  Sources should be cited for credit and more assistance should it be needed.  Also, the instruction to $“\<cd$ your directory name$\>”$ for express installation is entirely unhelpful.  \\
 
-\section{Install MongoDB}
+\subsection{Install MongoDB}
 \textbf{Version:}1.0\\
 \textbf{Description:} Attempt to use documentation for MongoDB installation.
 \textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
@@ -87,7 +106,7 @@
 \textbf{Pass/Fail:} Fail
 \textbf{Comments:} The install documentation should provide references or links to resources for installation.  Installation following the procedures given is incorrect.  The downloaded source is never actually used.  Also, the use of “sudo apt-get mongodb” assumes that the package is in the repository of the user’s system and that he or she is using a Debian based system.  Lastly, the final paragraph of the installation instructions is very confusing.
 
-\section{Interface with the Server}
+\subsection{Interface with the Server}
 \textbf{Version:}1.0\\
 \textbf{Description:} Design a client to interact with the server.\\
 \textbf{Pre-conditions:} None.\\
@@ -103,7 +122,12 @@
 \textbf{Comments:} There needs to be an API to understand the server.  As is, the documentation and looking at the code are very confusing for a new developer.  While an API may seem like a secondary goal, developing without one is impossible without intimate knowledge of the server code.
 
 
-\section{Running an initial test of the server code}
+\section{Communication}
+\label{sec:communicationCases}
+
+
+
+\subsection{Running an initial test of the server code}
 \label{sec:initialTest}
 \textbf{Version:}1.0\\
 \textbf{Description:} Using the most recent version of the paddle-meister code, run the server using node and try to connect with WebUI code from the mid-term demo.
@@ -121,7 +145,7 @@
 
 
 
-\section{First client connecting to system}
+\subsection{First client connecting to system}
 \textbf{Version:}1.0\\
 \textbf{Description:}Test successful client initiated communication between the server and client.\\
 \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has no other clients connected.\\
@@ -134,7 +158,7 @@
 \textbf{Expected Results:}It should just work. Server will notice the attempt to be connected to and will act accordingly.
 \textbf{Results:}Pass. System makes connection with client.
 
-\section{Client ID generated and signal}
+\subsection{Client ID generated and signal}
 \textbf{Version:}1.0\\
 \textbf{Description:}Test for successful generation and passing of client ID.\\
 \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client.\\
@@ -150,7 +174,7 @@
 \textbf{Comments:} Client sent ID client indicated in initiating game.\\
 
 
-\section{A Client Connecting To An Open Game}
+\subsection{A Client Connecting To An Open Game}
 \label{sec:openGameConnect}
 \textbf{Version:} 1.0\\
 \textbf{Description:} A Client connects to system requesting a specific game session, and system connects Client to existing game session with an already-connected Client and begins game session, communicating game data.\\
@@ -167,7 +191,7 @@ Scenario:
 \textbf{Pass/Fail:} Mostly success.
 \textbf{Comments:} The client can not select a game; however, the client can connect to a single game.
 
-\section{A Client Connecting To A Full Game}
+\subsection{A Client Connecting To A Full Game}
 \label{sec:fullGameConnect}
 \textbf{Version:}1.0\\
 \textbf{Description:} A Client connects to system requesting a specific game session, System notifies Client of full status of session and does not give Client access.\\
@@ -184,7 +208,23 @@ Scenario:
 \textbf{Comments:} This feature is not yet implemented.
 
 
-\section{Many Spectators}
+\subsection{Request client start new game}
+\textbf{Version:}1.0\\
+\textbf{Description:}Test system behavior if no current games are available.
+\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and recieved ID and ready signal.\\
+\textbf{Post-conditions:}Client is asked to start a new game.\\
+\textbf{Scenario:}
+\begin{enumerate}
+ \item Test case two passes.
+ \item System discovers no games currently exist.
+ \item System asks client to start a new game.
+\end{enumerate}
+\textbf{Expected Results:}Client asked to start new game.\\
+\textbf{Pass/Fail:} Feature not implemented yet. \\
+\textbf{Comments:} The server doesn't ask; it just starts new game.\\
+
+
+\subsection{Many Spectators}
 \label{sec:manySpectators}
 \textbf{Version:}1.0\\
 \textbf{Description:} Spectators connect to watch a game.\\
@@ -200,8 +240,10 @@ Scenario:
 \textbf{Pass/Fail:} Fail\\
 \textbf{Comments:} For each newly connected spectator, or player, the ball visibly gains speed.  Head to line $144$ for the if-statement that causes this issue.
 
+\section{Game Logic}
+\label{sec:logicCases}
 
-\section{Two players play a game, disregarding paddle logic}
+\subsection{Two players play a game, disregarding paddle logic}
 \label{sec:gameNoLogic}
 \textbf{Version:}1.0\\
 \textbf{Description:} Two PlayerClients play a Pong game.\\
@@ -218,7 +260,7 @@ Scenario:
 \textbf{Pass/Fail:} Fail\\
 \textbf{Comments:} When a new PlayerClient or a SpectatorClient joins an existing game between two PlayerClients, both paddles (Player1’s paddle and Player2’s paddle) will be moved to the default positions.
 
-\section{ Update player scores-Client1 scores 1 point}
+\subsection{ Update player scores-Client1 scores 1 point}
 \textbf{Version:}1.0\\
 \textbf{Description:} This will test if any defects appear when a client scores a point. The game logic should determine no collision, and the system should increment the point winner's score, and send the updated score to each client.\\
 \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
@@ -250,7 +292,7 @@ Scenario:
 \textbf{Comments:} Client would like to be able to hit the ball with the side of their paddle, not just the face.\\
 
 
-\section{Game Logic- Ball Logic Usability}
+\subsection{Game Logic- Ball Logic Usability}
 \textbf{Version:}1.0\\
 \textbf{Description:} This will test if any defects appear in ball when client plays a game.\\
 \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
@@ -268,7 +310,12 @@ Scenario:
 \textbf{Pass/Fail:} Pass\\
 \textbf{Comments:} Client would like more diversity in initial ball movement, both in which direction the ball is served as well as to which client the ball is served.\\
 
-\section{Between Client Latency}
+
+\section{Performance}
+\label{sec:performanceCases}
+
+
+\subsection{Between Client Latency}
 \textbf{Version:}1.0\\
 \textbf{Description:} This will test if any defects appear in the latency between separate clients (both players and spectators) logged into the same game.\\
 \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game, Client3 (a spectator) is logged on watching. \\
@@ -281,7 +328,7 @@ Scenario:
 \textbf{Expected Results:} Client finds that the game is running simultaneously on every computer.\\
 \textbf{Pass/Fail:}Pass\\
 
-\section{Two clients play a game until a winner is determined}
+\subsection{Two clients play a game until a winner is determined}
 \textbf{Description:} This test will determine whether a game informs a client of the score based upon the score limit for a game.
 \textbf{Pre-conditions:} The system is in operation, two clients are connected to the system, clients are prepared to start a game\\
 \textbf{Post-conditions:} The game is complete\\
@@ -306,7 +353,7 @@ Scenario:
 \textbf{Comments:} No score limit is reached. After 50 ‘non-collisions’, or scores, the game did not inform the client of the score
 
 
-\section{Available game information sent}
+\subsection{Available game information sent}
 \textbf{Version:}1.0\\
 \textbf{Description:}Test for transmission of current available games.
 \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and received ID and ready signal.\\
@@ -321,22 +368,7 @@ Scenario:
 \textbf{Results:}Feature not implemented yet. No information about current games sent.\\
 
 
-\section{Request client start new game}
-\textbf{Version:}1.0\\
-\textbf{Description:}Test system behavior if no current games are available.
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and recieved ID and ready signal.\\
-\textbf{Post-conditions:}Client is asked to start a new game.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Test case two passes.
- \item System discovers no games currently exist.
- \item System asks client to start a new game.
-\end{enumerate}
-\textbf{Expected Results:}Client asked to start new game.\\
-\textbf{Pass/Fail:} Feature not implemented yet. \\
-\textbf{Comments:} The server doesn't ask; it just starts new game.\\
-
-\section{Desired communication time}
+\subsection{Desired communication time}
 \textbf{Version:}1.0\\
 \textbf{Description:} This test will quantify the latency between issuing a paddle movement on the website, and when the client receives a ‘gameUpdate’ event corresponding to the paddle movement issued.\\
 \textbf{Pre-conditions:} Server is running Pong code, two clients are connected to a Pong game, a Pong game is in progress.\\
@@ -356,7 +388,7 @@ Scenario:
         \item In the test, the client machine was able to ping the server and get an average response of 1 millisecond
     \end{enumerate}
 
-\section{Client 1 waiting for Client 2}
+\subsection{Client 1 waiting for Client 2}
 \textbf{Version:}1.0\\
 \textbf{Description:} This test will check whether Client 1 is able to wait for Client 2 to join. \\
 \textbf{Pre-conditions:} The server is running Pong code, no clients are connected to the game\\
@@ -377,12 +409,11 @@ Scenario:
     \item The game will wait for two players to join
     \item The game will begin when two players join
 \end{enumerate}
-\textbf{Pass/Fail:} Will commonly pass, sometimes fail
+\textbf{Pass/Fail:} Will commonly pass, sometimes fail.\\
 \textbf{Comments:} If only Client 1 is connected, and Client 2 has not yet joined, Client 1 can crash the server. If Client 1 presses any key (whether it is a movement key, or a any keyboard input) before before Client 2 has connected, this will cause the server to crash, and not recover.
 \textbf{Code:} The server crashes at line 152 of Server.js
 
-
-\section{Client warning on system inability to store data}
+\subsection{Client warning on system inability to store data}
 \textbf{Version:}1.0\\
 \textbf{Description:}See if the system hands out a message.\\
 \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, client connected.\\

@@ -1,3 +1,4 @@
+
 \documentclass[12pt]{article}
 
 \usepackage{hyperref}
@@ -9,7 +10,7 @@
 \usepackage{graphicx}
 
 % for conveniently specifying the spacing (\singlespacing, \doublespacing,
-%    \onehalfspacing, etc.)
+% \onehalfspacing, etc.)
 \usepackage{setspace}
 \onehalfspacing
 
@@ -29,17 +30,17 @@
 
 % Differently spaced itemize
 \newenvironment{itemize*}%
- {\begin{itemize}%
-     \setlength{\parsep}{0pt}
+{\begin{itemize}%
+    \setlength{\parsep}{0pt}
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}}%
- {\end{itemize}}
+{\end{itemize}}
 \newenvironment{enumerate*}%
- {\begin{enumerate}%
-     \setlength{\parsep}{0pt}
+{\begin{enumerate}%
+    \setlength{\parsep}{0pt}
     \setlength{\itemsep}{0pt}%
     \setlength{\parskip}{0pt}}%
- {\end{enumerate}}
+{\end{enumerate}}
 
 
 % set up a new command to insert a little bit of vertical space
@@ -50,7 +51,7 @@
 \newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
 
 \newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
-              {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+             {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
 
 
 
@@ -58,344 +59,438 @@
 \begin{document}
 
 
-\subsection{Install Node.js}
-\textbf{Version:}1.0\\
-\textbf{Description:} Attempt to use documentation for Node JS installation.
-\textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
-\textbf{Post-conditions:} The Node JS is installed on the server and ready for use.
-\textbf{Scenario:}
-\begin{enumerate}
- \item Go to section $5.2.1$ of the Server Team intermediate report.
- \item Follow each step indicated to install Node.js.
- \item Follow the instructions to install socket.io and express.
-\end{enumerate}
-\textbf{Expected Results:} Node.js is installed and operational.\\
-\textbf{Pass/Fail:} Fail
-\textbf{Comments:} The user should be encouraged to install the build packages necessary on their system.  Sources should be cited for credit and more assistance should it be needed.  Also, the instruction to “cd <your directory name>” for express installation is entirely unhelpful.  \\
+%Add in some nice looking pages
+\begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+    {\Huge Server System Testing: Defect Documentation}\\[0.5cm]
+    {\Large Garrett Dieckmann, Kyle Monnett, Jordan Apele, Kyle Wenholz}\\[0.4cm]
+    \today
+    \end{center}
+    \vspace*{\fill}
+ \end{titlepage}
 
-\subsection{Install MongoDB}
-\textbf{Version:}1.0\\
-\textbf{Description:} Attempt to use documentation for MongoDB installation.
-\textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
-\textbf{Post-conditions:} MongoDB is installed on the server and ready for use.
-\textbf{Scenario:}
-\begin{enumerate}
- \item Go to section $5.2.1$ of the Server Team intermediate report.
- \item Follow each step indicated to install MongoDB.
-\end{enumerate}
-\textbf{Expected Results:} MongoDB is installed and operational.\\
-\textbf{Pass/Fail:} Fail
-\textbf{Comments:} The install documentation should provide references or links to resources for installation.  Installation following the procedures given is incorrect.  The downloaded source is never actually used.  Also, the use of “sudo apt-get mongodb” assumes that the package is in the repository of the user’s system and that he or she is using a Debian based system.  Lastly, the final paragraph of the installation instructions is very confusing.
-
-\subsection{Interface with the Server}
-\textbf{Version:}1.0\\
-\textbf{Description:} Design a client to interact with the server.\\
-\textbf{Pre-conditions:} None.\\
-\textbf{Post-conditions:} A client exists that can communicate with the server in a meaningful way.
-\textbf{Scenario:}
-\begin{enumerate}
- \item Understand the server through documentation and an API.
- \item Develop a client to interact with the server.
- \item Use the client.
-\end{enumerate}
-\textbf{Expected Results:} Developing a client for the server makes sense and is not impeded by a lack of understanding.\\
-\textbf{Pass/Fail:} Fail
-\textbf{Comments:} There needs to be an API to understand the server.  As is, the documentation and looking at the code are very confusing for a new developer.  While an API may seem like a secondary goal, developing without one is impossible without intimate knowledge of the server code.
+\tableofcontents
+\newpage
 
 
-\subsection{Running an initial test of the server code}
-\label{sec:initialTest}
-\textbf{Version:}1.0\\
-\textbf{Description:} Using the most recent version of the paddle-meister code, run the server using node and try to connect with WebUI code from the mid-term demo.
-\textbf{Pre-conditions:} Node JS installed and paddle-meister up to date.  A web browser and the WebUI’s demo code for the pong view are also required on a test machine (server or other machine).
-\textbf{Post-conditions:} Server logs output for client connections and client side draws or at least does something.
-\textbf{Steps:}
-\begin{enumerate}
- \item Run the server file using “node server.js”.
- \item Open the client files in browser (twice, once per tab in browser).
- \item Observe output.
-\end{enumerate}
-\textbf{Expected Results:} Both client and server produce output suggesting a successful connection.\\
-\textbf{Pass/Fail} Fail\\
-\textbf{Comments:} The most recent server.js file does not work.  We had to revert to the demo version after discussing with the server team.
+\section{Documentation}
+\label{sec:documentationCases}
+Note that not all test cases include an expected results section.  This is only in cases where the $Post-conditions$ are clear enough.  Throughout the document there are references to files used in testing.  These should be mostly obvious (i.e. VisualClient refers to a client capable of visualizing the ball and paddle data).  Some of the score clients were special and are in the testing files.  Also in the testing files, you will find notes, copies of clients used and various other possibly helpful tidbits.
 
 
+    \subsection{Install Node.js}
+    \textbf{Version:}1.0\\
+    \textbf{Description:} Attempt to use documentation for Node.js installation.\\
+    \textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
+    \textbf{Post-conditions:} Node.js is installed on the server and ready for use.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Go to section $5.2.1$ of the Server Team intermediate report.
+        \item Follow each step indicated to install Node.js.
+        \item Follow the instructions to install socket.io and express.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} The user should be encouraged to install the build packages necessary on their system.  Sources should be cited for credit and more assistance should it be needed.  Also, the instruction to \verb=''<cd your directory name>'' = for express installation is entirely unhelpful.\\
 
-\subsection{First client connecting to system}
-\textbf{Version:}1.0\\
-\textbf{Description:}Test successful client initiated communication between the server and client.\\
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has no other clients connected.\\
-\textbf{Post-conditions:}Client has initiated connection and server has responded.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Client requests connection with system.
- \item System accepts connection...
-\end{enumerate}
-\textbf{Expected Results:}It should just work. Server will notice the attempt to be connected to and will act accordingly.
-\textbf{Results:}Pass. System makes connection with client.
+    \subsection{Install MongoDB}
+    \textbf{Version:}1.0\\
+    \textbf{Description:} Attempt to use documentation for MongoDB installation.\\
+    \textbf{Pre-conditions:} Ubuntu 10.10 or later is installed on a machine with network access.\\
+    \textbf{Post-conditions:} MongoDB is installed on the server and ready for use.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Go to section $5.2.1$ of the Server Team intermediate report.
+        \item Follow each step indicated to install MongoDB.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} The install documentation should provide references or links to resources for installation.  Installation following the procedures given is incorrect.  The downloaded source is never actually used.  Also, the use of “sudo apt-get mongodb” assumes that the package is in the repository of the user’s system and that he or she is using a Debian based system.  Lastly, the final paragraph of the installation instructions is very confusing.\\
 
-\subsection{Client ID generated and signal}
-\textbf{Version:}1.0\\
-\textbf{Description:}Test for successful generation and passing of client ID.\\
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client.\\
-\textbf{Post-conditions:}Client has received system generated ID and ready signal.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Test case one passes.
- \item System generates Client ID.
- \item System sends client its ID and ready signal.
-\end{enumerate}
-\textbf{Expected Results:}Client receives a unique ID and a ready signal.\\
-\textbf{Pass/Fail:} Fail\\
-\textbf{Comments:} Client sent ID client indicated in initiating game.\\
+    \subsection{Develop for the server}
+    \textbf{Version:}1.0\\
+    \textbf{Description:} Design a client to interact with the server.\\
+    \textbf{Pre-conditions:} Be prepared to develop a client for interacting with the server.\\
+    \textbf{Post-conditions:} A client exists that can communicate with the server in a meaningful way.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Understand the server through documentation and an API.
+        \item Develop a client to interact with the server.
+        \item Use the client.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} There needs to be an API to understand the server.  As is, the documentation and looking at the code are very confusing for a new developer.  While an API may seem like a secondary goal, developing without one is impossible without intimate knowledge of the server code.\\
 
+\newpage
 
-\subsection{A Client Connecting To An Open Game}
-\label{sec:openGameConnect}
-\textbf{Version:} 1.0\\
-\textbf{Description:} A Client connects to system requesting a specific game session, and system connects Client to existing game session with an already-connected Client and begins game session, communicating game data.\\
-\textbf{Pre-conditions:} System and Clients operational on the same network, One Player is already connected waiting for a challenger.  Using the VisualClient.
-Post-conditions: Game has begun between Clients.
-Scenario:
-\begin{enumerate}
-\item Client communicates to server which open game it wants to play, and System opens communication between client and client already in open game.
-\item System initializes the game state, the game is started.
-\item Paddle position is transmitted from client to the system.
-\item System transmits clients’ paddle position, ball position, and score data back to client.
-\end{enumerate}
-\textbf{Expected Results:} The changes in paddle position of both Clients are recorded by the System and communicated to both clients in synchronization; both Clients are displaying same game state.\\
-\textbf{Pass/Fail:} Mostly success.
-\textbf{Comments:} The client can not select a game; however, the client can connect to a single game.
+\section{Communication}
+\label{sec:communicationCases}
 
-\subsection{A Client Connecting To A Full Game}
-\label{sec:fullGameConnect}
-\textbf{Version:}1.0\\
-\textbf{Description:} A Client connects to system requesting a specific game session, System notifies Client of full status of session and does not give Client access.\\
-\textbf{Pre-conditions:} System and Clients operational on the same network, Game Session occupied by two Clients. Using VisualClient.\\
-\textbf{Post-conditions:} Client returns to game listing.\\
-Scenario:
-\begin{enumerate}
-\item Client communicates to server which game it wants to play
-\item System discovers game session is full.
-\item System notifies Client of error and does not admit to game session.
-\end{enumerate}
-\textbf{Expected Results:} Client has received error message.\\
-\textbf{Pass/Fail:} Fail\\
-\textbf{Comments:} This feature is not yet implemented.
+    \subsection{Running an initial test of the server code}
+    \label{sec:initialTest}
+    \textbf{Version:}1.0\\
+    \textbf{Description:} Using the most recent version of the paddle-meister code, run the server using node and try to connect with WebUI code from the mid-term demo.\\
+    \textbf{Pre-conditions:} Node.js installed and paddle-meister up to date.  A web browser and the WebUI’s demo code for the pong view are also required on a test machine (server or other machine).\\
+    \textbf{Post-conditions:} Server logs output for client connections and client side draws or responds in any fashion.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Run the server file using “node server.js”.
+        \item Open the client files in browser (twice, once per tab in browser).
+        \item Observe output.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} The most recent server.js file does not work.  We had to revert to the demo version after discussing with the server team.\\
 
+    \subsection{First client connecting to system}
+    \textbf{Version:}1.0\\
+    \textbf{Description:}Test successful client initiated communication between the server and client.\\
+    \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has no other clients connected.\\
+    \textbf{Post-conditions:}Client has initiated connection and server has responded.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client requests connection with system.
+        \item System accepts connection...
+    \end{enumerate}
+    \textbf{Pass/Fail:}Pass\\
+    \textbf{Comments:}System makes connection with client.\\
 
-\subsection{Many Spectators}
-\label{sec:manySpectators}
-\textbf{Version:}1.0\\
-\textbf{Description:} Spectators connect to watch a game.\\
-\textbf{Pre-conditions:} System and Clients operational on the same network.  Game has begun for playing clients (using PlayerClient or VisualClient).  SpectatorClient is used to connect as a spectator.\\
-\textbf{Post-conditions:} Game proceeds for clients and spectators are able to view the game.\\
-Scenario:
-\begin{enumerate}
-\item Spectator selects to watch a game.
-\item Spectator registers with server.
-\item Repeat steps 1 and 2 several times. (Refreshing the page can do this.)
-\end{enumerate}
-\textbf{Expected Results:} The game proceeds up to reasonable expectations.\\
-\textbf{Pass/Fail:} Fail\\
-\textbf{Comments:} For each newly connected spectator, or player, the ball visibly gains speed.  Head to line $144$ for the if-statement that causes this issue.
+    \subsection{Client ID generated and signaled}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Test for successful generation and passing of client ID.\\
+    \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client.\\
+    \textbf{Post-conditions:}Client has received system generated ID and ready signal.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Test case one passes.
+        \item System generates Client ID.
+        \item System sends client its ID and ready signal.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} Client sent ID client indicated in initiating game.\\
 
+    \subsection{Client connecting to an open game}
+    \label{sec:openGameConnect}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} A Client connects to system requesting a specific game session, and system connects Client to existing game session with an already-connected Client and begins game session, communicating game data.\\
+    \textbf{Pre-conditions:} System and Clients operational on the same network, One Player is already connected waiting for a challenger.  Using the VisualClient.\\
+    \textbf{Post-conditions:} Game has begun between Clients.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client communicates to server which open game it wants to play, and System opens communication between client and client already in open game.
+        \item System initializes the game state, the game is started.
+        \item Paddle position is transmitted from client to the system.
+        \item System transmits clients’ paddle position, ball position, and score data back to client.
+        \end{enumerate}
+    \textbf{Expected Results:} The changes in paddle position of both Clients are recorded by the System and communicated to both clients in synchronization; both Clients are displaying same game state.\\
+    \textbf{Pass/Fail:} Mostly success.\\
+    \textbf{Comments:} The client can not select a game; however, the client can connect to a single game.\\
 
-\subsection{Two players play a game, disregarding paddle logic}
-\label{sec:gameNoLogic}
-\textbf{Version:}1.0\\
-\textbf{Description:} Two PlayerClients play a Pong game.\\
-\textbf{Pre-conditions:} System and Clients operational on the same network.  Game has begun for two playing clients (using PlayerClient or VisualClient).\\
-\textbf{Post-conditions:} Game continues for both players.\\
-Scenario:
-\begin{enumerate}
-\item System sends ball movement to both users.
-\item System receives position data information from client.
-\item System informs game logic of movement.
-\item System sends position data to other client.
-\end{enumerate}
-\textbf{Expected Results:} The game will continue to be playable between two users.
-\textbf{Pass/Fail:} Fail\\
-\textbf{Comments:} When a new PlayerClient or a SpectatorClient joins an existing game between two PlayerClients, both paddles (Player1’s paddle and Player2’s paddle) will be moved to the default positions.
+    \subsection{Client connecting to a full game}
+    \label{sec:fullGameConnect}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} A Client connects to system requesting a specific game session, System notifies Client of full status of session and does not give Client access.\\
+    \textbf{Pre-conditions:} System and Clients operational on the same network, Game Session occupied by two Clients. Using VisualClient.\\
+    \textbf{Post-conditions:} Client returns to game listing.\\
+    Scenario:
+    \begin{enumerate}
+        \item Client communicates to server which game it wants to play
+        \item System discovers game session is full.
+        \item System notifies Client of error and does not admit to game session.
+    \end{enumerate}
+    \textbf{Expected Results:} Client receives message.\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} This feature is not yet implemented.\\
 
-\subsection{ Update player scores-Client1 scores 1 point}
-\textbf{Version:}1.0\\
-\textbf{Description:} This will test if any defects appear when a client scores a point. The game logic should determine no collision, and the system should increment the point winner's score, and send the updated score to each client.\\
-\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
-\textbf{Post-conditions:} Game continues\\
-\textbf{Scenario:}
-\begin{enumerate}
-\item Client1 moves to hit the ball.\\
-\item Game logic determines ball movement.\\
-\item Client2 does not move.\\
-\item Game logic determines no collision. \\
-\item System should send updated score to both Client1 and Client2.\\
-\end{enumerate}
-\textbf{Expected Results:} Client receives updated score reflected as Client1 has 1 point, Client 2 has 0 points. Game should continue.\\
-\textbf{Pass/Fail:}Fail\\
-\textbf{Comment:} Due to the fact that the server does not send the updated score to the clients, boundary and functionality testing was not conducted on the score keeping.\\
-\noindent \textbf{Test Case:} Game Logic- Paddle Logic Usability\\
-\textbf{Version:}1.0\\
-\textbf{Description:} This will test if any defects appear when a client is using the paddle to hit the ball.\\
-\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
-\textbf{Post-conditions:} Game continues\\
-\textbf{Scenario:}
-\begin{enumerate}
-\item Client1 moves to hit the ball.\\
-\item Game logic determines collision when Client1's paddle comes in any contact with the ball. \\
-\item Game logic determines ball movement.\\
-\end{enumerate}
-\textbf{Expected Results:} Client can hit ball with any part of their paddle.\\
-\textbf{Pass/Fail:}Fail\\
-\textbf{Comments:} Client would like to be able to hit the ball with the side of their paddle, not just the face.\\
+    \subsection{Request client start new game}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Test system behavior if no current games are available.\\
+    \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and received ID and ready signal.\\
+    \textbf{Post-conditions:}Client is asked to start a new game.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Test case two passes.
+        \item System discovers no games currently exist.
+        \item System asks client to start a new game.
+    \end{enumerate}
+    \textbf{Pass/Fail:} Feature not implemented yet. \\
+    \textbf{Comments:} The server doesn't ask; it just starts new game.\\
 
+    \subsection{Many spectators}
+    \label{sec:manySpectators}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} Spectators connect to watch a game.\\
+    \textbf{Pre-conditions:} System and Clients operational on the same network.  Game has begun for playing clients (using PlayerClient or VisualClient).  SpectatorClient is used to connect as a spectator.\\
+    \textbf{Post-conditions:} Game proceeds for clients and spectators are able to view the game.\\
+    Scenario:
+    \begin{enumerate}
+        \item Spectator selects to watch a game.
+        \item Spectator registers with server.
+        \item Repeat steps 1 and 2 several times. (Refreshing the page can do this.)
+    \end{enumerate}
+    \textbf{Expected Results:} The game proceeds up to reasonable expectations.\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} For each newly connected spectator, or player, the ball visibly gains speed.  Head to line $144$ for the if-statement that causes this issue.\\
 
-\subsection{Game Logic- Ball Logic Usability}
-\textbf{Version:}1.0\\
-\textbf{Description:} This will test if any defects appear in ball when client plays a game.\\
-\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
-\textbf{Post-conditions:} Game continues\\
-\textbf{Scenario:}
-\begin{enumerate}
-\item Client1 moves to hit the ball.\\
-\item Game logic determines collision when Client1's paddle comes in any contact with the ball. \\
-\item Game logic determines ball movement.\\
-\item Client2 moves to hit the ball.\\
-\item Game logic determines collision when Client2's paddle comes in any contact with the ball. \\
-\item Game logic determines ball movement.\\
-\end{enumerate}
-\textbf{Expected Results:} Client finds ball movement to be logical and usable.\\
-\textbf{Pass/Fail:} Pass\\
-\textbf{Comments:} Client would like more diversity in initial ball movement, both in which direction the ball is served as well as to which client the ball is served.\\
+\newpage
 
-\subsection{Between Client Latency}
-\textbf{Version:}1.0\\
-\textbf{Description:} This will test if any defects appear in the latency between separate clients (both players and spectators) logged into the same game.\\
-\textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game, Client3 (a spectator) is logged on watching. \\
-\textbf{Post-conditions:} Game continues\\
-\textbf{Scenario:}
-\begin{enumerate}
-\item Clients continually play and watch the game from different computers.\\
-\item Clients notice the latency between the computers, both from the players' and spectators' computers.\\
-\end{enumerate}
-\textbf{Expected Results:} Client finds that the game is running simultaneously on every computer.\\
-\textbf{Pass/Fail:}Pass\\
-
-\subsection{Two clients play a game until a winner is determined}
-\textbf{Description:} This test will determine whether a game informs a client of the score based upon the score limit for a game.
-\textbf{Pre-conditions:} The system is in operation, two clients are connected to the system, clients are prepared to start a game\\
-\textbf{Post-conditions:} The game is complete\\
-\textbf{Scenario:}
-\begin{enumerate}
-\item System pairs users
-\item Game logic sets players and ball at default positions
-\item System informs clients of game start
-\item Game logic starts ball movement
-\item System sends ball movement to both users
-\item System receives position data information from client
-\item System informs game logic of movement
-\item System sends position data to other client
-\item Game logic determines no collision
-\item User receives a point\\
-\emph{Repeat 4 - 10 until score limit} - Score limit not reached by 50 ‘non-collisions’
-\item System informs client of score
-\end{enumerate}
-\emph{Return to 5}\\
-\textbf{Expected Results:} A game informs client of the score, after reaching the game score limit.
-\textbf{Pass/Fail:} Fail
-\textbf{Comments:} No score limit is reached. After 50 ‘non-collisions’, or scores, the game did not inform the client of the score
+\section{Game Logic}
+\label{sec:logicCases}
 
 
-\subsection{Available game information sent}
-\textbf{Version:}1.0\\
-\textbf{Description:}Test for transmission of current available games.
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and received ID and ready signal.\\
-\textbf{Post-conditions:}Client knows what current games are available.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Test case two passes.
- \item Server sends client available game info.
- \item Client receives info.
-\end{enumerate}
-\textbf{Expected Results:}Client receives information about current games.\\
-\textbf{Results:}Feature not implemented yet. No information about current games sent.\\
+    \subsection{Two players play a game, disregarding paddle logic}
+    \label{sec:gameNoLogic}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} Two PlayerClients play a Pong game.\\
+    \textbf{Pre-conditions:} System and Clients operational on the same network.  Game has begun for two playing clients (using PlayerClient or VisualClient).\\
+    \textbf{Post-conditions:} Game continues for both players.\\
+    Scenario:
+    \begin{enumerate}
+        \item System sends ball movement to both users.
+        \item System receives position data information from client.
+        \item System informs game logic of movement.
+        \item System sends position data to other client.
+    \end{enumerate}
+    \textbf{Expected Results:} The game will continue to be playable between two users.\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} When a new PlayerClient or a SpectatorClient joins an existing game between two PlayerClients, both paddles (Player1’s paddle and Player2’s paddle) will be moved to the default positions.\\
+
+    \subsection{ Update player scores-Client1 scores 1 point}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This will test if any defects appear when a client scores a point. The game logic should determine no collision, and the system should increment the point winner's score, and send the updated score to each client.\\
+    \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+    \textbf{Post-conditions:} Game continues\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client1 moves to hit the ball.
+        \item Game logic determines ball movement.
+        \item Client2 does not move.
+        \item Game logic determines no collision. 
+        \item System should send updated score to both Client1 and Client2.
+    \end{enumerate}
+    \textbf{Expected Results:} Client receives updated score reflected as Client1 has 1 point, Client 2 has 0 points. Game should continue.\\
+    \textbf{Pass/Fail:}Fail\\
+    \textbf{Comment:} Due to the fact that the server does not send the updated score to the clients, boundary and functionality testing was not conducted on the score keeping.\\
+
+    \subsection{Paddle logic}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This will test if any defects appear when a client is using the paddle to hit the ball.\\
+    \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+    \textbf{Post-conditions:} Game continues\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client1 moves to hit the ball.
+        \item Game logic determines collision when Client1's paddle comes in any contact with the ball. 
+        \item Game logic determines ball movement.
+    \end{enumerate}
+    \textbf{Expected Results:} Client can hit ball with any part of their paddle.\\
+    \textbf{Pass/Fail:}Fail\\
+    \textbf{Comments:} Client would like to be able to hit the ball with the side of their paddle, not just the face.\\
+
+    \subsection{Ball logic usability}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This will test if any defects appear in ball when client plays a game.\\
+    \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game \\
+    \textbf{Post-conditions:} Game continues\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client1 moves to hit the ball.
+        \item Game logic determines collision when Client1's paddle comes in any contact with the ball. 
+        \item Game logic determines ball movement.
+        \item Client2 moves to hit the ball.
+        \item Game logic determines collision when Client2's paddle comes in any contact with the ball. 
+        \item Game logic determines ball movement.
+    \end{enumerate}
+    \textbf{Expected Results:} Client finds ball movement to be logical and usable.\\
+    \textbf{Pass/Fail:} Pass\\
+    \textbf{Comments:} Client would like more diversity in initial ball movement, both in which direction the ball is served as well as to which client the ball is served.\\
+
+\newpage
+
+\section{Performance}
+\label{sec:performanceCases}
 
 
-\subsection{Request client start new game}
-\textbf{Version:}1.0\\
-\textbf{Description:}Test system behavior if no current games are available.
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and recieved ID and ready signal.\\
-\textbf{Post-conditions:}Client is asked to start a new game.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Test case two passes.
- \item System discovers no games currently exist.
- \item System asks client to start a new game.
-\end{enumerate}
-\textbf{Expected Results:}Client asked to start new game.\\
-\textbf{Pass/Fail:} Feature not implemented yet. \\
-\textbf{Comments:} The server doesn't ask; it just starts new game.\\
+    \subsection{Between client latency}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This will test if any defects appear in the latency between separate clients (both players and spectators) logged into the same game.\\
+    \textbf{Pre-conditions:} System Operational, Client1 and Client2 logged in and participating in game, Client3 (a spectator) is logged on watching. \\
+    \textbf{Post-conditions:} Game continues\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Clients continually play and watch the game from different computers.
+        \item Clients notice the latency between the computers, both from the players' and spectators' computers.
+    \end{enumerate}
+    \textbf{Expected Results:} Client finds that the game is running simultaneously on every computer.\\
+    \textbf{Pass/Fail:}Pass\\
 
-\subsection{Desired communication time}
-\textbf{Version:}1.0\\
-\textbf{Description:} This test will quantify the latency between issuing a paddle movement on the website, and when the client receives a ‘gameUpdate’ event corresponding to the paddle movement issued.\\
-\textbf{Pre-conditions:} Server is running Pong code, two clients are connected to a Pong game, a Pong game is in progress.\\
-\textbf{Test structure:} A timing-event start is placed at the updatePaddleToServer method, and a timing-event stop is placed at the updateGame event listener.\\
-\textbf{Scenario:}\\
-\begin{enumerate}
-    \item A client moves their pong Paddle
-    \item The client code sends updated paddle location to server
-    \item The client code starts a timer
-    \item The system sends updated game information to the client code
-    \item The client code stops the timer
-\end{enumerate}
-\textbf{Outcome:} Average time for 25 time-points is 29.52milliseconds with standard deviation of 14.08 milliseconds\\
-\textbf{Comments:}
+    \subsection{Two clients play a game until a winner is determined}
+    \textbf{Description:} This test will determine whether a game informs a client of the score based upon the score limit for a game.\\
+    \textbf{Pre-conditions:} The system is in operation, two clients are connected to the system, clients are prepared to start a game\\
+    \textbf{Post-conditions:} The game is complete.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item System pairs users
+        \item Game logic sets players and ball at default positions
+        \item System informs clients of game start
+        \item Game logic starts ball movement
+        \item System sends ball movement to both users
+        \item System receives position data information from client
+        \item System informs game logic of movement
+        \item System sends position data to other client
+        \item Game logic determines no collision
+        \item User receives a point\\
+        \emph{Repeat 4 - 10 until score limit} - Score limit not reached by 50 ‘non-collisions’
+        \item System informs client of score
+    \end{enumerate}
+    \emph{Return to 5}\\
+    \textbf{Expected Results:} A game informs client of the score, after reaching the game score limit.\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} No score limit is reached. After 50 ‘non-collisions’, or scores, the game did not inform the client of the score\\
+
+
+    \subsection{Available game information sent}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Test for transmission of current available games.\\
+    \textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, system has just received a request to connect from client and received ID and ready signal.\\
+    \textbf{Post-conditions:}Client knows what current games are available.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Connect to the server and request a game.
+        \item Server sends client available game information.
+        \item Client receives information.
+    \end{enumerate}
+    \textbf{Expected Results:}Client receives information about current games.\\
+    \textbf{Results:}This feature is not yet implemented.\\
+
+
+    \subsection{Desired communication time}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This test will quantify the latency between issuing a paddle movement on the website, and when the client receives a ‘gameUpdate’ event corresponding to the paddle movement issued.\\
+    \textbf{Pre-conditions:} Server is running Pong code, two clients are connected to a Pong game, a Pong game is in progress.\\
+    \textbf{Test structure:} A timing-event start is placed at the updatePaddleToServer method, and a timing-event stop is placed at the updateGame event listener.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item A client moves their pong Paddle
+        \item The client code sends updated paddle location to server
+        \item The client code starts a timer
+        \item The system sends updated game information to the client code
+        \item The client code stops the timer
+    \end{enumerate}
+    \textbf{Outcome:} Average time for 25 time-points is 29.52milliseconds with standard deviation of 14.08 milliseconds\\
+    \textbf{Comments:}
     \begin{enumerate}
         \item Server code has a hard-coded response interval of 50 milliseconds
         \item In the test, the client machine was able to ping the server and get an average response of 1 millisecond
     \end{enumerate}
 
-\subsection{Client 1 waiting for Client 2}
-\textbf{Version:}1.0\\
-\textbf{Description:} This test will check whether Client 1 is able to wait for Client 2 to join. \\
-\textbf{Pre-conditions:} The server is running Pong code, no clients are connected to the game\\
-\textbf{Post-conditions:} Game begins when Client 2 joins the game
-\textbf{Scenario:}
-\begin{enumerate}
-    \item Client 1 navigates to the gamePlay webpage
-    \item Client code notifies server that they have connected
-    \item Server accepts client as a player 1
-    \item Server waits for another client to join
-    \item Client 2 connects to gamePlay webpage
-    \item Client code notifies server that they have connected
-    \item Server accepts client 2 as player 2
-    \item Game begins
-\end{enumerate}
-\textbf{Expected Results:}
-\begin{enumerate}
-    \item The game will wait for two players to join
-    \item The game will begin when two players join
-\end{enumerate}
-\textbf{Pass/Fail:} Will commonly pass, sometimes fail
-\textbf{Comments:} If only Client 1 is connected, and Client 2 has not yet joined, Client 1 can crash the server. If Client 1 presses any key (whether it is a movement key, or a any keyboard input) before before Client 2 has connected, this will cause the server to crash, and not recover.
-\textbf{Code:} The server crashes at line 152 of Server.js
+    \subsection{Client 1 waiting for Client 2}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} This test will check whether Client 1 is able to wait for Client 2 to join. \\
+    \textbf{Pre-conditions:} The server is running Pong code, no clients are connected to the game\\
+    \textbf{Post-conditions:} Game begins when Client 2 joins the game\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Client 1 navigates to the gamePlay webpage
+        \item Client code notifies server that they have connected
+        \item Server accepts client as a player 1
+        \item Server waits for another client to join
+        \item Client 2 connects to gamePlay webpage
+        \item Client code notifies server that they have connected
+        \item Server accepts client 2 as player 2
+        \item Game begins
+    \end{enumerate}
+    \textbf{Expected Results:}
+    \begin{enumerate}
+        \item The game will wait for two players to join
+        \item The game will begin when two players join
+    \end{enumerate}
+    \textbf{Pass/Fail:} Will commonly pass, sometimes fail.\\
+    \textbf{Comments:} If only Client 1 is connected, and Client 2 has not yet joined, Client 1 can crash the server. If Client 1 presses any key (whether it is a movement key, or a any keyboard input) before before Client 2 has connected, this will cause the server to crash, and not recover.  The server crashes at line 152 of Server.js\\
 
+    \subsection{Ability to store data}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:} Can the server store data?\\
+    \textbf{Pre-conditions:} Client has access to network, system is connected to network and accepting connections, client connected.\\
+    \textbf{Post-conditions:} Some information is stored by the server.\\
+    \textbf{Scenario:}
+    \begin{enumerate}
+        \item Play a game.
+        \item Try to retrieve information afterwards.
+    \end{enumerate}
+    \textbf{Expected Results:} Server stores game, player, or anything information.\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:} No database exists.\\
 
-\subsection{Client warning on system inability to store data}
-\textbf{Version:}1.0\\
-\textbf{Description:}See if the system hands out a message.\\
-\textbf{Pre-conditions:}Client has access to network, system is connected to network and accepting connections, client connected.\\
-\textbf{Post-conditions:}Client recieved message saying game data could not be stored.\\
-\textbf{Scenario:}
-\begin{enumerate}
- \item Play game
- \item recieve warning
-\end{enumerate}
-\textbf{Expected Results:}Client receives message\\
-\textbf{Pass/Fail:} Fail\\
-\textbf{Comments:} No message. Not even a database.\\
+\newpage
 
+\section{Style Guide}
+\label{sec:styleCases}
 
+    \subsection{White space}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Look for inconsistent white space.\\
+    \textbf{Pre-conditions:}Have code\\
+    \textbf{Post-conditions:}N/A\\
+    \textbf{Scenario:}N/A\\
+    \textbf{Expected Results:}N/A\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:}
+    \begin{enumerate}
+        \item 9: Why is there so much white space here?
+        \item 34: Missing whitespace.
+        \item 66/67: White space needs cleaning up.
+        \item 70-77: White space needs cleaning up.
+        \item 70-77 Suggestion: Use a switch with cases instead of multiple IF statements.
+    \end{enumerate}
 
+    \subsection{Comments}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Proper comments.\\
+    \textbf{Pre-conditions:}Have code\\
+    \textbf{Post-conditions:}N/A\\
+    \textbf{Scenario:}N/A\\
+    \textbf{Expected Results:}N/A\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:}
+    \begin{enumerate}
+        \item Comments should be more specific and fleshed-out for functions (i.e. multi-line comments here). Use JavaDoc style for these (Lines 28, 45, 54, 60, 90).
+        \item TODO Comments should be noted as such.
+        \item Code commented out should have a comment describing why said code is commented out.
+        \item 81:  Why is this block temporary for testing?
+    \end{enumerate}
+
+    \subsection{Functions \& braces}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Functions and their braces.\\
+    \textbf{Pre-conditions:} Have code\\
+    \textbf{Post-conditions:}N/A\\
+    \textbf{Scenario:}N/A\\
+    \textbf{Expected Results:}N/A\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:}
+    \begin{enumerate}
+        \item Check spacing with "\{" character on lines 28, 33, 36, 39, 46, 65, 69, 70, 85. Refine style definition -- is the space before "\{" just for function definitions or for all code-blocking?
+    \end{enumerate}
+
+    \subsection{Variables \& nomenclature}
+    \textbf{Version:} 1.0\\
+    \textbf{Description:}Variables \& Nomenclature.\\
+    \textbf{Pre-conditions:}N/A\\
+    \textbf{Post-conditions:}N/A\\
+    \textbf{Scenario:}N/A\\
+    \textbf{Expected Results:}N/A\\
+    \textbf{Pass/Fail:} Fail\\
+    \textbf{Comments:}
+    \begin{enumerate}
+        \item What variables are global? They should be noted as such.
+        \item"a" prefix required for parameters (54, 60, 90).
+    \end{enumerate}
+
+\newpage
+
+\section{Awesomeness}
+\label{sec:awesomeness}
+
+A final note: great coding Server Team.  It has been a true pleasure reviewing your work.
+
+All the best, Kyle.
 \end{document}

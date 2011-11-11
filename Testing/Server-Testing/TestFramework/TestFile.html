@@ -1,24 +1,25 @@
 <html>
 <head>
   <script src="http://10.150.1.204:3000/socket.io/socket.io.js"></script>
-  <!-- INCLUDE YOU SCRIPT FOR THE TEST CASE JUST BELOW HERE -->
-  <script>
+  <!-- Testing the functionality and boundaries of the score keeper. -->
+  <script type="text/javascript">
     var textArea;
     var testString;
     /**
     * Start the pong game & grab the canvas so that we can modify it in JS.
     */
-    function initClient(){
-        textArea = document.getElementById('txt');    
-	alert("I initialized");
-    };
+   // function initClient(){
+     //   textArea = document.getElementById('txt');    
+	//alert("I initialized");
+    //};
 
     /**
     * The "document.addEventListener" contains reactions to information sent by the server.
     */
     document.addEventListener("DOMContentLoaded", function() {
-        testString = testString+"Connecting to the socket.";
-        textArea.value = testString
+        testString = "Connecting to the socket.";
+        textArea=document.getElementById('txt');
+        textArea.value = testString;
 	// The DOMContentLoaded event happens when the parsing of the current page
 	// is complete. This means that it only tries to connect when it's done
 	// parsing.
@@ -32,7 +33,9 @@
 	});
 	socket.on("updateGame", function(data){//expecting arrays for paddle1, paddle2, ballPos
 		//alert("update game");
+		
 	});
+	clientType();
     });
 
 
@@ -53,7 +56,7 @@
 
     </script>
 </head>
-<body onload="initClient();">
+<body>
   <textarea id="txt" rows="400" cols="80">
     TESTING OUTPUT:
   </textarea>
