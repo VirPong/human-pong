@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}Documentation}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Install Node.js}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Install MongoDB}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Develop for the server}{3}{subsection.1.3}
+\contentsline {section}{\numberline {2}Communication}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Running an initial test of the server code}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}First client connecting to system}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Client ID generated and signaled}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Client connecting to an open game}{5}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Client connecting to a full game}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Request client start new game}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Many spectators}{6}{subsection.2.7}
+\contentsline {section}{\numberline {3}Game Logic}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Two players play a game, disregarding paddle logic}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2} Update player scores-Client1 scores 1 point}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Paddle logic}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Ball logic usability}{9}{subsection.3.4}
+\contentsline {section}{\numberline {4}Performance}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Between client latency}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Two clients play a game until a winner is determined}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Available game information sent}{12}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Desired communication time}{12}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Client 1 waiting for Client 2}{13}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Ability to store data}{14}{subsection.4.6}
+\contentsline {section}{\numberline {5}Style Guide}{15}{section.5}
+\contentsline {subsection}{\numberline {5.1}White space}{15}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Comments}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Functions \& braces}{16}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Variables \& nomenclature}{16}{subsection.5.4}
+\contentsline {section}{\numberline {6}Awesomeness}{17}{section.6}
