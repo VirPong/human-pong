@@ -1,12 +1,12 @@
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 
-	DocumentRoot /home/web/cs340/site/http
+	DocumentRoot /home/web/human-pong/WebUI/site/http
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
-	<Directory /home/web/cs340/site/http>
+	<Directory /home/web/human-pong/WebUI/site/http>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride None
 		Order allow,deny
@@ -37,5 +37,8 @@
         Deny from all
         Allow from 127.0.0.0/255.0.0.0 ::1/128
     </Directory>
+
+
+    ErrorDocument 404 /error_docs/404.html
 
 </VirtualHost>

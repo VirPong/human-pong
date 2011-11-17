@@ -16,7 +16,7 @@
 
 	// pull out information on the logged in user
 	$myQuery = "SELECT * FROM Customer WHERE username='"
-		 . $_SESSION['username'] . "';";
+19		 . $_SESSION['username'] . "';";
 	$row = mysql_query($myQuery, $conn)
 		or die ('Could not check password. ' . mysql_error());
 	$user = mysql_fetch_row($row);
@@ -27,18 +27,18 @@
 		die();
 	}
 
-	// update the user's password
+30	// update the user's password
 	$myQuery = "UPDATE Customer SET password = '" . $_POST['newpassword'] . "'";
 		 . " WHERE username = '" . $_SESSION['username'] . "';";
 	mysql_query($myQuery, $conn)
 		or die('Could not update account.' . mysql_error());
 
 	// update the user's information
-	$myQuery = "UPDATE Customer SET firstname='" . $_POST["firstname"]
-		 . "', lastname='" . $_POST["lastname"] . "', email='"
-		 . $_POST["email"] . "', birthday='" . $_POST["year"] . "-"
-		 . $_POST["month"] . "-" . $_POST["day"] . "', gender='"
-		 . $_POST["gender"] . "'";
+37	$myQuery = "UPDATE Customer SET firstname='" . $_POST["firstname"]
+		 . "', lastname='" . $_POST['lastname'] . "', email='"
+		 . $_POST['email'] . "', birthday='" . $_POST['year'] . "-"
+		 . $_POST['month'] . "-" . $_POST['day'] . "', gender='"
+		 . $_POST['gender'] . "'";
 		 . " WHERE username = '" . $_SESSION['username'] . "';";
 	mysql_query($myQuery, $conn)
 		or die('Could not update account.' . mysql_error());

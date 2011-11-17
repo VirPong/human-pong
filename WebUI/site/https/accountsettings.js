@@ -3,7 +3,8 @@ function validate(){
 
 
 	// check that cookies are enabled
-	if (!navigator.cookieEnabled) {
+	if (!navigator.cookieEnabled)
+	{
 		alert("Please enable cookies.");
  		return false;
 	}
@@ -14,8 +15,10 @@ function validate(){
 
 
 	// ensure that all fields have been completed
-	for (var i = 0; i < theForm.length - 2; i++) {
-        	if (theForm.elements[i].value == "") {
+	for (var i = 0; i < theForm.length - 2; i++)
+	{
+        	if (theForm.elements[i].value == "")
+		{
         		alert("All fields must be complete.");
         		return false;
         	}
@@ -23,11 +26,13 @@ function validate(){
 
 
 	// check for valid new password
-	if (theForm.newpassword.value.length > 50) {
+	if (theForm.newpassword.value.length > 50)
+	{
 	    alert("New password must be fewer than 50 characters.");
 	    return false;
 	}
-	if (theForm.newpassword.value != theForm.newpassword1.value) {
+	if (theForm.newpassword.value != theForm.newpassword1.value)
+	{
             alert("Please re-confirm your new password.");
             return false;
 	}
@@ -36,15 +41,18 @@ function validate(){
 	// check for valid first and last name
 	var nameRegEx = /[^a-zA-Z\-]/;
 	if (nameRegEx.test(theForm.firstname.value) ||
-	    nameRegEx.test(theForm.lastname.value)) {
+	    nameRegEx.test(theForm.lastname.value))
+	{
 	    alert("Please enter a valid first and last name.");
 	    return false;
 	}
-	if (theForm.firstname.value.length > 50) {
+	if (theForm.firstname.value.length > 50)
+	{
 	    alert("First name must be fewer than 50 characters.");
 	    return false;
 	}
-	if (theForm.lastname.value.length > 50) {
+	if (theForm.lastname.value.length > 50)
+	{
 	    alert("Last name must be fewer than 50 characters.");
 	    return false;
 	}
@@ -52,11 +60,13 @@ function validate(){
 
 	// check for valid email address
 	var emailRegEx = /^[a-zA-Z0-9\.\_\-\+]+@[a-zA-Z0-9]+\.[a-zA-Z0-9\.]+$/;
-	if (!emailRegEx.test(theForm.email.value)) {
+	if (!emailRegEx.test(theForm.email.value))
+	{
             alert("Please enter a valid e-mail address.");
             return false;
 	}
-	if (theForm.email.value.length > 256) {
+	if (theForm.email.value.length > 256)
+	{
 	    alert("Email address must be fewer than 256 characters.");
 	    return false;
 	}
