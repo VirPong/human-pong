@@ -52,14 +52,15 @@ function initClient(){
 
 
 
-//===============================================================================================
-//===============================================================================================
-//===================================PADDLE HANDLING CODE========================================
-//===============================================================================================
-//===============================================================================================
+//===================================================================================
+//===================================================================================
+//===================================PADDLE HANDLING CODE============================
+//===================================================================================
+//===================================================================================
 
 /**
- * Receive the input and send it to changePaddlePosition(), which actually changes the paddle position.
+ * Receive the input and send it to changePaddlePosition(), which actually changes 
+ * the paddle position.
  * @param {e} the event passed by the keypress.
  */
 function movePaddle(e) {
@@ -70,13 +71,15 @@ function movePaddle(e) {
 
 
 /**
- * Change the value of leftPaddle or rightPaddle so that it will draw in the correct place.
+ * Change the value of leftPaddle or rightPaddle so that it will draw in the correct
+ * place.
  *  @param {actualKey} The string value of the key pressed.
  */
 function changePaddlePosition(actualKey) {
 	if(WHAT_PADDLE_AM_I == 0){
 		if(actualKey == "W"){ //check which key was pressed
-			if(leftPad > 0){ // do nothing if it would move paddle out of frame
+			if(leftPad > 0){ 
+			// do nothing if it would move paddle out of frame
 				leftPad = leftPad - motionStep;
 			}
 		}else if(actualKey == "S"){
@@ -86,7 +89,8 @@ function changePaddlePosition(actualKey) {
 		}updatePaddleToServer(leftPad);
 	}else{
 		if(actualKey == "W"){ //check which key was pressed
-			if(rightPad > 0){ // do nothing if it would move paddle out of frame
+			if(rightPad > 0){ 
+			// do nothing if it would move paddle out of frame
 				rightPad = rightPad - motionStep;
 			}
 		}if(actualKey == "S"){
@@ -97,28 +101,30 @@ function changePaddlePosition(actualKey) {
 	}
 };
 
-//===============================================================================================
-//===============================================================================================
-//========================================DRAWING CODE===========================================
-//===============================================================================================
-//===============================================================================================
+//===================================================================================
+//===================================================================================
+//========================================DRAWING CODE===============================
+//===================================================================================
+//===================================================================================
 
 /**
  * Draws the game state.
  */
 function draw(){
-	//alert("drawing");
-	//alert(Math.floor(leftPad*screenModifierY)+"upper-left   bottom-right"+Math.floor(paddleWidth*screenModifierX));
-	context.clearRect(0,0, Math.floor(gameX*screenModifierX),Math.floor(gameY*screenModifierY)); //clear the frame
+	//clear the frame
+	context.clearRect(0,0, Math.floor(gameX*screenModifierX),
+		Math.floor(gameY*screenModifierY));
 
-	//alert("clearRect");
-	drawRect(0,Math.floor(leftPad*screenModifierY),Math.floor(paddleWidth*screenModifierX), Math.floor(paddleHeight*screenModifierY), "rgb(0,200,0)");//xpos, ypos, width, height
-	//alert("drawRect1");
-	drawRect(Math.floor((gameX-paddleWidth)*screenModifierX),Math.floor(rightPad*screenModifierY),Math.floor(paddleWidth*screenModifierX),
-			Math.floor(paddleHeight*screenModifierY), "rgb(255,0,0)");
-	//alert("clearRect2");
+	//xpos, ypos, width, height
+	drawRect(0,Math.floor(leftPad*screenModifierY),
+		Math.floor(paddleWidth*screenModifierX), 
+		Math.floor(paddleHeight*screenModifierY), 
+		"rgb(0,200,0)");
+	drawRect(Math.floor((gameX-paddleWidth)*screenModifierX),
+		Math.floor(rightPad*screenModifierY),
+		Math.floor(paddleWidth*screenModifierX),
+		Math.floor(paddleHeight*screenModifierY), "rgb(255,0,0)");
 	drawBall(xBall, yBall);
-	//alert("drawn");
 };
 
 /**
@@ -152,7 +158,8 @@ function drawBall(){
 	context.beginPath();
 	context.fillStyle = "rgb(200,0,0)"; //color to fill shape in with
 
-	context.arc(xBall*screenModifierX,yBall*screenModifierY,ballR*screenModifierX,0,Math.PI*2,true);
+	context.arc(xBall*screenModifierX,yBall*screenModifierY,
+		ballR*screenModifierX,0,Math.PI*2,true);
 	context.closePath();
 	context.fill();
 
@@ -180,13 +187,14 @@ document.onkeydown = movePaddle;
 
 
 
-//===============================================================================================
-//===============================================================================================
-//========================================SERVER CODE============================================
-//===============================================================================================
-//===============================================================================================
+//===================================================================================
+//===================================================================================
+//========================================SERVER CODE================================
+//===================================================================================
+//===================================================================================
 /**
- * The "document.addEventListener" contains reactions to information sent by the server.
+ * The "document.addEventListener" contains reactions to information sent by the 
+ * server.
  */
 document.addEventListener("DOMContentLoaded", function() {
 	// The DOMContentLoaded event happens when the parsing of the current page
@@ -200,7 +208,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	socket.on("paddleNum", function(data){
 		WHAT_PADDLE_AM_I = data.paddleNum;
 	});
-	socket.on("updateGame", function(data){//expecting arrays for paddle1, paddle2, ballPos
+	//expecting arrays for paddle1, paddle2, ballPos
+	socket.on("updateGame", function(data){
 		//alert("update game");
 		leftPad = data.paddle[0];
 		rightPad= data.paddle[1];
@@ -229,11 +238,4 @@ function clientType(){
 function updatePaddleToServer(position){
 	//alert("update paddle "+position);
 	socket.emit("updatePaddle", {pos: position});
-};
-/**
- * Asks the user for some login information and stores it for submission to the server.
- */
-function promptLogin(){
-	name = prompt("Username please. (Use \"guest\" if you don't already have an account.");
-	pass = prompt("Please enter your password. (If you are logging in as \"guest\" then please use \"pass\".)");
 };

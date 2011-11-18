@@ -58,14 +58,27 @@
 	}
 ?>
 
-	<form name="accountsettings" id="accountsettings" method="post" action="accountsettings_post.php">
-		Current password <input type="password" size="20" name="password" /><br />
-		New password <input type="password" size="20" name="newpassword" /><br />
-		Confirm new password <input type="password" size="20" name="newpassword1" /><br />
-		First name <input type="text" size="20" name="firstname" value=<?php echo $firstname; ?> /><br />
-		Last name <input type="text" size="50" name="lastname" value=<?php echo $lastname; ?> /><br />
-		E-mail address <input type="text" size="50" name="email" value=<?php echo $email; ?> /><br />
-		Birthday <select name="month">
+	<form name="accountsettings" id="accountsettings" method="post" 
+		action="accountsettings_post.php">
+		Current password 
+		<input type="password" size="20" name="password" /><br />
+		New password 
+		<input type="password" size="20" name="newpassword" /><br />
+		Confirm new password 
+		<input type="password" size="20" name="newpassword1" /><br />
+		4-digit PIN 
+		<input type="text" size="4" name="pin" /><br />
+		First name 
+		<input type="text" size="20" name="firstname" 
+			value=<?php echo $firstname; ?> /><br />
+		Last name 
+		<input type="text" size="50" name="lastname" 
+			value=<?php echo $lastname; ?> /><br />
+		E-mail address 
+		<input type="text" size="50" name="email" 
+			value=<?php echo $email; ?> /><br />
+		Birthday 
+		<select name="month">
 			<option id="01" value="01">Jan</option>
 			<option id="02" value="02">Feb</option>
 			<option id="03" value="03">Mar</option>
@@ -79,7 +92,8 @@
 			<option id="11" value="11">Nov</option>
 			<option id="12" value="12">Dec</option>
 			<script language="JavaScript">
-				document.getElementById("<?php echo $month; ?>").defaultSelected = true;
+				document.getElementById("<?php echo $month; ?>")
+					.defaultSelected = true;
 			</script>
 		</select>
 		<select name="day">
@@ -115,7 +129,8 @@
 			<option id="30" value="30">30</option>
 			<option id="31" value="31">31</option>
 			<script language="JavaScript">
-				document.getElementById("<?php echo $day; ?>").defaultSelected = true;
+				document.getElementById("<?php echo $day; ?>")
+					.defaultSelected = true;
 			</script>
 		</select>
 		<select name="year">
@@ -221,17 +236,21 @@
 			<option id="1912" value="1912">1912</option>
 			<option id="1911" value="1911">1911</option>
 			<script language="JavaScript">
-				document.getElementById("<?php echo $year; ?>").defaultSelected = true;
+				document.getElementById("<?php echo $year; ?>")
+					.defaultSelected = true;
 			</script>
 		</select><br />
-		Gender <select name="gender">
+		Gender 
+		<select name="gender">
 			<option id="0" value="0">male</option>
 			<option id="1" value="1">female</option>
 			<script language="JavaScript">
-				document.getElementById("<?php echo $gender; ?>").defaultSelected = true;
+				document.getElementById("<?php echo $gender; ?>")
+					.defaultSelected = true;
 			</script>
 		</select><br />
-		<input type="submit" name="submitButton" value="Save changes" onclick="return validate();" />
+		<input type="submit" name="submitButton" value="Save changes" 
+			onclick="return validate();" />
 	</form>
 </p>
 

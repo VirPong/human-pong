@@ -8,7 +8,7 @@
 
 <p>All traffic to and from this site is secured. Yay security.</p>
 
-<p>Check out the <a href="http://cs340-serv/">normal site</a>.</p>
+<p>Check out the <a href="http://cs340/">normal site</a>.</p>
 
 
 <?php

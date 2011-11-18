@@ -21,7 +21,7 @@
 
 		<!-- the logo div holds the logo image -->
 		<div id="logo">
-			<a href=http://cs340-serv><img src="skins/1/logo.png" alt="virPONG" /></a>
+			<a href=http://cs340><img src="skins/1/logo.png" alt="virPONG" /></a>
 		</div>
 
 		<!-- the nav div holds the top navigation bar -->
@@ -32,14 +32,14 @@
 		<!-- the *_menu divs are hidden and hold the dropdown menu contents -->
 
 		<div id="gameplay_menu">
-			&#9612; <a href="http://cs340-serv/rules.php">rules</a> &nbsp;<br />
-			&#9612; <a href="http://cs340-serv/systemrequirements.php">system requirements</a> &nbsp;<br />
+			&#9612; <a href="http://cs340/rules.php">rules</a> &nbsp;<br />
+			&#9612; <a href="http://cs340/systemrequirements.php">system requirements</a> &nbsp;<br />
 			&#9612; <a>downloads</a> &nbsp;<br />
-			&#9612; <a href="http://cs340-serv/gamePlay.html"> play online</a> &nbsp;
+			&#9612; <a href="http://cs340/gamePlay.html"> play online</a> &nbsp;
 		</div>
 
 		<div id="watch_menu">
-			&#9612; <a href="http://cs340-serv/watchPong.html">Watch Live</a> &nbsp;<br />
+			&#9612; <a href="http://cs340/watchPong.html">Watch Live</a> &nbsp;<br />
 			&#9612; <a>past matches</a> &nbsp;
 		</div>
 
@@ -64,13 +64,13 @@
 				// the account menu changes its contents based on whether or not the user is logged in
 				if (isset($_SESSION['username']))
 				{
-					echo '&#9612; <a href="https://cs340-serv/accountsettings.php">settings</a> &nbsp;<br />';
-					echo '&#9612; <a href="https://cs340-serv/logout_post.php">log out</a> &nbsp;';
+					echo '&#9612; <a href="https://cs340/accountsettings.php">settings</a> &nbsp;<br />';
+					echo '&#9612; <a href="https://cs340/logout_post.php">log out</a> &nbsp;';
 				}
 				else
 				{
-					echo '&#9612; <a href="https://cs340-serv/register_form.php">register</a> &nbsp;<br />';
-					echo '&#9612; <a href="https://cs340-serv/login_form.php">log in</a> &nbsp;';
+					echo '&#9612; <a href="https://cs340/register_form.php">register</a> &nbsp;<br />';
+					echo '&#9612; <a href="https://cs340/login_form.php">log in</a> &nbsp;';
 				}
 			?>
 		</div>
