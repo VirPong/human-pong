@@ -11,7 +11,7 @@
 	if (isset($_SESSION['username']))
 	{
 		echo '<p>You are currently logged in as <b>'
-			. $_SESSION['username'] . '.<br />';
+			. $_SESSION['username'] . '</b>.<br />';
 	}
 
 	// if not logged in, display the log in form and a registration link

@@ -77,6 +77,20 @@ function validate()
 	}
 
 
+	// check for valid pin
+	var pinRegEx = /[^0-9]/;
+	if (pinRegEx.test(theForm.pin.value))
+	{
+		alert("PIN can only contain numbers.");
+		return false;
+	}
+	if (theForm.pin.value.length != 4)
+	{
+		alert("PIN must be four digits.");
+		return false;
+	}
+
+
 	// check for valid email address
 	var emailRegEx = /^[a-zA-Z0-9\.\_\-\+]+@[a-zA-Z0-9]+\.[a-zA-Z0-9\.]+$/;
 	if (!emailRegEx.test(theForm.email.value))

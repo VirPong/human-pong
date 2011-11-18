@@ -38,6 +38,20 @@ function validate(){
 	}
 
 
+	// check for valid pin
+	var pinRegEx = /[^0-9]/;
+	if (pinRegEx.test(theForm.pin.value))
+	{
+		alert("PIN can only contain numbers.");
+		return false;
+	}
+	if (theForm.pin.value.length != 4)
+	{
+		alert("PIN must be four digits.");
+		return false;
+	}
+
+
 	// check for valid first and last name
 	var nameRegEx = /[^a-zA-Z\-]/;
 	if (nameRegEx.test(theForm.firstname.value) ||

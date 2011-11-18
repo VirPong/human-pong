@@ -60,22 +60,25 @@
 
 	<form name="accountsettings" id="accountsettings" method="post" 
 		action="accountsettings_post.php">
-		Current password
+		Current password 
 		<input type="password" size="20" name="password" /><br />
-		New password
+		New password 
 		<input type="password" size="20" name="newpassword" /><br />
-		Confirm new password
+		Confirm new password 
 		<input type="password" size="20" name="newpassword1" /><br />
-		First name
+		4-digit PIN 
+		<input type="text" size="4" name="pin" /><br />
+		First name 
 		<input type="text" size="20" name="firstname" 
 			value=<?php echo $firstname; ?> /><br />
-		Last name
+		Last name 
 		<input type="text" size="50" name="lastname" 
 			value=<?php echo $lastname; ?> /><br />
-		E-mail address
+		E-mail address 
 		<input type="text" size="50" name="email" 
 			value=<?php echo $email; ?> /><br />
-		Birthday <select name="month">
+		Birthday 
+		<select name="month">
 			<option id="01" value="01">Jan</option>
 			<option id="02" value="02">Feb</option>
 			<option id="03" value="03">Mar</option>
@@ -237,7 +240,8 @@
 					.defaultSelected = true;
 			</script>
 		</select><br />
-		Gender <select name="gender">
+		Gender 
+		<select name="gender">
 			<option id="0" value="0">male</option>
 			<option id="1" value="1">female</option>
 			<script language="JavaScript">
