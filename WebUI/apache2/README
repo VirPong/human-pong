@@ -1,0 +1,3 @@
+This folder contains the Virtual Host configuration files for the Apache2 web server.
+
+Virtual host files contain the location of the root directory for tghe website and anyother configurations such as SSL use or custom error docs.

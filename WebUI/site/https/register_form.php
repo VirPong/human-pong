@@ -6,9 +6,10 @@
 
 <h1>&#9612; register &#9616;</h1>
 
-<p><form name="newuser" id="newuser" method="post" action="register_process.php">
+<p><form name="newuser" id="newuser" method="post" action="register_post.php">
 	Username <input type="text" size="20" name="username" /><br />
 	Password <input type="password" size="20" name="password" /><br />
+	4-digit PIN <input type="text" size="4" name="pin" /><br />
 	First name <input type="text" size="30" name="firstname" /><br />
 	Last name <input type="text" size="50" name="lastname" /><br />
 	E-mail address <input type="text" size="50" name="email" /><br />
@@ -166,7 +167,8 @@
 		<option value="0">male</option>
 		<option value="1">female</option>
 	</select><br />
-	<input type="submit" name="submitbutton" value="Submit" onclick="return validate();" /> <input type="reset" />
+	<input type="submit" name="submitbutton" value="Submit" 
+		onclick="return validate();" /> <input type="reset" />
 </form></p>
 
 

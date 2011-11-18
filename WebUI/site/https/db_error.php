@@ -8,7 +8,8 @@
 
 <p>An error has occurred. Please try refreshing the page.</p>
 
-<p>If the problem persists, please <a href=http://cs340-serv/contactus.php>contact</a> our management.</p>
+<p>If the problem persists, please <a href=http://cs340-serv/contactus.php>contact
+	</a> our management.</p>
 
 
 

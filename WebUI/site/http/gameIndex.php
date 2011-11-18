@@ -5,7 +5,7 @@
 
 
 <script type="text/javascript" src="pong.js"></script>
-<script src="http://10.150.1.204:3000/socket.io/socket.io.js"></script>
+<script src="http://cs340:3000/socket.io/socket.io.js"></script>
 
 <style type = "text/css">
 	canvas{
