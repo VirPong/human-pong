@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+/home/kwenholz/Programming/human-pong/Android/.metadata/.plugins/org.eclipse.jdt.core
-3327066291.index
-2456407983.index
-3607538125.index

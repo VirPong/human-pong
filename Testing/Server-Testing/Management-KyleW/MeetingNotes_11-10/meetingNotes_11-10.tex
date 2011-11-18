@@ -1,0 +1,102 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+% useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
+\usepackage{amsmath, amssymb, amsthm}
+
+% for including graphics
+\usepackage{graphicx}
+
+% for conveniently specifying the spacing (\singlespacing, \doublespacing,
+% \onehalfspacing, etc.)
+\usepackage{setspace}
+\onehalfspacing
+
+% this does some sort of symbol stuff
+\usepackage{textcomp}
+
+% A package for conveniently adjusting headers and such
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0 pt}
+\rhead{\textit{\thepage}}
+\cfoot{}
+
+\usepackage{hyperref}
+
+% Set the margins
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+
+% Differently spaced itemize
+\newenvironment{itemize*}%
+{\begin{itemize}%
+    \setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+{\end{itemize}}
+\newenvironment{enumerate*}%
+{\begin{enumerate}%
+    \setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+{\end{enumerate}}
+
+
+% set up a new command to insert a little bit of vertical space
+% (use this BEFORE a line break)
+\newcommand{\padding}{\vspace*{.5cm}}
+
+% set up an environment to format each hw problem in
+\newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
+
+\newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
+             {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+
+
+
+
+\begin{document}
+\thispagestyle{plain}
+\begin{flushleft}
+\singlespacing
+Team: Server System Testing\\
+Members Present: Jordan Apele,\\
+Joey Lange*,\\
+Garrett Dieckmann,\\
+Kyle Monet,\\
+Kyle Wenholz\\
+Date(s): 11-6-2011 and 11-10-2011\\
+*excused but not present on 11-6 and 11-10
+\end{flushleft}
+\pagestyle{fancy}
+\section*{Review of Goals:}
+\begin{itemize*}
+\item Wrap up installation of the server components. (Due 11-4-2011: Kyle W.)
+\item Generate test cases out of assigned use cases. (Due 11-6-2011: All minus Kyle W.)
+\item Conceptualize a file or class structure for testing client interaction with the server. (Due 11-6-2011: All)
+\item Review the style guide and begin comparing its rules with the actual code. (Due 11-6-2011: All)
+\item Complete (finalize, Tex, and run) all test cases.  (Due 11-9-2011: All)
+\end{itemize*}
+
+\section*{Accomplishments:}
+\begin{itemize*}
+\item Kyle W. finished server installation on time.  Garrett even installed the server on his own system as a test.
+\item All team members accomplished test case generation on time.
+\item All team members completed conceptualization.
+\item All testing was complete as of 11-9-2011.
+\item Final defect reports and Tex submissions were made on 11-10-2011.
+\item The Server System Testing team finalized all goals on 11-10-2011.
+\end{itemize*}
+
+\section*{New Goals:}
+\begin{itemize*}
+\item Await further instructions from Doctor Sawin.
+\item Prepare for team re-assembly.
+\end{itemize*}
+
+
+
+
+
+\end{document}

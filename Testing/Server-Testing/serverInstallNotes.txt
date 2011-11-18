@@ -1,0 +1,21 @@
+Installation:
+NODE & NPM:
+*does not mention MySQL
+*no mention of PHP
+*failed to mention that certain components need to be installed:
+	- build-essential
+	- libssl-dev
+*would have like to see sources (urls) for the various instructions 
+*instructions for npm installation of express and socket.io was unhelpful with 
+	instruction to "cd <your directory name>" DIRECTORY FOR WHAT?
+*node and npm instructions worked in end
+
+MONGO DB:
+*documentation wants 64-bit, not correct for all systems
+*documentation wanted a download of mongodb then use package manager to 
+	install.  This seems redundant.  Also, the downloaded package 
+	never gets used.	   
+*seemed to complete fine, but the discussion paragraph leads me confused
+*the mongodb sections seemed confused with downloading packages and then 
+     using the package manager's install features.
+
