@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%
+% This file is concerned with the implementation section.
+%
+% Please remember to compile the document from "00_finalreport.tex".
+% It will not work otherwise.
+%%%%%%%%%%%%%%%
+
+	\subsection{Installation}
+		There are a few requirements to installing and using our application. Our development platform is Ubuntu and the following are requirements for the installation:
+		\begin{description}
+			\item[Install a LAMP Server] A LAMP server is composed of a Linux environment, and installations of Apache, MySQL and PHP. However, this step is outside the scope of our tutorial, but you may follow this guide:\\ 
+		http://www.howtoforge.com/ubuntu\_debian\_lamp\_server
+			\item[Install git] Both our application and Node.js are hosted on git, so it is important to install git on your machine. Installation of git will be covered in the next requirement
+			\item[Install Node.js] This is how we are going to run our Javascript on the server. You can follow these directions here to install Node.js:\\http://howtonode.org/how-to-install-nodejs
+			\item[Install NPM] NPM is a package manager and has become the standard for installing node libraries. We are going to use this to install socket.io, and you can install NPM by entering the following command in your terminal window 'curl http://npmjs.org/install.sh | sh'
+			\item[Install Socket.io] This is how we are going to create bidirectional communication between the server and browser. To install, enter the following command in your terminal window: 'npm install socket.io'
+		\end{description}
+		Prior to installing the VirPong web application, the database needs to be configured to match the database used with the VirPong game. Once the MySQL database is installed, do the following:
+		\begin{enumerate}
+			\item Log into your MySQL database. From your terminal window:
+			\begin{enumerate}
+				\item enter 'mysql -u $<$your\_username$>$ -p'
+				\item press enter
+				\item enter '$<$your\_password$>$'
+				\item press enter
+			\end{enumerate}
+			\item Now that you're logged into MySQL, the database needs to be created. From the MySQL prompt, enter the following command:\\'CREATE DATABASE db2'
+			\item This creates the database, but tables must be created within the database. To create the three tables that are used in the VirPong game, enter the following three commands into the MySQL prompt
+			\begin{enumerate}
+				\item create table GamesPlayed (gameID INT(10) NOT NULL AUTO\_INCREMENT, username1 VARCHAR(50) NOT NULL, username2 VARCHAR(50) NOT NULL, score1 TINYINT NOT NULL, score2 TINYINT NOT NULL, win TINYINT NOT NULL, INDEX index1(gameID), CONSTRAINT FK\_customer FOREIGN KEY(username1) REFERENCES customer(username), CONSTRAINT FK\_customer\_2 FOREIGN KEY(username2) REFERENCES customer(username));
+				\item create table Customer (username VARCHAR(50) NOT NULL, password VARCHAR(50) NOT NULL, firstname VARCHAR(50) NOT NULL, lastname VARCHAR(50) NOT NULL, email VARCHAR(256) NOT NULL, birthday DATE NULL, gender TINYINT NULL, PRIMARY KEY(username));
+				\item create table Registration (gameID INT NOT NULL AUTO\_INCREMENT, username1 VARCHAR(50) NOT NULL, username2 VARCHAR(50) NOT NULL, gameTime DATETIME NOT NULL, tournamentID INT NULL,  INDEX index1(gameID), CONSTRAINT FK\_customer FOREIGN KEY(username1) REFERENCES customer(username), CONSTRAINT FK\_customer\_2 FOREIGN KEY(username2) REFERENCES customer(username));
+			\end{enumerate}
+			\item With all three tables created, exit the MySQL prompt to continue the installation process, by entering:\\'exit'
+		\end{enumerate}
+		With all of the requirements installed as well as the MySQL database, we can begin running the application. To get the source code for our application:
+		\begin{enumerate}
+			\item Navigate in your terminal window to your Apache root folder (by default, this is /var/www):\\'cd /./var/www'
+			\item Clone our source code by issuing the following command in your terminal window:\\'git clone git://github.com/VirPong/human-pong.git'
+			\item Navigate to into the Communication folder:\\'cd human-pong/WebUI/site/http/communication'
+			\item Run the VirPong web server by issuing command in your terminal window:\\'node server.js'\\Note: The client.js code may need to be changed depending on your system configuration. Simply change open the client.js file and change the IP address to the address of your server. ex: 'socket = io.connect('xxx.xxx.xxx.xxx');' With your server's address in the parenthesis
+			\item To view the application in use, point your web browser to: 'http://localhost/human-pong/WebUI/site/http/communication/index.html'
+		\end{enumerate}
+		To incorporate this HTML file into your own application, simply follow the steps above and create a link from your website to the Live Game page by making a link in your HTML file to the index.html file.\\To find further instructions on how to install the VirPong platform, or to find other resources that pertain to VirPong, please visit our repository and wiki page at: https://github.com/VirPong/human-pong

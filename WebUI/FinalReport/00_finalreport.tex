@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%
+% This is the main file for compiling the LaTeX document.
+%
+% Please keep all sections in there respective files and compile
+% the document from here.
+%%%%%%%%%%%%%%%
+
+\documentclass[pdftex,12pt]{article}
+
+\usepackage{graphicx}				% For including images.
+\usepackage[colorlinks]{hyperref}	% For links to sections in TOC.
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+	\input{./01_title.tex}			% Done!
+
+	\tableofcontents				% Auto-done!
+	\newpage
+
+	\input{./03_endproduct.tex}		% Incomplete
+
+	\input{./04_funcreq.tex}		% Incomplete
+
+	\input{./05_nonfunc.tex}		% Incomplete
+
+	\input{./06_domain.tex}			% Incomplete
+
+	\input{./07_interaction.tex}	% Incomplete
+
+	\input{./08_implement.tex}		% Incomplete
+
+	\input{./09_reflect.tex}		% Incomplete
+
+	\input{./10_reference.tex}		% Incomplete
+
+\end{document}

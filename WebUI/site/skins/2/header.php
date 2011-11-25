@@ -10,7 +10,7 @@
 
 		<title>virPONG - Pong played by humans</title>
 
-		<link href="skins/1/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="skins/2/stylesheet.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -23,7 +23,7 @@
 
 		<!-- the logo div holds the logo image -->
 		<div id="logo">
-			<a href=http://cs340><img src="skins/1/logo.png" alt="virPONG" /></a>
+			<a href=http://cs340><img src="skins/2/logo.png" alt="virPONG" /></a>
 		</div>
 
 		<!-- the nav div holds the top navigation bar -->

@@ -1,7 +1,7 @@
 <?php
 
 	$pathToSkins = getcwd() . '/skins/';
-	$defaultSkin = 1;
+	$defaultSkin = 2;
 
 	if (	isset($_COOKIE['myskin'])
 		&& file_exists($pathToSkins . $_COOKIE['myskin'] . '/header.php')
