@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0997E7147C644A00289B6B /* iPadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0997E6147C644A00289B6B /* iPadIcon.png */; };
+		FC3663481480280F008AE90B /* RetinaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3663471480280F008AE90B /* RetinaIcon.png */; };
+		FC36634A14802821008AE90B /* iPhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36634914802821008AE90B /* iPhoneIcon.png */; };
+		FC36634C1480468C008AE90B /* silkscreen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC36634B1480468C008AE90B /* silkscreen.ttf */; };
 		FCAD93371475770300F60BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAD93361475770300F60BB5 /* Foundation.framework */; };
 		FCAD93391475770300F60BB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAD93381475770300F60BB5 /* UIKit.framework */; };
 		FCAD933B1475770300F60BB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAD933A1475770300F60BB5 /* CoreGraphics.framework */; };
@@ -28,7 +32,6 @@
 		FCAD93661475770300F60BB5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD93651475770300F60BB5 /* icon.png */; };
 		FCAD93681475770300F60BB5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD93671475770300F60BB5 /* icon@2x.png */; };
 		FCAD936A1475770300F60BB5 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD93691475770300F60BB5 /* icon-72.png */; };
-		FCAD936D1475770300F60BB5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD936C1475770300F60BB5 /* Default.png */; };
 		FCAD936F1475770300F60BB5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD936E1475770300F60BB5 /* Default@2x.png */; };
 		FCAD93711475770300F60BB5 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCAD93701475770300F60BB5 /* Capture.bundle */; };
 		FCAD93731475770300F60BB5 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCAD93721475770300F60BB5 /* PhoneGap.plist */; };
@@ -41,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0997E6147C644A00289B6B /* iPadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadIcon.png; sourceTree = "<group>"; };
+		FC3663471480280F008AE90B /* RetinaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RetinaIcon.png; sourceTree = "<group>"; };
+		FC36634914802821008AE90B /* iPhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon.png; sourceTree = "<group>"; };
+		FC36634B1480468C008AE90B /* silkscreen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = silkscreen.ttf; path = ../www/css/silkscreen.ttf; sourceTree = "<group>"; };
 		FCAD93321475770300F60BB5 /* PongClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAD93361475770300F60BB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCAD93381475770300F60BB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -114,6 +121,9 @@
 		FCAD93241475770200F60BB5 = {
 			isa = PBXGroup;
 			children = (
+				FC36634914802821008AE90B /* iPhoneIcon.png */,
+				FC3663471480280F008AE90B /* RetinaIcon.png */,
+				FC0997E6147C644A00289B6B /* iPadIcon.png */,
 				FCFE55EC1477209500A6959A /* Default.png */,
 				FCFE55EA1477209100A6959A /* Default@2x.png */,
 				FCAD9383147580E600F60BB5 /* Default-Landscape~ipad.png */,
@@ -180,6 +190,7 @@
 		FCAD935B1475770300F60BB5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC36634B1480468C008AE90B /* silkscreen.ttf */,
 				FCAD93701475770300F60BB5 /* Capture.bundle */,
 				FCAD935C1475770300F60BB5 /* en.lproj */,
 				FCAD93601475770300F60BB5 /* es.lproj */,
@@ -301,7 +312,6 @@
 				FCAD93661475770300F60BB5 /* icon.png in Resources */,
 				FCAD93681475770300F60BB5 /* icon@2x.png in Resources */,
 				FCAD936A1475770300F60BB5 /* icon-72.png in Resources */,
-				FCAD936D1475770300F60BB5 /* Default.png in Resources */,
 				FCAD936F1475770300F60BB5 /* Default@2x.png in Resources */,
 				FCAD93711475770300F60BB5 /* Capture.bundle in Resources */,
 				FCAD93731475770300F60BB5 /* PhoneGap.plist in Resources */,
@@ -310,6 +320,10 @@
 				FCAD9384147580E600F60BB5 /* Default-Landscape~ipad.png in Resources */,
 				FCFE55EB1477209100A6959A /* Default@2x.png in Resources */,
 				FCFE55ED1477209500A6959A /* Default.png in Resources */,
+				FC0997E7147C644A00289B6B /* iPadIcon.png in Resources */,
+				FC3663481480280F008AE90B /* RetinaIcon.png in Resources */,
+				FC36634A14802821008AE90B /* iPhoneIcon.png in Resources */,
+				FC36634C1480468C008AE90B /* silkscreen.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +396,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -398,11 +415,11 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -410,7 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -419,11 +439,11 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -440,7 +460,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PongClient/PongClient-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -452,7 +472,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -469,7 +489,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PongClient/PongClient-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -481,7 +501,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
