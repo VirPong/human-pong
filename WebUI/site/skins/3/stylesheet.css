@@ -1,11 +1,11 @@
 ﻿body {
-	background-color: #AAAAAA;
+	background-color: #BCBCBC;
 	color: #333333;
 	font-family: Calibri, Candara, Trebuchet MS, sans serif;
 }
 
 a {
-	color: #666666;
+	color: #999999;
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -17,19 +17,19 @@ a:hover {
 h1 {
 	font-size: 1.5em;
 	font-weight: bold;
-	color: #666666;
+	color: #999999;
 }
 
 h2 {
 	font-size: 1.125em;
 	font-weight: bold;
-	color: #800000;
+	color: #000000;
 }
 
 h3 {
 	font-size: 1em;
 	font-weight: bold;
-	color: #AAAAAA;
+	color: #BCBCBC;
 }
 
 img {
@@ -54,7 +54,7 @@ img {
 
 #nav {
 	background-color: #FFFFFF;
-	color: #666666;
+	color: #999999;
 	width: 550px;
 	margin: 0 auto;
 	position: relative;
@@ -66,10 +66,10 @@ img {
 	clear: both;
 }
 #nav a {
-	color: #800000;
+	color: #000000;
 }
 #nav a:hover {
-	color: #666666;	
+	color: #999999;	
 }
 
 #content-outer {
@@ -87,7 +87,7 @@ img {
 }
 
 #footer {
-	color: #800000;
+	color: #000000;
 	text-align: center;
 	font-size: 0.75em;
 	width: 625px;
@@ -102,6 +102,6 @@ img {
 
 #gameplay_menu, #watch_menu, #events_menu, #records_menu, #chat_menu, #account_menu {
 	background-color: #FFFFFF;
-	color: #800000;
+	color: #000000;
 	z-index: 0;
 }

@@ -11,7 +11,7 @@
 
 <p>Other links of interest:
 	<ul>
-		<li><a href=setskin.php>change your skin</a></li>
+		<li><a href=setskin.php>choose your theme</a></li>
 		<li><a href=menutest.html>CSS menu test</a></li>
 	</ul>
 </p>

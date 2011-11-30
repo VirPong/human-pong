@@ -26,6 +26,10 @@
 		or die("This username is already taken. Please <a href=
 			register_form.php>register</a> with a new username.");
 
+	// set a session cookie and direct the user to the login page
+	$_SESSION['username'] = $_POST['username'];
+	header('Location:login_form.php?reg=true');
+
 	// close the connection
 	mysql_close($conn);
 

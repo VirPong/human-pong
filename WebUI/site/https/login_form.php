@@ -10,8 +10,12 @@
 	// if the user is logged in, tell them so and display the log out button
 	if (isset($_SESSION['username']))
 	{
+		// if the user just registered, tell them so
+		if(@$_GET['reg']=='true') {
+			echo '<p>Thank you for registering!</p>';
+		}
 		echo '<p>You are currently logged in as <b>'
-			. $_SESSION['username'] . '</b>.<br />';
+			. $_SESSION['username'] . '</b>.</p>';
 	}
 
 	// if not logged in, display the log in form and a registration link
@@ -19,9 +23,9 @@
 	{
 		// if the user just logged out, tell them so
 		if(@$_GET['logout']=='true') {
-			echo '<p>You are now logged out.</p><br />';
+			echo '<p>You are now logged out.</p>';
 		}
-		// if the user just logged out, tell them so
+		// if the user could not log in, tell them so
 		if(@$_GET['login']=='false') {
 			echo '<p><span class="errormsg">Unable to log in. 
 				Please try again.</span></p>';

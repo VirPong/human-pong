@@ -26,6 +26,16 @@ Vir-Pong Classic
 Logger Pride
 </a></p>
 
+<p><a href="setskin.php?skin=3">
+<img src="skins/3/logo.png" width=106px height=80px style="vertical-align:middle" />
+Panda
+</a></p>
+
+<p><a href="setskin.php?skin=4">
+<img src="skins/4/logo.png" width=106px height=80px style="vertical-align:middle" />
+CSS Menu Test
+</a></p>
+
 
 <?php
 	include_once($footer);
