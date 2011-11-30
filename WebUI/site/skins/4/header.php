@@ -11,6 +11,7 @@
 		<title>virPONG - Pong played by humans</title>
 
 		<link href="skins/4/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="css/cssmenu.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -20,73 +21,80 @@
 
 
 	<body>
+	
+		<div>
+		<!-- ########################## GRC Masthead Menu ########################## -->
+			<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+			<div id="masthead">
+				<a href="/index.php"><img id="mastheadlogo" src="/skins/1/logo" width="213" height="161" alt="Vir-Pong: Human Pong!" title="Vir-Pong!" /></a>
+			</div>
+			<div class="menu">
+				
+				<ul>
+					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Gameplay&nbsp;</a>
+						<ul>
+							<li><a href="/rules.php">&nbsp;Rules</a></li>
+							<li><a href="/systemrequirements.php">&nbsp;System Requirments</a></li>
+							<li><a href="/index.php">&nbsp;Downloads</a></li>
+							<li><a href="/gamePlay.html">&nbsp;Play Online</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<ul>
+					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Watch&nbsp;</a>
+						<ul>
+							<li><a href="/watchPong.html">&nbsp;Live Streaming</a></li>
+							<li><a href="/blahblahblah">&nbsp;Past Matches</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<ul>
+					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Events&nbsp;</a>
+						<ul>
+							<li><a href="/blahblahblah">&nbsp;Tournaments</a></li>
+							<li><a href="/blahblahblah">&nbsp;News</a></li>
+						</ul>
+					</li>
+				
+				<ul>
+					<li><a href="."><span class="drop"><span>&nbsp;&bull;&nbsp;Records&nbsp;</a>
+						<ul>
+							<li><a href="/blahblahblah">&nbsp;High Scores</a></li>
+							<li><a href="/blahblahblah">&nbsp;Top Players</a></li>
+							<li><a href="/blahblahblah">&nbsp;Your History</a></li>
+						</ul>
+					</li>
+				</ul>
 
-		<!-- the logo div holds the logo image -->
-		<div id="logo">
-			<a href=http://cs340><img src="skins/4/logo.png" alt="virPONG" /></a>
+				<ul>
+					<li><a href="blahblahblah">&nbsp;&bull;&nbsp;Chat&nbsp;</a>
+						<ul>
+							<li><a href="/blahblahblah">&nbsp;Your Inbox</a></li>
+							<li><a href="/blahblahblah">&nbsp;Forum</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<ul>
+					<li id="other"><a href="https://cs340/">&nbsp;&bull;&nbsp;Account&nbsp;</a>
+						<ul>
+							<li><a href="https://cs340/register_form.php">&nbsp;Register</a></li>
+							<li><a href="https://cs340/login_form.php">&nbsp;Login</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+			<hr style="display:none" />
+			</div></div></div>
+
+		<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
 		</div>
-
-		<!-- the nav div holds the top navigation bar -->
-		<div id="nav">
-			&bull;&nbsp; <a id="gameplay">gameplay</a> &nbsp;&bull;&nbsp; <a id="watch">watch</a> &nbsp;&bull;&nbsp; <a id="events">events</a> &nbsp;&bull;&nbsp; <a id="records">records</a> &nbsp;&bull;&nbsp; <a id="chat">chat</a> &nbsp;&bull;&nbsp; <a id="account">account</a> &nbsp;&bull;
-		</div>
-
-		<!-- the *_menu divs are hidden and hold the dropdown menu contents -->
-
-		<div id="gameplay_menu">
-			&#9612; <a href="http://cs340/rules.php">rules</a> &nbsp;<br />
-			&#9612; <a href="http://cs340/systemrequirements.php">system requirements</a> &nbsp;<br />
-			&#9612; <a>downloads</a> &nbsp;<br />
-			&#9612; <a href="http://cs340/gamePlay.html"> play online</a> &nbsp;
-		</div>
-
-		<div id="watch_menu">
-			&#9612; <a href="http://cs340/watchPong.html">Watch Live</a> &nbsp;<br />
-			&#9612; <a>past matches</a> &nbsp;
-		</div>
-
-		<div id="events_menu">
-			&#9612; <a>tournaments</a> &nbsp;<br />
-			&#9612; <a>news</a> &nbsp;
-		</div>
-
-		<div id="records_menu">
-			&#9612; <a>high scores</a> &nbsp;<br />
-			&#9612; <a>top players</a> &nbsp;<br />
-			&#9612; <a>your history</a> &nbsp;
-		</div>
-
-		<div id="chat_menu">
-			&#9612; <a>your inbox</a> &nbsp;<br />
-			&#9612; <a>forum</a> &nbsp;
-		</div>
-
-		<div id="account_menu">
-			<?php
-				// the account menu changes its contents based on whether or not the user is logged in
-				if (isset($_SESSION['username']))
-				{
-					echo '&#9612; <a href="https://cs340/accountsettings.php">settings</a> &nbsp;<br />';
-					echo '&#9612; <a href="https://cs340/logout_post.php">log out</a> &nbsp;';
-				}
-				else
-				{
-					echo '&#9612; <a href="https://cs340/register_form.php">register</a> &nbsp;<br />';
-					echo '&#9612; <a href="https://cs340/login_form.php">log in</a> &nbsp;';
-				}
-			?>
-		</div>
-
-		<!-- this script matches each dropdown menu with its parent -->
-		<script type ="text/javascript">
-			at_attach("gameplay", "gameplay_menu", "hover", "y");
-			at_attach("watch", "watch_menu", "hover", "y");
-			at_attach("events", "events_menu", "hover", "y");
-			at_attach("records", "records_menu", "hover", "y");
-			at_attach("chat", "chat_menu", "hover", "y");
-			at_attach("account", "account_menu", "hover", "y");
-		</script>
-
+		
+		
 		<!-- the content divs hold our site content; there are two of them for reasons of positioning & margins -->
 		<div id="content-outer">
 			<div id="content-inner">
+		

@@ -33,10 +33,8 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin: 0 auto;
 	border:0;
 	padding:0;
-	width:50%;
-	height:55px;/* 36px masthead height + 18px button height + 1px lower border*/
-	min-width:550px;
-	max-width:900px;
+	height:200px;/* 36px masthead height + 18px button height + 1px lower border*/
+	width:625px;
 }
 
 /* suppress our whole menu when not an interactive mode (when printing, etc.) */
@@ -62,9 +60,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	border:0;
 	margin:0;
 	padding:0;
-	/*width:100%;                                  /* grey-fill the entire width */
-	height:100px;                  /* set the overall height above the menu-bar */
-	/*background:#F3F3F3;                          /* a very light shade of grey */
+	height:60px;		/* set the overall height above the menu-bar */
 }
 
 #mastheadlogo {
@@ -72,10 +68,11 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	vertical-align:top;
 	border:0;
 	padding:0;
-	margin:6px 0 0 7px;
+	margin:0px 0 0 -120px;
 }
 
-#focus {                                                 /* GRC's focus label */
+/* GRC's focus label */
+#focus {
 	position:absolute;
 	border:0;
 	margin:0;
@@ -86,27 +83,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	height:13px;
 }
 
-#text {                                                 /* search text field */
-	position:absolute;
-	border:1px solid #404040;
-	margin:0;
-	padding:0 0 0 2px;
-	top:7px;
-	right:65px;
-	width:12em;
-/*	height:1.215em;         we'll define this at the bottom of our style sheet */
-	font-size:14px !important;
-	background:#fefefe;
-}
-
-#yah {                                    /* the "You are here" label graphic */
-	position:absolute;
-	top:5px;
-	right:99px;
-	width:87px;
-	height:9px;
-}
-
  /*========================= TOP OF THE MENU CASCADE =========================*/
 
 .menu {
@@ -115,9 +91,9 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	padding:0;
 	border:0;
-	height:25px;                                  /* the menu's overall height */
+	height:40px;                                  /* the menu's overall height */
 	width:100%;         /* we always want our menu to fill the available space */
-	background:#f3f3f3;
+	background:#FFFFFF;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size:13px;         /* this (and also below) sets the menu's font size */
 	border-bottom:1px solid black;        /* give us a black border underneath */
@@ -234,8 +210,8 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	padding:0;
 	height:auto;
-	color:#000;               /* this sets the unselected drop-down text color */
-	background:#d8d8d8;       /* this sets the drop-down menu background color */
+	color:#black;               /* this sets the unselected drop-down text color */
+	background:#FFFFFF;       /* this sets the drop-down menu background color */
 	width:13.5em;
 }
 
