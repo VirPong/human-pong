@@ -37,10 +37,10 @@
 				<ul>
 					<li><a>gameplay</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/rules.php"><span class="vertbar">&#9612;</span> rules</a></nobr></li>
-							<li><nobr><a href="http://cs340/systemrequirements.php"><span class="vertbar">&#9612;</span> system requirements</a></nobr></li>
-							<li><nobr><a href="http://cs340/index.php"><span class="vertbar">&#9612;</span> downloads</a></nobr></li>
-							<li><nobr><a href="http://cs340/gamePlay.html"><span class="vertbar">&#9612;</span> play online</a></nobr></li>
+							<li><nobr><a href="http://cs340/rules.php"><span class="vertbar">&#9612;</span>rules</a></nobr></li>
+							<li><nobr><a href="http://cs340/systemrequirements.php"><span class="vertbar">&#9612;</span>system requirements</a></nobr></li>
+							<li><nobr><a href="http://cs340/index.php"><span class="vertbar">&#9612;</span>downloads</a></nobr></li>
+							<li><nobr><a href="http://cs340/gamePlay.html"><span class="vertbar">&#9612;</span>play online</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -48,8 +48,8 @@
 				<ul>
 					<li><a>watch</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/watchPong.html"><span class="vertbar">&#9612;</span> live streaming</a></nobr></li>
-							<li><nobr><a><span class="vertbar">&#9612;</span> past matches</a></nobr></li>
+							<li><nobr><a href="http://cs340/watchPong.html"><span class="vertbar">&#9612;</span>live streaming</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>past matches</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -57,17 +57,18 @@
 				<ul>
 					<li><a>events</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a><span class="vertbar">&#9612;</span> tournaments</a></nobr></li>
-							<li><nobr><a><span class="vertbar">&#9612;</span> news</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>tournaments</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>news</a></nobr></li>
 						</ul>
 					</li>
+				</ul>
 				
 				<ul>
 					<li><a>records</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a><span class="vertbar">&#9612;</span> high scores</a></nobr></li>
-							<li><nobr><a><span class="vertbar">&#9612;</span> top players</a></nobr></li>
-							<li><nobr><a><span class="vertbar">&#9612;</span> your history</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>high scores</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>top players</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>your history</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -75,8 +76,8 @@
 				<ul>
 					<li><a>chat</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a><span class="vertbar">&#9612;</span> your inbox</a></nobr></li>
-							<li><nobr><a><span class="vertbar">&#9612;</span> forum</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>your inbox</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span>forum</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -84,8 +85,8 @@
 				<ul>
 					<li><a>account</a> &nbsp;&bull;
 						<ul>
-							<li><nobr><a href="https://cs340/register_form.php"><span class="vertbar">&#9612;</span> register</a></nobr></li>
-							<li><nobr><a href="https://cs340/login_form.php"><span class="vertbar">&#9612;</span> log in</a></nobr></li>
+							<li><nobr><a href="https://cs340/register_form.php"><span class="vertbar">&#9612;</span>register</a></nobr></li>
+							<li><nobr><a href="https://cs340/login_form.php"><span class="vertbar">&#9612;</span>log in</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
