@@ -39,6 +39,6 @@
     </Directory>
 
 
-    ErrorDocument 404 /error_docs/404.html
+    ErrorDocument 404 /error_docs/404.php
 
 </VirtualHost>

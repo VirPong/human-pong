@@ -11,7 +11,7 @@
 		<title>virPONG - Pong played by humans</title>
 
 		<link href="skins/4/stylesheet.css" rel="stylesheet" type="text/css" />
-		<link href="css/cssmenu.css" rel="stylesheet" type="text/css" />
+		<link href="skins/4/menu.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -26,62 +26,66 @@
 		<!-- ########################## GRC Masthead Menu ########################## -->
 			<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
 			<div id="masthead">
-				<a href="/index.php"><img id="mastheadlogo" src="/skins/1/logo" width="213" height="161" alt="Vir-Pong: Human Pong!" title="Vir-Pong!" /></a>
+				<a href="http://cs340/index.php"><img id="mastheadlogo" src="/skins/1/logo" width="213" height="161" alt="Vir-Pong: Human Pong!" title="Vir-Pong!" /></a>
 			</div>
 			<div class="menu">
+
+				<ul>
+					<li>&bull;&nbsp;&nbsp; </li>
+				</ul>
 				
 				<ul>
-					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Gameplay&nbsp;</a>
+					<li><a>gameplay</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><a href="/rules.php">&nbsp;Rules</a></li>
-							<li><a href="/systemrequirements.php">&nbsp;System Requirments</a></li>
-							<li><a href="/index.php">&nbsp;Downloads</a></li>
-							<li><a href="/gamePlay.html">&nbsp;Play Online</a></li>
+							<li><nobr><a href="http://cs340/rules.php"><span class="vertbar">&#9612;</span> rules</a></nobr></li>
+							<li><nobr><a href="http://cs340/systemrequirements.php"><span class="vertbar">&#9612;</span> system requirements</a></nobr></li>
+							<li><nobr><a href="http://cs340/index.php"><span class="vertbar">&#9612;</span> downloads</a></nobr></li>
+							<li><nobr><a href="http://cs340/gamePlay.html"><span class="vertbar">&#9612;</span> play online</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
 				
 				<ul>
-					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Watch&nbsp;</a>
+					<li><a>watch</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><a href="/watchPong.html">&nbsp;Live Streaming</a></li>
-							<li><a href="/blahblahblah">&nbsp;Past Matches</a></li>
+							<li><nobr><a href="http://cs340/watchPong.html"><span class="vertbar">&#9612;</span> live streaming</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> past matches</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
 				
 				<ul>
-					<li><a href="/blahblahblah">&nbsp;&bull;&nbsp;Events&nbsp;</a>
+					<li><a>events</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><a href="/blahblahblah">&nbsp;Tournaments</a></li>
-							<li><a href="/blahblahblah">&nbsp;News</a></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> tournaments</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> news</a></nobr></li>
 						</ul>
 					</li>
 				
 				<ul>
-					<li><a href="."><span class="drop"><span>&nbsp;&bull;&nbsp;Records&nbsp;</a>
+					<li><a>records</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><a href="/blahblahblah">&nbsp;High Scores</a></li>
-							<li><a href="/blahblahblah">&nbsp;Top Players</a></li>
-							<li><a href="/blahblahblah">&nbsp;Your History</a></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> high scores</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> top players</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> your history</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
 
 				<ul>
-					<li><a href="blahblahblah">&nbsp;&bull;&nbsp;Chat&nbsp;</a>
+					<li><a>chat</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 						<ul>
-							<li><a href="/blahblahblah">&nbsp;Your Inbox</a></li>
-							<li><a href="/blahblahblah">&nbsp;Forum</a></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> your inbox</a></nobr></li>
+							<li><nobr><a><span class="vertbar">&#9612;</span> forum</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
 				
 				<ul>
-					<li id="other"><a href="https://cs340/">&nbsp;&bull;&nbsp;Account&nbsp;</a>
+					<li><a>account</a> &nbsp;&bull;
 						<ul>
-							<li><a href="https://cs340/register_form.php">&nbsp;Register</a></li>
-							<li><a href="https://cs340/login_form.php">&nbsp;Login</a></li>
+							<li><nobr><a href="https://cs340/register_form.php"><span class="vertbar">&#9612;</span> register</a></nobr></li>
+							<li><nobr><a href="https://cs340/login_form.php"><span class="vertbar">&#9612;</span> log in</a></nobr></li>
 						</ul>
 					</li>
 				</ul>

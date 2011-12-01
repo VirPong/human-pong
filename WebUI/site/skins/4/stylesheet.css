@@ -36,6 +36,10 @@ img {
 	border: 0;
 }
 
+.vertbar {
+	color: #110066;
+}
+
 .errormsg {
 	font-size: 0.75em;
 	color: #FF0000;
