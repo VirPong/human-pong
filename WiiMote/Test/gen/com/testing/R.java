@@ -14,6 +14,9 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
+        public static final int PosX=0x7f050008;
+        public static final int PosY=0x7f050009;
+        public static final int PosZ=0x7f05000a;
         public static final int simpleButton=0x7f050002;
         public static final int tableLayout1=0x7f050000;
         public static final int tableRow1=0x7f050001;
