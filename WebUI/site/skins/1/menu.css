@@ -61,6 +61,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	padding:0;
 	height:60px;		/* set the overall height above the menu-bar */
+	z-index: 1;
 }
 
 #mastheadlogo {
@@ -92,11 +93,15 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	padding:0;
 	border:0;
 	height:40px;                                  /* the menu's overall height */
-	width:100%;         /* we always want our menu to fill the available space */
+	/*width:100%;*/         /* we always want our menu to fill the available space */
+	width: 514px;
+	left: 75px;
 	background:#FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:13px;         /* this (and also below) sets the menu's font size */
-	border-bottom:1px solid black;        /* give us a black border underneath */
+	font-family: Calibri, Candara, Trebuchet MS, sans serif;
+	font-size: 1.125em;         /* this (and also below) sets the menu's font size */
+	color: #DDAA11;
+	z-index: 0;
+	padding-left: 2em;
 }
 
 .menu img {
@@ -108,7 +113,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	border:0;
 	list-style-type:none;          /* we don't want to view the list as a list */
-	line-height:1.5em;           /* globally set the menu's item spacing. note */
+	line-height:2.25em;           /* globally set the menu's item spacing. note */
 }                               /* this must be 1.0 or 1.5 or 2.0 for Mozilla */
 
 .menu li {
@@ -121,7 +126,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:-1px 0;              /* IE5 needs -1px top and bottom table margins */
 	margin:0;               /* re-zero the table margins for everyone but IE5 */
 	border-collapse:collapse;      /* IE5 needs this for the sub-menus to work */
-	font-size:12px;        /* this sets the base font size for our entire menu */
+	font-size:1.125em;        /* this sets the base font size for our entire menu */
 }
 
 .drop {
@@ -152,21 +157,27 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 
 .menu ul li ul {
 	display:none;                  /* initially hide the entire list hierarchy */
-	padding:1px;                               /* this is our box border width */
+	padding: 0px;                               /* this is our box border width */
+	line-height: 80%;
+	border-left: 7px solid #001166;
+	padding-left: 5px;
 }
 
 .menu ul li a,
 .menu ul li a:visited {                    /* unselected top-level menu items */
 	display:block;
 	float:left;
-	text-decoration:none;
-	height:18px;
+	text-decoration: underline;
+	/* height:18px; */
+	color: #001166;
 }
 
 .menu ul li:hover a,
 .menu ul li a:hover {                        /* selected top-level menu items */
-	border-top:1px solid #000;    /* these 2 lines create the push-in illusion */
-	height:16px;
+	border-top: 0px solid #000;    /* these 2 lines create the push-in illusion */
+	/* height:16px; */
+	color: #DDAA11;
+	text-decoration: none;
 }
 
 /*======================== 2ND LEVEL MENU DEFINITIONS ========================*/
@@ -176,12 +187,13 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	display:block;
 	position:absolute;
 	margin:0;
-	top:18px;              /* place us just up underneath the top-level images */
-	left:-1px;       /* left-align our drop-down to the previous button border */
+	padding-right: 0.5em;
+	top: 36px;              /* place us just up underneath the top-level images */
+	left: 0px;       /* left-align our drop-down to the previous button border */
 	height:auto;      /* the drop-down height will be determiend by line count */
-	width:13.5em;
-	color:black;                        /* this sets the unselected-text color */
-	background:black;         /* this sets our menu's effective "border" color */
+	/*width:13.5em;*/
+	color: #001166;                        /* this sets the unselected-text color */
+	background: #FFFFFF;         /* this sets our menu's effective "border" color */
 }
 
 .menu ul li:hover ul.leftbutton,
@@ -209,16 +221,18 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	border:0;
 	margin:0;
 	padding:0;
-	height:auto;
-	color:#black;               /* this sets the unselected drop-down text color */
-	background:#FFFFFF;       /* this sets the drop-down menu background color */
-	width:13.5em;
+	height: 1em;
+	color: #DDAA11;               /* this sets the unselected drop-down text color */
+	/*background: #FFFFFF;*/       /* this sets the drop-down menu background color */
+	/*width:13.5em;*/
+	text-decoration: none;
 }
 
 .menu ul li:hover ul li:hover a,
 .menu ul li a:hover ul li a:hover {                /* 2nd level selected item */
-	color:black;
-	background:white;
+	height: 1em;
+	color: #001166;
+	text-decoration: none;
 }
 
 .menu ul li:hover ul.skinny li a,
@@ -226,6 +240,10 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 .menu ul li:hover ul.skinny li a:hover,
 .menu ul li a:hover ul.skinny li a:hover {     /* 2nd level un+selected items */
 	width:8.08333em;
+}
+
+.vertbar {
+	color: #110066;
 }
 
 /*======================== 3RD LEVEL MENU DEFINITIONS ========================*/
