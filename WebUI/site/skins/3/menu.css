@@ -99,7 +99,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	background:#FFFFFF;
 	font-family: Calibri, Candara, Trebuchet MS, sans serif;
 	font-size: 1.125em;         /* this (and also below) sets the menu's font size */
-	color: #000000;
+	color: #999999;
 	z-index: 0;
 	padding-left: 2em;
 }
@@ -159,7 +159,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	display:none;                  /* initially hide the entire list hierarchy */
 	padding: 0px;                               /* this is our box border width */
 	line-height: 80%;
-	border-left: 7px solid #999999;
+	border-left: 7px solid #000000;
 	padding-left: 5px;
 }
 
@@ -169,14 +169,14 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	float:left;
 	text-decoration: underline;
 	/* height:18px; */
-	color: #999999;
+	color: #000000;
 }
 
 .menu ul li:hover a,
 .menu ul li a:hover {                        /* selected top-level menu items */
 	border-top: 0px solid #000;    /* these 2 lines create the push-in illusion */
 	/* height:16px; */
-	color: #000000;
+	color: #999999;
 	text-decoration: none;
 }
 
@@ -192,7 +192,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	left: 0px;       /* left-align our drop-down to the previous button border */
 	height:auto;      /* the drop-down height will be determiend by line count */
 	/*width:13.5em;*/
-	color: #999999;                        /* this sets the unselected-text color */
+	color: #000000;                        /* this sets the unselected-text color */
 	background: #FFFFFF;         /* this sets our menu's effective "border" color */
 }
 
@@ -222,7 +222,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	padding:0;
 	height: 1em;
-	color: #000000;               /* this sets the unselected drop-down text color */
+	color: #999999;               /* this sets the unselected drop-down text color */
 	/*background: #FFFFFF;*/       /* this sets the drop-down menu background color */
 	/*width:13.5em;*/
 	text-decoration: none;
@@ -231,7 +231,7 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 .menu ul li:hover ul li:hover a,
 .menu ul li a:hover ul li a:hover {                /* 2nd level selected item */
 	height: 1em;
-	color: #999999;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -240,10 +240,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 .menu ul li:hover ul.skinny li a:hover,
 .menu ul li a:hover ul.skinny li a:hover {     /* 2nd level un+selected items */
 	width:8.08333em;
-}
-
-.vertbar {
-	color: #110066;
 }
 
 /*======================== 3RD LEVEL MENU DEFINITIONS ========================*/

@@ -11,7 +11,7 @@
 	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
 		or die ('Could not connect to server. ' . mysql_error());
 	mysql_select_db('db2', $conn)
-		or header('Location: https://cs340-serv/db_error.php');
+		or die ('could not open connection' . mysql_error());
 
 	// select the row associated with the given username
 	$getUser = "SELECT username, password FROM Customer WHERE username='"
@@ -44,5 +44,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

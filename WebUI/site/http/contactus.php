@@ -18,5 +18,5 @@ Tacoma, WA 98416<br/>
 
 
 <?php
-	include($footer);
+	include('footer.php');
 ?>

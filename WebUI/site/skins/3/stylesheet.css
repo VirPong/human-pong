@@ -93,15 +93,29 @@ img {
 	width: 625px;
 	margin: 0 auto;
 	position: relative;
-	top: -20px;
+	top: -10px;
 }
 
 #footer a {
 	color: #FFFFFF;
 }
 
-#gameplay_menu, #watch_menu, #events_menu, #records_menu, #chat_menu, #account_menu {
+#jsoff-outer {
 	background-color: #FFFFFF;
-	color: #000000;
-	z-index: 0;
+	text-align: justify;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#jsoff-inner {
+	padding: 0.125em 1em;
+	text-align: center;
+	font-size: 1.125em;
+}
+
+canvas {
+	border: 4px solid #AOAOAO;
+	background: #000000;
+	display: block;
 }

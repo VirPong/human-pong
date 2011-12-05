@@ -49,5 +49,5 @@ If you violate the Code of Conduct you will be immediately terminated from use o
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

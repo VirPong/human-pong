@@ -3,7 +3,9 @@
 	include_once('header.php');
 ?>
 
+
 <script src="accountsettings.js" type="text/javascript"></script>
+
 
 <h1>&#9612; account settings &#9616;</h1>
 
@@ -256,5 +258,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

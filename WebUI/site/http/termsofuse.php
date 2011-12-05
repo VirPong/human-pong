@@ -36,5 +36,5 @@ You can recover from us for all successful claims only direct damages up to a to
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

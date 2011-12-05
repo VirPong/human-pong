@@ -4,6 +4,9 @@
 ?>
 
 
+<script type="text/javascript" src="login.js"></script>
+
+
 <h1>&#9612; log in &#9616;</h1>
 
 <?php
@@ -44,5 +47,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

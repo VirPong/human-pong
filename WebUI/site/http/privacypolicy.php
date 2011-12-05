@@ -63,5 +63,5 @@ If you have any questions or concerns regarding this statement, you should first
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>
