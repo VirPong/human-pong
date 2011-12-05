@@ -23,7 +23,7 @@
 
 	// if the user entered an incorrect password, send them back with an error
 	if ($user[1] != $_POST['password']) {
-		header('Location: accountsettings.php?pw=false');
+		header('Location: accountsettings_form.php?pw=false');
 		die();
 	}
 
@@ -53,5 +53,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

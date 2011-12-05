@@ -16,5 +16,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>
