@@ -1,5 +1,7 @@
-<?php session_start();
-include("header.php"); ?>
+<?php
+	session_start();
+	include_once('header.php');
+?>
 
 
 <h1>&#9612; 404 error &#9616;</h1>
@@ -7,4 +9,6 @@ include("header.php"); ?>
 <p>You're a horrible person for landing here.</p>
 
 
-<?php include($footer); ?>
+<?php
+	include_once('footer.php');
+?>

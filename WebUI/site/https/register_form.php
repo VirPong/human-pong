@@ -4,6 +4,9 @@
 ?>
 
 
+<script type="text/javascript" src="register.js"></script>
+
+
 <h1>&#9612; register &#9616;</h1>
 
 <p><form name="newuser" id="newuser" method="post" action="register_post.php">
@@ -173,5 +176,5 @@
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>
