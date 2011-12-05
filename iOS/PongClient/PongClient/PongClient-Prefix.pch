@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PongClient' target in the 'PongClient' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
