@@ -106,67 +106,27 @@ The final product of this team will integrate with the greater Vir-Pong ecosyste
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \singlespacing
-<<<<<<< HEAD
-\subsubsection{Playing a Game - 1.0}
-Actors:
-\begin{itemize*}
-\item User
-=======
 \subsubsection{Playing a Game - v1.0}
 Actors:
 \begin{itemize*}
 \item Player
->>>>>>> upstream/master
 \item Hub
 \item Android device
 \item Input device
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-<<<<<<< HEAD
-\item User is authenticated into the system and has successfully requested a game from the hub.
-\item The input device is tethered to the Android device and is ready to submit motion data.
-=======
 \item Player is authenticated into the system and has successfully requested a game from the hub.
 \item Input device is tethered to the Android device and is ready to submit motion data.
->>>>>>> upstream/master
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
 \item A winner has been determined.
-<<<<<<< HEAD
-\item User statistics are recorded by the hub system.
-=======
 \item Player statistics are recorded by the hub system.
->>>>>>> upstream/master
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item Hub signals a ready-start and the game begins.
-<<<<<<< HEAD
-\item \label{UserObserves}User observes ball and opponent's paddle motion on Android device.
-\item User responds with appropriate motion, detected by the input device and relayed to the Android device.
-\item The Android device relays motion data to the hub.
-\item \label{HubUpdateGame}The hub recalculates ball and paddle position then sends updated information to Android device.
-\item \label{DisplayCurrentInformation}User's Android device displays the current information.\\
-Repeat \ref{UserObserves} through \ref{DisplayCurrentInformation} until a point is scored.
-\item \label{LogPointRefresh}Hub logs point scored then resets game state to fresh.\\
-Repeat \ref{UserObserves} through \ref{LogPointRefresh} until score limit is reached.
-\item \label{AnnounceWinner}Hub indicates winner to Android device.
-\item Android device displays winner to user and announces game complete.
-\item Hub logs game statistics for later access.
-\item User is prompted to play another game or exit back to the home screen.
-\end{enumerate*}
-Alternatives:\\
-\ref{AnnounceWinner}a) The user's Android device loses connection with the hub after score limit being reached.
-\begin{enumerate*}
-\item The hub waits for a specified recovery time.
-\item Upon connection lost, the user's Android device begins recovery mode, trying to reconnect with the hub and indicating this to the user.
-\item After reconnecting with the hub, the game's winner is announced.  
-\item User is prompted to verify this, due to the connection lost. 
-\item Both players agree, so hub logs the game statistics.
-\item User is prompted to play another game or exit back to the home screen.
-=======
+\item Hub signals a ready-start and the game begins. 
 \item \label{playerObserves}Player observes ball and opponent's paddle motion on Android device.
 \item Player responds with appropriate motion, detected by the input device and relayed to the Android device.
 \item Android device relays motion data to the hub.
@@ -198,16 +158,14 @@ Alternatives:\\
 \item Player is prompted to verify this, due to the connection lost. 
 \item Both players agree, so hub logs the game statistics.
 \item Player is prompted to play another game or exit back to the home screen.
->>>>>>> upstream/master
 \end{enumerate*}
 \ref{AnnounceWinner}b) The game duration exceeds the maximum time.
 \begin{enumerate*}
 \item Hub alerts players that game is reaching overtime.
-<<<<<<< HEAD
-\item User is given option to continue playing, call a tie, or postpone the game.
-\item User selects to call a tie. 
+\item Player is given option to continue playing, call a tie, or postpone the game.
+\item Player selects to call a tie. 
 \item The game ends and hub logs results.
-\item User is given option to play another game or return to home screen.
+\item Player is given option to play another game or return to home screen.
 \end{enumerate*}
 \ref{HubUpdateGame}a) Hub signals that connection to other player has been lost.
 \begin{enumerate*}
@@ -218,14 +176,7 @@ Alternatives:\\
 \item Game resumes.
 \item Return to \ref{DisplayCurrentInformation} in main scenario.
 \end{enumerate*}
-=======
-\item Player is given option to continue playing, call a tie, or postpone the game.
-\item Player selects to call a tie. 
-\item The game ends and hub logs results.
-\item Player is given option to play another game or return to home screen.
-\end{enumerate*}
 
->>>>>>> upstream/master
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.5]{ssd_GamePlay_1.png}
@@ -233,15 +184,8 @@ Alternatives:\\
 \end{center}
 \end{figure}
 
-<<<<<<< HEAD
-\textbf{Figure~\ref{ssd_GamePlay_1}} depicts the sequence of actions during a game.  The Hub signals to the Android Device that game is ready to start, then the user is able to move the paddle using their chosen Input Device.  That paddle movement is sent from the Input Device to the Android Device, which relays the motion data to the Hub.  It is then the Hub's responsibility to relay the game status back to the Android Device so that it may display the game state.  This relay of information is repeated until a point is scored.  The Hub will log the point, then refresh the game state and send this new state to the Android Device.  After a refresh, the user is able to move the paddle again and continue play.  Our system remains in this cycle until the maximum number of points is reached.  The Hub indicates the winner and completion of the game to the Android Device for informing the User.  Finally, the Hub logs the game statistics, and the Android Device prompts the User for a new game or exit.
-
-\subsubsection*{Initializing a Game - 2.0}
-=======
-\textbf{Figure~\ref{ssd_GamePlay_1}} depicts the sequence of actions during a game.  The Hub signals to the Android Device that the game is ready to start, then the player is able to move the paddle using their chosen Input Device.  That paddle movement is sent from the Input Device to the Android Device, which relays the motion data to the Hub.  It is then the Hub's responsibility to relay the game status back to the Android Device so that it may display the game state.  This relay of information is repeated until a point is scored.  The Hub will log the point, then refresh the game state and send this new state to the Android Device.  After a refresh, the player is able to move the paddle again and continue play.  Our system remains in this cycle until the maximum number of points is reached.  The Hub indicates the winner and completion of the game to the Android Device, which then informs the player.  Finally, the Hub logs the game statistics and the Android Device prompts the player for a new game or exit.
 
 \subsubsection*{Initializing a Game - v2.0}
->>>>>>> upstream/master
 Actors:
 \begin{itemize*}
 \item Player
@@ -251,13 +195,8 @@ Actors:
 Preconditions:
 \begin{itemize*}
 \item The application is installed and open on the device.
-<<<<<<< HEAD
-\item The user has already created an account with Vir-Pong.
-\item The input method is prepared.
-=======
 \item The player has already created an account with Vir-Pong.
 \item The input device is tethered to the Android device and is ready to submit motion data.
->>>>>>> upstream/master
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
@@ -272,11 +211,7 @@ Scenario:
 \item \label{SystemVerifies}The device verifies credentials with the hub.
 \item \label{SystemRequestsGame}The device requests a game from the hub.
 \item \label{HubSelectsOpponent}The hub selects an opponent and signals a ready-start to device.
-<<<<<<< HEAD
-\item \label{LoadGameState}The device loads an initial game state displayed to the user.
-=======
 \item \label{LoadGameState}The device loads an initial game state displayed to the player.
->>>>>>> upstream/master
 \item Game begins.
 \end{enumerate*}
 Alternatives:\\
@@ -298,17 +233,11 @@ Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player selects
 \item System connects to hub.
 \item Return to \ref{HubSelectsOpponent} of main scenario.
 \end{enumerate*}
-<<<<<<< HEAD
-\subsubsection*{Connect to Input Device - 1.0}
-Actors:
-\begin{itemize*}
-\item User
-=======
+
 \subsubsection*{Connect to Input Device - v1.0}
 Actors:
 \begin{itemize*}
 \item Player
->>>>>>> upstream/master
 \item Device 
 \item Wii Remote
 \end{itemize*}
@@ -322,36 +251,15 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-<<<<<<< HEAD
-\item \label{BeginGame}User selects start game.
-\item \label{InputMethod}System prompts user for input method: Wii Remote, device accelerometer, or touchscreen.
-\item User elects to use the Wii Remote.
-\item \label{ConnectWiimote}System attempts to tether Wii Remote.
-\item User follows instructions from system to connect Wii Remote.
-=======
 \item \label{BeginGame}Player selects start game.
 \item \label{InputMethod}Device prompts player for input method: Wii Remote, device accelerometer, or touchscreen.
 \item Player elects to use the Wii Remote.
 \item \label{ConnectWiimote}System attempts to tether Wii Remote.
 \item Player follows instructions from system to connect Wii Remote.
->>>>>>> upstream/master
 \item System accepts Wii Remote device and notifies user.
 \item System proceeds to game launch.
 \end{enumerate*}
 Alternatives:\\
-<<<<<<< HEAD
-\ref{InputMethod}a) User selects phone accelerometer.  
-\begin{enumerate*}
-\item System asks user to make certain the device has an built in accelerometer.
-\item User indicates that device has accelerometer.
-\item System connects to device accelerometer.
-\item System proceeds to game launch.
-\end{enumerate*}
-\ref{InputMethod}b) User selects touch screen interface.
-\begin{enumerate*}
-\item System asks user to touch a box displayed on-screen to ensure that a touch screen is available.
-\item User touches box.
-=======
 \ref{InputMethod}a) Player selects phone accelerometer.  
 \begin{enumerate*}
 \item System asks player to make certain the device has an built in accelerometer.
@@ -363,7 +271,6 @@ Alternatives:\\
 \begin{enumerate*}
 \item System asks player to touch a box displayed on-screen to ensure that a touch screen is available.
 \item Player touches box.
->>>>>>> upstream/master
 \item System proceeds to game launch.
 \end{enumerate*}
 \ref{ConnectWiimote}System attempts Wii Remote connection, and fails.
@@ -372,11 +279,7 @@ Alternatives:\\
 \item Return to step \ref{InputMethod} of main scenario.
 \end{enumerate*}
 
-<<<<<<< HEAD
-\subsubsection*{Changing the Game Settings - 1.0}
-=======
 \subsubsection*{Changing the Game Settings - v1.0}
->>>>>>> upstream/master
 Actors:
 \begin{itemize*}
 \item Player
@@ -392,19 +295,11 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-<<<<<<< HEAD
-\item \label{SelectChangeSettings}The player selects a $change$ $settings$ function.
-\item \label{ChangeSettings}The player changes the setting(s).
-\item \label{SelectSave}The player selects a $save$ $and$ $apply$ function.
-\item \label{SystemSaves}The device saves changes and applies them to future game plays.
-\item \label{ReturnToMainMenu}The device returns to the main menu.
-=======
 \item \label{SelectChangeSettings}Player selects a $change$ $settings$ function.
 \item \label{ChangeSettings}Player changes the setting(s).
 \item \label{SelectSave}Player selects a $save$ $and$ $apply$ function.
 \item \label{SystemSaves}Device saves changes and applies them to future game plays.
 \item \label{ReturnToMainMenu}Device returns to the main menu.
->>>>>>> upstream/master
 \end{enumerate*}
 Alternatives:\\
 \ref{ChangeSettings}a) The player selects a non-valid entry for a setting.
@@ -419,11 +314,7 @@ Alternatives:\\
 \onehalfspacing
 
 \singlespacing
-<<<<<<< HEAD
-\subsubsection*{Viewing Stats - 1.0}
-=======
 \subsubsection*{Viewing Stats - v1.0}
->>>>>>> upstream/master
 Actors:
 \begin{itemize*}
 \item Player
@@ -432,20 +323,6 @@ Actors:
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-<<<<<<< HEAD
-\item Our system is installed on the device and has launched.
-\item The user has already created an account with Vir-Pong and is logged in.
-\end{itemize*}
-Postconditions:
-\begin{itemize*}
-\item The user has looked at their statistics.
-\item The user can compare his to everyones.
-\end{itemize*}
-Scenario:
-\begin{enumerate*}
-\item \label{SelectStats}The player chooses view stats option
-\item \label{PersonalStatRequest}The device requests personal score from website.
-=======
 \item Our application is installed on the device and has launched.
 \item The player has already created an account with Vir-Pong and is logged in.
 \end{itemize*}
@@ -458,7 +335,6 @@ Scenario:
 \begin{enumerate*}
 \item \label{SelectStats}Player chooses view stats option
 \item \label{PersonalStatRequest}Device requests personal score from website.
->>>>>>> upstream/master
 \item Website sends personal stats.
 \item Device displays personal stats and CompareStats option.
 \item \label{CompareStats}Player selects CompareStats option.
@@ -470,17 +346,6 @@ Alternatives:\\
 \ref{PersonalStatRequest}a) Unable to contact website.
 \begin{enumerate*}
 \item Display connection error message.
-<<<<<<< HEAD
-\item User may utilize a $retry$ or $continue$ button.
-\item User selects $retry$.
-\item Return to \ref{PersonalStatRequest}.
-\end{enumerate*}
-
-\subsubsection*{Edit Account Information}
-Actors:
-\begin{itemize*}
-\item User
-=======
 \item Player may utilize a $retry$ or $continue$ button.
 \item Player selects $retry$.
 \item Return to \ref{PersonalStatRequest}.
@@ -490,26 +355,11 @@ Actors:
 Actors:
 \begin{itemize*}
 \item Player
->>>>>>> upstream/master
 \item System
 \item Vir-Pong Website
 \end{itemize*}
 Preconditions:
 \begin{itemize*}
-<<<<<<< HEAD
-\item System is installed on the device and has launched.
-\end{itemize*}
-Postconditions:
-\begin{itemize*}
-\item User has edited account information.
-\end{itemize*}
-Scenario:
-\begin{enumerate*}
-\item User selects Edit Account information.
-\item \label{Browser}System opens phone browser to "Vir-pong Edit Account" information page. 
-\item User begins editing account information.
-\item User saves and exits editing account information.
-=======
 \item The application is installed on the device and has launched.
 \end{itemize*}
 Postconditions:
@@ -522,7 +372,6 @@ Scenario:
 \item \label{Browser}System opens phone browser to "Vir-pong Edit Account" information page. 
 \item Player begins editing account information.
 \item Player saves and exits editing account information.
->>>>>>> upstream/master
 \item System returns user to previous page.
 \end{enumerate*} 
 
@@ -566,19 +415,6 @@ In order for the application to provide an experience enjoyable to a wide user b
 
 \subsection{Reliability Requirements}
 %Frequency/severity of failure, Recoverability, Predictability, Accuracy, Mean time to failure
-<<<<<<< HEAD
-A working product is fine, but reliability ensures a consistent experience.  With this in mind our design is striving for security of private user information and the ability to pause the game.  The latter is focused on creating a fault tolerant solution for network connectivity.  A strict testing policy will help to alleviate many other possible issues.
-
-\subsection{Performance Requirements}
-%Speed, Efficiency, Resource consumption, Throughput, Response time
-The ability to adjust the display for different screens will allow for better performance of the software on different Android devices.  The system must also minimize latency when contacting the server for game information or receiving information from the Wii Remote.  No other connections are nearly as important.
-
-\subsection{Supportability Requirements}
-%Testability, Extensibility, Adaptability, Maintainability, Compatibility, Configurability, Serviceability, %Installability, Localizability, Portability
-Installation, game play, and resource usage should all be properly documented in a conveniently located and navigated user-manual. A list of known compatible devices included in the manual will assist in keeping potential customers informed about our product.  There should also be some contact information for support and help when documentation is not enough.
-
-In keeping with the project's open source roots, it will be important to make all source code well documented for the general public; make the source code readily available; give credit to non-employees with contributions; and provide substantial developer documentation. 
-=======
 A working product is important, but reliability ensures a consistent experience.  With this in mind, our design is striving for security of private user information and the ability to pause the game.  The latter is focused on creating a fault tolerant solution for network connectivity.  A strict testing policy will help to alleviate many other possible issues.
 
 \subsection{Performance Requirements}
@@ -590,7 +426,6 @@ The ability to adjust the display for different screens will allow for better pe
 Installation, game play, and resource usage should all be properly documented in a conveniently located and navigated user-manual. A list of known compatible devices included in the manual will assist in keeping potential customers informed about our product.  There should also be some contact information for support and help when the available documentation is not enough.
 
 In keeping with the project's open source roots, it will be important to make all source code well documented for the general public; make the source code readily available; give credit to non-employees that have contributed to our application; and provide substantial developer documentation. 
->>>>>>> upstream/master
 
 
 \section{Domain Analysis}

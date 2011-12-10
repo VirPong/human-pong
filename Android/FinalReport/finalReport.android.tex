@@ -78,8 +78,41 @@
 %Describe in detail the end product your department is producing, do not 
 %    forget about documentation artifacts.
 
-\subsection{Requirements}
+The final product of this development team will be a downloadable Android 
+application for playing Pong via human motion.  Receiving position data 
+from a Wii Remote the application allows a user to move a paddle on screen 
+with motion in physical space.  The current concept is to host games over 
+the internet and allow play between two players to proceed as a normal game
+ of Pong.  This may change in the future to include \textit{enhanced modes} 
+where players may retrieve power-ups, attack or complete any other number 
+of non-standard actions.  Aside from the gameplay, however, the Android 
+application will host a suite of other features.  Accessing user statistics, 
+global statistics, help and support, changing aesthetic settings, adjusting 
+the volume, and even navigating to the Vir-Pong website will all be possible 
+from within the application.  While the application developed by our team is 
+targeted at the Android platform, our team is working closely with the iOS 
+development group to support a cohesive and quality application across 
+multiple platforms.  
+
+Installation and usage instructions as well as help and support will be 
+found on the Android market or on the Vir-Pong site.  These instructions 
+will be targeted towards novice technology users so that our product may be
+ enjoyed by all groups.  Developer documentation generated during the 
+development cycle will be available to all Vir-Pong employees and the 
+general public as part of our open-source commitment.  
+Where this documentation will be hosted is currently under consideration.  
+
+The final product of this team will integrate with the greater Vir-Pong 
+ecosystem.  Servers, devices, the website, and users will bring together a 
+community of human Pong players, all enjoying our product.  Our piece in 
+this greater puzzle is to put that experience in the pockets of consumers 
+and allow Pong to be played in the physical world.
+
+\section{Requirements Analysis}
 \label{sec:requirements}
+
+\subsection{Functional Requirements}
+\label{sec:functionalRequirements}
 %Functional Requirements:
 %    Use Cases:
 %        All uses cases must use the same template and this template should 
@@ -90,13 +123,394 @@
 %        Fully Dressed Descriptions: You need to write fully-dressed well 
 %            detailed use case for all features you plan to include in your 
 %            final product. 
+
+\singlespacing
+\subsubsection{Playing a Game - v1.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Hub
+\item Android device
+\item Input device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item Player is authenticated into the system and has successfully 
+  requested a game from the hub.
+\item Input device is tethered to the Android device and is ready to 
+  submit motion data.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item A winner has been determined.
+\item Player statistics are recorded by the hub system.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Hub signals a ready-start and the game begins. 
+\item \label{playerObserves}Player observes ball and opponent's paddle 
+  motion on Android device.
+\item Player responds with appropriate motion, detected by the input 
+  device and relayed to the Android device.
+\item Android device relays motion data to the hub.
+\item \label{HubUpdateGame}Hub recalculates ball and paddle position then 
+  sends updated information to Android device.
+\item \label{DisplayCurrentInformation}Player's Android device displays 
+  the current information.\\
+Repeat \ref{playerObserves} through \ref{DisplayCurrentInformation} until 
+  a point is scored.
+\item \label{LogPointRefresh}Hub logs point scored then resets game state 
+  to fresh.\\
+Repeat \ref{playerObserves} through \ref{LogPointRefresh} until score limit 
+  is reached.
+\item \label{AnnounceWinner}Hub indicates winner to Android device.
+\item Android device displays winner to player and announces game complete.
+\item Hub logs game statistics for later access.
+\item Player is prompted to play another game or exit back to the home screen.
+\end{enumerate*}
+Alternatives:\\
+\ref{HubUpdateGame}a) Hub signals that connection to other player has 
+  been lost.
+\begin{enumerate*}
+\item Android device signals a game pause to player.
+\item Player is prompted to wait or leave the game.
+\item The player elects to wait.
+\item Hub signals that the other player is reconnected.
+\item Game resumes.
+\item Return to \ref{DisplayCurrentInformation} in main scenario.
+\end{enumerate*}
+\ref{AnnounceWinner}a) The player's Android device loses connection with 
+  the hub after score limit has been reached.
+\begin{enumerate*}
+\item The hub waits for a specified recovery time.
+\item Upon connection lost, the player's Android device begins recovery 
+  mode, trying to reconnect with the hub and indicating this to the player.
+\item After reconnecting with the hub, the game's winner is announced.  
+\item Player is prompted to verify this, due to the connection lost. 
+\item Both players agree, so hub logs the game statistics.
+\item Player is prompted to play another game or exit back to the home 
+  screen.
+\end{enumerate*}
+\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
+\begin{enumerate*}
+\item Hub alerts players that game is reaching overtime.
+\item Player is given option to continue playing, call a tie, or postpone 
+  the game.
+\item Player selects to call a tie. 
+\item The game ends and hub logs results.
+\item Player is given option to play another game or return to home screen.
+\end{enumerate*}
+\ref{HubUpdateGame}a) Hub signals that connection to other player has been 
+  lost.
+\begin{enumerate*}
+\item Android device signals a game pause to user.
+\item User is prompted to wait or leave the game.
+\item The user elects to wait.
+\item Hub signals that the other player is reconnected.
+\item Game resumes.
+\item Return to \ref{DisplayCurrentInformation} in main scenario.
+\end{enumerate*}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{ssd_GamePlay_1.png}
+\caption{\label{ssd_GamePlay_1}The role of our system in gameplay is 
+  described through the system sequence diagram above.}
+\end{center}
+\end{figure}
+
+
+\subsubsection*{Initializing a Game - v3.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Hub
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item The application is installed and open on the device.
+\item The player has already created an account with Vir-Pong.
+\item The input device is tethered to the Android device and is ready to 
+  submit motion data.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The hub is relaying game information.
+\item The system is using a display to relay the game state.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item \label{InitGame_DisplayOptions} The software displays various options.
+\item \label{SelectStart}The player selects to begin a game.
+\item \label{SystemPromptsAuthentication}The device prompts the player to 
+  authenticate.
+\item \label{PlayerProvidesCredentials}The player provides credentials.
+\item \label{SystemVerifies}The device verifies credentials with the hub.
+\item \label{DisplayGameRooms} The player is prompted with a list of various
+game rooms.
+\item \label{SelectRoom} Player selects the desired game.
+\item \label{SystemRequestsGame}The device requests the selected game from 
+the hub.
+\item \label{NotifyPaddle} The player is notified of which paddle she is.
+\item \label{HubSelectsOpponent}The hub waits for an opponent then signals a 
+  ready-start to device.
+\item \label{LoadGameState}The device loads an initial game state displayed 
+  to the player.
+\item Game begins.
+\end{enumerate*}
+Alternatives:\\
+\ref{SelectStart}a) The player selects the wrong action.
+\begin{enumerate*}
+\item The player may elect to go back the the previous screen with a 
+  $return$ function.
+\end{enumerate*}
+\ref{PlayerProvidesCredentials}a) The player provides incorrect credentials.
+\begin{enumerate*}
+\item \label{HubNoAuthenticate}The device cannot authenticate into the hub.
+\item The device displays a message that tells the player that the entered 
+  credentials were incorrect.
+\item \label{PromptAuthenticate}The device prompts the player to 
+  authenticate.\\
+Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player 
+  selects the $return$ function.
+\end{enumerate*}
+\ref{SystemRequestsGame}a) The system can not connect to the hub.
+\begin{enumerate*}
+\item The device sends the player an error message that prompts the player 
+  to retry or exit.
+\item Player chooses to retry.
+\item System connects to hub.
+\item Return to \ref{HubSelectsOpponent} of main scenario.
+\end{enumerate*}
+
+\subsubsection*{Connect to Input Device - v2.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Device 
+\item Wii Remote
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item System is installed on the device and has launched.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item Input device (Wii Remote) is selected and prepared for game use.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Player is prompted with options for input devices.
+\item \label{SelectInput} Player selects to use a Wii Remote, but Wii Remote
+is not connected yet.
+\item \label{PromptToConnect} Device directs player to instructions for 
+pairing with a Wii Remote.
+\item \label{MenuToWii}Following directions, the player opens the correct 
+menu for pairing with a Wii Remote.
+\item Player selects to pair with the Wii Remote.
+\item \label{ConnectWiimote}System attempts to tether Wii Remote.
+\item Player follows instructions from system to connect Wii Remote.
+\item System accepts Wii Remote device and notifies user.
+\end{enumerate*}
+Alternatives:\\
+\ref{SelectInput}a) Player selects phone accelerometer.  
+\begin{enumerate*}
+\item System asks player to make certain the device has an built in 
+  accelerometer.
+\item Player indicates that device has accelerometer.
+\item System connects to device accelerometer.
+\item System proceeds to game launch.
+\end{enumerate*}
+\ref{SelectInput}b) Player selects touch screen interface.
+\begin{enumerate*}
+\item System asks player to touch a box displayed on-screen to ensure 
+  that a touch screen is available.
+\item Player touches box.
+\item System proceeds to game launch.
+\end{enumerate*}
+\ref{ConnectWiimote}System attempts Wii Remote connection, and fails.
+\begin{enumerate*}
+\item System alerts user that connection failed.
+\item User is prompted to try again or back out.
+\end{enumerate*}
+
+\subsubsection*{Changing the Game Settings - v2.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item The application is installed and open on the device.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The newly changed settings have been saved and will be applied to 
+  future game play.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Main menu options are displayed to the player.
+\item \label{SelectChangeSettings}Player selects a $change$ $settings$ 
+  function.
+\item \label{ChangeSettings}Player changes the setting(s).
+\item \label{SelectSave}Player selects a $save$ $and$ $apply$ function.
+\item \label{SystemSaves}Device saves changes and applies them to future 
+  game plays.
+\item \label{ReturnToMainMenu}Device returns to the main menu.
+\end{enumerate*}
+Alternatives:\\
+\ref{ChangeSettings}a) The player selects a non-valid entry for a setting.
+\begin{enumerate*}
+\item The device displays an error message that tells the player he 
+  entered a non-compatible value.
+\item The device returns the setting to a default state.
+\end{enumerate*}
+\ref{SelectSave}a) The player decides not to change any settings.
+\begin{enumerate*}
+\item The player selects the $return$ function.
+\end{enumerate*}
+\onehalfspacing
+
+\singlespacing
+\subsubsection*{Viewing Statistics - v2.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item Website
+\item Device
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item Our application is installed on the device and has launched.
+\item The player has already created an account with Vir-Pong and is logged
+  in.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item The player has looked at her statistics.
+\item The player can compare hers to everyones.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Main menu options are displayed to the player.
+\item \label{SelectStats}Player chooses to view statistics.
+\item \label{PersonalStatRequest}Device requests personal score from website.
+\item Website sends personal stats.
+\item Device displays personal stats and CompareStats option.
+\item \label{CompareStats}Player selects CompareStats option.
+\item Device navigates to website with all player stats listed.
+\item \label{Back}Player finishes viewing stats and hits back button.
+\item Device returns to system state SelectStats.
+\end{enumerate*}
+Alternatives:\\
+\ref{PersonalStatRequest}a) Unable to contact website.
+\begin{enumerate*}
+\item Display connection error message.
+\item Player may utilize a $retry$ or $continue$ button.
+\item Player selects $retry$.
+\item Return to \ref{PersonalStatRequest}.
+\end{enumerate*}
+
+\subsubsection*{Editing Account Information - v1.0}
+Actors:
+\begin{itemize*}
+\item Player
+\item System
+\item Vir-Pong Website
+\end{itemize*}
+Preconditions:
+\begin{itemize*}
+\item The application is installed on the device and has launched.
+\end{itemize*}
+Postconditions:
+\begin{itemize*}
+\item Player has edited account information.
+\end{itemize*}
+Scenario:
+\begin{enumerate*}
+\item Player selects Edit Account information.
+\item \label{Browser}System opens phone browser to "Vir-pong Edit Account" 
+  information page. 
+\item Player begins editing account information.
+\item Player saves and exits editing account information.
+\item System returns user to previous page.
+\end{enumerate*} 
+
+\onehalfspacing
+
+
+
 %    System Sequence Diagram:
 %        Create a system sequence diagram for your most important 
 %        fully-dressed use case. Include a one paragraph description of what 
 %        is being depicted in the diagram (use plan English). 
+
+
+
+\subsection{Nonfunctional Requirements}
+\label{sec:nonfunctionalRequirements}
 %Nonfunctional Requirements: Detail all nonfunctional requirements that you 
 %    addressed in your final product (e.g. Easy Visibility: All text in our 
 %    product is 16pt font.)
+
+
+\subsubsection{Usability Requirements}
+%Human factors, Aesthetics, Consistency, Documentation
+In order for the application to provide an experience enjoyable to a wide 
+user base, the following usability requirements should be met:
+\begin{itemize}
+\item Players should have their statistics saved and then made available 
+for viewing.
+\item Players should be able to change game settings(difficulty, ball shape, 
+etc.).
+\item Users should be able to register an account through the application.
+\item The application needs to be available for download via the website 
+or on the Android Market.
+\item The application should have the option to view a game in progress.
+\item It would be nice to make the game environment modifiable (i.e. theming).
+\item When there is not a second available human player (or connection to 
+the hub is impossible) there should be an option for playing versus the 
+computer in training mode.
+\end{itemize}
+
+\subsubsection{Reliability Requirements}
+%Frequency/severity of failure, Recoverability, Predictability, Accuracy, 
+%Mean time to failure
+A working product is important, but reliability ensures a consistent 
+experience.  With this in mind, our design is striving for security of 
+private user information and the ability to pause the game.  The latter is 
+focused on creating a fault tolerant solution for network connectivity.  A 
+strict testing policy will help to alleviate many other possible issues.
+
+\subsubsection{Performance Requirements}
+%Speed, Efficiency, Resource consumption, Throughput, Response time
+The ability to adjust the display for different screens will allow for 
+better performance of the software on different Android devices.  The system 
+must also minimize latency when contacting the server for game information 
+or receiving information from the Wii Remote.  There are no other connections 
+that are quite as important.
+
+\subsubsection{Supportability Requirements}
+%Testability, Extensibility, Adaptability, Maintainability, Compatibility, 
+%Configurability, Serviceability, %Installability, Localizability, Portability
+Installation, game play, and resource usage should all be properly 
+documented in a conveniently located and navigated user-manual. A list of 
+known compatible devices included in the manual will assist in keeping 
+potential customers informed about our product.  There should also be some 
+contact information for support and help when the available documentation 
+is not enough.
+
+In keeping with the project's open source roots, it will be important to 
+make all source code well documented for the general public; make the 
+source code readily available; give credit to non-employees that have 
+contributed to our application; and provide substantial developer 
+documentation. 
+
+
+
 
 \section{Diagrammatic Depictions of the Product}
 \label{sec:diagrams}
