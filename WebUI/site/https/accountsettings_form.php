@@ -5,6 +5,9 @@
 
 
 <script src="accountsettings.js" type="text/javascript"></script>
+<noscript>
+	<meta HTTP-EQUIV="REFRESH" content="0; url=skins/javascript.php">
+</noscript>
 
 
 <h1>&#9612; account settings &#9616;</h1>
@@ -15,17 +18,16 @@
 	{
 		// connect to the server and open db2
 		$conn = mysql_connect('localhost', 'root', 'sawinrocks')
-			or die ('Could not connect to server.' . mysql_error());
+			or die (header('Location:skins/error.php'));
 		mysql_select_db('db2', $conn)
-			or die ('Could not open database 2.' . mysql_error());
+			or die (header('Location:skins/error.php'));
 
 		// pull out the relevant account information
 		$myQuery = "SELECT username, firstname, lastname, email, birthday, 
 			 gender FROM Customer WHERE username='"
 			 . $_SESSION['username'] . "';";
 		$customer = mysql_query($myQuery, $conn)
-			or die ('Could not retriever customer information.'
-				. mysql_error());
+			or die (header('Location:skins/error.php'));
 		$cust = mysql_fetch_row($customer);
 
 		// save the appropriate account information for the form to access
@@ -41,8 +43,6 @@
 			$month = $birthday[5] . $birthday[6];
 			$day = $birthday[8] . $birthday[9];
 		}
-
-		echo '<p>Username <b>' . $_SESSION['username'] . '</b>';
 	}
 
 	// if the user is not logged in, send them to the login form
@@ -54,32 +54,38 @@
 	// if the user entered an incorrect password, display an error message
 	if(@$_GET['pw']=='false')
 	{
-		echo '<br /><span class="errormsg">You must enter your current 
+		echo '<span class="errormsg">You must enter your current 
 			password in order to update your account information.
-			</span><br/>';
+			</span>';
 	}
+
+	mysql_close($conn);
 ?>
 
-	<form name="accountsettings" id="accountsettings" method="post" 
-		action="accountsettings_post.php">
-		Current password 
+<p>
+	<form name="accountsettings" class="inputarea" id="accountsettings" 
+		method="post" action="accountsettings_post.php">
+		<label for="username">Username</label>
+		<input disabled type="text" size="20" name="username"
+			value=<?php echo $_SESSION['username']; ?> /><br />
+		<label for="password">Current password</label>
 		<input type="password" size="20" name="password" /><br />
-		New password 
+		<label for="newpassword">New password</label>
 		<input type="password" size="20" name="newpassword" /><br />
-		Confirm new password 
+		<label for="newpassword1">Confirm new password</label>
 		<input type="password" size="20" name="newpassword1" /><br />
-		4-digit PIN 
+		<label for="pin">4-digit PIN</label>
 		<input type="text" size="4" name="pin" /><br />
-		First name 
-		<input type="text" size="20" name="firstname" 
+		<label for="firstname">First name</label>
+		<input type="text" size="30" name="firstname" 
 			value=<?php echo $firstname; ?> /><br />
-		Last name 
-		<input type="text" size="50" name="lastname" 
+		<label for="lastname">Last name</label>
+		<input type="text" size="30" name="lastname" 
 			value=<?php echo $lastname; ?> /><br />
-		E-mail address 
-		<input type="text" size="50" name="email" 
+		<label for="email">E-mail address</label>
+		<input type="text" size="30" name="email" 
 			value=<?php echo $email; ?> /><br />
-		Birthday 
+		<label>Birthday</label>
 		<select name="month">
 			<option id="01" value="01">Jan</option>
 			<option id="02" value="02">Feb</option>
@@ -242,7 +248,7 @@
 					.defaultSelected = true;
 			</script>
 		</select><br />
-		Gender 
+		<label for="gender">Gender</label>
 		<select name="gender">
 			<option id="0" value="0">male</option>
 			<option id="1" value="1">female</option>
@@ -251,8 +257,8 @@
 					.defaultSelected = true;
 			</script>
 		</select><br />
-		<input type="submit" name="submitButton" value="Save changes" 
-			onclick="return validate();" />
+		<label for="submitButton">&nbsp;</label>
+		<input type="submit" value="Save changes" onclick="return validate();" />
 	</form>
 </p>
 

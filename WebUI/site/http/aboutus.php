@@ -15,7 +15,7 @@
 <br />
 <h2>Employees:</h2> 22 worldwide as of September 30, 2011
 <br />
-<h2>Background:</h2> Vir-Pong was developed due to a genius professor attempting to challenge his creative and intelligent students. The students were able to produce a pong game using mobile devices and a wii remote. I hope you enjoy the catchy and creative game they have produced.</p>
+<h2>Background:</h2> VirPong was developed due to a genius professor attempting to challenge his creative and intelligent students. The students were able to produce a pong game using mobile devices and a wii remote. I hope you enjoy the catchy and creative game they have produced.</p>
 
 
 <?php

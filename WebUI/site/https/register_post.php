@@ -9,10 +9,10 @@
 <?php
 
 	// connect to the server and open db2
-		$conn = mysql_connect('localhost', 'root', 'sawinrocks')
-		or die ("connection failed." . mysql_error());
+	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
+		or die (header('Location:skins/error.php'));
 	mysql_select_db('db2', $conn)
-		or die ("could not open connection" . mysql_error());
+		or die (header('Location:skins/error.php'));
 
 	// insert the account information into the Customer table
 	$myQuery = "INSERT INTO Customer (username, password, pin, firstname, 
@@ -24,7 +24,7 @@
 		 . $_POST['day'] . "', '" . $_POST['gender'] . "')";
 	mysql_query($myQuery, $conn)
 		or die("This username is already taken. Please <a href=
-			register_form.php>register</a> with a new username.");
+			register_form.php>register</a> with a new username.</p>");
 
 	// set a session cookie and direct the user to the login page
 	$_SESSION['username'] = $_POST['username'];

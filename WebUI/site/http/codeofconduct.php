@@ -7,7 +7,7 @@
 <h1>&#9612; code of conduct &#9616;</h1>
 
 
-<p>The Code of Conduct outlines the rules that you need to follow to help ensure that Vir-Pong is fun for everyone.</p>
+<p>The Code of Conduct outlines the rules that you need to follow to help ensure that VirPong is fun for everyone.</p>
 
 <p><h3>I. You may do the following:</h3>
 	<ul>
@@ -21,7 +21,7 @@
 
 <p><h3>II. Do not do the following:</h3>
 	<ul>
-		<li>Do not use the Service to do anything illegal. You are responsible for your actions and the consequences of your actions on the service, not Vir-Pong.</li>
+		<li>Do not use the Service to do anything illegal. You are responsible for your actions and the consequences of your actions on the service, not VirPong.</li>
 		<li>Do not harass, abuse, or spam other players, or encourage other players to do so.</li>
 		<li>Do not scream, yell, threaten, or stalk other players, or encourage other players to do so.</li>
 		<li>Do not create a gamertag, profile content, or other in-game content that other users may be offended by. This includes, without limitation, anything related to or suggestive of: profane words/phrases, topics of content of a sexual nature, hate speech (including but not limited to racial, ethnic, or religious slurs), illegal drugs/controlled substances, or illegal activities.</li>
@@ -36,14 +36,14 @@
 		<li>Do not post links to materials that could harm other users' computers or would allow others to inappropriately access software or Web sites.</li>
 		<li>Do not lend, transfer, sell, or otherwise provide access to your account to any individual.</li>
 		<li>Do not use your account for commercial purposes.</li>
-		<li>Do not impersonate, harass, or defame Vir-Pong employees, moderators, or staff members.</li>
+		<li>Do not impersonate, harass, or defame VirPong employees, moderators, or staff members.</li>
 		<li>Do not use the forums or chats for any commercial purpose. You may only create an account for yourself as an individual. You may not create an account for your corporation or other business entity.</li>
 		<li>Any non-game-related conversation that takes up a substantial amount of the forum or chat space and prevents users from finding game-related information may be considered a violation of the Code of Conduct.</li>
 	</ul>
 </p>
 
 <p><h3>Consequences of Violation:</h3>
-If you violate the Code of Conduct you will be immediately terminated from use of Vir-Pong products.</p>
+If you violate the Code of Conduct you will be immediately terminated from use of VirPong products.</p>
 
 <p align="right"><small><small>(adapted from: <a href="http://www.xbox.com/en-US/legal/codeofconduct">Xbox.com's Code of Conduct</a>)</small></small></p>
 

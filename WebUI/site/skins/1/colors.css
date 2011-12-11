@@ -1,0 +1,155 @@
+﻿
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  COLORS.CSS holds the skin-specific color information. When adding a new skin,
+ *  simply find-and-replace the three appropriate hex codes representing
+ *  main color, contrast color, and background color.
+ *
+ *  In this skin:
+ *    MAIN COLOR:	#001166
+ *    CONTRAST COLOR:	#DDAA11
+ *    BACKGROUND COLOR:	#7788CC
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls standard HTML page elements
+ */
+
+
+/* The background is BACKGROUND COLOR */
+body {
+	background-color: #7788CC;
+}
+
+/* Hyperlinks are CONTRAST COLOR */
+a {
+	color: #DDAA11;
+}
+
+/* Level one headers are CONTRAST COLOR */
+h1 {
+	color: #DDAA11;
+}
+
+/* Level two headers are MAIN COLOR */
+h2 {
+	color: #001166;
+}
+
+/* Level three headers are BACKGROUND COLOR */
+h3 {
+	color: #7788CC;
+}
+
+/* Table borders are MAIN COLOR */
+table, td, th {
+	border: 1px solid #001166;
+}
+
+/* Table header backgrounds are MAIN COLOR */
+th {
+	background-color: #001166;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls style classes & IDs used in forms
+ */
+
+
+/* Form input area borders are MAIN COLOR */
+.inputarea input, .inputarea select, .inputarea textarea {
+	border: solid 1px #001166;
+}
+
+/* The focused form input area border is CONTRAST COLOR */
+.inputarea input:focus, .inputarea select:focus, .inputarea textarea:focus
+{
+	border: solid 1px #DDAA11;
+}
+
+/* Submit buttons for forms are CONTRAST COLOR with MAIN COLOR text & border */
+.inputarea input[type="submit"] {
+	background-color: #DDAA11;
+	color: #001166;
+	border: solid 1px #001166;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls IDs used to create the overall site layout
+ */
+
+
+/* Text in the footer is MAIN COLOR */
+#footer {
+	color: #001166;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls the dropdown menus of the main navigation.
+ *  This code is modified from the GRC's Script-Free Pure-CSS Menuing System,
+ *  written by Steve Gibson and available at: http://www.grc.com/menu2/invitro.htm
+ */
+
+
+/* Text in the main menu is CONTRAST COLOR */
+.menu {
+	color: #DDAA11;
+}
+
+/* Hyperlinks in the main menu are MAIN COLOR */
+.menu ul li a {
+	color: #001166;
+}
+
+/* Hyperlinks on mouseover in the main menu are CONTRAST COLOR */
+.menu ul li a:hover {
+	color: #DDAA11;
+}
+
+/* Dropdowns have a thick left border of MAIN COLOR */
+.menu ul li ul {
+	border-left: 7px solid #001166;
+}
+
+/* Hyperlinks in dropdowns are CONTRAST COLOR */
+.menu ul li ul li a {
+	color: #DDAA11;
+}
+
+/* Hyperlinks on mouseover in dropdowns are MAIN COLOR */
+.menu ul li ul li a:hover {
+	color: #001166;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls the news slider on the index page.
+ *  This code is modified from the jQuery Coda-Slider v2.0,
+ *  written by Niall Doherty and available at: http://www.ndoherty.biz/coda-slider
+ */
+
+
+/* The news item background is BACKGROUND COLOR */
+.coda-slider {
+	background: #7788CC;
+}
+
+/* The current news item title is CONTRAST COLOR */
+.coda-nav ul li a.current {
+	background: #DDAA11;
+}
+
+/* Non-current news item titles are MAIN COLOR */
+.coda-nav ul li a {
+	background: #001166;
+}
