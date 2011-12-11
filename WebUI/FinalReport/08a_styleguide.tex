@@ -9,29 +9,64 @@
 	\subsection{Style Guide}
 	
 		\subsubsection{Indentation, Line length and Whitespace}
-			Use tabs, not spaces, for indentation. Set tabs to equal four spaces.\\Braces should appear on the line below their preceding argument, indented to the same level. All code contained within the braces should be indented by one additional tab. The contents of $<$php? ?$>$ tags should always be indented. The contents of HTML and JavaScript tags may or may not be indented depending on their scope. For example, in HTML the contents of a $<$div$>$ should be indented while the contents of a $<$p$>$ should not. In JavaScript, the contents of a $<$form$>$ should be indented while the contents of an $<$option$>$ should not. The properties of a CSS selector should be indented.\\Line length should not exceed 85 characters. When using HTML $<$p$>$ tags to display text, the contents of the paragraph do not need to comply with line length limits. If the line exceeds 85 characters, the $<$/p$>$ tag should be placed on the line below the textual content of the paragraph.\\Methods containing more than 30 lines of code are discouraged. If a method is over 30 lines of code, it can probably be written more efficiently and/or broken down into multiple methods.\\Readability is a priority over small file sizes; use of whitespace is encouraged where appropriate.
+		\begin{itemize}
+			\item Use tabs, not spaces, for indentation. Set tabs to equal four spaces.
+			\item Braces should appear on the line below their preceding argument, indented to the same level. All code contained within the braces should be indented by one additional tab.
+			\item The contents of $<$php? ?$>$ tags should always be indented. The contents of HTML and JavaScript tags may or may not be indented depending on their scope. For example, in HTML the contents of a $<$div$>$ should be indented while the contents of a $<$p$>$ should not. In JavaScript, the contents of a $<$form$>$ should be indented while the contents of an $<$option$>$ should not. The properties of a CSS selector should be indented.
+			\item Line length should not exceed 85 characters. When using HTML $<$p$>$ tags to display text, the contents of the paragraph do not need to comply with line length limits. If the line exceeds 85 characters, the $<$/p$>$ tag should be placed on the line below the textual content of the paragraph.
+			\item Methods containing more than 30 lines of code are discouraged. If a method is over 30 lines of code, it can probably be written more efficiently and/or broken down into multiple methods.
+			\item Readability is a priority over small file sizes; use of whitespace is encouraged where appropriate.
+		\end{itemize}
 			
 		\subsubsection{Naming Conventions}
-			Filenames should not contain capital letters. Underscores are only used for pages that pass information from the client to the server. These pages should have a shared, meaningful name followed by \_form or \_post to indicate whether the page is collecting information (\_form) or processing information (\_post).\\CSS specifications should not contain capital letters or underscores. Use of dashes is discouraged, though it is allowed if appropriate. ID and class names should refer to the contents rather than the appearance of an element. For example, "errormsg" is preferable to "smallredtext" in the interests of maintainability.\\Variable names in PHP and JavaScript should use camel casing. The names of boolean variables should begin with "is."
+		\begin{itemize}
+			\item Filenames should not contain capital letters. Underscores are only used for pages that pass information from the client to the server. These pages should have a shared, meaningful name followed by \_form or \_post to indicate whether the page is collecting information (\_form) or processing information (\_post).
+			\item CSS specifications should not contain capital letters or underscores. Use of dashes is discouraged, though it is allowed if appropriate. ID and class names should refer to the contents rather than the appearance of an element. For example, "errormsg" is preferable to "smallredtext" in the interests of maintainability.
+			\item Variable names in PHP and JavaScript should use camel casing. The names of boolean variables should begin with "is."
+		\end{itemize}
 			
 		\subsubsection{Structure of Pages}
-			All displayable pages on the VirPong website will begin and end with PHP tags to include the header and footer.\\All textual content will be placed within HTML $<$p$>$ tags, with the exception of headers which will be within the header tag of the appropriate level (e.g. $<$h1$>$).\\All HTML and CSS code will comply with the W3C validators in an effort to maximize cross-browser compatibility.
+		\begin{itemize}
+			\item All displayable pages on the VirPong website will begin and end with PHP tags to include the header and footer.
+			\item All textual content will be placed within HTML $<$p$>$ tags, with the exception of headers which will be within the header tag of the appropriate level (e.g. $<$h1$>$).
+			\item All HTML and CSS code will comply with the W3C validators in an effort to maximize cross-browser compatibility.
+		\end{itemize}
 			
 		\subsubsection{Documentation Conventions}
-			HTML comments should be formatted like so:\\$<$!-- This is a comment. --$>$\\CSS, PHP, and Javascript comments may be formatted in either of the following two ways:\\/**\\* This is a comment. Generally used at the beginning of a block of code to explain\\* its overall function in plain English.\\*/\\or\\// This is a comment. Generally used within blocks of code to explain how certain\\// elements are being used. Generally does not take up more than one line -- if you\\// have that much to say, consider a block comment.
+		\begin{itemize}
+			\item HTML comments should be formatted like so:\\$<$!-- This is a comment. --$>$\\
+			\\CSS, PHP, and Javascript comments may be formatted in either of the following two ways:\\/**\\  $*$ This is a comment. \\ $*$ Generally used at the beginning of a block of code to explain\\ $*$ its overall function in plain English.\\ $*$/\\or\\// This is a comment. \\ // Generally used within blocks of code to explain how certain\\// elements are being used. \\// Generally does not take up more than one line -- if you\\// have that much to say, consider a block comment.
+		\end{itemize}
 			
 		\subsubsection{HTML Specific}
-			All HTML tags and attributes will be entirely in lowercase.\\All opening HTML tags will be accompanied by a corresponding closing tag. When using multiple tags, all elements will be properly nested (e.g. $<$b$>$$<$i$>$text$<$/i$>$$<$/b$>$ rather than $<$b$>$$<$i$>$text$<$/b$>$$<$/i$>$). All singleton tags will be closed with a space and an ending slash at the end of the tag (e.g. $<$br /$>$).\\Attributes inside of HTML tags should be contained within double quotes. There should be no spaces between the attribute, the equals sign, and the definition. When defining multiple attributes, they should be separated by a single space.\\All image tags will contain an alt attribute.\\Div layers are generally preferable to tables and iframes. Divs will be used to display the main site layout. Tables should only be used in select cases, such as to display the contents of the database. Iframes should never be used.
+		\begin{itemize}
+			\item All HTML tags and attributes will be entirely in lowercase.
+			\item All opening HTML tags will be accompanied by a corresponding closing tag. When using multiple tags, all elements will be properly nested (e.g. $<$b$>$$<$i$>$text$<$/i$>$$<$/b$>$ rather than $<$b$>$$<$i$>$text$<$/b$>$$<$/i$>$). All singleton tags will be closed with a space and an ending slash at the end of the tag (e.g. $<$br /$>$).
+			\item Attributes inside of HTML tags should be contained within double quotes. There should be no spaces between the attribute, the equals sign, and the definition. When defining multiple attributes, they should be separated by a single space.
+			\item All image tags will contain an alt attribute.
+			\item Div layers are generally preferable to tables and iframes. Divs will be used to display the main site layout. Tables should only be used in select cases, such as to display the contents of the database. Iframes should never be used.
+		\end{itemize}
 			
 		\subsubsection{CSS Specific}
-			All CSS will be contained in the external stylesheet rather than included as inline style.\\When defining styles for specific elements, think carefully about whether the selector should be an ID or a class. Elements that are only used once on each page (e.g. the content div) should use IDs; elements that may be repeated (e.g. the errormsg) should use classes.\\All text sizes should be specified using ems, not pixels.
+		\begin{itemize}
+			\item All CSS will be contained in the external stylesheet rather than included as inline style.
+			\item When defining styles for specific elements, think carefully about whether the selector should be an ID or a class. Elements that are only used once on each page (e.g. the content div) should use IDs; elements that may be repeated (e.g. the errormsg) should use classes.
+			\item All text sizes should be specified using ems, not pixels.
+		\end{itemize}
 			
 		\subsubsection{PHP Specific}
-			Control statements (if, for, while, switch, etc.) should have one space between the control keyword and the opening parenthesis, to distinguish them from function calls.\\Long if statements may be split onto several lines to comply with line length limits. The conditions should be indented by one additional tab with the logical operators (e.g. \&\&) at the beginning of the line. The first condition may be indented to align with the others. The closing parenthesis and opening brace get their own line at the end of the conditions.\\Literal strings should be contained within singled quotes. When a literal string contains apostrophes, it should instead be contained within double quotes. SQL statements may be contained within double quotes whether or not they contain apostrophes.\\String concatenation will be done using the "." operator with spaces on both sides. When string concatenation exceeds line length limits, the statement should be broken up such each successive line begins with the "." operator aligned under the initial "=" operator.
+		\begin{itemize}
+			\item Control statements (if, for, while, switch, etc.) should have one space between the control keyword and the opening parenthesis, to distinguish them from function calls.
+			\item Long if statements may be split onto several lines to comply with line length limits. The conditions should be indented by one additional tab with the logical operators (e.g. \&\&) at the beginning of the line. The first condition may be indented to align with the others. The closing parenthesis and opening brace get their own line at the end of the conditions.
+			\item Literal strings should be contained within singled quotes. When a literal string contains apostrophes, it should instead be contained within double quotes. SQL statements may be contained within double quotes whether or not they contain apostrophes.
+			\item String concatenation will be done using the "." operator with spaces on both sides. When string concatenation exceeds line length limits, the statement should be broken up such each successive line begins with the "." operator aligned under the initial "=" operator.
+		\end{itemize}
 			
 		\subsubsection{JavaScript Specific}
-			Any JavaScript code that defines functions should be kept in an external .js file.
+		\begin{itemize}
+			\item Any JavaScript code that defines functions should be kept in an external .js file.
+		\end{itemize}
 			
 		\subsubsection{Sources}
-			http://na.isobar.com/standards/\\
-			http://pear.php.net/manual/en/standards.php
+			\indent http://na.isobar.com/standards/ \\
+			\indent http://pear.php.net/manual/en/standards.php

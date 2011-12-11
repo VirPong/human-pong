@@ -5,18 +5,29 @@
 
 
 <script type="text/javascript" src="register.js"></script>
+<noscript>
+	<meta HTTP-EQUIV="REFRESH" content="0; url=skins/javascript.php">
+</noscript>
 
 
 <h1>&#9612; register &#9616;</h1>
 
-<p><form name="newuser" id="newuser" method="post" action="register_post.php">
-	Username <input type="text" size="20" name="username" /><br />
-	Password <input type="password" size="20" name="password" /><br />
-	4-digit PIN <input type="text" size="4" name="pin" /><br />
-	First name <input type="text" size="30" name="firstname" /><br />
-	Last name <input type="text" size="50" name="lastname" /><br />
-	E-mail address <input type="text" size="50" name="email" /><br />
-	Birthday <select name="month">
+<p><form name="newuser" class="inputarea" id="newuser" method="post" 
+	action="register_post.php">
+	<label for="username">Username</label>
+	<input type="text" size="20" name="username" /><br />
+	<label for="password">Password</label>
+	<input type="password" size="20" name="password" /><br />
+	<label for="pin">4-digit PIN</label>
+	<input type="text" size="4" name="pin" /><br />
+	<label for="firstname">First name</label>
+	<input type="text" size="30" name="firstname" /><br />
+	<label for="lastname">Last name</label>
+	<input type="text" size="30" name="lastname" /><br />
+	<label for="email">E-mail address</label>
+	<input type="text" size="30" name="email" /><br />
+	<label>Birthday</label>
+	<select name="month">
 		<option value="01">Jan</option>
 		<option value="02">Feb</option>
 		<option value="03">Mar</option>
@@ -166,12 +177,14 @@
 		<option value="1912">1912</option>
 		<option value="1911">1911</option>
 	</select><br />
-	Gender <select name="gender">
+	<label for="gender">Gender</label>
+	<select name="gender">
 		<option value="0">male</option>
 		<option value="1">female</option>
 	</select><br />
-	<input type="submit" name="submitbutton" value="Submit" 
-		onclick="return validate();" /> <input type="reset" />
+	<label for="submit">&nbsp;</label>
+	<input type="submit" value="Submit" onclick="return validate();" />
+	<input type="reset" value="Clear" />
 </form></p>
 
 

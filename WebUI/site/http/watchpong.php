@@ -6,6 +6,9 @@
 
 <script src="pong.js" type="text/javascript" charset="utf-8"></script>
 <script src="http://cs340:3000/socket.io/socket.io.js"></script>
+<noscript>
+	<meta HTTP-EQUIV="REFRESH" content="0; url=skins/javascript.php">
+</noscript>
 
 
 <h1>&#9612; live VirPong streaming &#9612;</h1>

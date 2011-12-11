@@ -10,15 +10,15 @@
 
 	// connect to the server and open db2
        	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
-		or die ('Connection failed. ' . mysql_error());
+		or die (header('Location:skins/error.php'));
 	mysql_select_db('db2', $conn)
-		or die ('could not open connection' . mysql_error());
+		or die (header('Location:skins/error.php'));
 
 	// pull out information on the logged in user
 	$myQuery = "SELECT * FROM Customer WHERE username='"
 		 . $_SESSION['username'] . "';";
 	$row = mysql_query($myQuery, $conn)
-		or die ('Could not check password. ' . mysql_error());
+		or die (header('Location:skins/error.php'));
 	$user = mysql_fetch_row($row);
 
 	// if the user entered an incorrect password, send them back with an error
@@ -31,7 +31,7 @@
 	$myQuery = "UPDATE Customer SET password = '" . $_POST['newpassword']
 		 . "' WHERE username = '" . $_SESSION['username'] . "';";
 	mysql_query($myQuery, $conn)
-		or die('Could not update account.' . mysql_error());
+		or die (header('Location:skins/error.php'));
 
 	// update the user's information
 	$myQuery = "UPDATE Customer SET pin='" . $_POST['pin']
@@ -41,7 +41,7 @@
 		 . $_POST['day'] . "', gender='" . $_POST['gender']
 		 . "' WHERE username = '" . $_SESSION['username'] . "';";
 	mysql_query($myQuery, $conn)
-		or die('Could not update account.' . mysql_error());
+		or die (header('Location:skins/error.php'));
 
 	// close the connection
 	mysql_close($conn);
