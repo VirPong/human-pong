@@ -1,0 +1,107 @@
+﻿/**
+ * COLORS.CSS holds the skin-specific color information
+ */
+
+body {
+	background-color: #BCBCBC;
+}
+
+a {
+	color: #999999;
+}
+
+h1 {
+	color: #999999;
+}
+
+h2 {
+	color: #000000;
+}
+
+h3 {
+	color: #BCBCBC;
+}
+
+table, td, th {
+	border: 1px solid #000000;
+}
+
+th {
+	background-color: #000000;
+}
+
+#nav {
+	color: #999999;
+}
+
+#nav a {
+	color: #000000;
+}
+
+#nav a:hover {
+	color: #999999;	
+}
+
+#footer {
+	color: #000000;
+}
+
+.menu {
+	color: #999999;
+}
+
+.menu ul li ul {
+	border-left: 7px solid #000000;
+}
+
+.menu ul li a,
+.menu ul li a:visited {                    /* unselected top-level menu items */
+	color: #000000;
+}
+
+.menu ul li:hover a,
+.menu ul li a:hover {                        /* selected top-level menu items */
+	color: #999999;
+}
+
+.menu ul li:hover ul,
+.menu ul li a:hover ul {                           /* 2nd level drop-down box */
+	color: #000000;                        /* this sets the unselected-text color */
+}
+
+.menu ul li:hover ul li a,
+.menu ul li a:hover ul li a {                   /* 2nd level unselected items */
+	color: #999999;               /* this sets the unselected drop-down text color */
+}
+
+.menu ul li:hover ul li:hover a,
+.menu ul li a:hover ul li a:hover {                /* 2nd level selected item */
+	color: #000000;
+}
+
+.inputarea input, .inputarea select, .inputarea textarea {
+	border: solid 1px #000000;
+}
+
+.inputarea input:focus, .inputarea select:focus, .inputarea textarea:focus
+{
+	border: solid 1px #999999;
+}
+
+.inputarea input[type="submit"] {
+	background-color: #999999;
+	color: #000000;
+	border: solid 1px #000000;
+}
+
+.coda-slider {
+	background: #BCBCBC;
+}
+
+.coda-nav ul li a.current {
+	background: #999999;
+}
+
+.coda-nav ul li a {
+	background: #000000;
+}

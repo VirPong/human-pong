@@ -5,6 +5,9 @@
 
 
 <script type="text/javascript" src="login.js"></script>
+<noscript>
+	<meta HTTP-EQUIV="REFRESH" content="0; url=skins/javascript.php">
+</noscript>
 
 
 <h1>&#9612; log in &#9616;</h1>
@@ -33,11 +36,14 @@
 			echo '<p><span class="errormsg">Unable to log in. 
 				Please try again.</span></p>';
 		}
-		echo '<p><form name="login" id="login" method="post" 
-			action="login_post.php">';
-		echo 'Username: <input type="text" name="username" /><br />';
-		echo 'Password: <input type="password" name="password" /><br />';
-		echo '<input type="submit" name="submitButton" value="Log in" 
+		echo '<p><form name="login" class="inputarea" id="login" 
+			method="post" action="login_post.php">';
+		echo '<label for="username">Username</label>';
+		echo '<input type="text" name="username" /><br />';
+		echo '<label for="password">Password</label>';
+		echo '<input type="password" name="password" /><br />';
+		echo '<label for="submit">&nbsp;</label>';
+		echo '<input type="submit" value="Log in" 
 			onclick="return validate();" />';
 		echo '</form></p>';
 		echo '<p>Not a member? <a href=register_form.php>Register</a> 

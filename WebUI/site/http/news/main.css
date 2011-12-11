@@ -1,4 +1,167 @@
-﻿/*==============================================================================
+/**
+ * MAIN.CSS holds all CSS needed for the layout except for the
+ * colors that change depending on the selected skin. This CSS
+ * is housed in the colors.css files in the individual skins
+ * directories. Note that main.css retains some color information;
+ * this is for colors that remain constant across skins.
+ */
+
+body {
+	color: #333333;
+	font-family: Calibri, Candara, Trebuchet MS, sans serif;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+table, td, th {
+	padding: 0.5em;
+}
+
+th {
+	color: #FFFFFF;
+}
+
+img {
+	border: 0;
+}
+
+.errormsg {
+	font-size: 0.75em;
+	color: #FF0000;
+}
+
+.inputarea label {
+	float: left;
+	text-align: right;
+	padding-right: 0.25em;
+}
+
+.inputarea input, .inputarea select, .inputarea textarea {
+	font-size: 0.875em;
+	margin-bottom: 0.25em;
+	padding: 0.125em;
+}
+
+.inputarea input[type="submit"] {
+	margin-top: 0.5em;
+}
+
+#accountsettings label {
+	width: 9.375em;
+}
+
+#login label {
+	width: 4.125em;
+}
+
+#newuser label {
+	width: 6em;
+}
+
+#viewhist label {
+	width: 4.125em;
+}
+
+#logo {
+	width: 864px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+#logo img {
+	float: left;
+}
+
+#nav {
+	background-color: #FFFFFF;
+	width: 550px;
+	margin: 0 auto;
+	position: relative;
+	left: 37px;
+	top: -101px;
+	text-align: center;
+	font-size: 1.125em;
+	line-height: 2.25em;
+	clear: both;
+}
+
+#content-outer {
+	background-color: #FFFFFF;
+	color: #333333;
+	text-align: justify;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: -30px;
+}
+
+#content-inner {
+	padding: 0.125em 1em;
+}
+
+#footer {
+	text-align: center;
+	font-size: 0.75em;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: -10px;
+}
+
+#footer a {
+	color: #FFFFFF;
+}
+
+#jsoff-outer {
+	background-color: #FFFFFF;
+	text-align: justify;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#jsoff-inner {
+	padding: 0.125em 1em;
+	text-align: center;
+	font-size: 1.125em;
+}
+
+canvas {
+	border: 4px solid #AOAOAO;
+	background: #000000;
+	display: block;
+}
+
+
+
+/*==============================================================================
 
 	GRC multi-level script-free pure-CSS menuing system stylesheet.
    This code is hereby placed into the public domain by its author
@@ -99,7 +262,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	background:#FFFFFF;
 	font-family: Calibri, Candara, Trebuchet MS, sans serif;
 	font-size: 1.125em;         /* this (and also below) sets the menu's font size */
-	color: #999999;
 	z-index: 0;
 	padding-left: 2em;
 }
@@ -159,7 +321,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	display:none;                  /* initially hide the entire list hierarchy */
 	padding: 0px;                               /* this is our box border width */
 	line-height: 80%;
-	border-left: 7px solid #000000;
 	padding-left: 5px;
 }
 
@@ -169,14 +330,12 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	float:left;
 	text-decoration: underline;
 	/* height:18px; */
-	color: #000000;
 }
 
 .menu ul li:hover a,
 .menu ul li a:hover {                        /* selected top-level menu items */
 	border-top: 0px solid #000;    /* these 2 lines create the push-in illusion */
 	/* height:16px; */
-	color: #999999;
 	text-decoration: none;
 }
 
@@ -192,7 +351,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	left: 0px;       /* left-align our drop-down to the previous button border */
 	height:auto;      /* the drop-down height will be determiend by line count */
 	/*width:13.5em;*/
-	color: #000000;                        /* this sets the unselected-text color */
 	background: #FFFFFF;         /* this sets our menu's effective "border" color */
 }
 
@@ -222,7 +380,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 	margin:0;
 	padding:0;
 	height: 1em;
-	color: #999999;               /* this sets the unselected drop-down text color */
 	/*background: #FFFFFF;*/       /* this sets the drop-down menu background color */
 	/*width:13.5em;*/
 	text-decoration: none;
@@ -231,7 +388,6 @@ li { margin-bottom:1em; }          /* set default inter-item vertical spacing */
 .menu ul li:hover ul li:hover a,
 .menu ul li a:hover ul li a:hover {                /* 2nd level selected item */
 	height: 1em;
-	color: #000000;
 	text-decoration: none;
 }
 
