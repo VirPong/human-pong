@@ -1,4 +1,22 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/10/2011
+ *
+ *  topplayers.php displays a table containing the usernames and win counts of the
+ *  ten players who have won the most matches of VirPong. The usernames are
+ *  hyperlinks pointing to that user's personal history (that is,
+ *  personalhistory.php?user=USERNAME, where USERNAME is the username).
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

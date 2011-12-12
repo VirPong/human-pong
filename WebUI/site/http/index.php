@@ -1,4 +1,25 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/10/2011
+ *
+ *  index.php is the main page of the VirPong site. It displays a short welcome
+ *  message and a slider box with the latest in VirPong news.
+ *
+ *  The slider box requires the use of JavaScript. In the case of disabled JavaScript
+ *  the user is immediately redirected to index_nojs.php which displays the same
+ *  information in a different format.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *		news/index.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

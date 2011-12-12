@@ -1,4 +1,21 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Aryn Grause
+ *  DATE:	12/10/2011
+ *
+ *  termsofuse.php documents the Terms of Use for the VirPong service. This
+ *  extensive document was adapted from the Xbox Terms of Use, available at:
+ *  http://www.xbox.com/en-US/legal/livetou
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

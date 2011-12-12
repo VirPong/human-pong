@@ -1,4 +1,21 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/10/2011
+ *
+ *  index_nojs.php is a JavaScript free version of the main page of the VirPong
+ *  site. It displays a short welcome message and the latest in VirPong news.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *		stories/*
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>
