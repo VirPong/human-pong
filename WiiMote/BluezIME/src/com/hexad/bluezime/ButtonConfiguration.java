@@ -119,19 +119,8 @@ public class ButtonConfiguration extends PreferenceActivity {
 		int[] buttonCodes;
 		int[] buttonNames; 
 		
-		if (driver.equals(ZeemoteReader.DRIVER_NAME)) {
-			buttonCodes = ZeemoteReader.getButtonCodes();
-			buttonNames = ZeemoteReader.getButtonNames();
-		} else if (driver.equals(BGP100Reader.DRIVER_NAME)) {
-			buttonCodes = BGP100Reader.getButtonCodes();
-			buttonNames = BGP100Reader.getButtonNames();
-		} else if (driver.equals(PhonejoyReader.DRIVER_NAME)) {
-			buttonCodes = PhonejoyReader.getButtonCodes();
-			buttonNames = PhonejoyReader.getButtonNames();
-		} else if (driver.equals(iControlPadReader.DRIVER_NAME)) {
-			buttonCodes = iControlPadReader.getButtonCodes();
-			buttonNames = iControlPadReader.getButtonNames();
-		} else if (driver.equals(WiimoteReader.DRIVER_NAME)) {
+
+		if (driver.equals(WiimoteReader.DRIVER_NAME)) {
 			buttonCodes = WiimoteReader.getButtonCodes();
 			buttonNames = WiimoteReader.getButtonNames();
 		} else {

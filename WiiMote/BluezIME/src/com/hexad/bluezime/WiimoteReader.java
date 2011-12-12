@@ -673,6 +673,10 @@ public class WiimoteReader extends HIDReaderBase {
 	}
 	
 	public static final String TEST_INTENT = "com.hexad.bluezime.intent.action.TEST";
+	private double[] position = new double[3];
+	private long[] roundedPosition = new long[3];
+	private double SCALAR = .004;
+	
 	
 	private void handleAnalogValues(int[] newValues, int[] prev, boolean[] buttonstates, int[] keys, int report_axis_offset, boolean isAccelerometer) {
 		
@@ -682,26 +686,38 @@ public class WiimoteReader extends HIDReaderBase {
 			
 			if (prev[i] != newValues[i]) {
 				
-				if (D && Math.abs(prev[i] - newValues[i]) > 10) Log.d(getDriverName(), "Axis " + (i + report_axis_offset) + " changed from " + prev[i] + " to: " + newValues[i]);
+				//if (D && Math.abs(prev[i] - newValues[i]) > 10) Log.d(getDriverName(), "Axis " + (i + report_axis_offset) + " changed from " + prev[i] + " to: " + newValues[i]);
 				
-				boolean up = newValues[i] >= ANALOG_THRESHOLD;
-				boolean down = newValues[i] <= -ANALOG_THRESHOLD;
+				boolean up = false;// = newValues[i] >= ANALOG_THRESHOLD;
+				boolean down = false;// = newValues[i] <= -ANALOG_THRESHOLD;
 				
 				prev[i] = newValues[i];
 				
-				//TODO do the work here or where it calls this method?
 				if (isAccelerometer) {
-					//Log.d("WII", i + ": " + prev[i] + "  \n  ");
 					accelerometerBroadcast.putExtra(BluezService.EVENT_ACCELEROMETERCHANGE_AXIS, i + report_axis_offset);
 					accelerometerBroadcast.putExtra(BluezService.EVENT_ACCELEROMETERCHANGE_VALUE, prev[i]);
 					m_context.sendBroadcast(accelerometerBroadcast);
-					Intent intent = new Intent();
-					intent.setAction(TEST_INTENT);
-					intent.putExtra("Accel", prev);
-					//slows down the reporting so the app doesn't crash
-					if(counter%100==0)
-						m_context.sendBroadcast(intent);
-					counter++;
+					//Intent intent = new Intent();
+					//intent.setAction(TEST_INTENT);
+					//intent.putExtra("Accel", prev);
+					
+					//assuming we will only use the x-axis tilt...
+					position[i] += (newValues[i]-13)*SCALAR;
+				    
+				    //round the position in order to check for threshold values.
+					long tempPosition = Math.round(position[i]);
+					//if the position has moved to the next integer
+					if(roundedPosition[i] != tempPosition){
+						//if it is positive acceleration
+						if(newValues[i] > 0)
+							up = true;
+						//if it is negative acceleration
+						else
+							down = true;
+						roundedPosition[i] = tempPosition;
+					}
+					
+					
 					
 					
 					
@@ -710,7 +726,6 @@ public class WiimoteReader extends HIDReaderBase {
 					directionBroadcast.putExtra(BluezService.EVENT_DIRECTIONALCHANGE_VALUE, prev[i]);
 					m_context.sendBroadcast(directionBroadcast);
 				}
-				
 				if (up != buttonstates[i*2]) {
 					buttonstates[i*2] = up;
 					if (keys[i*2] != KEYCODE_UNUSED) {
@@ -720,7 +735,6 @@ public class WiimoteReader extends HIDReaderBase {
 						m_context.sendBroadcast(keypressBroadcast);
 					}
 				}
-				
 				if (down != buttonstates[(i*2) + 1]) {
 					buttonstates[i*2 + 1] = down;
 					if (keys[i*2 + 1] != KEYCODE_UNUSED) {
