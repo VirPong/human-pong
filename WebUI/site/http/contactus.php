@@ -1,4 +1,20 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Aryn Grause
+ *  DATE:	12/10/2011
+ *
+ *  contactus.php provides the user with means for contacting VirPong, including the
+ *  address of the UPS CS department and a "real" phone number.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>
