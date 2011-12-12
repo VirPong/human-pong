@@ -34,21 +34,11 @@ import android.util.Log;
 public class BluezService extends IntentService {
 	
 	public static final String[] DRIVER_NAMES = {
-		ZeemoteReader.DRIVER_NAME, 
-		BGP100Reader.DRIVER_NAME, 
-		PhonejoyReader.DRIVER_NAME,
-		iControlPadReader.DRIVER_NAME,
 		WiimoteReader.DRIVER_NAME,
-		DataDumpReader.DRIVER_NAME
 	};
 	
 	public static final String[] DRIVER_DISPLAYNAMES = {
-		ZeemoteReader.DISPLAY_NAME, 
-		BGP100Reader.DISPLAY_NAME, 
-		PhonejoyReader.DISPLAY_NAME,
-		iControlPadReader.DISPLAY_NAME,
 		WiimoteReader.DISPLAY_NAME,
-		DataDumpReader.DISPLAY_NAME
 	};
 	public static final String DEFAULT_DRIVER_NAME = DRIVER_NAMES[0];
 	
@@ -308,17 +298,8 @@ public class BluezService extends IntentService {
 				connectingBroadcast.putExtra(SESSION_ID, sessionId);
 				sendBroadcast(connectingBroadcast);
 	
-				if (driver.toLowerCase().equals(ZeemoteReader.DRIVER_NAME.toLowerCase()))
-					reader = new ZeemoteReader(address, sessionId, getApplicationContext(), startnotification);
-				else if (driver.toLowerCase().equals(BGP100Reader.DRIVER_NAME.toLowerCase()))
-					reader = new BGP100Reader(address, sessionId, getApplicationContext(), startnotification);
-				else if (driver.toLowerCase().equals(PhonejoyReader.DRIVER_NAME.toLowerCase()))
-					reader = new PhonejoyReader(address, sessionId, getApplicationContext(), startnotification);
-				else if (driver.toLowerCase().equals(DataDumpReader.DRIVER_NAME.toLowerCase()))
-					reader = new DataDumpReader(address, sessionId, getApplicationContext(), startnotification);
-				else if (driver.toLowerCase().equals(iControlPadReader.DRIVER_NAME.toLowerCase()))
-					reader = new iControlPadReader(address, sessionId, getApplicationContext(), startnotification);
-				else if (driver.toLowerCase().equals(WiimoteReader.DRIVER_NAME.toLowerCase()))
+
+				if (driver.toLowerCase().equals(WiimoteReader.DRIVER_NAME.toLowerCase()))
 					reader = new WiimoteReader(address, sessionId, getApplicationContext(), startnotification);
 				else
 					throw new Exception(String.format(this.getString(R.string.invalid_driver), driver));

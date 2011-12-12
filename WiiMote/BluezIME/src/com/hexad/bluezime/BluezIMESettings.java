@@ -48,10 +48,10 @@ public class BluezIMESettings extends PreferenceActivity {
 	
 	private CheckBoxPreference m_bluetoothActivity;
 	private ListPreference m_pairedDevices;
-	private ListPreference m_drivers;
+	//private ListPreference m_drivers;
 	private Preference m_selectIME;
-	private Preference m_helpButton;
-	private Preference m_configureButton;
+	//private Preference m_helpButton;
+	//private Preference m_configureButton;
 	private ListPreference m_donateButton;
 	
 	private HashMap<String, String> m_pairedDeviceLookup;
@@ -69,10 +69,10 @@ public class BluezIMESettings extends PreferenceActivity {
         
         m_bluetoothActivity = (CheckBoxPreference)findPreference("blue_activated");
         m_pairedDevices = (ListPreference)findPreference("blue_devices");
-        m_drivers = (ListPreference)findPreference("blue_drivers");
+        //m_drivers = (ListPreference)findPreference("blue_drivers");
         m_selectIME = (Preference)findPreference("blue_selectime");
-        m_helpButton = (Preference)findPreference("blue_help");
-        m_configureButton = (Preference)findPreference("configure_keys");
+        //m_helpButton = (Preference)findPreference("blue_help");
+        //m_configureButton = (Preference)findPreference("configure_keys");
         m_donateButton = (ListPreference)findPreference("donate_button");
         
         //Populate the list, otherwise the app will crash
@@ -92,7 +92,7 @@ public class BluezIMESettings extends PreferenceActivity {
         	inAppDonationsEnabled(false);
         }
         
-        m_helpButton.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+        /*m_helpButton.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				try {
@@ -104,7 +104,7 @@ public class BluezIMESettings extends PreferenceActivity {
 				
 				return false;
 			}
-		});
+		});*/
 
         m_donateButton.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 			@Override
@@ -134,8 +134,8 @@ public class BluezIMESettings extends PreferenceActivity {
         	m_pairedDevices.setEntryValues(entries);
         	
         	m_pairedDevices.setEnabled(false);
-        	m_drivers.setEnabled(false);
-        	m_configureButton.setEnabled(false);
+        	//m_drivers.setEnabled(false);
+        	//m_configureButton.setEnabled(false);
         	
         	AlertDialog dlg = new AlertDialog.Builder(this).create();
         	dlg.setMessage(this.getString(R.string.bluetooth_unsupported));
@@ -143,7 +143,7 @@ public class BluezIMESettings extends PreferenceActivity {
         }
         else
         {
-            m_configureButton.setIntent(new Intent(this, ButtonConfiguration.class));
+            //m_configureButton.setIntent(new Intent(this, ButtonConfiguration.class));
         	
         	m_bluetoothActivity.setChecked(blue.isEnabled());
         	m_bluetoothActivity.setEnabled(true);
@@ -204,14 +204,14 @@ public class BluezIMESettings extends PreferenceActivity {
 				}
 			});
 
-        	m_drivers.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+        	/*m_drivers.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 				@Override
 				public boolean onPreferenceChange(Preference preference, Object newValue) {
 					String driver = (String)newValue;
 					m_prefs.setSelectedDriverName(driver);
 					return true;
 				}
-			});
+			});*/
 
     		updateDisplay();
         }
@@ -229,8 +229,8 @@ public class BluezIMESettings extends PreferenceActivity {
     		entryValues[i] = BluezService.DRIVER_NAMES[i];
     	}
     	
-    	m_drivers.setEntries(entries);
-    	m_drivers.setEntryValues(entryValues);
+    	//m_drivers.setEntries(entries);
+    	//m_drivers.setEntryValues(entryValues);
 
     	registerReceiver(preferenceUpdateMonitor, new IntentFilter(Preferences.PREFERENCES_UPDATED));
     	
@@ -239,6 +239,7 @@ public class BluezIMESettings extends PreferenceActivity {
 			public boolean onPreferenceClick(Preference preference) {
 				InputMethodManager m = (InputMethodManager)BluezIMESettings.this.getSystemService(INPUT_METHOD_SERVICE);
 				m.showInputMethodPicker();
+				
 				return false;
 			}
 		});
@@ -325,10 +326,10 @@ public class BluezIMESettings extends PreferenceActivity {
     	    }
     	}
     	
-    	if (!containsCurrent && curDevice != null) {
+    	/*if (!containsCurrent && curDevice != null) {
     		entries[entries.length - 2] = m_prefs.getSelectedDeviceName();
     		entryValues[entries.length - 2] = m_prefs.getSelectedDeviceAddress();
-    	}
+    	}*/
     	
     	entries[entries.length - 1] = this.getString(R.string.bluetooth_scan_menu);
     	entryValues[entries.length - 1] = SCAN_MARKER;
@@ -362,12 +363,12 @@ public class BluezIMESettings extends PreferenceActivity {
 				break;
 			}
 
-		if (index < 0 || index >= BluezService.DRIVER_DISPLAYNAMES.length)
-			m_drivers.setSummary(R.string.preference_device_unknown);
-		else
-			m_drivers.setSummary(BluezService.DRIVER_DISPLAYNAMES[index]);
+		//if (index < 0 || index >= BluezService.DRIVER_DISPLAYNAMES.length)
+		//	m_drivers.setSummary(R.string.preference_device_unknown);
+		//else
+		//	m_drivers.setSummary(BluezService.DRIVER_DISPLAYNAMES[index]);
 		
-		m_configureButton.setEnabled(m_prefs.getSelectedDriverName() != null && m_prefs.getSelectedDriverName().length() > 0);
+		//m_configureButton.setEnabled(m_prefs.getSelectedDriverName() != null && m_prefs.getSelectedDriverName().length() > 0);
 	}
     
 	private BroadcastReceiver bluetoothStateMonitor = new BroadcastReceiver() {
