@@ -1,3 +1,20 @@
+<?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller
+ *  DATE:	12/10/2011
+ *
+ *  footer.php is included on every page of the VirPong website. It closes the divs
+ *  that hold the main content and displays the footer div, which contains the
+ *  validation images and bottom navigation links.
+ *
+ *  Note that the use of relative URLs requires that footer.php be present in every
+ *  directory that contains files that implement the VirPong layout. We have set up
+ *  symlinks in order to make this maintainable.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
 
 			</div>
 		</div>

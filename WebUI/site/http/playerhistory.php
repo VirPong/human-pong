@@ -1,4 +1,30 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/10/2011
+ *
+ *  playerhistory.php allows users to look up specific players and view information
+ *  about their past matches. If it receives no "user" variable in the query string,
+ *  it displays a form prompting the user for a username. Upon submission this form
+ *  returns to playerhistory.php, passing the username input in as the "user"
+ *  variable.
+ *
+ *  When playerhistory.php receives a "user" variable in the query string, it
+ *  connects to the database and escapes the string representing the "user" variable
+ *  as a precaution against SQL injection. It then traverses the database for matches
+ *  involving this user, displaying the results in a table. If it finds no results,
+ *  it displays a message saying that the user either does not exist or has not
+ *  played any matches. In any case, it prompts the user to look up another username.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

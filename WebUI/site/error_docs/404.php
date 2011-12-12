@@ -1,4 +1,20 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Kyle Monnett
+ *  DATE:	12/10/2011
+ *
+ *  404.php is displayed when the server cannot find the requested page. It contains
+ *  a somewhat rude message to the user.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

@@ -1,4 +1,20 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller
+ *  DATE:	12/10/2011
+ *
+ *  error.php is displayed when the database encounters an unexpected error. It
+ *  apologizes to the user and asks them to try again or contact us.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

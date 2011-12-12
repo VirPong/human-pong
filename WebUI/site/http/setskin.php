@@ -1,4 +1,30 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller
+ *  DATE:	12/10/2011
+ *
+ *  setskin.php allows users to select their preferred color scheme for the VirPong
+ *  site. It displays a small version of the logo of each color scheme with the
+ *  accompanying name displayed in the background color (which is not present in the
+ *  logo). Clicking on any one of these schemes returns to setskin.php, passing the
+ *  skin number as the "skin" variable in the query string.
+ *
+ *  When setskin.php receives a "skin" variable in the query string it tests to make
+ *  sure that variable is a valid skin identifier. If so, it sets a cookie on the
+ *  user's computer identifying the skin they have chosen.
+ *
+ *  Skinning was achieved with assistance from a tutorial available at:
+ *  http://girlswhogeek.com/tutorials/2006/skinning-theming-your-website-with-php
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 
 	if (	isset($_GET['skin'])

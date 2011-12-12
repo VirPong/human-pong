@@ -1,4 +1,21 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Aryn Grause
+ *  DATE:	12/10/2011
+ *
+ *  privacypolicy.php details the Privacy Policy for VirPong Users. This extensive
+ *  document was adapted from the EA Privacy Policy, availalbe at:
+ *  http://www.ea.com/1/privacy-policy
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>
@@ -7,7 +24,7 @@
 <h1>&#9612; privacy policy &#9616;</h1>
 
 
-<p>By registering for an VirPong Account. using this site and/or any of VirPongs online or mobile products and services, you agree to VirPong's Privacy Policy and that we may transfer and store your account information in the USA. By registering. you agree that VirPong may process your data in accordance with the following privacy policy and that you will abide by VirPong's Terms of Service.</p>
+<p>By registering for an VirPong Account. using this site and/or any of VirPong's online or mobile products and services, you agree to VirPong's Privacy Policy and that we may transfer and store your account information in the USA. By registering. you agree that VirPong may process your data in accordance with the following privacy policy and that you will abide by VirPong's Terms of Service.</p>
 
 <p><b>IF YOU DO NOT AGREE TO THIS POLICY, PLEASE DO NOT USE ANY VirPong SITE, ONLINE OR MOBILE PRODUCT OR SERVICE.</b> If VirPong changes any conditions to their privacy policy, those changes will be located here. This section makes any users aware of the information we collect, how we will use it, and under what circumstances, if any, we disclose it. We reserve the right to modify this privacy policy at any time, so please review it frequently. Your continued use of our online and mobile products and services will signify your acceptance of the changes to our online Privacy Policy.</p>
 

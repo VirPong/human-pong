@@ -1,4 +1,21 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Aryn Grause
+ *  DATE:	12/10/2011
+ *
+ *  codeofconduct.php outlines the Code of Conduct for VirPong users. This
+ *  extensive document was adapted from the Xbox Code of Conduct, available at:
+ *  http://www.xbox.com/en-US/legal/codeofconduct
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>
@@ -32,7 +49,7 @@
 		<li>Do not cheat in a game.</li>
 		<li>Do not modify or hack game content to create cheats.</li>
 		<li>Do not make unauthorized modifications to your account profile or its contents.</li>
-		<li>Donot intentionally play with someone who is using unauthorized software or methods to help inflate your game rank.</li>
+		<li>Do not intentionally play with someone who is using unauthorized software or methods to help inflate your game rank.</li>
 		<li>Do not post links to materials that could harm other users' computers or would allow others to inappropriately access software or Web sites.</li>
 		<li>Do not lend, transfer, sell, or otherwise provide access to your account to any individual.</li>
 		<li>Do not use your account for commercial purposes.</li>

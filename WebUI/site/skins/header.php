@@ -1,4 +1,27 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Kyle Monnett
+ *  DATE:	12/10/2011
+ *
+ *  header.php is included on every page of the VirPong website. It checks the user's
+ *  cookies for a set skin and displays the layout accordingly. If the user has
+ *  JavaScript disabled, it displays a warning message. It displays the navigation
+ *  div (including the VirPong logo and main menu) and opens the main content div.
+ *
+ *  Note that the use of relative URLs requires that header.php be present in every
+ *  directory that contains files that implement the VirPong layout. We have set up
+ *  symlinks in order to make this maintainable.
+
+ *  USES:	main.css
+ *		/skins/*
+ *		favicon.ico
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 
 	$pathToSkins = '/skins/';
 	$defaultSkin = 1;
@@ -49,12 +72,12 @@
 			</div></div>
 		</noscript>
 	
-		<div>
-		<!-- ########################## GRC Masthead Menu ########################## -->
-			<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
-			<div id="masthead">
-				<a href="http://cs340/index.php"><img id="mastheadlogo" src=<?php echo $logo; ?> width="213" height="161" alt="VirPong: Human Pong!" title="VirPong!" /></a>
+		<div id="nav">
+
+			<div id="logo">
+				<a href="http://cs340/index.php"><img src=<?php echo $logo; ?> width="213" height="161" alt="VirPong: Pong. With humans." /></a>
 			</div>
+
 			<div class="menu">
 
 				<ul>
@@ -134,10 +157,7 @@
 ?>
 				
 			</div>
-			<hr style="display:none" />
-			</div></div></div>
 
-		<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
 		</div>
 		
 		
