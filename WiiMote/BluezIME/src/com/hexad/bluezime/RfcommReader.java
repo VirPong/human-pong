@@ -173,10 +173,6 @@ public abstract class RfcommReader implements BluezDriverInterface {
                 }
             } while (retryCount-- > 0);
 
-            //if (D)
-            //    Log.d(LOG_NAME, "Welcome message from controller was "
-            //            + getHexString(header, 0, read));
-
             validateWelcomeMessage(header, read);
 
             connectedBroadcast.putExtra(BluezService.EVENT_CONNECTED_ADDRESS,
@@ -199,7 +195,7 @@ public abstract class RfcommReader implements BluezDriverInterface {
     }
 
     /**
-     * Perhaps this method is another method of connecting?
+     * Perhaps this method is a helper method for doConnect?
      * 
      * @param device The device to connect to
      * @param readBuffer
@@ -211,9 +207,6 @@ public abstract class RfcommReader implements BluezDriverInterface {
         m_socket = m_useInsecureChannel ? device.createInsecureRfcommSocket(1)
                 : device.createRfcommSocket(1);
         m_socket.connect();
-
-        //if (D)
-        //    Log.d(LOG_NAME, "Connected to " + m_address);
 
         m_input = m_socket.getInputStream();
         return m_input.read(readBuffer);
@@ -289,19 +282,9 @@ public abstract class RfcommReader implements BluezDriverInterface {
 
         while (m_isRunning) {
             try {
-                //if (D)
-                //    Log.e(LOG_NAME + getDriverName(),
-                //            "Buffer before read(" + unparsed + "): "
-                //                    + getHexString(buffer, 0, buffer.length));
 
                 read = m_input.read(buffer, unparsed, buffer.length - unparsed);
                 errors = 0;
-
-                //if (D)
-                //    Log.e(LOG_NAME + getDriverName(),
-                //            "Buffer after read(" + read + " + " + unparsed
-                //                    + "): "
-                //                    + getHexString(buffer, 0, buffer.length));
 
                 read += unparsed;
                 unparsed = parseInputData(buffer, read);
@@ -309,10 +292,6 @@ public abstract class RfcommReader implements BluezDriverInterface {
                     unparsed = 0;
 
                 if (unparsed >= buffer.length - 10) {
-                    //if (D)
-                    //    Log.e(LOG_NAME + getDriverName(),
-                    //            "Dumping unparsed data: "
-                    //                    + getHexString(buffer, 0, unparsed));
 
                     unparsed = 0;
                 }
@@ -320,29 +299,13 @@ public abstract class RfcommReader implements BluezDriverInterface {
                 // Copy the remaining data back to the beginning of the buffer
                 // to emulate a sliding window buffer
                 if (unparsed > 0 && read != unparsed) {
-                    //if (D)
-                    //    Log.e(LOG_NAME + getDriverName(),
-                    //            "Sliding array before: "
-                    //                    + getHexString(buffer, 0, buffer.length));
-
-                    //if (D)
-                    //    Log.e(LOG_NAME + getDriverName(),
-                    //            "Sliding array params, read: " + read
-                    //                    + ", unparsed: " + unparsed);
 
                     System.arraycopy(buffer, read - unparsed, buffer, 0,
                             unparsed);
 
-                    //if (D)
-                    //    Log.e(LOG_NAME + getDriverName(),
-                    //            "Sliding array after: "
-                    //                    + getHexString(buffer, 0, buffer.length));
                 }
 
             } catch (Exception ex) {
-                //if (D)
-                //    Log.e(LOG_NAME + getDriverName(),
-                //            "Got error: " + ex.toString());
 
                 errors++;
                 if (errors > 10) {

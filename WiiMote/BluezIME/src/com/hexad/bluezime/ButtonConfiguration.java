@@ -38,6 +38,8 @@ import java.util.Hashtable;
 /**
  * This class handles what device buttons control what keys are pressed. Can't
  * actually be changed by the user, but still adds functionality for VirPong.
+ * (Since I changed the buttons to be pressed in WiimoteReader itself, not entirely sure what
+ * this class does, but would be very dangerous to remove.)
  */
 public class ButtonConfiguration extends PreferenceActivity {
 
@@ -47,6 +49,10 @@ public class ButtonConfiguration extends PreferenceActivity {
     private Hashtable<Integer, String> m_name_lookup;
     private Hashtable<Preference, Integer> m_list_lookup;
 
+    /**
+     * Appears to add a layer that represents the actual Android key ints with better
+     * named ints.
+     */
     public class AndroidNewKeys {
         // These are from API level 9
         public static final int KEYCODE_BUTTON_A = 0x60;
@@ -201,12 +207,18 @@ public class ButtonConfiguration extends PreferenceActivity {
     }
 
     @Override
+    /**
+     * This method stops the class and unregisters receivers.
+     */
     protected void onDestroy() {
         super.onDestroy();
 
         unregisterReceiver(preferenceUpdateMonitor);
     }
 
+    /**
+     * This method updates the list of button configurations.
+     */
     private void updateDisplay() {
         for (Preference p : Collections.list(m_list_lookup.keys())) {
             ListPreference lp = (ListPreference) p;
@@ -240,6 +252,9 @@ public class ButtonConfiguration extends PreferenceActivity {
 
     private BroadcastReceiver preferenceUpdateMonitor = new BroadcastReceiver() {
         @Override
+        /**
+         * This method just calls an update for display.
+         */
         public void onReceive(Context context, Intent intent) {
             updateDisplay();
         }

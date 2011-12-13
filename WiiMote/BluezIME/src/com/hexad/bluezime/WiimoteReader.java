@@ -55,11 +55,6 @@ public class WiimoteReader extends HIDReaderBase {
     // Nunchuck accelerometer axis (x,y,z) is reported as accelerometer (3,4,5)
     private static final int NUNCHUCK_ACCELEROMETER_AXIS_OFFSET = 3;
 
-    // The max value an analog control can have can report
-    // private static int ANALOG_MAX_VALUE = 127;
-    // How large the analog value must be for it to issue an emulated keypress
-    // private static int ANALOG_THRESHOLD = ANALOG_MAX_VALUE / 2;
-
     // Mappings from bit-index to keycode for core buttons
     private static final int[] CORE_KEYS = new int[] { 
             KeyEvent.KEYCODE_S, // Byte 1, bit 0 button 2
@@ -277,6 +272,11 @@ public class WiimoteReader extends HIDReaderBase {
     private static double SCALAR = .004;
 
     @Override
+    /**
+     * This method returns the supported report codes of this reader.
+     * 
+     * @return whatever codes are supported
+     */
     protected Hashtable<Byte, Integer> getSupportedReportCodes() {
 
         Hashtable<Byte, Integer> results = new Hashtable<Byte, Integer>();
@@ -400,8 +400,6 @@ public class WiimoteReader extends HIDReaderBase {
             break;
 
         default:
-            // if (D) Log.w(DRIVER_NAME, "Got unexpected wii message: " +
-            // data[1]);
             break;
         }
 
@@ -431,9 +429,6 @@ public class WiimoteReader extends HIDReaderBase {
                     + m_extensionInitState);
         } else {
 
-            // if (D) Log.d(DRIVER_NAME, "Extension device id: " +
-            // getHexString(data, 0, size));
-
             m_extensionInitState = EXTENSION_INIT_STATE_NONE;
             boolean classic = true;
             for (int i = 0; i < size; i++)
@@ -452,8 +447,6 @@ public class WiimoteReader extends HIDReaderBase {
                 nunchuck_alt &= data[i] == NUNCHUCK_DEVICE_ID_ALT[i];
 
             if (classic || classic_alt) {
-                // if (D) Log.d(DRIVER_NAME,
-                // "Wii Classic Controller Extension connected");
 
                 // Clear any previous states
                 for (int i = 0; i < m_classicButtons.length; i++)
@@ -466,8 +459,6 @@ public class WiimoteReader extends HIDReaderBase {
                 m_isClassicConnected = true;
                 updateReportMode();
             } else if (nunchuck | nunchuck_alt) {
-                // if (D) Log.d(DRIVER_NAME,
-                // "Wii Nunchuck Controller Extension connected");
 
                 // Clear any previous states
                 for (int i = 0; i < m_nunchuckButtons.length; i++)
@@ -741,16 +732,11 @@ public class WiimoteReader extends HIDReaderBase {
             // If a new extension is connected, examine it to see what type it
             // is
             if (extensionConnected) {
-                // if (D && m_extensionInitState != EXTENSION_INIT_STATE_NONE)
-                // Log.e(DRIVER_NAME,
-                // "Started extension init seqence but state was: " +
-                // m_extensionInitState);
 
                 // These will activate the extension without encryption
                 writeExtensionRegister((byte) 0xf0, (byte) 0x55);
                 m_extensionInitState = EXTENSION_INIT_STATE_SENT_FIRST;
             } else {
-                // if (D) Log.d(DRIVER_NAME, "Extension disconnected");
 
                 m_isClassicConnected = false;
                 m_isNunchuckConnected = false;
@@ -777,9 +763,6 @@ public class WiimoteReader extends HIDReaderBase {
                 states[i] = (bitmask & 1);
 
                 if (keys[i] != KEYCODE_UNUSED) {
-                    // if (D || (D3 && keys == CLASSIC_KEYS))
-                    // Log.d(getDriverName(), "Button " + i + " changed to: " +
-                    // (states[i] == 1 ? "down" : "up"));
 
                     keypressBroadcast.putExtra(
                             BluezService.EVENT_KEYPRESS_ACTION,
@@ -818,10 +801,6 @@ public class WiimoteReader extends HIDReaderBase {
 
             if (prev[i] != newValues[i]) {
 
-                // if (D && Math.abs(prev[i] - newValues[i]) > 10)
-                // Log.d(getDriverName(), "Axis " + (i + report_axis_offset) +
-                // " changed from " + prev[i] + " to: " + newValues[i]);
-
                 boolean up = false;// = newValues[i] >= ANALOG_THRESHOLD;
                 boolean down = false;// = newValues[i] <= -ANALOG_THRESHOLD;
 
@@ -835,9 +814,6 @@ public class WiimoteReader extends HIDReaderBase {
                             BluezService.EVENT_ACCELEROMETERCHANGE_VALUE,
                             prev[i]);
                     m_context.sendBroadcast(accelerometerBroadcast);
-                    // Intent intent = new Intent();
-                    // intent.setAction(TEST_INTENT);
-                    // intent.putExtra("Accel", prev);
 
                     // assuming we will only use the x-axis tilt...
                     m_position[i] += (newValues[i] - 13) * SCALAR;
@@ -935,8 +911,6 @@ public class WiimoteReader extends HIDReaderBase {
         m_tmpAnalogValues[0] = raw_x - 0x80;
         m_tmpAnalogValues[1] = raw_y - 0x80;
         m_tmpAnalogValues[2] = raw_z - 0x80;
-        // Log.d("WII VALUES", ""+m_tmpAnalogValues[0] + " " +
-        // m_tmpAnalogValues[1] + " " + m_tmpAnalogValues[2]);
         handleAnalogValues(m_tmpAnalogValues, m_coreAccelerometerValues,
                 m_coreEmulatedAccelerometerButtons, CORE_ACCELEROMETER_KEYS,
                 CORE_ACCELEROMETER_AXIS_OFFSET, true);
@@ -952,9 +926,6 @@ public class WiimoteReader extends HIDReaderBase {
     private void handleExtensionData(byte[] data, int offset) {
 
         if (m_isClassicConnected) {
-
-            // if (D3) Log.d(DRIVER_NAME, "Got Classic data: " +
-            // getHexString(data, offset, offset + 6));
 
             int byteA = data[offset + 4] & 0xff;
             int byteB = data[offset + 5] & 0xff;
@@ -975,14 +946,6 @@ public class WiimoteReader extends HIDReaderBase {
                                                                  // trigger
             m_tmpAnalogValues[5] = data[offset + 3] & 0x1f; // Right trigger
 
-            // if (D3) Log.d(DRIVER_NAME, "Raw classic analog values: "
-            // + m_tmpAnalogValues[0] + ", "
-            // + m_tmpAnalogValues[1] + ", "
-            // + m_tmpAnalogValues[2] + ", "
-            // + m_tmpAnalogValues[3] + ", "
-            // + m_tmpAnalogValues[4] + ", "
-            // + m_tmpAnalogValues[5] + ", ");
-
             // We scale up the values so they are all in the -127/+127 range
             m_tmpAnalogValues[0] = ((byte) (m_tmpAnalogValues[3] << 2));
             m_tmpAnalogValues[1] = ((byte) (m_tmpAnalogValues[4] << 2));
@@ -991,14 +954,6 @@ public class WiimoteReader extends HIDReaderBase {
             m_tmpAnalogValues[3] = ((byte) (m_tmpAnalogValues[6] << 3));
             m_tmpAnalogValues[4] = ((byte) (m_tmpAnalogValues[7] << 3));
             m_tmpAnalogValues[5] = ((byte) (m_tmpAnalogValues[8] << 3));
-
-            // if (D3) Log.d(DRIVER_NAME, "Normalized classic values: "
-            // + m_tmpAnalogValues[0] + ", "
-            // + m_tmpAnalogValues[1] + ", "
-            // + m_tmpAnalogValues[2] + ", "
-            // + m_tmpAnalogValues[3] + ", "
-            // + m_tmpAnalogValues[4] + ", "
-            // + m_tmpAnalogValues[5] + ", ");
 
             handleAnalogValues(m_tmpAnalogValues, m_classicAnalogValues,
                     m_classicEmulatedButtons, CLASSIC_ANALOG_KEYS, 0, false);
@@ -1010,8 +965,6 @@ public class WiimoteReader extends HIDReaderBase {
             if (m_nunchuckButtons[0] != isCPressed) {
                 m_nunchuckButtons[0] = isCPressed;
                 if (NUNCHUCK_KEYS[0] != KEYCODE_UNUSED) {
-                    // if (D) Log.d(getDriverName(), "Button C changed to: " +
-                    // (isCPressed ? "down" : "up"));
 
                     keypressBroadcast.putExtra(
                             BluezService.EVENT_KEYPRESS_ACTION,
@@ -1028,8 +981,6 @@ public class WiimoteReader extends HIDReaderBase {
             if (m_nunchuckButtons[1] != isZPressed) {
                 m_nunchuckButtons[1] = isZPressed;
                 if (NUNCHUCK_KEYS[1] != KEYCODE_UNUSED) {
-                    // if (D) Log.d(getDriverName(), "Button Z changed to: " +
-                    // (isZPressed ? "down" : "up"));
 
                     keypressBroadcast.putExtra(
                             BluezService.EVENT_KEYPRESS_ACTION,

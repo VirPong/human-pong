@@ -123,9 +123,6 @@ public class BluezIME extends InputMethodService {
     public void onStartInputView(EditorInfo info, boolean restarting) {
         super.onStartInputView(info, restarting);
 
-        //if (D)
-        //    Log.d(LOG_NAME, "Start input view");
-
         if (!m_connected)
             connect();
     }
@@ -146,8 +143,6 @@ public class BluezIME extends InputMethodService {
      * This method starts up the connection process.
      */
     private void connect() {
-        //if (D)
-        //    Log.d(LOG_NAME, "Connecting");
         String address = m_prefs.getSelectedDeviceAddress();
         String driver = m_prefs.getSelectedDriverName();
 
@@ -166,9 +161,6 @@ public class BluezIME extends InputMethodService {
      */
     public void onFinishInput() {
         super.onFinishInput();
-
-        //if (D)
-        //    Log.d(LOG_NAME, "Finish input view");
     }
 
     @Override
@@ -178,15 +170,10 @@ public class BluezIME extends InputMethodService {
      */
     public void onDestroy() {
         super.onDestroy();
-
-        //if (D)
-        //    Log.d(LOG_NAME, "Destroy IME");
-
+        
         m_notificationManager.cancel(1);
 
         if (m_connected) {
-            //if (D)
-            //    Log.d(LOG_NAME, "Disconnecting");
             Intent i = new Intent(this, BluezService.class);
             i.setAction(BluezService.REQUEST_DISCONNECT);
             i.putExtra(BluezService.SESSION_ID, SESSION_ID);
@@ -234,9 +221,7 @@ public class BluezIME extends InputMethodService {
             String sid = intent.getStringExtra(BluezService.SESSION_ID);
             if (sid == null || !sid.equals(SESSION_ID))
                 return;
-
-            //if (D)
-            //    Log.d(LOG_NAME, "Connect received");
+            
             Toast.makeText(
                     context,
                     String.format(
@@ -260,8 +245,6 @@ public class BluezIME extends InputMethodService {
             if (sid == null || !sid.equals(SESSION_ID))
                 return;
 
-            //if (D)
-            //    Log.d(LOG_NAME, "Disconnect received");
             Toast.makeText(
                     context,
                     String.format(
@@ -283,8 +266,6 @@ public class BluezIME extends InputMethodService {
             if (sid == null || !sid.equals(SESSION_ID))
                 return;
 
-            //if (D)
-            //    Log.d(LOG_NAME, "Error received");
             Toast.makeText(
                     context,
                     String.format(context
@@ -321,9 +302,6 @@ public class BluezIME extends InputMethodService {
             String sid = intent.getStringExtra(BluezService.SESSION_ID);
             if (sid == null || !sid.equals(SESSION_ID)) return;
 
-            //if (D)
-            //    Log.d(LOG_NAME, "Update event received");
-
             try {
                 InputConnection ic = getCurrentInputConnection();
                 long eventTime = SystemClock.uptimeMillis();
@@ -348,10 +326,7 @@ public class BluezIME extends InputMethodService {
                             translatedKey = m_prefs.getKeyMapping(key);
                             m_keyMappingCache[key] = translatedKey;
                         }
-                        //if (D)
-                        //    Log.d(LOG_NAME, "Sending key event: "
-                        //            + (action == KeyEvent.ACTION_DOWN ? "Down"
-                        //                    : "Up") + " - " + key);
+                        
                         ic.sendKeyEvent(new KeyEvent(eventTime, eventTime,
                                 action, translatedKey, 0, 0, 0, 0,
                                 KeyEvent.FLAG_SOFT_KEYBOARD
