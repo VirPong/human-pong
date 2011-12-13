@@ -561,6 +561,39 @@ documentation.
 %    Describe your testing and verification procedure for your implemented 
 %    code 
 
+\section{Developer Documentation}
+
+\label{sec:developerdocumentation}
+
+\subsection{Setting up the Development Environment}
+In order to develop for Android, you will need the Android SDK, the PhoneGap software, and some editor (for example, Eclipse).  These pieces are relatively easy to set up, but because all systems are different, some personal configuration may be required.  All of the software mentioned below can be found, with current links, at the PhoneGap Android page\cite{PhoneGap-Android}.  
+
+\subsubsection{Android SDK}
+The Android SDK comes with an Android Emulator as well as Android libraries.
+To download the SDK, first check to make sure your operating system fulfills all of the system requirements.  A list of of system requirements is available on the Android Developers website\cite{AndroidSDK-SystemRequirements}.
+
+Next, download the Android SDK from the Android Developer website\cite{AndroidSDK-Download}.
+The instructions for installation are found on the same site but on the installation page\cite{AndroidSDK-Installation}. \textbf{Note:} do not put a space in the folder name.
+
+After that, you must add necessary components to the SDK.  The instructions for that portion are found on the components page\cite{AndroidSDK-Components}.  On your first run, you will be required to create an Android Virtual Device (AVD) that is simply a mock phone.
+
+
+\subsubsection{PhoneGap}
+The PhoneGap download is primarily a collection of tools that provide functionality for the HTML5 and JavaScript interface in a native application environment.  That is, the PhoneGap jar, js, and xml files all serve to support the use of HTML5 and JavaScript coding as implementing the core functionality of the application.  The download for PhoneGap can be found on the PhoneGap Android page\cite{PhoneGap-Android}.
+
+
+\subsubsection{Editing Environment}
+In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.  In addition, you may then want to install the plugin for PhoneGap Development\cite{PhoneGap-Eclipse}.
+
+\textbf{An important note:} When creating a PhoneGap application in Eclipse, it may be necessary to include the PhoneGap jar file in the libs folder of the application.  To do this, right-click on the Eclipse project, and select "Build Path", then "Configure Build Path".  If there is no PhoneGap jar file included, then select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay".
+
+\subsection{Retrieving the Source}
+<<<<<<< HEAD
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
+=======
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:Vir-Pong/human-pong}.  You will then want to navigate into $Android/Vir-Pong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:Vir-Pong/www}.  Now you may open Eclipse and import the $Vir-Pong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/Vir-Pong/human-pong} and \url{https://github.com/Vir-Pong/www}, placing the $www$ repository in the same place mentioned above.
+>>>>>>> upstream/master
+
 \section{Reflections}
 \label{sec:reflections}
 %Reflections:
@@ -574,8 +607,10 @@ documentation.
 
 
 
-%References: Clearly indicate all the tools and sources you have used in the 
-%    development of your product thus far. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%8. References: Clearly indicate all the tools and sources you have used in the development of your product thus far. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \newpage
 \bibliographystyle{amsplain}
