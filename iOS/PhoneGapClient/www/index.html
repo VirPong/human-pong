@@ -1,28 +1,86 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta name="viewport" content="width=320; user-scalable=no" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>PhoneGap</title>
-	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	  <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-	  <script type="text/javascript" charset="utf-8" src="main.js"></script>
-	  <script type="text/javascript" charset="utf-8" src="websocket.js"></script>
-	   <script type="text/javascript" charset="utf-8" src="socket.io.js"></script>
+<!DOCTYPE html>
 
+<html>
+
+  <head>
+        
+    <!-- Title, so we can keep track of what page this is, even if PhoneGap doesn't display it. -->
+    <title>VirPong Mobile Client</title>
+        
+    <!-- Defining the size of the viewport. This is useful for -->
+    <!-- mobile devices for the sake of scaling and disabling resizing. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" charset="utf-8" />
+    
+    <!-- Defining our main styles. "main.css" is basic stuff, -->
+    <!-- and the two others provide sizing relativity for the iPad -->
+    <!-- and Android respectively. -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (device-width: 768px)" href="css/ipad.css" type="text/css" />		
+    <link rel="stylesheet" media="only screen and (device-width: 800px)" href="css/android.css" type="text/css" />	
+    <link rel="stylesheet" media="only screen and (device-width: 320px)" href="css/iphone.css" type="text/css" />		
+    <link rel="stylesheet" media="only screen and (device-width: 480px)" href="css/iphone.css" type="text/css" />		
+    
+    <!-- Include PhoneGap! -->
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.2.0-iOS.js"></script>
+      <script type="text/javascript" charset="utf-8" src="WiiPosHandler.js"></script>
+        
+    <!-- Some basic JS for this document. -->
+    <script type="text/javascript">
+      
+      /*
+      * This function takes an event and disables the default behavior.
+      * @param   event   e   The event we're preventing the behavior of.
+      */
+      function preventBehavior(e)
+      { 
+          e.preventDefault(); 
+      }
+      
+            
+      /* 
+      * When the body element loads, create an event listener
+      * to fire off function "onDeviceReady" when the device
+      * reports ready.
+      */
+      function onBodyLoad()
+      {	
+          document.addEventListener("deviceready", onDeviceReady, false);
+      }
+      
+      /* 
+      * This gets fired off when the device reports ready.
+      */
+      function onDeviceReady()
+      {
+          // When the device is ready, disable scrolling by touch.
+      	  // document.addEventListener("touchmove", preventBehavior, false);
+      }
+        
+    </script>
+        
   </head>
-  <body onload="" id="stage" class="theme">
-    <div id="info">
-        <img src="logo-blue.gif"
-         width="280"
-         height="150">
-     </div>    
-     <!-- href="javascript:history.go(-1);" -->
-    <a href="PlayGame/gameIndex.html" class="btn large">Play a game!</a>
-	<a href="index2.html" class="btn large">To server.</a>
-	<a href="http://www.pugetsound.edu" class="btn large">To UPS homepage.</a>
-    <div id="viewport" class="viewport" style="display: none;">       
-      <img style="width:60px;height:60px" id="test_img" src=""> </img>
-    </div> 
+    
+  <body onload="onBodyLoad()"> <!-- When body element loads, call "onBodyLoad()" -->
+    
+    <!-- Main page wrapper. -->
+    <div id="mainWrapper">
+      
+      <!-- Display logo. -->
+      <div id="logo"></div>
+      
+      <br />
+      
+      <!-- Our big blue buttons! -->
+      <a class="button" href="playGame.html">Play Game</a>
+      <a class="button" href="settings.html">Settings</a>
+      <a class="button" onclick="connect()">Connect</a>
+      <a class="button" onclick="disconnect()">Disconnect</a>
+      <a class="button" onclick="getPosition()">Position</a>
+        <br />
+      
+      <!-- Small footer text. -->
+      <span id="footerMeta">&copy 2011 Vir-Pong, Inc. All rights reserved.</span>
+                
+    </div>
   </body>
 </html>
