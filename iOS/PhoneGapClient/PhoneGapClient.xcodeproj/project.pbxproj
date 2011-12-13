@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		190E296E14576B490094D884 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 190E296D14576B490094D884 /* www */; };
+		C052B9181497DA2C00621DF4 /* Bluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B9131497DA2C00621DF4 /* Bluetooth.m */; };
+		C052B9191497DA2C00621DF4 /* BluetoothDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B9151497DA2C00621DF4 /* BluetoothDelegate.m */; };
+		C052B91A1497DA2C00621DF4 /* WiiPositionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C052B9171497DA2C00621DF4 /* WiiPositionHandler.m */; };
+		C052B9221497DA7200621DF4 /* libBTstack.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C052B9211497DA7100621DF4 /* libBTstack.dylib */; };
 		CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */; };
 		CB73D684143D4ADA005B15EF /* GapSocketCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D683143D4ADA005B15EF /* GapSocketCommand.m */; };
 		CB73D687143D4AF6005B15EF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73D686143D4AF6005B15EF /* AsyncSocket.m */; };
@@ -42,6 +46,18 @@
 
 /* Begin PBXFileReference section */
 		190E296D14576B490094D884 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		C052B9121497DA2C00621DF4 /* Bluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bluetooth.h; sourceTree = "<group>"; };
+		C052B9131497DA2C00621DF4 /* Bluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bluetooth.m; sourceTree = "<group>"; };
+		C052B9141497DA2C00621DF4 /* BluetoothDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDelegate.h; sourceTree = "<group>"; };
+		C052B9151497DA2C00621DF4 /* BluetoothDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDelegate.m; sourceTree = "<group>"; };
+		C052B9161497DA2C00621DF4 /* WiiPositionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiiPositionHandler.h; sourceTree = "<group>"; };
+		C052B9171497DA2C00621DF4 /* WiiPositionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiiPositionHandler.m; sourceTree = "<group>"; };
+		C052B91C1497DA5200621DF4 /* btstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btstack.h; sourceTree = "<group>"; };
+		C052B91D1497DA5200621DF4 /* hci_cmds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hci_cmds.h; sourceTree = "<group>"; };
+		C052B91E1497DA5200621DF4 /* linked_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linked_list.h; sourceTree = "<group>"; };
+		C052B91F1497DA5200621DF4 /* run_loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = run_loop.h; sourceTree = "<group>"; };
+		C052B9201497DA5200621DF4 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		C052B9211497DA7100621DF4 /* libBTstack.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libBTstack.dylib; sourceTree = "<group>"; };
 		CB02A06E143C029E007CD2F0 /* VPBluetoothDataProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPBluetoothDataProcessor.h; path = Classes/VPBluetoothDataProcessor.h; sourceTree = "<group>"; };
 		CB02A06F143C029E007CD2F0 /* VPBluetoothDataProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPBluetoothDataProcessor.m; path = Classes/VPBluetoothDataProcessor.m; sourceTree = "<group>"; };
 		CB73D682143D4ADA005B15EF /* GapSocketCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GapSocketCommand.h; path = Classes/GapSocketCommand.h; sourceTree = "<group>"; };
@@ -102,6 +118,7 @@
 				CBCD228B14352FBB00E74443 /* MobileCoreServices.framework in Frameworks */,
 				CBCD228D14352FBB00E74443 /* CoreMedia.framework in Frameworks */,
 				CBCD229814352FBB00E74443 /* PhoneGap.framework in Frameworks */,
+				C052B9221497DA7200621DF4 /* libBTstack.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +132,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C052B91B1497DA3D00621DF4 /* btstack */ = {
+			isa = PBXGroup;
+			children = (
+				C052B91C1497DA5200621DF4 /* btstack.h */,
+				C052B91D1497DA5200621DF4 /* hci_cmds.h */,
+				C052B91E1497DA5200621DF4 /* linked_list.h */,
+				C052B91F1497DA5200621DF4 /* run_loop.h */,
+				C052B9201497DA5200621DF4 /* utils.h */,
+			);
+			name = btstack;
+			sourceTree = "<group>";
+		};
 		CBCD226214352FBB00E74443 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +272,14 @@
 		CBCD22B614352FBC00E74443 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C052B9211497DA7100621DF4 /* libBTstack.dylib */,
+				C052B91B1497DA3D00621DF4 /* btstack */,
+				C052B9121497DA2C00621DF4 /* Bluetooth.h */,
+				C052B9131497DA2C00621DF4 /* Bluetooth.m */,
+				C052B9141497DA2C00621DF4 /* BluetoothDelegate.h */,
+				C052B9151497DA2C00621DF4 /* BluetoothDelegate.m */,
+				C052B9161497DA2C00621DF4 /* WiiPositionHandler.h */,
+				C052B9171497DA2C00621DF4 /* WiiPositionHandler.m */,
 				CBCD22B714352FBC00E74443 /* README */,
 			);
 			name = Plugins;
@@ -341,6 +378,9 @@
 				CB02A070143C029E007CD2F0 /* VPBluetoothDataProcessor.m in Sources */,
 				CB73D684143D4ADA005B15EF /* GapSocketCommand.m in Sources */,
 				CB73D687143D4AF6005B15EF /* AsyncSocket.m in Sources */,
+				C052B9181497DA2C00621DF4 /* Bluetooth.m in Sources */,
+				C052B9191497DA2C00621DF4 /* BluetoothDelegate.m in Sources */,
+				C052B91A1497DA2C00621DF4 /* WiiPositionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +475,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "PhoneGapClient/PhoneGapClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PhoneGapClient\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -453,6 +497,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "PhoneGapClient/PhoneGapClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PhoneGapClient\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
