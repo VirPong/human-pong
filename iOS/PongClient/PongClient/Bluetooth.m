@@ -203,9 +203,9 @@ static void hex_dump(void *data, int size)
 // random function
 void hexdumpacc(void *data, int size, int *accdataarray){
 	// print the accelerometer data
-	printf("%02i X axis acc| ", (((uint8_t *)data)[4] - 120));
-	printf("%02i Y axis acc| ", (((uint8_t *)data)[5] - 120));
-	printf("%02i z axis acc| ", (((uint8_t *)data)[6] - 120));
+	//printf("%02i X axis acc| ", (((uint8_t *)data)[4] - 120));
+	//printf("%02i Y axis acc| ", (((uint8_t *)data)[5] - 120));
+	//printf("%02i z axis acc| ", (((uint8_t *)data)[6] - 120));
 	if ((((uint8_t *)data)[4] - 120)> 10) {
 		position = position + 1;
 		if (position > 100) {
@@ -219,12 +219,12 @@ void hexdumpacc(void *data, int size, int *accdataarray){
 		}
 	}
 	
-	printf("%02i pos", position);
+	//printf("%02i pos", position);
 	// store the values in values
 	accdataarray[0] = ((uint8_t *)data)[4];
 	accdataarray[1] = ((uint8_t *)data)[5];
 	accdataarray[2] = ((uint8_t *)data)[6];
-    printf("\n");
+   // printf("\n");
 }
 // end random function
 // THESE ARE RANDOM VARIABLES THAT SUCK
@@ -251,7 +251,8 @@ void packet_handler(uint8_t packet_type, uint16_t channel, uint8_t *packet, uint
 			
 		case L2CAP_DATA_PACKET:
 			// prints out accelerometer readings
-			printf("source cid %x -- ", channel);
+			//printf("source cid %x -- ", channel);
+            printf("");
 			int accarray[] = {0x00, 0x00, 0x00};
 			hexdumpacc(packet, size, accarray);
             
@@ -600,8 +601,9 @@ void packet_handlerprime(uint8_t packet_type, uint16_t channel, uint8_t *packet,
 			
 		case L2CAP_DATA_PACKET:
 			// prints out accelerometer readings
-			printf("source cid %x -- ", channel);
-			int accarray[] = {0x00, 0x00, 0x00};
+			//printf("source cid %x -- ", channel);
+			printf("");
+            int accarray[] = {0x00, 0x00, 0x00};
 			hexdumpacc(packet, size, accarray);
             
 			// HOME => disconnect
