@@ -55,6 +55,11 @@
 		C0CE24BE1497FC61000A8DA2 /* BluetoothDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDelegate.m; sourceTree = "<group>"; };
 		C0CE24BF1497FC61000A8DA2 /* WiiPositionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiiPositionHandler.h; sourceTree = "<group>"; };
 		C0CE24C01497FC61000A8DA2 /* WiiPositionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiiPositionHandler.m; sourceTree = "<group>"; };
+		C0CE24C71497FD99000A8DA2 /* btstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btstack.h; sourceTree = "<group>"; };
+		C0CE24C81497FD99000A8DA2 /* hci_cmds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hci_cmds.h; sourceTree = "<group>"; };
+		C0CE24C91497FD99000A8DA2 /* linked_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linked_list.h; sourceTree = "<group>"; };
+		C0CE24CA1497FD99000A8DA2 /* run_loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = run_loop.h; sourceTree = "<group>"; };
+		C0CE24CB1497FD99000A8DA2 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		FC0997E6147C644A00289B6B /* iPadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadIcon.png; sourceTree = "<group>"; };
 		FC3663471480280F008AE90B /* RetinaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RetinaIcon.png; sourceTree = "<group>"; };
 		FC36634914802821008AE90B /* iPhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon.png; sourceTree = "<group>"; };
@@ -130,6 +135,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0CE24C61497FD8C000A8DA2 /* btstack */ = {
+			isa = PBXGroup;
+			children = (
+				C0CE24C71497FD99000A8DA2 /* btstack.h */,
+				C0CE24C81497FD99000A8DA2 /* hci_cmds.h */,
+				C0CE24C91497FD99000A8DA2 /* linked_list.h */,
+				C0CE24CA1497FD99000A8DA2 /* run_loop.h */,
+				C0CE24CB1497FD99000A8DA2 /* utils.h */,
+			);
+			name = btstack;
+			sourceTree = "<group>";
+		};
 		FCAD93241475770200F60BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +276,7 @@
 		FCAD93781475770300F60BB5 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C0CE24C61497FD8C000A8DA2 /* btstack */,
 				C0CE24BA1497FC61000A8DA2 /* libBTstack.dylib */,
 				C0CE24BB1497FC61000A8DA2 /* Bluetooth.h */,
 				C0CE24BC1497FC61000A8DA2 /* Bluetooth.m */,
