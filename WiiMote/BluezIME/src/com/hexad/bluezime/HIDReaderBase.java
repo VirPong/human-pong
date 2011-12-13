@@ -14,151 +14,211 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+ */
 package com.hexad.bluezime;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Hashtable;
 
 import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.util.Log;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Hashtable;
+
+/**
+ * This abstract class is between RfcommReader and WiimoteReader. I suppose
+ * it adds another layer of abstraction and generalization, but for VirPong's purposes
+ * it isn't really necessary, but it wouldn't be wise to remove it.
+ */
 public abstract class HIDReaderBase extends RfcommReader {
 
-	private static final boolean D = false;
-	private static final String LOG_NAME = "HID Reader - ";
-	
-	private static final int HIDP_CONTROL_CHANNEL = 0x11; 
-	private static final int HIDP_INTERRUPT_CHANNEL = 0x13; 
-	
-	protected BluetoothSocket m_controlSocket;
-	protected OutputStream m_control;
+    private static final boolean D = false;
+    private static final String LOG_NAME = "HID Reader - ";
 
-	//A list of buffers, used to send HID reports
-	protected Hashtable<Integer, byte[]> m_readBuffers;
-	
-	public HIDReaderBase(String address, String sessionId, Context context, boolean startnotification) throws Exception {
-		super(address, sessionId, context, false, startnotification);
-		
-		m_readBuffers = new Hashtable<Integer, byte[]>();
-	}
+    private static final int HIDP_CONTROL_CHANNEL = 0x11;
+    private static final int HIDP_INTERRUPT_CHANNEL = 0x13;
 
-	@Override
-	protected int setupConnection(ImprovedBluetoothDevice device, byte[] readBuffer) throws Exception {
-		
-		boolean isSecure = false;
-		
-		if (!m_useInsecureChannel) {
-			try {
-				m_controlSocket = device.createLCAPSocket(HIDP_CONTROL_CHANNEL);
-				m_controlSocket.connect();
-				isSecure = true;
-			} catch (Exception ex) {
-				m_controlSocket = null;
-			}
-		}
-		
-		if (m_controlSocket == null) {
-			m_controlSocket = device.createInsecureLCAPSocket(HIDP_CONTROL_CHANNEL);
-			m_controlSocket.connect();
-		}
-		
-		m_control = m_controlSocket.getOutputStream();
-		
-        m_socket = isSecure ? device.createLCAPSocket(HIDP_INTERRUPT_CHANNEL) : device.createInsecureLCAPSocket(HIDP_INTERRUPT_CHANNEL);
+    protected BluetoothSocket m_controlSocket;
+    protected OutputStream m_control;
+
+    // A list of buffers, used to send HID reports
+    protected Hashtable<Integer, byte[]> m_readBuffers;
+
+    /**
+     * Calls the inherited constructor and also starts up the buffer for reading.
+     * 
+     * @param address
+     * @param sessionId
+     * @param context
+     * @param startnotification
+     * @throws Exception
+     */
+    public HIDReaderBase(String address, String sessionId, Context context,
+            boolean startnotification) throws Exception {
+        super(address, sessionId, context, false, startnotification);
+
+        m_readBuffers = new Hashtable<Integer, byte[]>();
+    }
+
+    @Override
+    /**
+     * This method tries to start up a connection between the phone and a device.
+     * 
+     * @param device the device to be connected
+     * @param readBuffer 
+     * @throws Exception
+     */
+    protected int setupConnection(ImprovedBluetoothDevice device,
+            byte[] readBuffer) throws Exception {
+
+        boolean isSecure = false;
+
+        if (!m_useInsecureChannel) {
+            try {
+                m_controlSocket = device.createLCAPSocket(HIDP_CONTROL_CHANNEL);
+                m_controlSocket.connect();
+                isSecure = true;
+            } catch (Exception ex) {
+                m_controlSocket = null;
+            }
+        }
+
+        if (m_controlSocket == null) {
+            m_controlSocket = device
+                    .createInsecureLCAPSocket(HIDP_CONTROL_CHANNEL);
+            m_controlSocket.connect();
+        }
+
+        m_control = m_controlSocket.getOutputStream();
+
+        m_socket = isSecure ? device.createLCAPSocket(HIDP_INTERRUPT_CHANNEL)
+                : device.createInsecureLCAPSocket(HIDP_INTERRUPT_CHANNEL);
         m_socket.connect();
 
-        if (D) Log.d(LOG_NAME, "Connected to " + m_address);
-    	
-    	m_input = m_socket.getInputStream();
-    	
-    	verifyHIDDevice();
-    	
-    	return 0;		
-	}
-	
-	protected void verifyHIDDevice() throws Exception {
-	}
-	
-	@Override
-	protected int parseInputData(byte[] data, int read) {
-		
-		int offset = 0;
-		int remaining = read;
+        if (D)
+            Log.d(LOG_NAME, "Connected to " + m_address);
 
-		Hashtable<Byte, Integer> supportedReports = getSupportedReportCodes();
+        m_input = m_socket.getInputStream();
 
-		if (remaining <= 2)
-			return remaining;
+        verifyHIDDevice();
 
-		//If we get a HID A or C data package, process it
-		if (data[offset] == (byte)0xa1 || data[offset] == (byte)0xb1) {
-			
-			if (supportedReports.containsKey(data[offset + 1]))
-			{
-				int neededBytes = supportedReports.get(data[offset + 1]);
-				
-				//Safeguard, if we get too little data, wait for some more
-				if (neededBytes > remaining - 2) {
-					if (D) Log.w(getDriverName(), "Got " + (remaining - 2) + " bytes for report " + data[offset + 1] + ", but need " + neededBytes);
-					return remaining;
-				}
-				
-				if (!m_readBuffers.containsKey(neededBytes))
-					m_readBuffers.put(neededBytes, new byte[neededBytes]);
-				
-				byte[] buffer = m_readBuffers.get(neededBytes);
-				System.arraycopy(data, offset + 2, buffer, 0, neededBytes);
-				
-				try {
-					handleHIDMessage(data[offset], data[offset + 1], buffer);
-				} catch (Exception ex) {
-					Log.e(getDriverName(), "Handling HID message " + data[offset + 1] + " failed: " + ex.toString());
-				}
-			}
-			else
-			{
-				if (D) Log.w(getDriverName(), "Got an unsupported HID report: " + data[offset + 1] + ", length: " + (remaining - 2));
-			}
-		}
-		
-		//Since we cannot get the underlying L2CAP "field length", we
-		// *assume* that a single read delivers a single package
-		//As "an error is the result of an assumption" this may break :( 
-		return 0;
-	}
+        return 0;
+    }
 
-	@Override
-	protected void validateWelcomeMessage(byte[] data, int read) {
-	}
-	
-	@Override
-	public void stop() {
-		if (m_controlSocket != null) {
-			
-			if (m_control != null) {
-				try {
-					m_control.close();
-				} catch (IOException e) {
-				}
-				
-				m_control = null;
-			}
-			
-			try {
-				m_controlSocket.close();
-			} catch (IOException e) {
-			}
-			m_controlSocket = null;
-		}
-		
-		super.stop();
-	}
-	
-	protected abstract void handleHIDMessage(byte hidType, byte reportId, byte[] data) throws Exception;
+    /**
+     * This method is empty.
+     * 
+     * @throws Exception never
+     */
+    protected void verifyHIDDevice() throws Exception {
+    }
 
-	protected abstract Hashtable<Byte, Integer> getSupportedReportCodes();
-	
+    @Override
+    /**
+     * This method interprets the output from the device.
+     * 
+     * @param data the data sent from the device.
+     * @param read the size of the data?
+     */
+    protected int parseInputData(byte[] data, int read) {
+
+        int offset = 0;
+        int remaining = read;
+
+        Hashtable<Byte, Integer> supportedReports = getSupportedReportCodes();
+
+        if (remaining <= 2)
+            return remaining;
+
+        // If we get a HID A or C data package, process it
+        if (data[offset] == (byte) 0xa1 || data[offset] == (byte) 0xb1) {
+
+            if (supportedReports.containsKey(data[offset + 1])) {
+                int neededBytes = supportedReports.get(data[offset + 1]);
+
+                // Safeguard, if we get too little data, wait for some more
+                if (neededBytes > remaining - 2) {
+                    if (D)
+                        Log.w(getDriverName(), "Got " + (remaining - 2)
+                                + " bytes for report " + data[offset + 1]
+                                + ", but need " + neededBytes);
+                    return remaining;
+                }
+
+                if (!m_readBuffers.containsKey(neededBytes))
+                    m_readBuffers.put(neededBytes, new byte[neededBytes]);
+
+                byte[] buffer = m_readBuffers.get(neededBytes);
+                System.arraycopy(data, offset + 2, buffer, 0, neededBytes);
+
+                try {
+                    handleHIDMessage(data[offset], data[offset + 1], buffer);
+                } catch (Exception ex) {
+                    Log.e(getDriverName(), "Handling HID message "
+                            + data[offset + 1] + " failed: " + ex.toString());
+                }
+            } else {
+                if (D)
+                    Log.w(getDriverName(), "Got an unsupported HID report: "
+                            + data[offset + 1] + ", length: " + (remaining - 2));
+            }
+        }
+
+        // Since we cannot get the underlying L2CAP "field length", we
+        // *assume* that a single read delivers a single package
+        // As "an error is the result of an assumption" this may break :(
+        return 0;
+    }
+
+    @Override
+    /**
+     * This method is blank.
+     */
+    protected void validateWelcomeMessage(byte[] data, int read) {
+    }
+
+    @Override
+    /**
+     * This method stops the connection.
+     */
+    public void stop() {
+        if (m_controlSocket != null) {
+
+            if (m_control != null) {
+                try {
+                    m_control.close();
+                } catch (IOException e) {
+                }
+
+                m_control = null;
+            }
+
+            try {
+                m_controlSocket.close();
+            } catch (IOException e) {
+            }
+            m_controlSocket = null;
+        }
+
+        super.stop();
+    }
+
+    /**
+     * This method will handle any message sent by HID devices.
+     * 
+     * @param hidType the type of HID
+     * @param reportId the ID of the report
+     * @param data the meat of the message
+     * @throws Exception if things go wrong
+     */
+    protected abstract void handleHIDMessage(byte hidType, byte reportId,
+            byte[] data) throws Exception;
+
+    /**
+     * This method returns the supported report codes.
+     * 
+     * @return a hashtable of supported codes
+     */
+    protected abstract Hashtable<Byte, Integer> getSupportedReportCodes();
+
 }
