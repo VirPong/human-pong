@@ -17,6 +17,9 @@
 */
 package com.hexad.bluezime;
 
+/**
+ * This interface is used by any device that will connect to the phone.
+ */
 public interface BluezDriverInterface extends Runnable {
 	void stop();
 	String getDeviceAddress();

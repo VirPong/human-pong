@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="com/hexad/bluezime/BGP100Reader.java|com/hexad/bluezime/DataDumpReader.java|com/hexad/bluezime/iControlPadReader.java|com/hexad/bluezime/PhonejoyReader.java|com/hexad/bluezime/ZeemoteReader.java" kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="output" path="bin"/>
