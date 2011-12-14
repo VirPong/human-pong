@@ -434,9 +434,7 @@ Scenario:
 %     uses.  Once in a game, activating the Wii Remote sends changes in the paddle 
 %     position to the phone which then sends it to the server. The server receives 
 %     these changes and sends an updated game state to the phones every 50 ms. If 
-%     connection to  game fails, the program will promptly pause the game and notify 
-%     you of the disconnection, however unfortunately you cannot resume the game from 
-%     its state at disconnection.
+%     connection to  game fails, the program will promptly pause the game and notify you of the disconnection, however unfortunately you cannot resume the game from its state at disconnection.
 
 
 \section{Diagrammatic Depictions of the Product}
@@ -804,6 +802,14 @@ In order to work with the source code of the project, you will likely want to us
 =======
 In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:Vir-Pong/human-pong}.  You will then want to navigate into $Android/Vir-Pong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:Vir-Pong/www}.  Now you may open Eclipse and import the $Vir-Pong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/Vir-Pong/human-pong} and \url{https://github.com/Vir-Pong/www}, placing the $www$ repository in the same place mentioned above.
 >>>>>>> upstream/master
+
+\section{Class Diagram}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{ClassDiagram.png}
+\caption{\label{Class Diagram}This model depicts the all the classes and their associations within our pong.js file.  The ServerConnection class updates the Draw class, and continually calls to redraw the canvas.  The ServerConnection also is informed by InputListener as to what input is being used and when it updates position.  The UserInterface displays the refreshed canvas from Draw, and is controlled by ServerConnection as far as the game state.}
+\end{center}
+\end{figure}
 
 \section{Database}
 In order to enforce security of the highest, the smart phones do not deal with the user password which is the only thing that allows access to personal information stored with the account. Instead the phones only store the user name and a pin number that grants the user limited access. This means that all major account settings and changes can only happen through the website. The account information saved on the phone uses HTML5 localstorage and more information and tutorials on localstorage can be found at http://www.w3schools.com/html5/html5_webstorage.asp. It uses JavaScript to store and access data and provides a more efficient replacement for cookies in webpages. It provides easy saving and accessing using a lookup key for each pin number and account name.
