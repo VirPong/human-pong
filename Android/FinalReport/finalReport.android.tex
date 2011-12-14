@@ -143,7 +143,7 @@ Preconditions:
 Postconditions:
 \begin{itemize*}
 \item A winner has been determined.
-\item Player statistics are recorded by the hub system.
+\item Replay is saved to the system database.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
@@ -165,50 +165,16 @@ Repeat \ref{playerObserves} through \ref{LogPointRefresh} until score limit
   is reached.
 \item \label{AnnounceWinner}Hub indicates winner to Android device.
 \item Android device displays winner to player and announces game complete.
-\item Hub logs game statistics for later access.
+\item Hub logs game replay for later access.
 \item Player is prompted to play another game or exit back to the home screen.
 \end{enumerate*}
 Alternatives:\\
 \ref{HubUpdateGame}a) Hub signals that connection to other player has 
   been lost.
 \begin{enumerate*}
-\item Android device signals a game pause to player.
-\item Player is prompted to wait or leave the game.
-\item The player elects to wait.
-\item Hub signals that the other player is reconnected.
-\item Game resumes.
-\item Return to \ref{DisplayCurrentInformation} in main scenario.
-\end{enumerate*}
-\ref{AnnounceWinner}a) The player's Android device loses connection with 
-  the hub after score limit has been reached.
-\begin{enumerate*}
-\item The hub waits for a specified recovery time.
-\item Upon connection lost, the player's Android device begins recovery 
-  mode, trying to reconnect with the hub and indicating this to the player.
-\item After reconnecting with the hub, the game's winner is announced.  
-\item Player is prompted to verify this, due to the connection lost. 
-\item Both players agree, so hub logs the game statistics.
-\item Player is prompted to play another game or exit back to the home 
-  screen.
-\end{enumerate*}
-\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
-\begin{enumerate*}
-\item Hub alerts players that game is reaching overtime.
-\item Player is given option to continue playing, call a tie, or postpone 
-  the game.
-\item Player selects to call a tie. 
-\item The game ends and hub logs results.
-\item Player is given option to play another game or return to home screen.
-\end{enumerate*}
-\ref{HubUpdateGame}a) Hub signals that connection to other player has been 
-  lost.
-\begin{enumerate*}
-\item Android device signals a game pause to user.
-\item User is prompted to wait or leave the game.
-\item The user elects to wait.
-\item Hub signals that the other player is reconnected.
-\item Game resumes.
-\item Return to \ref{DisplayCurrentInformation} in main scenario.
+\item Android device pauses the game and signals a disconnection from the game.
+\item Player is prompted to leave the game.
+\item The player goes back to main menu.
 \end{enumerate*}
 
 \begin{figure}
@@ -243,10 +209,6 @@ Scenario:
 \begin{enumerate*}
 \item \label{InitGame_DisplayOptions} The software displays various options.
 \item \label{SelectStart}The player selects to begin a game.
-\item \label{SystemPromptsAuthentication}The device prompts the player to 
-  authenticate.
-\item \label{PlayerProvidesCredentials}The player provides credentials.
-\item \label{SystemVerifies}The device verifies credentials with the hub.
 \item \label{DisplayGameRooms} The player is prompted with a list of various
 game rooms.
 \item \label{SelectRoom} Player selects the desired game.
@@ -265,16 +227,7 @@ Alternatives:\\
 \item The player may elect to go back the the previous screen with a 
   $return$ function.
 \end{enumerate*}
-\ref{PlayerProvidesCredentials}a) The player provides incorrect credentials.
-\begin{enumerate*}
-\item \label{HubNoAuthenticate}The device cannot authenticate into the hub.
-\item The device displays a message that tells the player that the entered 
-  credentials were incorrect.
-\item \label{PromptAuthenticate}The device prompts the player to 
-  authenticate.\\
-Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player 
-  selects the $return$ function.
-\end{enumerate*}
+
 \ref{SystemRequestsGame}a) The system can not connect to the hub.
 \begin{enumerate*}
 \item The device sends the player an error message that prompts the player 
@@ -375,7 +328,7 @@ Alternatives:\\
 \onehalfspacing
 
 \singlespacing
-\subsubsection*{Viewing Statistics - v2.0}
+\subsubsection*{Viewing Replays - v2.0}
 Actors:
 \begin{itemize*}
 \item Player
@@ -390,23 +343,22 @@ Preconditions:
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
-\item The player has looked at her statistics.
-\item The player can compare hers to everyones.
+\item The player has watched their replay.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
 \item Main menu options are displayed to the player.
-\item \label{SelectStats}Player chooses to view statistics.
-\item \label{PersonalStatRequest}Device requests personal score from website.
-\item Website sends personal stats.
-\item Device displays personal stats and CompareStats option.
-\item \label{CompareStats}Player selects CompareStats option.
-\item Device navigates to website with all player stats listed.
-\item \label{Back}Player finishes viewing stats and hits back button.
-\item Device returns to system state SelectStats.
+\item \label{SelectReplay}Player chooses to view replay.
+\item \label{ReplayChoice}Device requests list of available replays from server.
+\item Database sends list of replays.
+\item Device displays list of replays.
+\item \label{WatchReplay}Player selects a replay to watch.
+\item Device displays replay.
+\item \label{Back}Player finishes the replay and hits the back button.
+\item Device returns to main menu.
 \end{enumerate*}
 Alternatives:\\
-\ref{PersonalStatRequest}a) Unable to contact website.
+\ref{PersonalStatRequest}a) Unable to obtain available replays.
 \begin{enumerate*}
 \item Display connection error message.
 \item Player may utilize a $retry$ or $continue$ button.
@@ -431,10 +383,9 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item Player selects Edit Account information.
-\item \label{Browser}System opens phone browser to "Vir-pong Edit Account" 
-  information page. 
-\item Player begins editing account information.
+\item Player selects Edit Account information on main menu.
+\item Device displays current login and pin number.
+\item Player may change these current settings.
 \item Player saves and exits editing account information.
 \item System returns user to previous page.
 \end{enumerate*} 
