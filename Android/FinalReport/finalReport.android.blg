@@ -1,0 +1,20 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: finalReport.android.aux
+The style file: amsplain.bst
+Database file #1: finalReport.android.bib
+Warning--string name "[oneline;" is undefined
+--line 37 of file finalReport.android.bib
+I was expecting a `,' or a `}'---line 37 of file finalReport.android.bib
+ : note =[oneline; 
+ :                 accessed September/October-2011]"
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in PhoneGap-Android
+Warning--to sort, need author or key in AndroidSDK-SystemRequirements
+Warning--to sort, need author or key in AndroidSDK-Download
+Warning--to sort, need author or key in AndroidSDK-Installation
+Warning--to sort, need author or key in AndroidSDK-Components
+Warning--to sort, need author or key in Eclipse-Helios
+Warning--to sort, need author or key in Eclipse-ADT
+Warning--to sort, need author or key in PhoneGap-Eclipse
+Warning--to sort, need author or key in Wiki-PhoneGap-Eclipse
+Warning--to sort, need author or key in Github
+(There was 1 error message)

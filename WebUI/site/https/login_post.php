@@ -9,15 +9,15 @@
 <?php
 	// connect to the server and open db2
 	$conn = mysql_connect('localhost', 'root', 'sawinrocks')
-		or die ('Could not connect to server. ' . mysql_error());
+		or die (header('Location:skins/error.php'));
 	mysql_select_db('db2', $conn)
-		or header('Location: https://cs340-serv/db_error.php');
+		or die (header('Location:skins/error.php'));
 
 	// select the row associated with the given username
 	$getUser = "SELECT username, password FROM Customer WHERE username='"
 		 . $_POST['username'] . "';";
 	$user = mysql_query($getUser, $conn)
-		or die ('Unable to log in.');
+		or die (header('Location:skins/error.php'));
 	$cust = mysql_fetch_row($user);
 
 	// if the passwords match, set a session cookie
@@ -40,9 +40,11 @@
 	{
 		header('Location:login_form.php?login=false');
 	}
+
+	mysql_close($conn);
 ?>
 
 
 <?php
-	include_once($footer);
+	include_once('footer.php');
 ?>

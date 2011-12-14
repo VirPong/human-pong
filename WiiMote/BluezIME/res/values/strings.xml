@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-<string name="app_name">Bluez IME</string>
+<string name="app_name">VirPong IME</string>
 <string name="error_message_generic" formatted="false">Error: %s</string>
 <string name="connected_to_device_message" formatted="false">Connected to %s</string>
 <string name="disconnected_from_device_message" formatted="false">Disconnected from %s</string>
@@ -24,7 +24,7 @@
 <string name="invalid_driver" formatted="false">The supplied driver is invalid: %s</string>
 
 <string-array name="driver_displaynames">
-  <item>Zeemote JS1</item>
+  <item>Wiimote</item>
 </string-array>
 <string name="devicelist_scanfordevices">Scan for devices</string>
 <string name="devicelist_scanningfordevices">Scanning for devices ...</string>
@@ -35,11 +35,11 @@
 
 <string name="preferencelist_header1">1. Select the device to use</string>
 <string name="preferencelist_header2">2. Set device as IME</string>
-<string name="preferencelist_header3">3. More</string>
+<string name="preferencelist_header3">3. To support the original Developer</string>
 <string name="preferencelist_activateitem">Activate Bluetooth</string>
 <string name="preferencelist_selectdevice">Select device</string>
 <string name="preferencelist_selectdriver">Select device driver</string>
-<string name="preferencelist_selectimehint">Press here to select the Bluez IME\n\nIf "Bluez IME" is not shown, enable it under Settings -> Language and Keyboard</string>
+<string name="preferencelist_selectimehint">Press here to select the VirPong IME\n\nIf "VirPong IME" is not shown, enable it under Settings -> Language and Keyboard</string>
 <string name="preferencelist_selectimetext">Select IME</string>
 
 <string name="preferencelist_configure_keys_short">Configure key mapping</string>
@@ -53,11 +53,11 @@
 
 <string name="error_bluetooth_off">Bluetooth is currently turned off</string>
 
-<string name="settings_title">Bluez IME Settings</string>
-<string name="scan_title">Bluez IME Device Selection</string>
+<string name="settings_title">VirPong IME</string>
+<string name="scan_title">VirPong IME Device Selection</string>
 <string name="button_config_title">Button configuration</string>
 
-<string name="ime_starting">Bluez IME is starting ...</string>
+<string name="ime_starting">VirPong IME is starting ...</string>
 <string name="ime_connecting" formated="false">Connecting to: %s ...</string>
 <string name="ime_error" formated="false">Error: %s</string>
 <string name="ime_connected" formated="false">Connected to %s</string>

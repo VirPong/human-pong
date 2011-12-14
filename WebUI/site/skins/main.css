@@ -1,0 +1,395 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  MAIN.CSS holds all CSS needed for the layout except for the colors that change
+ *  depending on the selected skin. This CSS is housed in the colors.css files in the
+ *  individual skins directories. Note that main.css retains some color information;
+ *  this is for colors that remain constant across skins.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls standard HTML page elements
+ */
+
+
+/* Body text is dark gray sans serif */
+body {
+	color: #333333;
+	font-family: Calibri, Candara, Trebuchet MS, sans serif;
+}
+
+/* Hyperlinks are bold & underlined */
+a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Hyperlinks on mouseover lose their underline */
+a:hover {
+	text-decoration: none;
+}
+
+/* First level headers are extra large & bold */
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+/* Second level headers are large & bold */
+h2 {
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+/* Third level headers are bold */
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+/* Tables have collapsed borders */
+table {
+	border-collapse:collapse;
+}
+
+/* Tables have built-in padding */
+table, td, th {
+	padding: 0.5em;
+}
+
+/* Table header text is white */
+th {
+	color: #FFFFFF;
+}
+
+/* Images have no borders */
+img {
+	border: 0;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls style classes used in news items & error messages
+ */
+
+
+/* News author text is small, italic, & right-aligned */
+.newsauthor {
+	font-size: 0.75em;
+	font-style: italic;
+	float: right;
+}
+
+/* News date text is small, italic, & right-aligned */
+.newsdate {
+	font-size: 0.75em;
+	font-style: italic;
+	float: right;
+}
+
+/* Error message text is small & red */
+.errormsg {
+	font-size: 0.75em;
+	color: #FF0000;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls style classes & IDs used in forms
+ */
+
+
+/* Form labels are right-aligned with built-in padding */
+.inputarea label {
+	float: left;
+	text-align: right;
+	padding-right: 0.25em;
+}
+
+/* Form input areas have slightly smaller text with a built-in margin & padding */
+.inputarea input, .inputarea select, .inputarea textarea {
+	font-size: 0.875em;
+	margin-bottom: 0.25em;
+	padding: 0.125em;
+}
+
+/* Submit buttons for forms have a built-in top margin */
+.inputarea input[type="submit"] {
+	margin-top: 0.5em;
+}
+
+/* The account settings form has a built-in indent */
+#accountsettings label {
+	width: 9.375em;
+}
+
+/* The login form has a built-in indent */
+#login label {
+	width: 4.125em;
+}
+
+/* The registration form has a built-in indent */
+#newuser label {
+	width: 6em;
+}
+
+/* The player history search form has a built-in indent */
+#viewhist label {
+	width: 4.125em;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls IDs used to create the overall site layout
+ */
+
+
+/* The navigation menu is properly positioned */
+#nav {
+	position: relativive;
+	margin: 0 auto;
+	border: 0;
+	padding: 0;
+	height: 200px;
+	width: 625px;
+}
+
+/* The logo is positioned properly and brought in front of the menu */
+#logo {
+	position: relative;
+	float: left;
+	vertical-align: top;
+	border: 0;
+	margin: 0 0 0 -120px;
+	padding: 0;
+	height: 60px;
+	z-index: 1;
+}
+
+/* The main content box is centered with a white background & gray justified text */
+#content-outer {
+	background-color: #FFFFFF;
+	color: #333333;
+	text-align: justify;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: -30px;
+}
+
+/* The main content box has built-in padding */
+#content-inner {
+	padding: 0.125em 1em;
+}
+
+/* The footer is properly aligned with centered text */
+#footer {
+	text-align: center;
+	font-size: 0.75em;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+	top: -10px;
+}
+
+/* Hyperlinks in the footer are white */
+#footer a {
+	color: #FFFFFF;
+}
+
+/* The JavaScript disabled warning box is centered with a white background */
+#jsoff-outer {
+	background-color: #FFFFFF;
+	text-align: justify;
+	width: 625px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* The JavaScript disabled warning box has built-in padding & large centered text */
+#jsoff-inner {
+	padding: 0.125em 1em;
+	text-align: center;
+	font-size: 1.125em;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls the canvas used to display matches
+ */
+
+
+/* The canvas has a black background and a thick gray border */
+canvas {
+	border: 4px solid #AOAOAO;
+	background: #000000;
+	display: block;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls the dropdown menus of the main navigation.
+ *  This code is modified from the GRC's Script-Free Pure-CSS Menuing System,
+ *  written by Steve Gibson and available at: http://www.grc.com/menu2/invitro.htm
+ */
+
+
+/* The menu is positioned properly with a white background & large sans-serif text */
+.menu {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 40px;
+	width: 517px;
+	left: 72px;
+	padding-left: 2em;
+	background: #FFFFFF;
+	font-family: Calibri, Candara, Trebuchet MS, sans serif;
+	font-size: 1.125em;
+	z-index: 0;
+}
+
+/* The main menu is vertically centered & without list formatting */
+.menu ul {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style-type: none;
+	line-height: 2.25em;
+}
+
+/* Items in the main menu are positioned side-by-side */
+.menu li {
+	float: left;
+	position: relative;
+	margin: 0;
+}
+
+/* Hyperlinks in the main menu are underlined & without list formatting */
+.menu ul li a {
+	display: block;
+	float: left;
+	text-decoration: underline;
+}
+
+/* Hyperlinks on mouseover in the main menu lose their underline */
+.menu ul li a:hover { 
+	text-decoration: none;
+}
+
+/* Drowpdown menus have built in padding & spacing */
+.menu ul li ul {
+	display: none;
+	padding: 0;
+	line-height: 80%;
+	padding-left: 5px;
+}
+
+/* Dropdowns are positioned properly  with a white background */
+.menu ul li:hover ul, .menu ul li a:hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding-right: 0.5em;
+	top: 36px;
+	left: 0;
+	height: auto;
+	background: #FFFFFF;
+}
+
+/* Hyperlinks in dropdowns have no underline, border, margin, or padding */
+.menu ul li ul li a {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 1em;
+	text-decoration: none;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CSS below this point controls the news slider on the index page.
+ *  This code is modified from the jQuery Coda-Slider v2.0,
+ *  written by Niall Doherty and available at: http://www.ndoherty.biz/coda-slider
+ */
+
+
+/* Body text of the news items is white */
+.coda-slider {
+	color: #FFFFFF;
+}
+
+/* The news box is of a set width */
+.coda-slider, .coda-slider .panel {
+	width: 593px;
+}
+
+/* The news box has built-in padding */
+.coda-slider .panel-wrapper {
+	padding: 1em;
+}
+
+/* Don't change anything below here unless you know what you're doing */
+
+/* Tabbed nav */
+.coda-nav ul {
+	clear: both;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+}
+
+.coda-nav ul li {
+	display: inline
+}
+
+.coda-nav ul li a {
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	margin-right: 1px;
+	padding: 3px 6px;
+	text-decoration: none;
+}
+
+/* Miscellaneous */
+.coda-slider-wrapper {
+	clear: both;
+	overflow: auto;
+}
+
+.coda-slider {
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.coda-slider .panel {
+	display: block;
+	float: left
+}
+
+.coda-slider .panel-container {
+	position: relative;
+}
+
+.coda-nav-left, .coda-nav-right{
+	float: left;
+}
+
+.coda-nav-left a, .coda-nav-right a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}

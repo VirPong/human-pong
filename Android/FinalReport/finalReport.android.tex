@@ -1,5 +1,4 @@
 \documentclass[12pt]{article}
-
 \usepackage{hyperref}
 
 % useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
@@ -7,7 +6,6 @@
 
 % for including graphics
 \usepackage{graphicx}
-
 % for conveniently specifying the spacing (\singlespacing, \doublespacing,
 %    \onehalfspacing, etc.)
 \usepackage{setspace}
@@ -143,7 +141,7 @@ Preconditions:
 Postconditions:
 \begin{itemize*}
 \item A winner has been determined.
-\item Player statistics are recorded by the hub system.
+\item Replay is saved to the system database.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
@@ -165,50 +163,16 @@ Repeat \ref{playerObserves} through \ref{LogPointRefresh} until score limit
   is reached.
 \item \label{AnnounceWinner}Hub indicates winner to Android device.
 \item Android device displays winner to player and announces game complete.
-\item Hub logs game statistics for later access.
+\item Hub logs game replay for later access.
 \item Player is prompted to play another game or exit back to the home screen.
 \end{enumerate*}
 Alternatives:\\
 \ref{HubUpdateGame}a) Hub signals that connection to other player has 
   been lost.
 \begin{enumerate*}
-\item Android device signals a game pause to player.
-\item Player is prompted to wait or leave the game.
-\item The player elects to wait.
-\item Hub signals that the other player is reconnected.
-\item Game resumes.
-\item Return to \ref{DisplayCurrentInformation} in main scenario.
-\end{enumerate*}
-\ref{AnnounceWinner}a) The player's Android device loses connection with 
-  the hub after score limit has been reached.
-\begin{enumerate*}
-\item The hub waits for a specified recovery time.
-\item Upon connection lost, the player's Android device begins recovery 
-  mode, trying to reconnect with the hub and indicating this to the player.
-\item After reconnecting with the hub, the game's winner is announced.  
-\item Player is prompted to verify this, due to the connection lost. 
-\item Both players agree, so hub logs the game statistics.
-\item Player is prompted to play another game or exit back to the home 
-  screen.
-\end{enumerate*}
-\ref{AnnounceWinner}b) The game duration exceeds the maximum time.
-\begin{enumerate*}
-\item Hub alerts players that game is reaching overtime.
-\item Player is given option to continue playing, call a tie, or postpone 
-  the game.
-\item Player selects to call a tie. 
-\item The game ends and hub logs results.
-\item Player is given option to play another game or return to home screen.
-\end{enumerate*}
-\ref{HubUpdateGame}a) Hub signals that connection to other player has been 
-  lost.
-\begin{enumerate*}
-\item Android device signals a game pause to user.
-\item User is prompted to wait or leave the game.
-\item The user elects to wait.
-\item Hub signals that the other player is reconnected.
-\item Game resumes.
-\item Return to \ref{DisplayCurrentInformation} in main scenario.
+\item Android device pauses the game and signals a disconnection from the game.
+\item Player is prompted to leave the game.
+\item The player goes back to main menu.
 \end{enumerate*}
 
 \begin{figure}
@@ -243,10 +207,6 @@ Scenario:
 \begin{enumerate*}
 \item \label{InitGame_DisplayOptions} The software displays various options.
 \item \label{SelectStart}The player selects to begin a game.
-\item \label{SystemPromptsAuthentication}The device prompts the player to 
-  authenticate.
-\item \label{PlayerProvidesCredentials}The player provides credentials.
-\item \label{SystemVerifies}The device verifies credentials with the hub.
 \item \label{DisplayGameRooms} The player is prompted with a list of various
 game rooms.
 \item \label{SelectRoom} Player selects the desired game.
@@ -265,16 +225,7 @@ Alternatives:\\
 \item The player may elect to go back the the previous screen with a 
   $return$ function.
 \end{enumerate*}
-\ref{PlayerProvidesCredentials}a) The player provides incorrect credentials.
-\begin{enumerate*}
-\item \label{HubNoAuthenticate}The device cannot authenticate into the hub.
-\item The device displays a message that tells the player that the entered 
-  credentials were incorrect.
-\item \label{PromptAuthenticate}The device prompts the player to 
-  authenticate.\\
-Repeat \ref{HubNoAuthenticate}-\ref{PromptAuthenticate} until the Player 
-  selects the $return$ function.
-\end{enumerate*}
+
 \ref{SystemRequestsGame}a) The system can not connect to the hub.
 \begin{enumerate*}
 \item The device sends the player an error message that prompts the player 
@@ -375,7 +326,7 @@ Alternatives:\\
 \onehalfspacing
 
 \singlespacing
-\subsubsection*{Viewing Statistics - v2.0}
+\subsubsection*{Viewing Replays - v2.0}
 Actors:
 \begin{itemize*}
 \item Player
@@ -390,23 +341,22 @@ Preconditions:
 \end{itemize*}
 Postconditions:
 \begin{itemize*}
-\item The player has looked at her statistics.
-\item The player can compare hers to everyones.
+\item The player has watched their replay.
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
 \item Main menu options are displayed to the player.
-\item \label{SelectStats}Player chooses to view statistics.
-\item \label{PersonalStatRequest}Device requests personal score from website.
-\item Website sends personal stats.
-\item Device displays personal stats and CompareStats option.
-\item \label{CompareStats}Player selects CompareStats option.
-\item Device navigates to website with all player stats listed.
-\item \label{Back}Player finishes viewing stats and hits back button.
-\item Device returns to system state SelectStats.
+\item \label{SelectReplay}Player chooses to view replay.
+\item \label{ReplayChoice}Device requests list of available replays from server.
+\item Database sends list of replays.
+\item Device displays list of replays.
+\item \label{WatchReplay}Player selects a replay to watch.
+\item Device displays replay.
+\item \label{Back}Player finishes the replay and hits the back button.
+\item Device returns to main menu.
 \end{enumerate*}
 Alternatives:\\
-\ref{PersonalStatRequest}a) Unable to contact website.
+\ref{PersonalStatRequest}a) Unable to obtain available replays.
 \begin{enumerate*}
 \item Display connection error message.
 \item Player may utilize a $retry$ or $continue$ button.
@@ -431,10 +381,9 @@ Postconditions:
 \end{itemize*}
 Scenario:
 \begin{enumerate*}
-\item Player selects Edit Account information.
-\item \label{Browser}System opens phone browser to "Vir-pong Edit Account" 
-  information page. 
-\item Player begins editing account information.
+\item Player selects Edit Account information on main menu.
+\item Device displays current login and pin number.
+\item Player may change these current settings.
 \item Player saves and exits editing account information.
 \item System returns user to previous page.
 \end{enumerate*} 
@@ -448,68 +397,42 @@ Scenario:
 %        fully-dressed use case. Include a one paragraph description of what 
 %        is being depicted in the diagram (use plan English). 
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{ssd_GamePlay_1.png}
+\caption{\label{ssd_GamePlay_1}The role of our system in gameplay is described through the system sequence diagram above.}
+\end{center}
+\end{figure}
+
+
 
 
 \subsection{Nonfunctional Requirements}
-\label{sec:nonfunctionalRequirements}
-%Nonfunctional Requirements: Detail all nonfunctional requirements that you 
-%    addressed in your final product (e.g. Easy Visibility: All text in our 
-%    product is 16pt font.)
-
-
-\subsubsection{Usability Requirements}
-%Human factors, Aesthetics, Consistency, Documentation
-In order for the application to provide an experience enjoyable to a wide 
-user base, the following usability requirements should be met:
-\begin{itemize}
-\item Players should have their statistics saved and then made available 
-for viewing.
-\item Players should be able to change game settings(difficulty, ball shape, 
-etc.).
-\item Users should be able to register an account through the application.
-\item The application needs to be available for download via the website 
-or on the Android Market.
-\item The application should have the option to view a game in progress.
-\item It would be nice to make the game environment modifiable (i.e. theming).
-\item When there is not a second available human player (or connection to 
-the hub is impossible) there should be an option for playing versus the 
-computer in training mode.
-\end{itemize}
-
-\subsubsection{Reliability Requirements}
-%Frequency/severity of failure, Recoverability, Predictability, Accuracy, 
-%Mean time to failure
-A working product is important, but reliability ensures a consistent 
-experience.  With this in mind, our design is striving for security of 
-private user information and the ability to pause the game.  The latter is 
-focused on creating a fault tolerant solution for network connectivity.  A 
-strict testing policy will help to alleviate many other possible issues.
-
-\subsubsection{Performance Requirements}
-%Speed, Efficiency, Resource consumption, Throughput, Response time
-The ability to adjust the display for different screens will allow for 
-better performance of the software on different Android devices.  The system 
-must also minimize latency when contacting the server for game information 
-or receiving information from the Wii Remote.  There are no other connections 
-that are quite as important.
-
-\subsubsection{Supportability Requirements}
-%Testability, Extensibility, Adaptability, Maintainability, Compatibility, 
-%Configurability, Serviceability, %Installability, Localizability, Portability
-Installation, game play, and resource usage should all be properly 
-documented in a conveniently located and navigated user-manual. A list of 
-known compatible devices included in the manual will assist in keeping 
-potential customers informed about our product.  There should also be some 
-contact information for support and help when the available documentation 
-is not enough.
-
-In keeping with the project's open source roots, it will be important to 
-make all source code well documented for the general public; make the 
-source code readily available; give credit to non-employees that have 
-contributed to our application; and provide substantial developer 
-documentation. 
-
-
+%The product provides an extremely fun basic pong game that combines the use
+%     of smart phones, Wii remotes, and server and web communication. It is 
+%     free to use and open source available at https://github.com/VirPong/human-pong 
+%     for developers. The developer documentation can be found on github or on the 
+%     VirPong website. It will be launched on December 14th 2011 which is available 
+%     to any person who wants to come see it at 4:00PM on the University of Puget 
+%     Sound campus. It is accessible to people on the World Wide Web through our 
+%     website and available to anyone who chooses to do so. A group will need two 
+%     phones Android or iPhone, two Wiimotes, and be able to connect to our server 
+%     in order to play. It works with most android phones except for those with 
+%     SenseUI which has errors with the Bluetooth stack. See the VirPong website for 
+%     the full user installation instructions and basic tutorial. A user has the 
+%     choice of creating an account via the website or playing as a guest. Personal 
+%     information saved in account is extremely secure. The product’s use of a pin 
+%     number means your password is safe and doesn’t need to be encrypted or even 
+%     known by the phones. Support can be found on the website but once everything 
+%     needed to play the game is set up, a user can connect a Wii Remote to his phone, 
+%     connect to the server and start a game against another player. The intuitive 
+%     interface allows users to navigate and use the different functions of the 
+%     product through the use of simple but distinct and easy to select buttons. 
+%     Users can change certain settings for the game which will be saved over multiple 
+%     uses.  Once in a game, activating the Wii Remote sends changes in the paddle 
+%     position to the phone which then sends it to the server. The server receives 
+%     these changes and sends an updated game state to the phones every 50 ms. If 
+%     connection to  game fails, the program will promptly pause the game and notify you of the disconnection, however unfortunately you cannot resume the game from its state at disconnection.
 
 
 \section{Diagrammatic Depictions of the Product}
@@ -519,6 +442,18 @@ documentation.
 %    description of what is being shown in the diagram. Define any terms used
 %    in conceptual classes, attributes, or associations that might not be 
 %    clear to a lay person.
+<<<<<<< HEAD
+\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of virtual pong on an android device.  Throughout the game, the user controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and immediately sent to the hub.  The hub sends back information on both the user's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the user to view their virtual pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub.
+=======
+\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of Pong on an android device.  Throughout the game, the player controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and from there is immediately sent to the hub.  The hub sends back information on both the player's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the player to view their Pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub and also keeps track of the game's current score.
+>>>>>>> upstream/master
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{DomainModel.png}
+\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\end{center}
+\end{figure}
+
 
 
 %Interaction Diagram:
@@ -527,6 +462,25 @@ documentation.
 %    Add a description of the design principles (Information Expert, Creator,
 %    High Cohesion, Low Coupling, Controller) you employed, where you employed
 %    them and why you made those choices. 
+
+\subsection{Interaction Diagram}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{InteractionDiagram.png}
+\caption{\label{InteractionDiagram}}
+\end{center}
+\end{figure}
+Though our code utilizes a number of design patterns, the code for our first use case, playing a pong
+game, uses three highly advantageous design patterns that help structure our code.
+One of the design patterns used was the observer pattern.  In order to update paddle positions for each
+player efficiently, we chose to listen for events from the input device rather than constantly updating
+over specific increments of time.  We also utilized the information expert pattern in regards to drawing
+and redrawing the screen during game play.  The server maintains the current game state, so the
+serverConnection class has knowledge of the paddle and ball locations.  Consequently, the serverConnection
+class is given the responsibility of calling the draw method so that the screen will represent the
+current game state.  We also maintain high cohesion in our Draw class.  Draw is only focused on methods
+involving the act of drawing a figure on to the canvas.  This makes the class highly cohesive and as a
+result, the code is easily understood and can be reused.
 
 \section{Implementation}
 \label{sec:implementation}
@@ -560,6 +514,303 @@ documentation.
 %        formatting. 
 %    Describe your testing and verification procedure for your implemented 
 %    code 
+%         
+
+\section{Coding Style Guide}
+
+The majority of the coding takes place within the $assets/www$ folder of our application.  It is, therefore, important that our team maintain a clear and concise style within this limited space.  In general, folders should be titled in the CamelCase style (first letter a capital) and individual files should be likewise with the exception that the first letter is a lower case.  Dashes may be permitted so long as it is used when there may be multiple editions of something (e.g. a "logo-blue.jpg" and "logo-red.jpg").  Further exceptions include any README files (used for build instructions) or versioned files. 
+
+
+
+As to how many folders to have, if there exists a logical grouping between one file and several others (i.e. more than 2 files are related to one another) then these should be placed in a separate folder within the $www$ directory.  Files themselves and the code contained should follow the guidelines given below.  While these guidelines are not quite as extensive as some resources (such as Sun's own Java style guide\cite{JavaStyle-Sun}) the brevity serves our team well.
+
+
+
+\subsection{Working with Java}
+
+While Java is not a primary language for our team, we will be strictly following conventions laid down by Sun and other programmers\cite{JavaStyle-Sun}\cite{JavaStyle-JavaRanch}.
+
+
+
+\subsubsection{Style Rules}
+
+\begin{itemize}
+
+\item All identifiers use letters ('A' through 'Z' and 'a' through 'z') and numbers ('0' through '9') only. No underscores, dollar signs or non-ascii characters (with one exception mentioned later).
+
+\item In general, use $methodNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+
+\item Use a separate line for an increment or decrement.
+
+\item All fields must be private, except for some constants.
+
+\item Class elements will follow this order: fields, constructors, methods.
+
+\item Limit the scope of local variables.
+
+\item Initialize objects as late as possible.
+
+\item Use Strings with care.
+
+\item Avoid wrapper classes.
+
+\end{itemize}
+
+\textbf{A note on comments:} all methods and classes should contain a standard Javadoc comment (text description and appropriate author, version, parameter and return tags).  In-line comments are strongly encouraged to assist in readability of the code.
+
+
+
+\subsubsection{Coding Rules}
+
+\begin{itemize}
+
+\item Opening curly braces should be on the same line as what they are opening.
+
+\item Closing curly braces will be horizontally aligned with the line where the statement began.
+
+\item Indent each time a new bracket set is created.  Indents should be four spaces.
+
+\item All control-flow statements must use brackets.
+
+\item Commas and semicolons are always followed by whitespace.
+
+\item Binary operators should have a space on either side.
+
+\item Parentheses should be used in expressions not only to specify order of precedence, but also to help simplify the expression. When in doubt, parenthesize.
+
+\item There will be no use of $break$.
+
+\end{itemize}
+
+
+
+
+
+\subsection{Working with JavaScript}
+
+The majority of our JavaScript style guidelines are mimicked from Google\cite{JavaScriptStyle-Google}.  For further and more detailed information, see their guide.  To many new programmers, JavaScript seems very much like Java (even the name!), but it is important to note that these are different languages and we have several very different rules.
+
+
+
+\subsubsection{Style Rules}
+
+\begin{itemize}
+
+\item In general, use $functionNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, $EnumNamesLikeThis$, $methodNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+
+\item Avoid using many global variables.
+
+\item Start curly braces on the same line as what they are opening.
+
+\item Be sure to indent blocks by four spaces.
+
+\item Use blank lines to group logically related pieces of code.
+
+\item Use parentheses only when required.
+
+\item Prefer $'$ over $"$ for strings.
+
+\item Be sure to use JSDoc comments.  A comment at the top of the file for authorship and general overview, comments for methods, and inline comments are encouraged.  The first two are done using $/*. . . */$ and the latter is $//$.
+
+\item Use JSDoc annotations ($@private$ and $@protected$) where appropriate.  Marking visibility is encouraged.
+
+\item Be sure to use @param and @return tags for methods and functions.
+
+\item Simple getters may have no description but should specify the returned values.
+
+\end{itemize}
+
+
+
+\subsubsection{Coding Rules}
+
+\begin{itemize}
+
+\item Always declare variables with $var$.
+
+\item Use $NAMES\_LIKE\_THIS$ for constants. Use $@const$ where appropriate. Never use the $const$ keyword.
+
+\item Always end lines with semicolons.
+
+\item Feel free to use nested functions but try to comment these to make them clear.
+
+\item Avoid wrapper objects for primitive types.
+
+\item The keyword $this$ is for object constructors and methods only.
+
+\item For-in loops are only for iterating over keys in an object/map/hash.
+
+\item Do not use multiline string literals.  Instead, use concatenation when initializing such long strings.
+
+\item Use $onclick$ instead of $javascript:$ for anchors.
+
+\end{itemize}
+
+
+
+\subsection{Working with HTML5}
+
+HTML5 and CSS are so quickly evolving of late that style guides are not readily available.  We have, however, compiled our own unique guide from some suggestions found on the Web Developer's Virtual Library\cite{HTMLStyle-WDVL}.  We recommend keeping JavaScript and CSS code in files separate from the HTML.  This is primarily to keep the code modular and sensible.  Reading HTML and JavaScript in the same file can be confusing.
+
+
+
+\begin{itemize}
+
+\item Block-level tags are to the far left with content indented four spaces.
+
+\item Don't indent tags relative to their container.
+
+\item Line up multiple attributes with the "=" signs all in the same column.
+
+\item The home page is an index to other pages.
+
+\item Page designs should be consistent in appearance and structure.
+
+\item Choose a meaningful title for pages.
+
+\item $*$Unless it is an incredibly brief code-snippet, do not include JavaScript or CSS in the $html$ file.  Place this code in a separate file.
+
+\item Provide a $Home$ link.
+
+\end{itemize}
+
+
+
+\subsection{Style Guide Removal}
+
+Due to the fact that we have redistributed tasks among the two phone teams, we have removed some items that no longer apply to the Android Development team.  The following have been removed: 
+
+
+
+\begin{itemize}
+
+\item CSS style guide section
+
+\end{itemize}
+
+\section{User Documentation}
+\subsection{Features Overview}
+ VirPong provides a safe and fun pong game that combines the use of connections and communication between Wii Remotes, smart phones, and a local University of Puget Sound Server. This allows you to play pong against another human player using your phone and a Wii Remote as a controller.
+
+\subsection{Setting Up}
+Setting up VirPong game environment and account is simple and quick. It allows for the convenient set up of everything entirely from your phone through the use of our website.
+\begin{itemize}
+\item The product can be downloaded by directing your Android internet browser to “WEBSITE” and clicking on the Android APK download. An automatic prompt asking if you want to install the APK should pop up. Follow your phones instructions to complete installation of the application.
+\item Follow the instructions on the website to quickly and easily set up your own VirPong user account, information, and password. If you do not want to do this, you also have the choice of not logging in and using a guest account.
+\item Once your user account has been set up launch the application.
+\end{itemize}
+\subsection{Functions of the Main Menu}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{ homeScreen.png}
+\caption{\label{homeScreen}Home Screen Menu}
+\end{center}
+\end{figure}
+
+\subsubsection{User Settings}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{userNamePinSave.png}
+\caption{\label{User Setting Interface}User Settings Menu}
+\end{center}
+\end{figure}
+
+The first thing a user will probably want to do upon opening the application for the first time is opening the settings page. This will bring up a page that allows the user to put in their username and pin number that will save so they can stay logged in through multiple uses.
+\subsubsection{Select Input Method}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{ selectInputMethod-Android.png}
+\caption{\label{Input Selection Interface}Input Selection Menu}
+\end{center}
+\end{figure}
+
+After saving any settings, the user will want to select the input method and follow the correct steps to set up the input device.
+\begin{itemize}
+\item Wii Remote – choose this under input options and run the plugin in order to use a Wii Remote as your controller. The plugin should pop up and allow you to connect to the Wii Remote. Once connection has been verified you are ready to play a game.
+\item Phone Accelerometer – this option will allow you to use the phones accelerometer rather than the Wii Remote. This allows you to play if you don’t have a Wii Remote.
+\item Button Presses – choosing this input method will allow you to play the game by using button presses on the screen to move your paddle.
+\end{itemize}
+\subsubsection{Play Game}
+Upon selecting the Play Game on Internet option, the application will bring you to a page containing different game rooms. 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{ gameSelect.png}
+\caption{\label{gameSelection}List of Joinable Games Menu}
+\end{center}
+\end{figure}
+
+\begin{itemize}
+\item Choosing a game with one person already in it will allow you to join the game and start playing versus them.
+\item You can choose to create a new game, where you will have to wait until another player joins to start.
+\item Or you can join a game that already has two players and watch them play as an observer.
+\end{itemize}
+You can also choose to play offline against a simple bot program in order to test your skills when an opponent is no longer available.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{ touchOnServer.png}
+\caption{\label{PlayingGame}Game in Action}
+\end{center}
+\end{figure}
+
+\subsubsection{Replay Game}
+After you have played a game or even if you haven’t and just want to watch a replay of a game, select the function to watch a replay. This will bring up a selection of previously played games to watch from.
+\subsection{Rules of Pong}
+Now for the fun, playing pong is extremely simple and fun. The rules are straight forward and any new player can pick them up easily. Here are the basics:
+\subsubsection {Major Components}
+There are 3 major components to any pong game. These are the ball, the paddles, and score area. 
+\begin{itemize}
+\item Ball – flies around the screen following basic game mechanics and doing basic collision detection. If this makes it into your score area, you lose a point.
+\item Score area – this is everything between your paddle and the end of the screen. 
+\item Paddle – this is the only thing the user controls. The game will tell you which of the two is yours and use of your selected input method will cause it to move up and down on the screen. 
+\subsubsection{How to Play}
+The basic concept of a pong game is to hit the ball with your paddle more than your opponent does. Try to send the ball flying into your opponents score area while still defending your score area from balls your opponent sends flying at you. The first to 10 points wins.
+
+
+
+
+\section{Developer Documentation}
+
+\label{sec:developerdocumentation}
+
+\subsection{Setting up the Development Environment}
+In order to develop for Android, you will need the Android SDK, the PhoneGap software, and some editor (for example, Eclipse).  These pieces are relatively easy to set up, but because all systems are different, some personal configuration may be required.  All of the software mentioned below can be found, with current links, at the PhoneGap Android page\cite{PhoneGap-Android}.  
+
+\subsubsection{Android SDK}
+The Android SDK comes with an Android Emulator as well as Android libraries.
+To download the SDK, first check to make sure your operating system fulfills all of the system requirements.  A list of of system requirements is available on the Android Developers website\cite{AndroidSDK-SystemRequirements}.
+
+Next, download the Android SDK from the Android Developer website\cite{AndroidSDK-Download}.
+The instructions for installation are found on the same site but on the installation page\cite{AndroidSDK-Installation}. \textbf{Note:} do not put a space in the folder name.
+
+After that, you must add necessary components to the SDK.  The instructions for that portion are found on the components page\cite{AndroidSDK-Components}.  On your first run, you will be required to create an Android Virtual Device (AVD) that is simply a mock phone.
+
+
+\subsubsection{PhoneGap}
+The PhoneGap download is primarily a collection of tools that provide functionality for the HTML5 and JavaScript interface in a native application environment.  That is, the PhoneGap jar, js, and xml files all serve to support the use of HTML5 and JavaScript coding as implementing the core functionality of the application.  The download for PhoneGap can be found on the PhoneGap Android page\cite{PhoneGap-Android}.
+
+
+\subsubsection{Editing Environment}
+In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.  In addition, you may then want to install the plugin for PhoneGap Development\cite{PhoneGap-Eclipse}.
+
+\textbf{An important note:} When creating a PhoneGap application in Eclipse, you will need from the PhoneGap download earlier the following two files: Android/phonegap-1.0.0.jar and Android/phonegap-1.0.0.js.  In the directory of the PhoneGap project, there needs to be two directories: /libs and /assets/www.  You must then copy Android/phonegap-1.0.0.jar into the /libs directory and Android/phonegap-1.0.0.js into the /assets/www directory.  If you are still experiencing an error because Eclipse cannot find the Android/phonegap-1.0.0.jar file, you may need to right-click on the /libs folder and select "Build Path", then "Configure Build Path".  In the Libraries tab, select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay". All of these instructions and more are included on the PhoneGap wiki page\cite{Wiki-PhoneGap-Eclipse}.
+
+\subsection{Retrieving the Source}
+<<<<<<< HEAD
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
+=======
+In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:Vir-Pong/human-pong}.  You will then want to navigate into $Android/Vir-Pong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:Vir-Pong/www}.  Now you may open Eclipse and import the $Vir-Pong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/Vir-Pong/human-pong} and \url{https://github.com/Vir-Pong/www}, placing the $www$ repository in the same place mentioned above.
+>>>>>>> upstream/master
+
+\section{Class Diagram}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{ClassDiagram.png}
+\caption{\label{Class Diagram}This model depicts the all the classes and their associations within our pong.js file.  The ServerConnection class updates the Draw class, and continually calls to redraw the canvas.  The ServerConnection also is informed by InputListener as to what input is being used and when it updates position.  The UserInterface displays the refreshed canvas from Draw, and is controlled by ServerConnection as far as the game state.}
+\end{center}
+\end{figure}
+
+\section{Database}
+In order to enforce security of the highest, the smart phones do not deal with the user password which is the only thing that allows access to personal information stored with the account. Instead the phones only store the user name and a pin number that grants the user limited access. This means that all major account settings and changes can only happen through the website. The account information saved on the phone uses HTML5 localstorage and more information and tutorials on localstorage can be found at http://www.w3schools.com/html5/html5_webstorage.asp. It uses JavaScript to store and access data and provides a more efficient replacement for cookies in webpages. It provides easy saving and accessing using a lookup key for each pin number and account name.
 
 \section{Reflections}
 \label{sec:reflections}
@@ -571,15 +822,26 @@ documentation.
 %    Describe what you would have done differently if you were to start this 
 %    project over again.
 %    If you were to continue this project what would you do. 
+<<<<<<< HEAD
+The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have had more manager meetings than at the beginning of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we have reached the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team couldn’t move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits.
+
+If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed our team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
+=======
+The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have planned more manager meetings for the rest of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we are at the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team could not move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits for both teams.
+
+If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed our team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
+>>>>>>> upstream/master
 
 
 
-%References: Clearly indicate all the tools and sources you have used in the 
-%    development of your product thus far. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%8. References: Clearly indicate all the tools and sources you have used in the development of your product thus far. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \newpage
 \bibliographystyle{amsplain}
-\bibliography{finalReport.android.bib}
+\bibliography{finalReport.android}
 
 
 

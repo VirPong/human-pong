@@ -14,8 +14,11 @@
     </TableRow>
 </TableLayout>
 <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberSigned" android:id="@+id/xAxis">
-    <requestFocus></requestFocus>
 </EditText>
 <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberSigned" android:id="@+id/yAxis"></EditText>
 <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberSigned" android:id="@+id/zAxis"></EditText>
+<EditText android:layout_width="match_parent" android:inputType="numberSigned" android:layout_height="wrap_content" android:id="@+id/PosX"></EditText>
+<EditText android:layout_width="match_parent" android:inputType="numberSigned" android:layout_height="wrap_content" android:id="@+id/PosY"></EditText>
+<EditText android:layout_width="match_parent" android:inputType="numberSigned" android:layout_height="wrap_content" android:id="@+id/PosZ">
+</EditText>
 </LinearLayout>

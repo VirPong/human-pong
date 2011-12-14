@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0CE24C11497FC61000A8DA2 /* libBTstack.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CE24BA1497FC61000A8DA2 /* libBTstack.dylib */; };
+		C0CE24C21497FC61000A8DA2 /* Bluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CE24BC1497FC61000A8DA2 /* Bluetooth.m */; };
+		C0CE24C31497FC61000A8DA2 /* BluetoothDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CE24BE1497FC61000A8DA2 /* BluetoothDelegate.m */; };
+		C0CE24C41497FC61000A8DA2 /* WiiPositionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CE24C01497FC61000A8DA2 /* WiiPositionHandler.m */; };
 		FC0997E7147C644A00289B6B /* iPadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0997E6147C644A00289B6B /* iPadIcon.png */; };
 		FC3663481480280F008AE90B /* RetinaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3663471480280F008AE90B /* RetinaIcon.png */; };
 		FC36634A14802821008AE90B /* iPhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36634914802821008AE90B /* iPhoneIcon.png */; };
@@ -44,6 +48,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0CE24BA1497FC61000A8DA2 /* libBTstack.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libBTstack.dylib; sourceTree = "<group>"; };
+		C0CE24BB1497FC61000A8DA2 /* Bluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bluetooth.h; sourceTree = "<group>"; };
+		C0CE24BC1497FC61000A8DA2 /* Bluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bluetooth.m; sourceTree = "<group>"; };
+		C0CE24BD1497FC61000A8DA2 /* BluetoothDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDelegate.h; sourceTree = "<group>"; };
+		C0CE24BE1497FC61000A8DA2 /* BluetoothDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDelegate.m; sourceTree = "<group>"; };
+		C0CE24BF1497FC61000A8DA2 /* WiiPositionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiiPositionHandler.h; sourceTree = "<group>"; };
+		C0CE24C01497FC61000A8DA2 /* WiiPositionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiiPositionHandler.m; sourceTree = "<group>"; };
+		C0CE24C71497FD99000A8DA2 /* btstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btstack.h; sourceTree = "<group>"; };
+		C0CE24C81497FD99000A8DA2 /* hci_cmds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hci_cmds.h; sourceTree = "<group>"; };
+		C0CE24C91497FD99000A8DA2 /* linked_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linked_list.h; sourceTree = "<group>"; };
+		C0CE24CA1497FD99000A8DA2 /* run_loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = run_loop.h; sourceTree = "<group>"; };
+		C0CE24CB1497FD99000A8DA2 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		FC0997E6147C644A00289B6B /* iPadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadIcon.png; sourceTree = "<group>"; };
 		FC3663471480280F008AE90B /* RetinaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RetinaIcon.png; sourceTree = "<group>"; };
 		FC36634914802821008AE90B /* iPhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon.png; sourceTree = "<group>"; };
@@ -105,6 +121,7 @@
 				FCAD934D1475770300F60BB5 /* MobileCoreServices.framework in Frameworks */,
 				FCAD934F1475770300F60BB5 /* CoreMedia.framework in Frameworks */,
 				FCAD935A1475770300F60BB5 /* PhoneGap.framework in Frameworks */,
+				C0CE24C11497FC61000A8DA2 /* libBTstack.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +135,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0CE24C61497FD8C000A8DA2 /* btstack */ = {
+			isa = PBXGroup;
+			children = (
+				C0CE24C71497FD99000A8DA2 /* btstack.h */,
+				C0CE24C81497FD99000A8DA2 /* hci_cmds.h */,
+				C0CE24C91497FD99000A8DA2 /* linked_list.h */,
+				C0CE24CA1497FD99000A8DA2 /* run_loop.h */,
+				C0CE24CB1497FD99000A8DA2 /* utils.h */,
+			);
+			name = btstack;
+			sourceTree = "<group>";
+		};
 		FCAD93241475770200F60BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +276,14 @@
 		FCAD93781475770300F60BB5 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C0CE24C61497FD8C000A8DA2 /* btstack */,
+				C0CE24BA1497FC61000A8DA2 /* libBTstack.dylib */,
+				C0CE24BB1497FC61000A8DA2 /* Bluetooth.h */,
+				C0CE24BC1497FC61000A8DA2 /* Bluetooth.m */,
+				C0CE24BD1497FC61000A8DA2 /* BluetoothDelegate.h */,
+				C0CE24BE1497FC61000A8DA2 /* BluetoothDelegate.m */,
+				C0CE24BF1497FC61000A8DA2 /* WiiPositionHandler.h */,
+				C0CE24C01497FC61000A8DA2 /* WiiPositionHandler.m */,
 				FCAD93791475770300F60BB5 /* README */,
 			);
 			name = Plugins;
@@ -352,6 +389,9 @@
 			files = (
 				FCAD93571475770300F60BB5 /* main.m in Sources */,
 				FCAD93771475770300F60BB5 /* AppDelegate.m in Sources */,
+				C0CE24C21497FC61000A8DA2 /* Bluetooth.m in Sources */,
+				C0CE24C31497FC61000A8DA2 /* BluetoothDelegate.m in Sources */,
+				C0CE24C41497FC61000A8DA2 /* WiiPositionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +501,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PongClient/PongClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PongClient\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -490,6 +534,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PongClient/PongClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PongClient\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,

@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%
+% This is the main file for compiling the LaTeX document.
+%
+% Please keep all sections in there respective files and compile
+% the document from here.
+%%%%%%%%%%%%%%%
+
+\documentclass[pdftex,12pt]{article}
+
+\usepackage{fancyhdr}	% For header and footers.
+\usepackage{graphicx}	% For including images.
+\usepackage[colorlinks,bookmarksnumbered,linktocpage]{hyperref}	% For links to sections in TOC.
+
+\setlength{\topmargin}{-0.3in}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{60pt}
+\setlength{\footskip}{75pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}	% To use the fancyhdr package.
+
+
+% Finally the actual document we're concerned with.
+\begin{document}
+
+	\input{./01_title.tex}			% Done!
+	
+	% Just here to enter a completely blank page.
+	\thispagestyle{empty}
+		\mbox{}
+	\newpage
+
+	\tableofcontents				% Auto-done!
+	\newpage
+	
+	% Just here to enter a completely blank page.
+	\thispagestyle{empty}
+		\mbox{}
+	\newpage
+
+	\input{./03_endproduct.tex}		% Incomplete
+
+	\input{./04_funcreq.tex}		% Incomplete
+
+	\input{./05_nonfunc.tex}		% Incomplete
+
+	\input{./06_domain.tex}			% Incomplete
+
+	\input{./07_interaction.tex}	% Incomplete
+
+	\input{./08_implement.tex}		% Incomplete
+
+	\input{./09_reflect.tex}		% Incomplete
+
+	\input{./10_reference.tex}		% Incomplete
+
+\end{document}

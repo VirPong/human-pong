@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%
+% This file is concerned with design patterns,
+% a subsection of the implementation section.
+%
+% Please remember to compile the document from "00_finalreport.tex".
+% It will not work otherwise.
+%%%%%%%%%%%%%%%
+
+	\subsection{Design Patterns}
+	
+		\subsubsection{Home Link}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To always provide the user with a simple path to the website's home page.
+				\item[Implementation] \hfill \\
+					The VirPong logo in the upper left corner of the layout is a hyperlink to the VirPong home page. This is present on every page.
+				\item[Consequences] \hfill \\
+					Allows users to navigate to the home page no matter what page they start at. This is especially helpful if users arrive at the website via a search engine or an emailed link to a specific page.
+				\item[Related Patterns] \hfill \\
+					Main Navigation, Footer Bar
+			\end{description}
+			
+		\subsubsection{Main Navigation}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To always provide the user with hyperlinks to all areas of the website.
+				\item[Implementation] \hfill \\
+					The horizontal bar at the top of the layout is a menu containing dropdowns with links to different pages of the VirPong website. This is present on every page.
+				\item[Consequences] \hfill \\
+					Allows users to navigate to a page of their choosing no matter what page they start at.
+				\item[Related Patterns] \hfill \\
+					Home Link, Footer Bar
+			\end{description}
+			
+		\subsubsection{Footer Bar}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To always provide the user with hyperlinks to important informational content regarding the use of the system.
+				\item[Implementation] \hfill \\
+					The centered bar at the bottom of the layout is a footer containing links to important information regarding the services that VirPong provides. These links are: about us, contact us, privacy policy, terms of use, and code of conduct. This is present on every page.
+				\item[Consequences] \hfill \\
+					Allows users to directly access information about the service no matter what page they start at.
+				\item[Related Patterns] \hfill \\
+					Home Link, Main Navigation
+			\end{description}
+			
+		\subsubsection{Account Registration}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To only display protected content to users who have registered with the service. To store user information which can later be used to enhance the user experience.
+				\item[Implementation] \hfill \\
+					Users must fill out the registration form before they can play VirPong games, participate in tournaments, or use the chat feature.
+				\item[Consequences] \hfill \\
+					Allows for personalization of the VirPong experience, including display of personal player history information, the ability to chat with other users, email notifications regarding tournament participation, and happy birthday emails. Trade-offs include potential loss of users who are discouraged by the registration form.
+				\item[Related Patterns] \hfill \\
+					Lazy Registration, Log In, Input Feedback
+			\end{description}
+			
+		\subsubsection{Lazy Registration}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To allow users to become familiar with the service before requiring them to register.
+				\item[Implementation] \hfill \\
+					Users can watch VirPong matches (both live and past matches) and view high score information without being registered or signed in to an account. Users can also access all informational content (about us, contact us, privacy policy, terms of use, code of conduct, rules, system requirements, news) without being registered or signed in to an account.
+				\item[Consequences] \hfill \\
+					Allows users to try out the system with little immediate commitment, making registration seem like more of a choice than a chore. Allows users to be already invested in VirPong by the time they register for an account, making it more likely that our registered users are active uses. Trade-offs include potential loss of registered accounts by users who only utilize features that do no require registration.
+				\item[Related Patterns] \hfill \\
+					Account Registration
+			\end{description}
+			
+		\subsubsection{Log In}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To identify a registered user in order to properly personalize their experience.
+				\item[Implementation] \hfill \\
+					The main navigation contains a link to the log in form, allowing registered users to authenticate into the system whenever they desire. If an unauthenticated user attempts to access a page that is only available to registered users, it will display a prompt asking the user to log in before proceeding.
+				\item[Consequences] \hfill \\
+					Allows for personalization of the VirPong experience, including unlocking access to certain pages that are only available to registered users.
+				\item[Related Patterns] \hfill \\
+					Account Registration
+			\end{description}
+			
+		\subsubsection{Input Feedback}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To communicate with users about information they are submitting to the service.
+				\item[Implementation] \hfill \\
+					All improperly filled out forms will generate specific error messages, whether through Javascript alerts or inline text. All properly filled out forms will lead to a success message, confirming that the user?s submission was successful. This design pattern applies to the registration, log in, and account settings forms.
+				\item[Consequences] \hfill \\
+					Prevents improper information submission by alerting the user immediately and directly of any errors. Allows the user to feel confident upon receipt of success message that their information has been passed to the system.
+				\item[Related Patterns] \hfill \\
+					Account Registration, Good Defaults
+			\end{description}
+			
+		\subsubsection{Good Defaults}
+			\begin{description}
+				\item[Intent] \hfill \\
+					To prevent users from having to type any more keystrokes than strictly necessary by prefilling certain form values to anticipate the user input.
+				\item[Implementation] \hfill \\
+					The account settings form automatically fills in the user?s current first name, last name, email address, birthday, and gender. The user can then edit any fields he wants to change and leave any fields he wants to remain the same.
+				\item[Consequences] \hfill \\
+					Eliminates the need for the user to reenter all of their information in order to change any field, resulting in significantly increased convenience for the user. Trade-offs include reminding users that we have their personal information and we know how to use it.
+				\item[Related Patterns] \hfill \\
+					Input Feedback
+			\end{description}
