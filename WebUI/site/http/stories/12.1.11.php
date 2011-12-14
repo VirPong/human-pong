@@ -1,3 +1,21 @@
+<?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/12/2011
+ *
+ *  12.1.11.php corresponds to the date of the news story that is linked to in the 
+ *  php file. Each news story is displayed within the slider on the main page. 
+ *
+ *  This particular story contains a link to the Google maps that makes it easier for 
+ *  users to plot their drive to the presentation place.
+ *
+ *  INCLUDES:	header.php
+ *				footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
 <div class="panel">
 	<div class="panel-wrapper">
 		<h2 class="title">World Premiere</h2>

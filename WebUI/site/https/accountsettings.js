@@ -1,4 +1,12 @@
 
+/**
+ * @author Katie Mueller
+ *
+ * Validates user input for the account settings form.
+ *
+ * @return boolean describing whether input is valid
+ */
+
 function validate(){
 
 

@@ -1,7 +1,12 @@
 
 /**
- * Validate the form input.
+ * @author Katie Mueller
+ *
+ * Validates user input for the registration form.
+ *
+ * @return boolean describing whether input is valid
  */
+
 function validate()
 {
 

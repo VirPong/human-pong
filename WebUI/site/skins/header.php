@@ -2,7 +2,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  *  AUTHORS:	Katie Mueller, Kyle Monnett
- *  DATE:	12/10/2011
+ *  DATE:	12/12/2011
  *
  *  header.php is included on every page of the VirPong website. It checks the user's
  *  cookies for a set skin and displays the layout accordingly. If the user has
@@ -12,7 +12,7 @@
  *  Note that the use of relative URLs requires that header.php be present in every
  *  directory that contains files that implement the VirPong layout. We have set up
  *  symlinks in order to make this maintainable.
-
+ *
  *  USES:	main.css
  *		/skins/*
  *		favicon.ico
@@ -56,7 +56,7 @@
 
 		<title>VirPong: Pong. With humans.</title>
 
-		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link href="/main.css" rel="stylesheet" type="text/css" />
 		<link href=<?php echo $colors; ?> rel="stylesheet" type="text/css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -75,7 +75,7 @@
 		<div id="nav">
 
 			<div id="logo">
-				<a href="http://cs340/index.php"><img src=<?php echo $logo; ?> width="213" height="161" alt="VirPong: Pong. With humans." /></a>
+				<a href="http://cs340.pugetsound.edu/index.php"><img src=<?php echo $logo; ?> width="213" height="161" alt="VirPong: Pong. With humans." /></a>
 			</div>
 
 			<div class="menu">
@@ -87,8 +87,8 @@
 				<ul>
 					<li><a>game</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/rules.php">rules</a></nobr></li>
-							<li><nobr><a href="http://cs340/systemrequirements.php">system requirements</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/rules.php">rules</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/systemrequirements.php">system requirements</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -96,8 +96,8 @@
 				<ul>
 					<li><a>play</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a>downloads</a></nobr></li>
-							<li><nobr><a href="http://cs340/gameplay.php">play online</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/downloads.php">downloads</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/gameplay.php">play online</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -105,8 +105,7 @@
 				<ul>
 					<li><a>watch</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/watchpong.php">live streaming</a></nobr></li>
-							<li><nobr><a>past matches</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/watchpong.php">live streaming</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -114,8 +113,8 @@
 				<ul>
 					<li><a>records</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/topplayers.php">top players</a></nobr></li>
-							<li><nobr><a href="http://cs340/playerhistory.php">player history</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/topplayers.php">top players</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/playerhistory.php">player history</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -123,7 +122,7 @@
 				<ul>
 					<li><a>themes</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
 						<ul>
-							<li><nobr><a href="http://cs340/setskin.php">select theme</a></nobr></li>
+							<li><nobr><a href="http://cs340.pugetsound.edu/setskin.php">select theme</a></nobr></li>
 						</ul>
 					</li>
 				</ul>
@@ -135,9 +134,9 @@
 		echo '<ul>';
 			echo '<li><a>account</a> &nbsp;&nbsp;&nbsp;&bull;';
 				echo '<ul>';
-					echo '<li><nobr><a href="https://cs340/accountsettings_form.php">account settings</a></nobr></li>';
-					echo '<li><nobr><a href="http://cs340/playerhistory.php?user=' . $_SESSION['username'] . '">your history</a></nobr></li>';
-					echo '<li><nobr><a href="https://cs340/logout_post.php">log out</a></nobr></li>';
+					echo '<li><nobr><a href="https://cs340.pugetsound.edu/accountsettings_form.php">account settings</a></nobr></li>';
+					echo '<li><nobr><a href="http://cs340.pugetsound.edu/playerhistory.php?user=' . $_SESSION['username'] . '">your history</a></nobr></li>';
+					echo '<li><nobr><a href="https://cs340.pugetsound.edu/logout_post.php">log out</a></nobr></li>';
 				echo '</ul>';
 			echo '</li>';
 		echo '</ul>';
@@ -147,8 +146,8 @@
 		echo '<ul>';
 			echo '<li><a>account</a> &nbsp;&nbsp;&nbsp;&bull;';
 				echo '<ul>';
-					echo '<li><nobr><a href="https://cs340/register_form.php">register</a></nobr></li>';
-					echo '<li><nobr><a href="https://cs340/login_form.php">log in</a></nobr></li>';
+					echo '<li><nobr><a href="https://cs340.pugetsound.edu/register_form.php">register</a></nobr></li>';
+					echo '<li><nobr><a href="https://cs340.pugetsound.edu/login_form.php">log in</a></nobr></li>';
 				echo '</ul>';
 			echo '</li>';
 		echo '</ul>';

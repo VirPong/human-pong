@@ -1,4 +1,13 @@
 
+/**
+ * @author Katie Mueller
+ *
+ * Validates user input for the log in form.
+ *
+ * @return boolean describing whether input is valid
+ */
+
+
 function validate()
 {
 
