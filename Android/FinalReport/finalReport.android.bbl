@@ -5,7 +5,7 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Eclipse-ADT}
 \emph{{ADT} {P}lugin for {E}clipse},
@@ -39,6 +39,11 @@
 \bibitem{Github}
 \emph{Github}, \url{https://github.com}, 2011, [Online; accessed
   September/October-2011].
+
+\bibitem{Wiki-PhoneGap-Eclipse}
+\emph{{phonegap / phonegap-android-eclipse-quickstart}},
+  \url{http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart},
+  2011, [Online; accessed September/October-2011].
 
 \bibitem{PhoneGap-Android}
 \emph{{PhoneGap for Android}}, \url{http://www.phonegap.com/about}, 2011,
