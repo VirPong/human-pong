@@ -340,20 +340,12 @@ canvas {
 	padding: 1em;
 }
 
-/* Don't change anything below here unless you know what you're doing */
-
-/* Tabbed nav */
-.coda-nav ul {
-	clear: both;
-	display: block;
-	margin: auto;
-	overflow: hidden;
-}
-
+/* Aligns the item titles properly */
 .coda-nav ul li {
 	display: inline
 }
 
+/* Item titles are white text with built-in padding */
 .coda-nav ul li a {
 	color: #FFFFFF;
 	display: block;
@@ -363,33 +355,21 @@ canvas {
 	text-decoration: none;
 }
 
-/* Miscellaneous */
+/* Helps the slider auto-resize */
 .coda-slider-wrapper {
 	clear: both;
 	overflow: auto;
 }
 
+/* Aligns the slider properly */
 .coda-slider {
 	float: left;
 	overflow: hidden;
 	position: relative;
 }
 
+/* Aligns the slider items properly */
 .coda-slider .panel {
 	display: block;
 	float: left
-}
-
-.coda-slider .panel-container {
-	position: relative;
-}
-
-.coda-nav-left, .coda-nav-right{
-	float: left;
-}
-
-.coda-nav-left a, .coda-nav-right a {
-	display: block;
-	text-align: center;
-	text-decoration: none;
 }

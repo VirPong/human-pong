@@ -27,12 +27,14 @@
 		
 		Main Success Scenario:
 		\begin{description}
-			\item[1.] User navigates to the System.
-			\item[2.] User fills out appropriate information on System’s form.
-			\item[3.] System connects to Data Repository.
-			\item[4.] System stores information in Data Repository.
-			\item[5.] System disconnects from Data Repository.
-			\item[6.] System reports successful registration.
+			%\item[1.] User navigates to the System.
+			\item[1.] User fills out appropriate information on System’s form.
+			\item[2.] System connects to Data Repository.
+			\item[3.] System checks for duplicate information.
+			\item[4.] Requests differnt information if duplicate found.
+			\item[5.] System stores information in Data Repository.
+			\item[6.] System disconnects from Data Repository.
+			\item[7.] System reports successful registration.
 		\end{description}
 		
 		Extensions:
@@ -42,7 +44,8 @@
 			
 				\item[1a.] System is down.
 				\begin{description}
-					\item[1.] Report 404 Error that provides information to the User.
+					\item[1.] Be sad.
+					\item[2.] Fix system.
 				\end{description}
 			\end{description}
 			
@@ -119,14 +122,15 @@
 		Main Success Scenario:
 		\begin{description}
 			\item[1.] User navigates to the System
-			\item[2.] User selects the game information to view
-			\item[3.] System connects to the Game Manager
-			\item[4.] System informs Game Manager of which game was selected by user
-			\item[5.] Game Manager supplies information on the selected game to the system
-			\item[6.] System displays information
-			\item[7.] Repeat 4, 5, 6, and 7 until information stream ends from Game Manager
-			\item[8.] System closes connection to the Game Manager
-			\item[9.] System informs User that the game is over
+			\item[2.] System display options to user.
+			\item[3.] User selects the game information to view
+			\item[4.] System connects to the Game Manager
+			\item[5.] System informs Game Manager of which game was selected by user
+			\item[6.] Game Manager supplies information on the selected game to the system
+			\item[7.] System displays information
+			\item[8.] Repeat 4, 5, 6, and 7 until information stream ends from Game Manager
+			\item[9.] System closes connection to the Game Manager
+			\item[10.] System informs User that the game is over
 		\end{description}
 		
 		Extensions:
@@ -141,7 +145,7 @@
 			
 			\item[2.] User selects the game information to view
 			\begin{description}
-				\item[2a.] User is indecisive
+				\item[2a.] User isn't doing much
 				\begin{description}
 					\item[1.] Suggest a current game to view
 				\end{description}
@@ -199,18 +203,18 @@
 				\end{description}
 			\end{description}
 			
-			\item[6.] System interprets the information
-			\begin{description}
-				\item[6a.] Information is in a different format
-				\begin{description}
-					\item[1.] Ask user to refresh system
-				\end{description}
-				\item[6b.] Information is in a different format a second time
-				\begin{description}
-					\item[1.] Ask user to contact VirPong and report an error
-					\item[2.] Provide user with a link to the Contact Us page
-				\end{description}
-			\end{description}
+%			\item[6.] System interprets the information
+%			\begin{description}
+%				\item[6a.] Information is in a different format
+%				\begin{description}
+%					\item[1.] Ask user to refresh system
+%				\end{description}
+%				\item[6b.] Information is in a different format a second time
+%				\begin{description}
+%					\item[1.] Ask user to contact VirPong and report an error
+%					\item[2.] Provide user with a link to the Contact Us page
+%				\end{description}
+%			\end{description}
 			
 			\item[7.] System displays information
 			\begin{description}
@@ -576,16 +580,16 @@
 		Main Success Scenario:
 		\begin{enumerate}
 			\item Company decides to host a tournament
-			\item System displays tournament Registration
 			\item User authenticates into the System
+			\item System displays tournament Registration
 			\item User navigates to the System
-			\item User tells System they would like to register for a tournament
+			\item User requests System they would like to register for a tournament
 			\item System connects to Data Repository
 			\item System registers User on Data Repository 
 			\item System Disconnects from Data Repository
 			\item System confirms registration
 			\item System sends a reminder to User
-			\item User authenticates into System
+			%\item User authenticates into System
 			\item User navigates to game system
 			\item User successfully plays a game
 		\end{enumerate}

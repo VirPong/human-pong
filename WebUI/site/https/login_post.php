@@ -1,10 +1,28 @@
 <?php
-	session_start();
-	include_once('header.php');
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller
+ *  DATE:	12/12/2011
+ *
+ *  login_post.php processes the information received from login_form.php. On
+ *  connecting to the database, it checks the record for the given username. If the
+ *  recorded password and the entered password match, it sets a session cookie with
+ *  the username, thereby logging the user in. The user is then sent back to
+ *  login_form.php. If the passwords do not match, the user is sent back to
+ *  login_form.php with a variable in the query string that will cause an error
+ *  message to be displayed to the user.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 ?>
 
 
-<h1>&#9612; log in &#9616;</h1>
+<?php
+	session_start();
+	include_once('header.php');
+?>
 
 <?php
 	// connect to the server and open db2
@@ -35,7 +53,7 @@
 		header('Location:login_form.php');
 	}
 
-	// if it's not set, print an error message
+	// if it's not set, send them back to the login page with an error
 	else
 	{
 		header('Location:login_form.php?login=false');
