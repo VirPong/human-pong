@@ -399,6 +399,14 @@ Scenario:
 %        fully-dressed use case. Include a one paragraph description of what 
 %        is being depicted in the diagram (use plan English). 
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{ssd_GamePlay_1.png}
+\caption{\label{ssd_GamePlay_1}The role of our system in gameplay is described through the system sequence diagram above.}
+\end{center}
+\end{figure}
+
+
 
 
 \subsection{Nonfunctional Requirements}
@@ -438,11 +446,32 @@ Scenario:
 %    description of what is being shown in the diagram. Define any terms used
 %    in conceptual classes, attributes, or associations that might not be 
 %    clear to a lay person.
-\subsection{Domain Model}
+<<<<<<< HEAD
+\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of virtual pong on an android device.  Throughout the game, the user controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and immediately sent to the hub.  The hub sends back information on both the user's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the user to view their virtual pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub.
+=======
+\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of Pong on an android device.  Throughout the game, the player controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and from there is immediately sent to the hub.  The hub sends back information on both the player's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the player to view their Pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub and also keeps track of the game's current score.
+>>>>>>> upstream/master
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{DomainModel.png}
 \caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\end{center}
+\end{figure}
+
+
+
+%Interaction Diagram:
+%    Create an interaction diagram for each of the events depicted in your 
+%    System Sequence Diagram.
+%    Add a description of the design principles (Information Expert, Creator,
+%    High Cohesion, Low Coupling, Controller) you employed, where you employed
+%    them and why you made those choices. 
+
+\subsection{Interaction Diagram}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{InteractionDiagram.png}
+\caption{\label{InteractionDiagram}}
 \end{center}
 \end{figure}
 Though our code utilizes a number of design patterns, the code for our first use case, playing a pong
@@ -456,22 +485,6 @@ class is given the responsibility of calling the draw method so that the screen 
 current game state.  We also maintain high cohesion in our Draw class.  Draw is only focused on methods
 involving the act of drawing a figure on to the canvas.  This makes the class highly cohesive and as a
 result, the code is easily understood and can be reused.
-
-
-
-%Interaction Diagram:
-%    Create an interaction diagram for each of the events depicted in your 
-%    System Sequence Diagram.
-%    Add a description of the design principles (Information Expert, Creator,
-%    High Cohesion, Low Coupling, Controller) you employed, where you employed
-%    them and why you made those choices. 
-
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{InteractionDiagram.png}
-\caption{\label{InteractionDiagram}}
-\end{center}
-\end{figure}
 
 \section{Implementation}
 \label{sec:implementation}
