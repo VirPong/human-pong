@@ -1,5 +1,4 @@
 \documentclass[12pt]{article}
-
 \usepackage{hyperref}
 
 % useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
@@ -7,7 +6,6 @@
 
 % for including graphics
 \usepackage{graphicx}
-
 % for conveniently specifying the spacing (\singlespacing, \doublespacing,
 %    \onehalfspacing, etc.)
 \usepackage{setspace}
@@ -794,7 +792,7 @@ The PhoneGap download is primarily a collection of tools that provide functional
 \subsubsection{Editing Environment}
 In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.  In addition, you may then want to install the plugin for PhoneGap Development\cite{PhoneGap-Eclipse}.
 
-\textbf{An important note:} When creating a PhoneGap application in Eclipse, it may be necessary to include the PhoneGap jar file in the libs folder of the application.  To do this, right-click on the Eclipse project, and select "Build Path", then "Configure Build Path".  If there is no PhoneGap jar file included, then select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay".
+\textbf{An important note:} When creating a PhoneGap application in Eclipse, you will need from the PhoneGap download earlier the following two files: Android/phonegap-1.0.0.jar and Android/phonegap-1.0.0.js.  In the directory of the PhoneGap project, there needs to be two directories: /libs and /assets/www.  You must then copy Android/phonegap-1.0.0.jar into the /libs directory and Android/phonegap-1.0.0.js into the /assets/www directory.  If you are still experiencing an error because Eclipse cannot find the Android/phonegap-1.0.0.jar file, you may need to right-click on the /libs folder and select "Build Path", then "Configure Build Path".  In the Libraries tab, select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay". All of these instructions and more are included on the PhoneGap wiki page\cite{Wiki-PhoneGap-Eclipse}.
 
 \subsection{Retrieving the Source}
 <<<<<<< HEAD
@@ -843,7 +841,7 @@ If we were to begin this project again, there are a number of things we would ha
 
 \newpage
 \bibliographystyle{amsplain}
-\bibliography{finalReport.android.bib}
+\bibliography{finalReport.android}
 
 
 
