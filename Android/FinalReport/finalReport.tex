@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+
 \usepackage{hyperref}
 
 % useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
@@ -6,6 +7,7 @@
 
 % for including graphics
 \usepackage{graphicx}
+
 % for conveniently specifying the spacing (\singlespacing, \doublespacing,
 %    \onehalfspacing, etc.)
 \usepackage{setspace}
@@ -177,8 +179,8 @@ Alternatives:\\
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.5]{ssd_GamePlay_1.png}
-\caption{\label{ssd_GamePlay_1}The role of our system in gameplay is 
+\includegraphics[scale=.5]{SystemSeq.png}
+\caption{\label{System Sequence Diagram}The role of our system in gameplay is 
   described through the system sequence diagram above.}
 \end{center}
 \end{figure}
@@ -397,12 +399,7 @@ Scenario:
 %        fully-dressed use case. Include a one paragraph description of what 
 %        is being depicted in the diagram (use plan English). 
 
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.5]{ssd_GamePlay_1.png}
-\caption{\label{ssd_GamePlay_1}The role of our system in gameplay is described through the system sequence diagram above.}
-\end{center}
-\end{figure}
+
 
 
 
@@ -442,15 +439,11 @@ Scenario:
 %    description of what is being shown in the diagram. Define any terms used
 %    in conceptual classes, attributes, or associations that might not be 
 %    clear to a lay person.
-<<<<<<< HEAD
 \textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of virtual pong on an android device.  Throughout the game, the user controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and immediately sent to the hub.  The hub sends back information on both the user's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the user to view their virtual pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub.
-=======
-\textbf{Figure~\ref{domainModel}} shows the interactions that take place and the associations involved in playing a game of Pong on an android device.  Throughout the game, the player controls an input device that will pass motion data to the android device.  There are three different types of input that can be used by the user: the Wii Remote, the phone accelerometer, or the touch screen interface.  The motion data from the input device is sent to the android device and from there is immediately sent to the hub.  The hub sends back information on both the player's and an opponent's positions as well as the position of the ball.  Other relevant data is sent to and from the android device and hub, including score data and a signal that a point has been scored.  To allow the player to view their Pong game, the android device relies on a game interface to graphically display the constantly updating state of the game.  This game interface contains a graphical representation of two paddles and one ball that respond to information sent from the hub and also keeps track of the game's current score.
->>>>>>> upstream/master
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{DomainModel.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\caption{\label{Domain Model} Class interactions and attributes outline the major system components.}
 \end{center}
 \end{figure}
 
@@ -688,86 +681,6 @@ Due to the fact that we have redistributed tasks among the two phone teams, we h
 
 \end{itemize}
 
-\section{User Documentation}
-\subsection{Features Overview}
- VirPong provides a safe and fun pong game that combines the use of connections and communication between Wii Remotes, smart phones, and a local University of Puget Sound Server. This allows you to play pong against another human player using your phone and a Wii Remote as a controller.
-
-\subsection{Setting Up}
-Setting up VirPong game environment and account is simple and quick. It allows for the convenient set up of everything entirely from your phone through the use of our website.
-\begin{itemize}
-\item The product can be downloaded by directing your Android internet browser to “WEBSITE” and clicking on the Android APK download. An automatic prompt asking if you want to install the APK should pop up. Follow your phones instructions to complete installation of the application.
-\item Follow the instructions on the website to quickly and easily set up your own VirPong user account, information, and password. If you do not want to do this, you also have the choice of not logging in and using a guest account.
-\item Once your user account has been set up launch the application.
-\end{itemize}
-\subsection{Functions of the Main Menu}
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{ homeScreen.png}
-\caption{\label{homeScreen}Home Screen Menu}
-\end{center}
-\end{figure}
-
-\subsubsection{User Settings}
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{userNamePinSave.png}
-\caption{\label{User Setting Interface}User Settings Menu}
-\end{center}
-\end{figure}
-
-The first thing a user will probably want to do upon opening the application for the first time is opening the settings page. This will bring up a page that allows the user to put in their username and pin number that will save so they can stay logged in through multiple uses.
-\subsubsection{Select Input Method}
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{ selectInputMethod-Android.png}
-\caption{\label{Input Selection Interface}Input Selection Menu}
-\end{center}
-\end{figure}
-
-After saving any settings, the user will want to select the input method and follow the correct steps to set up the input device.
-\begin{itemize}
-\item Wii Remote – choose this under input options and run the plugin in order to use a Wii Remote as your controller. The plugin should pop up and allow you to connect to the Wii Remote. Once connection has been verified you are ready to play a game.
-\item Phone Accelerometer – this option will allow you to use the phones accelerometer rather than the Wii Remote. This allows you to play if you don’t have a Wii Remote.
-\item Button Presses – choosing this input method will allow you to play the game by using button presses on the screen to move your paddle.
-\end{itemize}
-\subsubsection{Play Game}
-Upon selecting the Play Game on Internet option, the application will bring you to a page containing different game rooms. 
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{ gameSelect.png}
-\caption{\label{gameSelection}List of Joinable Games Menu}
-\end{center}
-\end{figure}
-
-\begin{itemize}
-\item Choosing a game with one person already in it will allow you to join the game and start playing versus them.
-\item You can choose to create a new game, where you will have to wait until another player joins to start.
-\item Or you can join a game that already has two players and watch them play as an observer.
-\end{itemize}
-You can also choose to play offline against a simple bot program in order to test your skills when an opponent is no longer available.
-\begin{figure}
-\begin{center}
-\includegraphics[scale=.7]{ touchOnServer.png}
-\caption{\label{PlayingGame}Game in Action}
-\end{center}
-\end{figure}
-
-\subsubsection{Replay Game}
-After you have played a game or even if you haven’t and just want to watch a replay of a game, select the function to watch a replay. This will bring up a selection of previously played games to watch from.
-\subsection{Rules of Pong}
-Now for the fun, playing pong is extremely simple and fun. The rules are straight forward and any new player can pick them up easily. Here are the basics:
-\subsubsection {Major Components}
-There are 3 major components to any pong game. These are the ball, the paddles, and score area. 
-\begin{itemize}
-\item Ball – flies around the screen following basic game mechanics and doing basic collision detection. If this makes it into your score area, you lose a point.
-\item Score area – this is everything between your paddle and the end of the screen. 
-\item Paddle – this is the only thing the user controls. The game will tell you which of the two is yours and use of your selected input method will cause it to move up and down on the screen. 
-\subsubsection{How to Play}
-The basic concept of a pong game is to hit the ball with your paddle more than your opponent does. Try to send the ball flying into your opponents score area while still defending your score area from balls your opponent sends flying at you. The first to 10 points wins.
-
-
-
-
 \section{Developer Documentation}
 
 \label{sec:developerdocumentation}
@@ -792,14 +705,10 @@ The PhoneGap download is primarily a collection of tools that provide functional
 \subsubsection{Editing Environment}
 In theory, any development can be done from a text editor so long as you have access to the Android SDK and Java.  It is highly recommended, however, that you use Eclipse\cite{Eclipse-Helios}.  You then may want to install the ADT plugin for Android Development\cite{Eclipse-ADT}.  In addition, you may then want to install the plugin for PhoneGap Development\cite{PhoneGap-Eclipse}.
 
-\textbf{An important note:} When creating a PhoneGap application in Eclipse, you will need from the PhoneGap download earlier the following two files: Android/phonegap-1.0.0.jar and Android/phonegap-1.0.0.js.  In the directory of the PhoneGap project, there needs to be two directories: /libs and /assets/www.  You must then copy Android/phonegap-1.0.0.jar into the /libs directory and Android/phonegap-1.0.0.js into the /assets/www directory.  If you are still experiencing an error because Eclipse cannot find the Android/phonegap-1.0.0.jar file, you may need to right-click on the /libs folder and select "Build Path", then "Configure Build Path".  In the Libraries tab, select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay". All of these instructions and more are included on the PhoneGap wiki page\cite{Wiki-PhoneGap-Eclipse}.
+\textbf{An important note:} When creating a PhoneGap application in Eclipse, it may be necessary to include the PhoneGap jar file in the libs folder of the application.  To do this, right-click on the Eclipse project, and select "Build Path", then "Configure Build Path".  If there is no PhoneGap jar file included, then select to "Add External JARs".  Select the jar file downloaded earlier with the rest of the PhoneGap tools and click "Okay".
 
 \subsection{Retrieving the Source}
-<<<<<<< HEAD
 In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:VirPong/human-pong}.  You will then want to navigate into $Android/VirPong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:VirPong/www}.  Now you may open Eclipse and import the $VirPong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/VirPong/human-pong} and \url{https://github.com/VirPong/www}, placing the $www$ repository in the same place mentioned above.
-=======
-In order to work with the source code of the project, you will likely want to use Git\cite{Github}.  Using Git, you may clone the repository from \url{git@github.com:Vir-Pong/human-pong}.  You will then want to navigate into $Android/Vir-Pong-Mobile/$ and create a folder called $assets$.  Navigate into $assets$ and clone \url{git@github.com:Vir-Pong/www}.  Now you may open Eclipse and import the $Vir-Pong-Mobile$ directory as an existing project.  You may need to point the build path to your PhoneGap Jar file (located wherever you downloaded PhoneGap and then inside the Android folder).  Once this is done, you may begin development!  \textbf{Note:} an alternative to git is to download the repository from \url{https://github.com/Vir-Pong/human-pong} and \url{https://github.com/Vir-Pong/www}, placing the $www$ repository in the same place mentioned above.
->>>>>>> upstream/master
 
 \section{Class Diagram}
 \begin{figure}
@@ -810,7 +719,7 @@ In order to work with the source code of the project, you will likely want to us
 \end{figure}
 
 \section{Database}
-In order to enforce security of the highest, the smart phones do not deal with the user password which is the only thing that allows access to personal information stored with the account. Instead the phones only store the user name and a pin number that grants the user limited access. This means that all major account settings and changes can only happen through the website. The account information saved on the phone uses HTML5 localstorage and more information and tutorials on localstorage can be found at http://www.w3schools.com/html5/html5_webstorage.asp. It uses JavaScript to store and access data and provides a more efficient replacement for cookies in webpages. It provides easy saving and accessing using a lookup key for each pin number and account name.
+In order to enforce security of the highest, the smart phones do not deal with the user password which is the only thing that allows access to personal information stored with the account. Instead the phones only store the user name and a pin number that grants the user limited access. This means that all major account settings and changes can only happen through the website. The account information saved on the phone uses HTML5 localstorage and more information and tutorials on localstorage can be found at \url{http://www.w3schools.com/html5/html5_webstorage.asp}. It uses JavaScript to store and access data and provides a more efficient replacement for cookies in webpages. It provides easy saving and accessing using a lookup key for each pin number and account name.
 
 \section{Reflections}
 \label{sec:reflections}
@@ -822,16 +731,9 @@ In order to enforce security of the highest, the smart phones do not deal with t
 %    Describe what you would have done differently if you were to start this 
 %    project over again.
 %    If you were to continue this project what would you do. 
-<<<<<<< HEAD
 The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have had more manager meetings than at the beginning of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we have reached the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team couldn’t move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits.
 
 If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed our team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
-=======
-The biggest challenge involved with a project of this nature is the variety of interactions between all of the groups.  The Android device in particular relies on communication with the Wii Remote, server, and website, so consistent communication is vital.  Therefore, if one team manager does not make an effort to communicate, the entire project suffers.  We finally realized the importance of human communication and have planned more manager meetings for the rest of the semester.  In addition, managers have become more prompt with emailing and this has made it much easier to stay in touch and keep everyone updated on the status of the project.  Another challenge has been a general lack of motivation due to a failure to create a sense of individual accountability.  It was nearly impossible to measure how much work each individual in every group had done; consequently, team members were not highly motivated to work at a fast pace.  As a result, some teams would move ahead of the others and then feel a great deal of frustration when they had to wait for other teams to catch up.  This is an extremely difficult challenge to overcome, but the situation has improved because we are at the point where it is apparent if a team member is not contributing a satisfactory amount.  The increased manager communication also causes the group leaders to hold each other more accountable for their group’s progress.  A more specific challenge for the Android team was getting the iOS development team to agree to implement PhoneGap; this was difficult because their team members were divided on the issue.  This was especially frustrating because our team could not move forward until the iOS team had made their decision.  However, we finally convinced them that the use of PhoneGap has a number of important benefits for both teams.
-
-If we were to begin this project again, there are a number of things we would have done differently.  First of all, we would have written the APIs for Android to server and Android to Wii Remote communication at the very start of the project.  This would have allowed our team to more forward, even when the other teams were stuck.  This change would also have helped us be clearer in our expectations of what we needed from the Wii Remote team.  Another beneficial change would been restructuring the Android and iOS development teams.  Since we are using PhoneGap, the user interface for the game will be the same for both systems, so it would have been advantageous to instead divide the teams between “local” programming (the interface, pong game, features) and communications (namely between the server and the device, but also the Wii Remote to the device). 
->>>>>>> upstream/master
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -841,7 +743,7 @@ If we were to begin this project again, there are a number of things we would ha
 
 \newpage
 \bibliographystyle{amsplain}
-\bibliography{finalReport.android}
+\bibliography{finalReport.android.bib}
 
 
 

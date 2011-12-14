@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}The Final Product}{2}{section.1}
+\contentsline {section}{\numberline {2}Requirements Analysis}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Functional Requirements}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Playing a Game - v1.0}{2}{subsubsection.2.1.1}
+\contentsline {subsection}{\numberline {2.2}Nonfunctional Requirements}{7}{subsection.2.2}
+\contentsline {section}{\numberline {3}Diagrammatic Depictions of the Product}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Interaction Diagram}{7}{subsection.3.1}
+\contentsline {section}{\numberline {4}Implementation}{9}{section.4}
+\contentsline {section}{\numberline {5}Coding Style Guide}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}Working with Java}{9}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Style Rules}{9}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Coding Rules}{10}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Working with JavaScript}{10}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Style Rules}{10}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Coding Rules}{11}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Working with HTML5}{12}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Style Guide Removal}{12}{subsection.5.4}
+\contentsline {section}{\numberline {6}Developer Documentation}{12}{section.6}
+\contentsline {subsection}{\numberline {6.1}Setting up the Development Environment}{12}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Android SDK}{13}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}PhoneGap}{13}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Editing Environment}{13}{subsubsection.6.1.3}
+\contentsline {subsection}{\numberline {6.2}Retrieving the Source}{13}{subsection.6.2}
+\contentsline {section}{\numberline {7}Class Diagram}{14}{section.7}
+\contentsline {section}{\numberline {8}Database}{14}{section.8}
+\contentsline {section}{\numberline {9}Reflections}{15}{section.9}
