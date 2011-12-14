@@ -481,6 +481,178 @@ Scenario:
 %    code 
 %         
 
+\section{Coding Style Guide}
+
+The majority of the coding takes place within the $assets/www$ folder of our application.  It is, therefore, important that our team maintain a clear and concise style within this limited space.  In general, folders should be titled in the CamelCase style (first letter a capital) and individual files should be likewise with the exception that the first letter is a lower case.  Dashes may be permitted so long as it is used when there may be multiple editions of something (e.g. a "logo-blue.jpg" and "logo-red.jpg").  Further exceptions include any README files (used for build instructions) or versioned files. 
+
+
+
+As to how many folders to have, if there exists a logical grouping between one file and several others (i.e. more than 2 files are related to one another) then these should be placed in a separate folder within the $www$ directory.  Files themselves and the code contained should follow the guidelines given below.  While these guidelines are not quite as extensive as some resources (such as Sun's own Java style guide\cite{JavaStyle-Sun}) the brevity serves our team well.
+
+
+
+\subsection{Working with Java}
+
+While Java is not a primary language for our team, we will be strictly following conventions laid down by Sun and other programmers\cite{JavaStyle-Sun}\cite{JavaStyle-JavaRanch}.
+
+
+
+\subsubsection{Style Rules}
+
+\begin{itemize}
+
+\item All identifiers use letters ('A' through 'Z' and 'a' through 'z') and numbers ('0' through '9') only. No underscores, dollar signs or non-ascii characters (with one exception mentioned later).
+
+\item In general, use $methodNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+
+\item Use a separate line for an increment or decrement.
+
+\item All fields must be private, except for some constants.
+
+\item Class elements will follow this order: fields, constructors, methods.
+
+\item Limit the scope of local variables.
+
+\item Initialize objects as late as possible.
+
+\item Use Strings with care.
+
+\item Avoid wrapper classes.
+
+\end{itemize}
+
+\textbf{A note on comments:} all methods and classes should contain a standard Javadoc comment (text description and appropriate author, version, parameter and return tags).  In-line comments are strongly encouraged to assist in readability of the code.
+
+
+
+\subsubsection{Coding Rules}
+
+\begin{itemize}
+
+\item Opening curly braces should be on the same line as what they are opening.
+
+\item Closing curly braces will be horizontally aligned with the line where the statement began.
+
+\item Indent each time a new bracket set is created.  Indents should be four spaces.
+
+\item All control-flow statements must use brackets.
+
+\item Commas and semicolons are always followed by whitespace.
+
+\item Binary operators should have a space on either side.
+
+\item Parentheses should be used in expressions not only to specify order of precedence, but also to help simplify the expression. When in doubt, parenthesize.
+
+\item There will be no use of $break$.
+
+\end{itemize}
+
+
+
+
+
+\subsection{Working with JavaScript}
+
+The majority of our JavaScript style guidelines are mimicked from Google\cite{JavaScriptStyle-Google}.  For further and more detailed information, see their guide.  To many new programmers, JavaScript seems very much like Java (even the name!), but it is important to note that these are different languages and we have several very different rules.
+
+
+
+\subsubsection{Style Rules}
+
+\begin{itemize}
+
+\item In general, use $functionNamesLikeThis$, $variableNamesLikeThis$, $ClassNamesLikeThis$, $EnumNamesLikeThis$, $methodNamesLikeThis$, and $SYMBOLIC\_CONSTANTS\_LIKE\_THIS$.
+
+\item Avoid using many global variables.
+
+\item Start curly braces on the same line as what they are opening.
+
+\item Be sure to indent blocks by four spaces.
+
+\item Use blank lines to group logically related pieces of code.
+
+\item Use parentheses only when required.
+
+\item Prefer $'$ over $"$ for strings.
+
+\item Be sure to use JSDoc comments.  A comment at the top of the file for authorship and general overview, comments for methods, and inline comments are encouraged.  The first two are done using $/*. . . */$ and the latter is $//$.
+
+\item Use JSDoc annotations ($@private$ and $@protected$) where appropriate.  Marking visibility is encouraged.
+
+\item Be sure to use @param and @return tags for methods and functions.
+
+\item Simple getters may have no description but should specify the returned values.
+
+\end{itemize}
+
+
+
+\subsubsection{Coding Rules}
+
+\begin{itemize}
+
+\item Always declare variables with $var$.
+
+\item Use $NAMES\_LIKE\_THIS$ for constants. Use $@const$ where appropriate. Never use the $const$ keyword.
+
+\item Always end lines with semicolons.
+
+\item Feel free to use nested functions but try to comment these to make them clear.
+
+\item Avoid wrapper objects for primitive types.
+
+\item The keyword $this$ is for object constructors and methods only.
+
+\item For-in loops are only for iterating over keys in an object/map/hash.
+
+\item Do not use multiline string literals.  Instead, use concatenation when initializing such long strings.
+
+\item Use $onclick$ instead of $javascript:$ for anchors.
+
+\end{itemize}
+
+
+
+\subsection{Working with HTML5}
+
+HTML5 and CSS are so quickly evolving of late that style guides are not readily available.  We have, however, compiled our own unique guide from some suggestions found on the Web Developer's Virtual Library\cite{HTMLStyle-WDVL}.  We recommend keeping JavaScript and CSS code in files separate from the HTML.  This is primarily to keep the code modular and sensible.  Reading HTML and JavaScript in the same file can be confusing.
+
+
+
+\begin{itemize}
+
+\item Block-level tags are to the far left with content indented four spaces.
+
+\item Don't indent tags relative to their container.
+
+\item Line up multiple attributes with the "=" signs all in the same column.
+
+\item The home page is an index to other pages.
+
+\item Page designs should be consistent in appearance and structure.
+
+\item Choose a meaningful title for pages.
+
+\item $*$Unless it is an incredibly brief code-snippet, do not include JavaScript or CSS in the $html$ file.  Place this code in a separate file.
+
+\item Provide a $Home$ link.
+
+\end{itemize}
+
+
+
+\subsection{Style Guide Removal}
+
+Due to the fact that we have redistributed tasks among the two phone teams, we have removed some items that no longer apply to the Android Development team.  The following have been removed: 
+
+
+
+\begin{itemize}
+
+\item CSS style guide section
+
+\end{itemize}
+
 \section{User Documentation}
 \subsection{Features Overview}
  VirPong provides a safe and fun pong game that combines the use of connections and communication between Wii Remotes, smart phones, and a local University of Puget Sound Server. This allows you to play pong against another human player using your phone and a Wii Remote as a controller.
