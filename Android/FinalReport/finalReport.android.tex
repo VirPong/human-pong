@@ -438,6 +438,25 @@ Scenario:
 %    description of what is being shown in the diagram. Define any terms used
 %    in conceptual classes, attributes, or associations that might not be 
 %    clear to a lay person.
+\subsection{Domain Model}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{DomainModel.png}
+\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\end{center}
+\end{figure}
+Though our code utilizes a number of design patterns, the code for our first use case, playing a pong
+game, uses three highly advantageous design patterns that help structure our code.
+One of the design patterns used was the observer pattern.  In order to update paddle positions for each
+player efficiently, we chose to listen for events from the input device rather than constantly updating
+over specific increments of time.  We also utilized the information expert pattern in regards to drawing
+and redrawing the screen during game play.  The server maintains the current game state, so the
+serverConnection class has knowledge of the paddle and ball locations.  Consequently, the serverConnection
+class is given the responsibility of calling the draw method so that the screen will represent the
+current game state.  We also maintain high cohesion in our Draw class.  Draw is only focused on methods
+involving the act of drawing a figure on to the canvas.  This makes the class highly cohesive and as a
+result, the code is easily understood and can be reused.
+
 
 
 %Interaction Diagram:
@@ -446,6 +465,13 @@ Scenario:
 %    Add a description of the design principles (Information Expert, Creator,
 %    High Cohesion, Low Coupling, Controller) you employed, where you employed
 %    them and why you made those choices. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.7]{InteractionDiagram.png}
+\caption{\label{InteractionDiagram}}
+\end{center}
+\end{figure}
 
 \section{Implementation}
 \label{sec:implementation}
@@ -668,15 +694,15 @@ Setting up VirPong game environment and account is simple and quick. It allows f
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{ homeScreen.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\caption{\label{homeScreen}Home Screen Menu}
 \end{center}
 \end{figure}
 
 \subsubsection{User Settings}
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.7]{ userNamePinSave.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\includegraphics[scale=.7]{userNamePinSave.png}
+\caption{\label{User Setting Interface}User Settings Menu}
 \end{center}
 \end{figure}
 
@@ -685,7 +711,7 @@ The first thing a user will probably want to do upon opening the application for
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{ selectInputMethod-Android.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\caption{\label{Input Selection Interface}Input Selection Menu}
 \end{center}
 \end{figure}
 
@@ -700,7 +726,7 @@ Upon selecting the Play Game on Internet option, the application will bring you 
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{ gameSelect.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\caption{\label{gameSelection}List of Joinable Games Menu}
 \end{center}
 \end{figure}
 
@@ -713,7 +739,7 @@ You can also choose to play offline against a simple bot program in order to tes
 \begin{figure}
 \begin{center}
 \includegraphics[scale=.7]{ touchOnServer.png}
-\caption{\label{domainModel}Class interactions and attributes outline the major system components.}
+\caption{\label{PlayingGame}Game in Action}
 \end{center}
 \end{figure}
 
