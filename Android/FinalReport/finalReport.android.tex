@@ -402,65 +402,33 @@ Scenario:
 
 
 \subsection{Nonfunctional Requirements}
-\label{sec:nonfunctionalRequirements}
-%Nonfunctional Requirements: Detail all nonfunctional requirements that you 
-%    addressed in your final product (e.g. Easy Visibility: All text in our 
-%    product is 16pt font.)
-
-
-\subsubsection{Usability Requirements}
-%Human factors, Aesthetics, Consistency, Documentation
-In order for the application to provide an experience enjoyable to a wide 
-user base, the following usability requirements should be met:
-\begin{itemize}
-\item Players should have their statistics saved and then made available 
-for viewing.
-\item Players should be able to change game settings(difficulty, ball shape, 
-etc.).
-\item Users should be able to register an account through the application.
-\item The application needs to be available for download via the website 
-or on the Android Market.
-\item The application should have the option to view a game in progress.
-\item It would be nice to make the game environment modifiable (i.e. theming).
-\item When there is not a second available human player (or connection to 
-the hub is impossible) there should be an option for playing versus the 
-computer in training mode.
-\end{itemize}
-
-\subsubsection{Reliability Requirements}
-%Frequency/severity of failure, Recoverability, Predictability, Accuracy, 
-%Mean time to failure
-A working product is important, but reliability ensures a consistent 
-experience.  With this in mind, our design is striving for security of 
-private user information and the ability to pause the game.  The latter is 
-focused on creating a fault tolerant solution for network connectivity.  A 
-strict testing policy will help to alleviate many other possible issues.
-
-\subsubsection{Performance Requirements}
-%Speed, Efficiency, Resource consumption, Throughput, Response time
-The ability to adjust the display for different screens will allow for 
-better performance of the software on different Android devices.  The system 
-must also minimize latency when contacting the server for game information 
-or receiving information from the Wii Remote.  There are no other connections 
-that are quite as important.
-
-\subsubsection{Supportability Requirements}
-%Testability, Extensibility, Adaptability, Maintainability, Compatibility, 
-%Configurability, Serviceability, %Installability, Localizability, Portability
-Installation, game play, and resource usage should all be properly 
-documented in a conveniently located and navigated user-manual. A list of 
-known compatible devices included in the manual will assist in keeping 
-potential customers informed about our product.  There should also be some 
-contact information for support and help when the available documentation 
-is not enough.
-
-In keeping with the project's open source roots, it will be important to 
-make all source code well documented for the general public; make the 
-source code readily available; give credit to non-employees that have 
-contributed to our application; and provide substantial developer 
-documentation. 
-
-
+%The product provides an extremely fun basic pong game that combines the use
+%     of smart phones, Wii remotes, and server and web communication. It is 
+%     free to use and open source available at https://github.com/VirPong/human-pong 
+%     for developers. The developer documentation can be found on github or on the 
+%     VirPong website. It will be launched on December 14th 2011 which is available 
+%     to any person who wants to come see it at 4:00PM on the University of Puget 
+%     Sound campus. It is accessible to people on the World Wide Web through our 
+%     website and available to anyone who chooses to do so. A group will need two 
+%     phones Android or iPhone, two Wiimotes, and be able to connect to our server 
+%     in order to play. It works with most android phones except for those with 
+%     SenseUI which has errors with the Bluetooth stack. See the VirPong website for 
+%     the full user installation instructions and basic tutorial. A user has the 
+%     choice of creating an account via the website or playing as a guest. Personal 
+%     information saved in account is extremely secure. The product’s use of a pin 
+%     number means your password is safe and doesn’t need to be encrypted or even 
+%     known by the phones. Support can be found on the website but once everything 
+%     needed to play the game is set up, a user can connect a Wii Remote to his phone, 
+%     connect to the server and start a game against another player. The intuitive 
+%     interface allows users to navigate and use the different functions of the 
+%     product through the use of simple but distinct and easy to select buttons. 
+%     Users can change certain settings for the game which will be saved over multiple 
+%     uses.  Once in a game, activating the Wii Remote sends changes in the paddle 
+%     position to the phone which then sends it to the server. The server receives 
+%     these changes and sends an updated game state to the phones every 50 ms. If 
+%     connection to  game fails, the program will promptly pause the game and notify 
+%     you of the disconnection, however unfortunately you cannot resume the game from 
+%     its state at disconnection.
 
 
 \section{Diagrammatic Depictions of the Product}
