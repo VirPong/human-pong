@@ -1,4 +1,34 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller
+ *  DATE:	12/13/2011
+ *
+ *  login_form.php displays differently depending on whether the user is logged in
+ *  to a VirPong account or not.
+ *
+ *  Logged in users see a message saying they are logged in and displaying their
+ *  username. If they have just registered, they also see a message thanking them for
+ *  joining VirPong.
+ *
+ *  Logged out users see a form allowing them to log in. If they have just logged
+ *  out, they also see a message informing them that their logout was successful.
+ *
+ *  The form validation (checking for valid user input as a means of preventing SQL
+ *  injection) requires the use of JavaScript. In the case of disabled Javascript
+ *  the user is immediately redirected to skins/javascript.php, which asks that the
+ *  user enable JavaScript to use this feature.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ *  Javascript:	login.js
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

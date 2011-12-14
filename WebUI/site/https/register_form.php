@@ -1,4 +1,28 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann, Aryn Grause
+ *  DATE:	12/13/2011
+ *
+ *  register_form.php displays a form allowing the user to become a registered
+ *  member of the VirPong community. It prompts the user for some personal
+ *  information which it passes to register_post.php.
+ *
+ *  The form validation (checking for valid user input as a means of preventing SQL
+ *  injection) requires the use of JavaScript. In the case of disabled Javascript
+ *  the user is immediately redirected to skins/javascript.php, which asks that the
+ *  user enable JavaScript to use this feature.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ *  Javascript:	register.js
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

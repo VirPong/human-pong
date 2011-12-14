@@ -86,13 +86,13 @@
 				{
 					echo '<td align=center>win</td>';
 					echo '<td align=center>' . $winner[3] . '&ndash;' . $winner[4] . '</td>';
-					echo '<td>' . $winner[2] . '</td>';
+					echo '<td><a href="playerhistory?user=' . $winner[2] . '">' . $winner[2] . '</a></td>';
 				}
 				else
 				{
 					echo '<td align=center>loss</td>';
 					echo '<td align=center>' . $winner[3] . '&ndash;' . $winner[4] . '</td>';
-					echo '<td>' . $winner[2] . '</td>';
+					echo '<td><a href="playerhistory?user=' . $winner[2] . '">' . $winner[2] . '</a></td>';
 				}
 			}
 			else if ($winner[2]==$user)
@@ -101,13 +101,13 @@
 				{
 					echo '<td align=center>win</td>';
 					echo '<td align=center>' . $winner[4] . '&ndash;' . $winner[3] . '</td>';
-					echo '<td>' . $winner[1] . '</td>';
+					echo '<td><a href="playerhistory?user=' . $winner[1] . '">' . $winner[1] . '</a></td>';
 				}
 				else
 				{
 					echo '<td align=center>loss</td>';
 					echo '<td align=center>' . $winner[4] . '&ndash;' . $winner[3] . '</td>';
-					echo '<td>' . $winner[1] . '</td>';
+					echo '<td><a href="playerhistory?user=' . $winner[1] . '">' . $winner[1] . '</a></td>';
 				}
 			}
 
