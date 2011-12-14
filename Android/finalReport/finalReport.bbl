@@ -1,0 +1,52 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{Eclipse-ADT}
+\emph{{ADT} {P}lugin for {E}clipse},
+  \url{http://developer.android.com/sdk/eclipse-adt.html#installing}, 2011,
+  [Online; accessed September/October-2011].
+
+\bibitem{AndroidSDK-Components}
+\emph{Android {SDK} {C}omponents},
+  \url{http://developer.android.com/sdk/adding-components.html}, 2011, [Online;
+  accessed September/October-2011].
+
+\bibitem{AndroidSDK-Download}
+\emph{Android {SDK} {D}ownload},
+  \url{http://developer.android.com/sdk/index.html}, 2011, [Online; accessed
+  September/October-2011].
+
+\bibitem{AndroidSDK-Installation}
+\emph{Android {SDK} {I}nstallation},
+  \url{http://developer.android.com/sdk/installing.html}, 2011, [Online;
+  accessed September/October-2011].
+
+\bibitem{AndroidSDK-SystemRequirements}
+\emph{Android {SDK} {S}ystem {R}equirements}, 2011, [Online; accessed
+  September/October-2011].
+
+\bibitem{Eclipse-Helios}
+\emph{Eclipse {P}ackages},
+  \url{http://www.eclipse.org/downloads/packages/release/helios/sr2}, 2011,
+  [Online; accessed September/October-2011].
+
+\bibitem{Github}
+\emph{Github}, \url{https://github.com}, 2011, [Online; accessed
+  September/October-2011].
+
+\bibitem{PhoneGap-Android}
+\emph{{PhoneGap for Android}}, \url{http://www.phonegap.com/about}, 2011,
+  [Online; accessed September-2011].
+
+\bibitem{PhoneGap-Eclipse}
+\emph{{PhoneGap for Android with JSLint/JSHint 1.2}},
+  \url{http://marketplace.eclipse.org/content/phonegap-android-jslintjshint},
+  2011.
+
+\end{thebibliography}
