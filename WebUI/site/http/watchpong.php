@@ -1,4 +1,27 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann
+ *  DATE:	12/12/2011
+ *
+ *  watchpong.php 
+ *
+ *  The form validation (checking for valid user input as a means of preventing SQL
+ *  injection) requires the use of JavaScript. In the case of disabled Javascript
+ *  the user is immediately redirected to skins/javascript.php, which asks that the
+ *  user enable JavaScript to use this feature.
+ *
+ *  INCLUDES:	header.php
+ *				footer.php
+ *
+ *  JavaScript: pong.js
+ *  			socket.io.js
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

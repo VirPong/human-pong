@@ -1,4 +1,34 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann, Aryn Grause
+ *  DATE:	12/13/2011
+ *
+ *  accountsettings_form.php displays a form allowing the user to change his
+ *  information in the database. With the exception of the password and PIN fields,
+ *  the current user information stored in the database is displayed as the form
+ *  defaults, serving the dual purpose of showing the user what information is
+ *  currently stored and saving the user some keystrokes assuming they are not
+ *  changing every single field.
+ *
+ *  accountsettings_form.php is only usable when logged in; if a user navigates to
+ *  the page while logged out, he is redirected to the login form.
+ *
+ *  The form validation (checking for valid user input as a means of preventing SQL
+ *  injection) requires the use of JavaScript. In the case of disabled Javascript
+ *  the user is immediately redirected to skins/javascript.php, which asks that the
+ *  user enable JavaScript to use this feature.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ *  Javascript:	accountsettings.js
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>

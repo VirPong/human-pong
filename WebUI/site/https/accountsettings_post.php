@@ -1,4 +1,26 @@
 <?php
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *  AUTHORS:	Katie Mueller, Garrett Dieckmann, Aryn Grause
+ *  DATE:	12/12/2011
+ *
+ *  accountsettings_post.php processes the information received from
+ *  accountsettings_form.php. On connecting to the database, it finds the relevant
+ *  user account and first checks that the entered password matches the password on
+ *  record. If not, it redircts the user to accountsettings_form.php with a
+ *  variable in the query string indicating that there was a password mismatch. If
+ *  the passwords do match, it updates the user record with the information from
+ *  accountsettings_form.php. When it has successfully completed this task, it
+ *  displays a success message to the user.
+ *
+ *  INCLUDES:	header.php
+ *		footer.php
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+?>
+
+
+<?php
 	session_start();
 	include_once('header.php');
 ?>
