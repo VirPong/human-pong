@@ -1,0 +1,227 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+% useful for formatting (align*, etc.) and for certain symbols (the QED box, etc.)
+\usepackage{amsmath, amssymb, amsthm}
+
+% for including graphics
+\usepackage{graphicx}
+
+% for conveniently specifying the spacing (\singlespacing, \doublespacing,
+%    \onehalfspacing, etc.)
+\usepackage{setspace}
+\onehalfspacing
+
+% this does some sort of symbol stuff
+\usepackage{textcomp}
+
+% A package for conveniently adjusting headers and such
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0 pt}
+\rhead{\textit{\thepage}}
+\cfoot{}
+
+
+
+% Set the margins
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+
+% Differently spaced itemize
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+  	\setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+\newenvironment{enumerate*}%
+  {\begin{enumerate}%
+  	\setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{enumerate}}
+
+
+% set up a new command to insert a little bit of vertical space
+% (use this BEFORE a line break)
+\newcommand{\padding}{\vspace*{.5cm}}
+
+% set up an environment to format each hw problem in
+\newenvironment{problem}[1]{\noindent\textbf{#1.}}{\vspace*{.5cm}}
+
+\newenvironment{proof*}{\par\noindent{\bf Proof}\quad}
+               {\quad\vrule height 8pt depth 0pt width 8pt\medskip\par}
+
+
+
+\begin{document}
+
+%Add in some nice looking pages
+ \begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+      {\Huge Code Documentation: Android Development Team}\\[0.5cm]
+      {\Large Jillian Andersen, Jordan Apele, David Ruhle, Kyle Wenholz}\\[0.4cm]
+      \today
+    \end{center}
+    \vspace*{\fill}
+  \end{titlepage}
+  
+\newpage
+
+
+Due to the nature of web-development, not all of our code is ``documentation 
+worth''.  There are, of course, comments throughout all of the code, but 
+the pieces developed by our team that are worthy of a full document are below.
+
+After collaborating with the iOS team for an entire semester, our team was 
+in the end responsible for only two files: pong.js and replay.js.   The 
+remainder of the code was mostly styling and, therefore, fell into their 
+territory.  JavaScript has no official documentation procedure, so we 
+have attempted to mimic JavaDoc comments as best as possible.
+\singlespacing
+\section{pong.js}
+This file deals with the VirPong game: drawing, communicating (server and 
+inputs), and all other necessary utilities.
+\subsection{Drawing Code}
+
+\begin{itemize*}
+\item function initCanvas() \\
+Starts the pong game and grabs the canvas so that we can modify it in JS.
+\item function displaySelection(selection, options)\\
+Serves as a filter for various display options.  Game canvases, buttons, input options, and even game end screens are initialized here.\\
+ @param {selection} a string representing the desired display: gameCanvas, gameCanvasWithButtons, inputMethodSelection, selectRoom, newRoom, or gameEnd\\
+ @param {options} any of various options that go with {selection}
+\item function draw() \\
+Draws the game state.
+\item function drawHalfCourt()\\ 
+Draws a half court line.
+\item function drawPaddles()\\
+Draws paddles based on the field positions.
+\item function drawRect(a,b,c,d,col)\\
+Draws rectangles on the canvas.\\
+@param a top-left x-position\\
+ @param b top-left y-position\\
+ @param c bottom-right x-position\\
+ @param d bottom-right y-position\\
+ @param col color of the paddle
+\item function drawBall()\\
+Draws the ball at current position.
+\item function drawScore()\\
+Draws current score on the canvas.
+\end{itemize*}
+
+\subsection{Input Code}
+\begin{itemize*}
+\item function handleInputSelect(method)\\
+Initializes the appropriate input methods for playing a game.\\
+@param {method} a string for the desired input method. \\
+"K" = Keyboard\\
+"T" = Touchscreen\\
+"W" = Wii Remote\\
+"A" = Local Accelerometer
+\item function movePaddle(e)\\
+Recieve the input and send it to changePaddlePosition(), which actually changes the paddle position.\\
+@param {e} the event passed by the keypress.
+\item function changePaddlePosition(actualKey)\\
+Change the value of leftPaddle or rightPaddle so that it will draw in the correct place.  This method is for a string input.  "W" is down and"S" is up. \\
+@param {actualKey} The string value of the key pressed.
+\item function detectViableInputMethods()\\
+Figure out what platform we"re running on, return the correct choices for input selection. 
+\item function setupLocalAccerometer()\\
+Set the frequency of refresh for accelerometer data.  Start watching acceleration and point ot it with watchID.
+\item function onSuccess(acceleration)\\
+Contains the work done each time acceleration is audited. Right now, we display the raw data with a timestamp, as well as the calculated position, which is taken from the getPosition function.\\
+@param   acceleration    An object containing the current acceleration values. (x,y,z,timestamp).
+\item function onError(acceleration)\\
+Fires off an alert if there's an error if the collection of acceleration.
+\end{itemize*}
+
+\subsection{Server Code}
+\begin{itemize*}
+\item document.addEventListener("DOMContentLoaded", function()\\
+The 'document.addEventListener' contains reactions to information sent by the server.
+\item function connectToServer()\\
+Sets up the connection to the server and registers multiple event listeners.
+\item joinRoom(room, clientType)\\
+Select the room to join.\\
+@param room a string representing the room name\\
+@param clientType player or spectator as a string
+\item function createRoom(roomName)\\
+Tells the server to make a room just for me.\\
+@param {roomName} the name of the room to create.
+\item function updatePaddleToServer(position)\\
+Update our paddle position with the server.\\
+@param {position} the new position of the paddle.
+\item function performAuthentication()\\
+Loads in login information from local storage to send to the server.
+\item handleNewRoom()\\
+Grabs the room name from an element roomName.roomName and submits it as a new room to the server.
+\end{itemize*}
+
+
+\singlespacing
+\section{replay.js}
+This file takes care of backend events for the replay system (still in beta):
+drawing and server communication.
+
+\subsection{Drawing Code}
+
+\begin{itemize*}
+\item function initCanvas()\\
+Stars the pong game and grabs the canvas so that we can modify it in JS.
+\item function draw()\\
+Draws the game state.
+\item function drawHalfCourt() \\
+Draws a half court line.
+\item function drawPaddles()\\
+Draws paddles based on the field positions.
+\item function drawRect(a,b,c,d,col)\\
+Draws rectangles on the canvas.\\
+@param a top-left x-position\\
+@param b top-left y-position\\
+@param c bottom-right x-position\\
+@param d bottom-right y-position\\
+@param col color of the paddle
+\item function drawBall()\\
+Draws the ball at current position.
+\item function drawScore()\\
+Draws current score on the canvas.
+\end{itemize*}
+
+\subsection{Server Code}
+\begin{itemize*}
+\item document.addEventListener("DOMContentLoaded", function()\\
+The 'document.addEventListener' contains reactions to information sent by the server.
+\item function connectToServer()\\
+Sets up the connection to the server and registers multiple event listeners.
+\item function viewGame(gameName)\\
+Select the room to join.\\
+@param room a string representing the room name.\\
+@param clientType player or spectator as a string.
+\item function createRoom(roomName)\\
+Tells the server to make a room just for me.\\
+@param {roomName} the name of the room to create.
+\item function updatePaddleToServer(position)\\
+Update our paddle position with the server.\\
+@param {position} the new position of the paddle.
+\item function performAuthentication()\\
+Loads in login information from local storage to send to the server.
+\item function displaySelection(selection, options)\\
+Serves as a filter for various display options.  Game canvases, buttons, input options, and even game end screens are initialized here.\\
+@param {selection} a string representing the desired display: gameCanvas, gameCanvasWithButtons, inputMethodSelection, selectRoom, newRoom, or gameEnd\\
+@param {options} any of various options that go with {selection}\\
+\end{itemize*}
+
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
